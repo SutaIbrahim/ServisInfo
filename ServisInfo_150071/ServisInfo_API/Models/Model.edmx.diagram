@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fc99e73cb4d84e138060aef7b7d936ae" Name="Diagram1">
+        <EntityTypeShape EntityType="ServisInfoModel.Gradovi" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.Kategorije" Width="1.5" PointX="6" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.Klijenti" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.Kompanije" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.KompanijeKategorije" Width="1.5" PointX="8.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.KompanijeUpiti" Width="1.5" PointX="10.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.MarkeUredjaja" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.ModeliUredjaja" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.Ocjene" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.Ponude" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.Servisi" Width="1.5" PointX="10.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.Upiti" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServisInfoModel.VrsteOcjena" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="ServisInfoModel.FK__Klijenti__GradID__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Kompanije__GradI__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Kompanije__Kateg__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Ocjene__KlijentI__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Ponude__KlijentI__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Upiti__KlijentID__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Kompanije__Kompa__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Kompanije__Kompa__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Ponude__Kompanij__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Servisi__Kompani__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Kompanije__UpitI__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__ModeliUre__Marka__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Upiti__MarkaUred__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Ocjene__ServisID__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Ocjene__VrstaOcj__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Ponude__UpitID__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Servisi__PonudaI__48CFD27E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
