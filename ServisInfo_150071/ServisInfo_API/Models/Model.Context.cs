@@ -12,15 +12,15 @@ namespace ServisInfo_API.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ServisInfoEntities : DbContext
     {
         public ServisInfoEntities()
             : base("name=ServisInfoEntities")
         {
-
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,9 +28,6 @@ namespace ServisInfo_API.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        
-  //this.Configuration.LazyLoadingEnabled = false;
-
         public virtual DbSet<Gradovi> Gradovi { get; set; }
         public virtual DbSet<Kategorije> Kategorije { get; set; }
         public virtual DbSet<Klijenti> Klijenti { get; set; }
@@ -44,5 +41,23 @@ namespace ServisInfo_API.Models
         public virtual DbSet<Servisi> Servisi { get; set; }
         public virtual DbSet<Upiti> Upiti { get; set; }
         public virtual DbSet<VrsteOcjena> VrsteOcjena { get; set; }
+    
+        public virtual ObjectResult<Kompanije> esp_Kompanije_GetByKorisnickoIme(string korisnickoIme)
+        {
+            var korisnickoImeParameter = korisnickoIme != null ?
+                new ObjectParameter("KorisnickoIme", korisnickoIme) :
+                new ObjectParameter("KorisnickoIme", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Kompanije_GetByKorisnickoIme", korisnickoImeParameter);
+        }
+    
+        public virtual ObjectResult<Kompanije> esp_Kompanije_GetByKorisnickoIme(string korisnickoIme, MergeOption mergeOption)
+        {
+            var korisnickoImeParameter = korisnickoIme != null ?
+                new ObjectParameter("KorisnickoIme", korisnickoIme) :
+                new ObjectParameter("KorisnickoIme", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Kompanije_GetByKorisnickoIme", mergeOption, korisnickoImeParameter);
+        }
     }
 }

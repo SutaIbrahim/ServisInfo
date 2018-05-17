@@ -18,7 +18,7 @@ namespace ServisInfo_UI
 {
     public partial class LoginForm : Form
     {
-        private WebAPIHelper kompanijeService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.KompanijeRoute);
+        private WebAPIHelper KompanijeService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.KompanijeRoute);
 
         public LoginForm()
         {
@@ -27,8 +27,35 @@ namespace ServisInfo_UI
 
         private void Prijava()
         {
-            
+            HttpResponseMessage response = KompanijeService.GetActionResponse("GetByKorisnickoIme", korisnickoImeInput.Text);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+                MessageBox.Show("Greska1", "Greska1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            else if (response.IsSuccessStatusCode)
+            {
+                Kompanije k = response.Content.ReadAsAsync<Kompanije>().Result;
+
+                if (UIHelper.GenerateHash(k.LozinkaSalt, lozinkaInput.Text) == k.LozinkaHash)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    Global.prijavljenaKompanija = k;
+                    Form frm = new Administracija.DodajKompaniju();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Greska2", "Greska2", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lozinkaInput.Text = String.Empty;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error Code" + response.StatusCode + " Message - " + response.ReasonPhrase);
+            }
+
         }
+
 
         private void potvrdiButton_Click(object sender, EventArgs e)
         {

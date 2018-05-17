@@ -103,6 +103,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\GradoviController.cs" />
     <Compile Include="Controllers\PonudeController.cs" />
     <Compile Include="Controllers\ServisiController.cs" />
     <Compile Include="Controllers\UpitiController.cs" />
@@ -111,6 +112,12 @@
     <Compile Include="Controllers\VrsteOcjenaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_Kompanije_GetByKorisnickoIme_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_Korisnici_GetByKorisnickoIme_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Gradovi.cs">
       <DependentUpon>Model.tt</DependentUpon>

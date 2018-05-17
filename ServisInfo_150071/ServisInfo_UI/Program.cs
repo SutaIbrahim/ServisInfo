@@ -16,7 +16,13 @@ namespace ServisInfo_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            //Application.Run(new LoginForm());
+
+            LoginForm frm = new LoginForm();
+            frm.ShowDialog();
+
+            if (frm.DialogResult == DialogResult.OK)
+                Application.Run(new Administracija.DodajKompaniju());
         }
     }
 }

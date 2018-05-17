@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ServisInfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ServisInfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Gradovi">
           <Key>
             <PropertyRef Name="GradID" />
@@ -345,6 +345,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="esp_Kompanije_GetByKorisnickoIme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="ServisInfoModelStoreContainer">
           <EntitySet Name="Gradovi" EntityType="Self.Gradovi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kategorije" EntityType="Self.Kategorije" Schema="dbo" store:Type="Tables" />
@@ -428,8 +431,7 @@
             <End Role="Upiti" EntitySet="Upiti" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ServisInfoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -889,7 +891,32 @@
             <End Role="Ponude" EntitySet="Ponude" />
             <End Role="Servisi" EntitySet="Servisi" />
           </AssociationSet>
+          <FunctionImport Name="esp_Kompanije_GetByKorisnickoIme" EntitySet="Kompanije" ReturnType="Collection(ServisInfoModel.Kompanije)">
+            <Parameter Name="KorisnickoIme" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="esp_Korisnici_GetByKorisnickoIme_Result">
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="KorisickoIme" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LozinkaSalt" Nullable="true" />
+          <Property Type="String" Name="LozinkaHash" Nullable="true" />
+          <Property Type="Int32" Name="GradID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="esp_Kompanije_GetByKorisnickoIme_Result">
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="KorisickoIme" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LozinkaSalt" Nullable="true" />
+          <Property Type="String" Name="LozinkaHash" Nullable="true" />
+          <Property Type="Int32" Name="GradID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1045,6 +1072,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="esp_Kompanije_GetByKorisnickoIme" FunctionName="ServisInfoModel.Store.esp_Kompanije_GetByKorisnickoIme">
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
