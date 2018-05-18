@@ -38,7 +38,7 @@ namespace ServisInfo_UI.Upiti
             //HttpResponseMessage response = UpitiService.GetActionResponse("SearchByDate",OdDtm.Value.ToString());
             //HttpResponseMessage response = UpitiService.GetActionResponse("SearchByDate",OdDtm.Value.ToString(),DoDtm.Value.ToString());
 
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate","1");
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate","2","2"); // poslati datum za provjeru i kompanija id
 
 
 

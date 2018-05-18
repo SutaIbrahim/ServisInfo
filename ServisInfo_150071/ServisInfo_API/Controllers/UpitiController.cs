@@ -50,8 +50,8 @@ namespace ServisInfo_API.App_Start
 
 
         [HttpGet]
-        [Route("api/Upiti/GetByDate/{datum?}")]
-        public List<UpitiKompanije_ByDate> GetByDate(string datum="")
+        [Route("api/Upiti/GetByDate/{datum?}/{datum2}")]
+        public List<UpitiKompanije_ByDate> GetByDate(string datum="", string datum2="")
         {
 
             datum="ehehhe";

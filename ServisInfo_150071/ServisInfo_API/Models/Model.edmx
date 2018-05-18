@@ -893,28 +893,6 @@
             <Parameter Name="Datum2" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
-        <ComplexType Name="esp_Korisnici_GetByKorisnickoIme_Result">
-          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
-          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="KorisickoIme" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="LozinkaSalt" Nullable="true" />
-          <Property Type="String" Name="LozinkaHash" Nullable="true" />
-          <Property Type="Int32" Name="GradID" Nullable="false" />
-        </ComplexType>
-        <ComplexType Name="esp_Kompanije_GetByKorisnickoIme_Result">
-          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
-          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="KorisickoIme" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="LozinkaSalt" Nullable="true" />
-          <Property Type="String" Name="LozinkaHash" Nullable="true" />
-          <Property Type="Int32" Name="GradID" Nullable="false" />
-        </ComplexType>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
           <End Type="ServisInfoModel.Upiti" Role="Upiti" Multiplicity="*" />
@@ -927,26 +905,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="esp_KompanijeUpiti_GetByDate_Result">
-          <Property Type="DateTime" Name="DatumUpita" Nullable="true" Precision="23" />
-          <Property Type="String" Name="Marka" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Model" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="OpisKvara" Nullable="false" />
-          <Property Type="Binary" Name="Slika" Nullable="true" />
-          <Property Type="DateTime" Name="ZeljeniDatumPrijemaOd" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="ZeljeniDatumPrijemaDo" Nullable="true" Precision="23" />
-          <Property Type="String" Name="NazivKlijenta" Nullable="false" MaxLength="101" />
-        </ComplexType>
-        <ComplexType Name="KompanijeUpiti_Result">
-          <Property Type="DateTime" Name="DatumUpita" Nullable="true" Precision="23" />
-          <Property Type="String" Name="Marka" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Model" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="OpisKvara" Nullable="false" />
-          <Property Type="Binary" Name="Slika" Nullable="true" />
-          <Property Type="DateTime" Name="ZeljeniDatumPrijemaOd" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="ZeljeniDatumPrijemaDo" Nullable="true" Precision="23" />
-          <Property Type="String" Name="NazivKlijenta" Nullable="false" MaxLength="101" />
-        </ComplexType>
         <ComplexType Name="UpitiKompanije_ByDate">
           <Property Type="DateTime" Name="DatumUpita" Nullable="true" Precision="23" />
           <Property Type="String" Name="Marka" Nullable="false" MaxLength="50" />
