@@ -18,7 +18,6 @@ namespace ServisInfo_API.Models
         public MarkeUredjaja()
         {
             this.ModeliUredjaja = new HashSet<ModeliUredjaja>();
-            this.Upiti = new HashSet<Upiti>();
         }
     
         public int MarkaUredjajaID { get; set; }
@@ -26,7 +25,5 @@ namespace ServisInfo_API.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ModeliUredjaja> ModeliUredjaja { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Upiti> Upiti { get; set; }
     }
 }

@@ -29,13 +29,14 @@ namespace ServisInfo_API.Models
         public Nullable<System.DateTime> ZeljeniDatumPrijemaOd { get; set; }
         public Nullable<System.DateTime> ZeljeniDatumPrijemaDo { get; set; }
         public int KlijentID { get; set; }
-        public int MarkaUredjajaID { get; set; }
+        public int ModelUredjajaID { get; set; }
+        public Nullable<System.DateTime> Datum { get; set; }
     
         public virtual Klijenti Klijenti { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KompanijeUpiti> KompanijeUpiti { get; set; }
-        public virtual MarkeUredjaja MarkeUredjaja { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ponude> Ponude { get; set; }
+        public virtual ModeliUredjaja ModeliUredjaja { get; set; }
     }
 }

@@ -30,11 +30,11 @@
         <AssociationConnector Association="ServisInfoModel.FK__Servisi__Kompani__47DBAE45" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__Kompanije__UpitI__398D8EEE" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__ModeliUre__Marka__31EC6D26" ManuallyRouted="false" />
-        <AssociationConnector Association="ServisInfoModel.FK__Upiti__MarkaUred__35BCFE0A" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__Ocjene__ServisID__4E88ABD4" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__Ocjene__VrstaOcj__4D94879B" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__Ponude__UpitID__44FF419A" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__Servisi__PonudaI__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="ServisInfoModel.FK__Upiti__ModelUred__00200768" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

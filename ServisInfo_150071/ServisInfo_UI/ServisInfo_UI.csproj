@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Upiti\PregledUpita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upiti\PregledUpita.Designer.cs">
+      <DependentUpon>PregledUpita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\UIHelper.cs" />
     <Compile Include="Util\WebAPIHelper.cs" />
     <EmbeddedResource Include="Administracija\DodajKompaniju.resx">
@@ -85,6 +91,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Upiti\PregledUpita.resx">
+      <DependentUpon>PregledUpita.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

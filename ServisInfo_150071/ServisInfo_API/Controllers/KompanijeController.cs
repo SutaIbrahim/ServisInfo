@@ -39,15 +39,21 @@ namespace ServisInfo_API.Controllers
         [Route("api/Kompanije/GetByKorisnickoIme/{korisnickoIme}")]
         public IHttpActionResult GetByKorisnickoIme(string korisnickoIme)
         {
-            Kompanije kompanije = db.esp_Kompanije_GetByKorisnickoIme(korisnickoIme).FirstOrDefault();
+            Kompanije kompanija = db.esp_Kompanije_GetByKorisnickoIme(korisnickoIme).FirstOrDefault();
 
-            if (kompanije == null)
+            if (kompanija == null)
             {
                 return NotFound();
             }
 
-            return Ok(kompanije);
+            return Ok(kompanija);
         }
+
+
+
+
+
+        
 
         // PUT: api/Kompanije/5
         [ResponseType(typeof(void))]

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Core;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
@@ -34,6 +35,30 @@ namespace ServisInfo_API.App_Start
 
             return Ok(upiti);
         }
+
+        //[HttpGet]
+        //[Route("api/Upiti/GetByDate/{datum1}/{datum2}")]
+        //public List<KompanijeUpiti_Result> GetByDate(string datum1,string datum2)
+        //{
+        //    //DateTime Datum1 = DateTime.Parse(datum1);
+        //   // DateTime Datum2 = DateTime.Parse(datum2);
+
+
+
+        //    return db.esp_KompanijeUpiti_GetByDate(null,null).ToList();
+        //}
+
+
+        [ResponseType(typeof(KompanijeUpiti_Result))]
+        public IHttpActionResult GetByDate()
+        {
+            //DateTime Datum1 = DateTime.Parse(datum1);
+            // DateTime Datum2 = DateTime.Parse(datum2);
+            List<KompanijeUpiti_Result> upiti= db.esp_KompanijeUpiti_GetByDate(null, null).ToList();
+
+            return Ok(upiti);
+        }
+
 
         // PUT: api/Upiti/5
         [ResponseType(typeof(void))]

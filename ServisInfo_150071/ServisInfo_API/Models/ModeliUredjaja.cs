@@ -14,10 +14,18 @@ namespace ServisInfo_API.Models
     
     public partial class ModeliUredjaja
     {
-        public int ModeliUredjajaID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ModeliUredjaja()
+        {
+            this.Upiti = new HashSet<Upiti>();
+        }
+    
         public string Naziv { get; set; }
         public int MarkaUredjajaID { get; set; }
+        public int ModelUredjajaID { get; set; }
     
         public virtual MarkeUredjaja MarkeUredjaja { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Upiti> Upiti { get; set; }
     }
 }
