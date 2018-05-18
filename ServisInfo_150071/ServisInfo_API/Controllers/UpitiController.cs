@@ -25,16 +25,16 @@ namespace ServisInfo_API.App_Start
 
         // GET: api/Upiti/5
         [ResponseType(typeof(Upiti))]
-        public IHttpActionResult GetUpiti(int id)
-        {
-            Upiti upiti = db.Upiti.Find(id);
-            if (upiti == null)
-            {
-                return NotFound();
-            }
+        //public IHttpActionResult GetUpiti(int id)
+        //{
+        //    Upiti upiti = db.Upiti.Find(id);
+        //    if (upiti == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(upiti);
-        }
+        //    return Ok(upiti);
+        //}
 
         //[HttpGet]
         //[Route("api/Upiti/GetByDate/{datum1}/{datum2}")]
@@ -49,14 +49,17 @@ namespace ServisInfo_API.App_Start
         //}
 
 
-        [ResponseType(typeof(KompanijeUpiti_Result))]
-        public IHttpActionResult GetByDate()
+        [HttpGet]
+        [Route("api/Upiti/GetByDate/{datum?}")]
+        public List<UpitiKompanije_ByDate> GetByDate(string datum="")
         {
+
+            datum="ehehhe";
             //DateTime Datum1 = DateTime.Parse(datum1);
             // DateTime Datum2 = DateTime.Parse(datum2);
-            List<KompanijeUpiti_Result> upiti= db.esp_KompanijeUpiti_GetByDate(null, null).ToList();
+            List<UpitiKompanije_ByDate> upiti= db.esp_KompanijeUpiti_GetByDate(null, null).ToList();
 
-            return Ok(upiti);
+            return upiti;
         }
 
 

@@ -176,6 +176,9 @@
     <Compile Include="Models\Upiti.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UpitiKompanije_ByDate.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VrsteOcjena.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

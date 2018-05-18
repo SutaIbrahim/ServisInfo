@@ -37,14 +37,15 @@ namespace ServisInfo_UI.Upiti
 
             //HttpResponseMessage response = UpitiService.GetActionResponse("SearchByDate",OdDtm.Value.ToString());
             //HttpResponseMessage response = UpitiService.GetActionResponse("SearchByDate",OdDtm.Value.ToString(),DoDtm.Value.ToString());
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate");
+
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate","1");
 
 
 
 
             if (response.IsSuccessStatusCode)
             {
-                List<KompanijeUpiti_Result> upiti = response.Content.ReadAsAsync<List<KompanijeUpiti_Result>>().Result;
+                List<UpitiKompanije_ByDate> upiti = response.Content.ReadAsAsync<List<UpitiKompanije_ByDate>>().Result;
                 UpitiGrid.DataSource = upiti;
                 UpitiGrid.ClearSelection();
 

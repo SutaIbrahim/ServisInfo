@@ -888,7 +888,7 @@
             <End Role="ModeliUredjaja" EntitySet="ModeliUredjaja" />
             <End Role="Upiti" EntitySet="Upiti" />
           </AssociationSet>
-          <FunctionImport Name="esp_KompanijeUpiti_GetByDate" ReturnType="Collection(ServisInfoModel.KompanijeUpiti_Result)">
+          <FunctionImport Name="esp_KompanijeUpiti_GetByDate" ReturnType="Collection(ServisInfoModel.UpitiKompanije_ByDate)">
             <Parameter Name="Datum1" Mode="In" Type="String" />
             <Parameter Name="Datum2" Mode="In" Type="String" />
           </FunctionImport>
@@ -943,6 +943,13 @@
           <Property Type="String" Name="Model" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="OpisKvara" Nullable="false" />
           <Property Type="Binary" Name="Slika" Nullable="true" />
+          <Property Type="DateTime" Name="ZeljeniDatumPrijemaOd" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ZeljeniDatumPrijemaDo" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NazivKlijenta" Nullable="false" MaxLength="101" />
+        </ComplexType>
+        <ComplexType Name="UpitiKompanije_ByDate">
+          <Property Type="DateTime" Name="DatumUpita" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Marka" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="ZeljeniDatumPrijemaOd" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="ZeljeniDatumPrijemaDo" Nullable="true" Precision="23" />
           <Property Type="String" Name="NazivKlijenta" Nullable="false" MaxLength="101" />
@@ -1107,12 +1114,9 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_KompanijeUpiti_GetByDate" FunctionName="ServisInfoModel.Store.esp_KompanijeUpiti_GetByDate">
           <ResultMapping>
-              <ComplexTypeMapping TypeName="ServisInfoModel.KompanijeUpiti_Result">
+              <ComplexTypeMapping TypeName="ServisInfoModel.UpitiKompanije_ByDate">
                 <ScalarProperty Name="DatumUpita" ColumnName="DatumUpita" />
                 <ScalarProperty Name="Marka" ColumnName="Marka" />
-                <ScalarProperty Name="Model" ColumnName="Model" />
-                <ScalarProperty Name="OpisKvara" ColumnName="OpisKvara" />
-                <ScalarProperty Name="Slika" ColumnName="Slika" />
                 <ScalarProperty Name="ZeljeniDatumPrijemaOd" ColumnName="ZeljeniDatumPrijemaOd" />
                 <ScalarProperty Name="ZeljeniDatumPrijemaDo" ColumnName="ZeljeniDatumPrijemaDo" />
                 <ScalarProperty Name="NazivKlijenta" ColumnName="NazivKlijenta" />

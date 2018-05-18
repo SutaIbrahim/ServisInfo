@@ -61,7 +61,7 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Kompanije_GetByKorisnickoIme", mergeOption, korisnickoImeParameter);
         }
     
-        public virtual ObjectResult<KompanijeUpiti_Result> esp_KompanijeUpiti_GetByDate(string datum1, string datum2)
+        public virtual ObjectResult<UpitiKompanije_ByDate> esp_KompanijeUpiti_GetByDate(string datum1, string datum2)
         {
             var datum1Parameter = datum1 != null ?
                 new ObjectParameter("Datum1", datum1) :
@@ -71,7 +71,7 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("Datum2", datum2) :
                 new ObjectParameter("Datum2", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijeUpiti_Result>("esp_KompanijeUpiti_GetByDate", datum1Parameter, datum2Parameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UpitiKompanije_ByDate>("esp_KompanijeUpiti_GetByDate", datum1Parameter, datum2Parameter);
         }
     }
 }
