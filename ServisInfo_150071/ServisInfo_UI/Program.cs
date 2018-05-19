@@ -18,7 +18,7 @@ namespace ServisInfo_UI
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm());
 
-            Application.Run(new Upiti.PregledUpita());
+            Application.Run(new Administracija.PregledKompanija());
 
             //LoginForm frm = new LoginForm();
             //frm.ShowDialog();

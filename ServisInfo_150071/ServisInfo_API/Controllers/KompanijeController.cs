@@ -50,10 +50,21 @@ namespace ServisInfo_API.Controllers
         }
 
 
+        [Route("api/Kompanije/SearchByNaziv/{naziv?}")]
+        [HttpGet]
+        public IHttpActionResult SearchByNaziv(string naziv="")
+        {
+
+            List<Kompanije_Result> kompanije = db.esp_Kompanije_SearchByNaziv(naziv).ToList();
+
+            return Ok(kompanije);
+        }
 
 
 
-        
+
+
+
 
         // PUT: api/Kompanije/5
         [ResponseType(typeof(void))]

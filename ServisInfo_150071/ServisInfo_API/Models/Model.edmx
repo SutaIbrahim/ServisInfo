@@ -353,6 +353,12 @@
         <Function Name="esp_Kompanije_GetByKorisnickoIme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="esp_Kompanije_SearchByNaziv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="esp_Upiti_GetDetalji" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UpitID" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="ServisInfoModelStoreContainer">
           <EntitySet Name="Gradovi" EntityType="Self.Gradovi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kategorije" EntityType="Self.Kategorije" Schema="dbo" store:Type="Tables" />
@@ -888,9 +894,15 @@
             <End Role="ModeliUredjaja" EntitySet="ModeliUredjaja" />
             <End Role="Upiti" EntitySet="Upiti" />
           </AssociationSet>
-          <FunctionImport Name="esp_KompanijeUpiti_GetByDate" ReturnType="Collection(ServisInfoModel.UpitiKompanije_ByDate)">
+          <FunctionImport Name="esp_KompanijeUpiti_GetByDate" ReturnType="Collection(ServisInfoModel.KompanijaUpiti_Result)">
             <Parameter Name="Datum1" Mode="In" Type="String" />
             <Parameter Name="Datum2" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Upiti_GetDetalji" ReturnType="Collection(ServisInfoModel.DetaljiUpita_Result)">
+          <Parameter Name="UpitID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Kompanije_SearchByNaziv" ReturnType="Collection(ServisInfoModel.Kompanije_Result)">
+          <Parameter Name="Naziv" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -905,12 +917,34 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="UpitiKompanije_ByDate">
-          <Property Type="DateTime" Name="DatumUpita" Nullable="true" Precision="23" />
-          <Property Type="String" Name="Marka" Nullable="false" MaxLength="50" />
+        <ComplexType Name="DetaljiUpita_Result">
+          <Property Type="DateTime" Name="Datum_upita" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Marka_uredjaja" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Model_uredjaja" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Opis_kvara" Nullable="false" />
+          <Property Type="Binary" Name="Slika" Nullable="true" />
           <Property Type="DateTime" Name="ZeljeniDatumPrijemaOd" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="ZeljeniDatumPrijemaDo" Nullable="true" Precision="23" />
           <Property Type="String" Name="NazivKlijenta" Nullable="false" MaxLength="101" />
+          <Property Type="Boolean" Name="Odgovoreno" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="KompanijaUpiti_Result">
+          <Property Type="Int32" Name="UpitID" Nullable="false" />
+          <Property Type="DateTime" Name="Datum_upita" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Marka_uredjaja" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Zeljeni_datum_prijema_Od" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Zeljeni_datum_prijema_Do" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Klijent" Nullable="false" MaxLength="101" />
+          <Property Type="Boolean" Name="Odgovoreno" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Kompanije_Result">
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="String" Name="Naziv_kompanije" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="KorisickoIme" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Grad" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1071,13 +1105,43 @@
           <FunctionImportMapping FunctionImportName="esp_Kompanije_GetByKorisnickoIme" FunctionName="ServisInfoModel.Store.esp_Kompanije_GetByKorisnickoIme">
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_KompanijeUpiti_GetByDate" FunctionName="ServisInfoModel.Store.esp_KompanijeUpiti_GetByDate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.KompanijaUpiti_Result">
+                <ScalarProperty Name="UpitID" ColumnName="UpitID" />
+                <ScalarProperty Name="Datum_upita" ColumnName="Datum upita" />
+                <ScalarProperty Name="Marka_uredjaja" ColumnName="Marka uredjaja" />
+                <ScalarProperty Name="Zeljeni_datum_prijema_Od" ColumnName="Zeljeni datum prijema Od" />
+                <ScalarProperty Name="Zeljeni_datum_prijema_Do" ColumnName="Zeljeni datum prijema Do" />
+                <ScalarProperty Name="Klijent" ColumnName="Klijent" />
+                <ScalarProperty Name="Odgovoreno" ColumnName="Odgovoreno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Upiti_GetDetalji" FunctionName="ServisInfoModel.Store.esp_Upiti_GetDetalji">
           <ResultMapping>
-              <ComplexTypeMapping TypeName="ServisInfoModel.UpitiKompanije_ByDate">
-                <ScalarProperty Name="DatumUpita" ColumnName="DatumUpita" />
-                <ScalarProperty Name="Marka" ColumnName="Marka" />
+              <ComplexTypeMapping TypeName="ServisInfoModel.DetaljiUpita_Result">
+                <ScalarProperty Name="Datum_upita" ColumnName="Datum upita" />
+                <ScalarProperty Name="Marka_uredjaja" ColumnName="Marka uredjaja" />
+                <ScalarProperty Name="Model_uredjaja" ColumnName="Model uredjaja" />
+                <ScalarProperty Name="Opis_kvara" ColumnName="Opis kvara" />
+                <ScalarProperty Name="Slika" ColumnName="Slika" />
                 <ScalarProperty Name="ZeljeniDatumPrijemaOd" ColumnName="ZeljeniDatumPrijemaOd" />
                 <ScalarProperty Name="ZeljeniDatumPrijemaDo" ColumnName="ZeljeniDatumPrijemaDo" />
                 <ScalarProperty Name="NazivKlijenta" ColumnName="NazivKlijenta" />
+                <ScalarProperty Name="Odgovoreno" ColumnName="Odgovoreno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Kompanije_SearchByNaziv" FunctionName="ServisInfoModel.Store.esp_Kompanije_SearchByNaziv">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.Kompanije_Result">
+                <ScalarProperty Name="KompanijaID" ColumnName="KompanijaID" />
+                <ScalarProperty Name="Naziv_kompanije" ColumnName="Naziv kompanije" />
+                <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="KorisickoIme" ColumnName="KorisickoIme" />
+                <ScalarProperty Name="Grad" ColumnName="Grad" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

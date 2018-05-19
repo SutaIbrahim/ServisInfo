@@ -58,6 +58,12 @@
     <Compile Include="Administracija\DodajKompaniju.Designer.cs">
       <DependentUpon>DodajKompaniju.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracija\PregledKompanija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracija\PregledKompanija.Designer.cs">
+      <DependentUpon>PregledKompanija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -65,8 +71,26 @@
     <Compile Include="LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ponude\KreirajPonudu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ponude\KreirajPonudu.Designer.cs">
+      <DependentUpon>KreirajPonudu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ponude\PregledPonuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ponude\PregledPonuda.Designer.cs">
+      <DependentUpon>PregledPonuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Upiti\DetaljiUpita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upiti\DetaljiUpita.Designer.cs">
+      <DependentUpon>DetaljiUpita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Upiti\PregledUpita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +101,9 @@
     <Compile Include="Util\WebAPIHelper.cs" />
     <EmbeddedResource Include="Administracija\DodajKompaniju.resx">
       <DependentUpon>DodajKompaniju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracija\PregledKompanija.resx">
+      <DependentUpon>PregledKompanija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -91,6 +118,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Upiti\DetaljiUpita.resx">
+      <DependentUpon>DetaljiUpita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Upiti\PregledUpita.resx">
       <DependentUpon>PregledUpita.cs</DependentUpon>
     </EmbeddedResource>

@@ -36,6 +36,7 @@
             this.DoDtm = new System.Windows.Forms.DateTimePicker();
             this.PrikaziBtn = new System.Windows.Forms.Button();
             this.UpitiGrid = new System.Windows.Forms.DataGridView();
+            this.DetaljiBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UpitiGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,11 +113,22 @@
             this.UpitiGrid.Size = new System.Drawing.Size(991, 336);
             this.UpitiGrid.TabIndex = 6;
             // 
+            // DetaljiBtn
+            // 
+            this.DetaljiBtn.Location = new System.Drawing.Point(852, 102);
+            this.DetaljiBtn.Name = "DetaljiBtn";
+            this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
+            this.DetaljiBtn.TabIndex = 7;
+            this.DetaljiBtn.Text = "Prikaz detalja o upitu";
+            this.DetaljiBtn.UseVisualStyleBackColor = true;
+            this.DetaljiBtn.Click += new System.EventHandler(this.DetaljiBtn_Click);
+            // 
             // PregledUpita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 489);
+            this.Controls.Add(this.DetaljiBtn);
             this.Controls.Add(this.UpitiGrid);
             this.Controls.Add(this.PrikaziBtn);
             this.Controls.Add(this.DoDtm);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.DateTimePicker DoDtm;
         private System.Windows.Forms.Button PrikaziBtn;
         private System.Windows.Forms.DataGridView UpitiGrid;
+        private System.Windows.Forms.Button DetaljiBtn;
     }
 }

@@ -45,7 +45,7 @@ namespace ServisInfo_UI.Upiti
 
             if (response.IsSuccessStatusCode)
             {
-                List<UpitiKompanije_ByDate> upiti = response.Content.ReadAsAsync<List<UpitiKompanije_ByDate>>().Result;
+                List<KompanijaUpiti_Result> upiti = response.Content.ReadAsAsync<List<KompanijaUpiti_Result>>().Result;
                 UpitiGrid.DataSource = upiti;
                 UpitiGrid.ClearSelection();
 
@@ -72,6 +72,15 @@ namespace ServisInfo_UI.Upiti
         private void PrikaziBtn_Click(object sender, EventArgs e)
         {
             BindGrid();
+        }
+
+        private void DetaljiBtn_Click(object sender, EventArgs e)
+        {
+            DetaljiUpita frm = new DetaljiUpita(Convert.ToInt32(UpitiGrid.SelectedRows[0].Cells[0].Value));
+            frm.ShowDialog();
+            BindGrid();
+
+
         }
     }
 }

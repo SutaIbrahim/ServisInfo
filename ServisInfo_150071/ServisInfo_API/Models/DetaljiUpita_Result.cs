@@ -11,12 +11,16 @@ namespace ServisInfo_API.Models
 {
     using System;
     
-    public partial class UpitiKompanije_ByDate
+    public partial class DetaljiUpita_Result
     {
-        public Nullable<System.DateTime> DatumUpita { get; set; }
-        public string Marka { get; set; }
+        public Nullable<System.DateTime> Datum_upita { get; set; }
+        public string Marka_uredjaja { get; set; }
+        public string Model_uredjaja { get; set; }
+        public string Opis_kvara { get; set; }
+        public byte[] Slika { get; set; }
         public Nullable<System.DateTime> ZeljeniDatumPrijemaOd { get; set; }
         public Nullable<System.DateTime> ZeljeniDatumPrijemaDo { get; set; }
         public string NazivKlijenta { get; set; }
+        public bool Odgovoreno { get; set; }
     }
 }

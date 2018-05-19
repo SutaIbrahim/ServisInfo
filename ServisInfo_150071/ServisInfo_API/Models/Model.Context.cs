@@ -21,7 +21,6 @@ namespace ServisInfo_API.Models
             : base("name=ServisInfoEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -61,7 +60,7 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Kompanije_GetByKorisnickoIme", mergeOption, korisnickoImeParameter);
         }
     
-        public virtual ObjectResult<UpitiKompanije_ByDate> esp_KompanijeUpiti_GetByDate(string datum1, string datum2)
+        public virtual ObjectResult<KompanijaUpiti_Result> esp_KompanijeUpiti_GetByDate(string datum1, string datum2)
         {
             var datum1Parameter = datum1 != null ?
                 new ObjectParameter("Datum1", datum1) :
@@ -71,7 +70,25 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("Datum2", datum2) :
                 new ObjectParameter("Datum2", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UpitiKompanije_ByDate>("esp_KompanijeUpiti_GetByDate", datum1Parameter, datum2Parameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaUpiti_Result>("esp_KompanijeUpiti_GetByDate", datum1Parameter, datum2Parameter);
+        }
+    
+        public virtual ObjectResult<DetaljiUpita_Result> esp_Upiti_GetDetalji(Nullable<int> upitID)
+        {
+            var upitIDParameter = upitID.HasValue ?
+                new ObjectParameter("UpitID", upitID) :
+                new ObjectParameter("UpitID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DetaljiUpita_Result>("esp_Upiti_GetDetalji", upitIDParameter);
+        }
+    
+        public virtual ObjectResult<Kompanije_Result> esp_Kompanije_SearchByNaziv(string naziv)
+        {
+            var nazivParameter = naziv != null ?
+                new ObjectParameter("Naziv", naziv) :
+                new ObjectParameter("Naziv", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije_Result>("esp_Kompanije_SearchByNaziv", nazivParameter);
         }
     }
 }
