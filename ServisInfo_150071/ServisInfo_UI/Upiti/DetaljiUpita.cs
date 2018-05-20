@@ -94,7 +94,7 @@ namespace ServisInfo_UI.Upiti
 
         private void KreirajPonuduBtn_Click(object sender, EventArgs e)
         {
-            Ponude.KreirajPonudu frm= new Ponude.KreirajPonudu(UID);
+            Ponude.KreirajPonudu frm= new Ponude.KreirajPonudu(UID, 1,1, OdLbl.Text,DoLbl.Text); // DODATI KLIJENT ID i KompanijaUpitID U PROCEDURU !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             frm.ShowDialog();
             this.Close();
 

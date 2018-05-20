@@ -109,6 +109,9 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Messages.resx" />
+    <EmbeddedResource Include="Ponude\KreirajPonudu.resx">
+      <DependentUpon>KreirajPonudu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

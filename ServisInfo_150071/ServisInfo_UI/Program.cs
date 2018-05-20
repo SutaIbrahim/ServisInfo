@@ -18,13 +18,13 @@ namespace ServisInfo_UI
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm());
 
-            Application.Run(new Administracija.PregledKompanija());
+            // Application.Run(new Administracija.PregledKompanija());
 
-            //LoginForm frm = new LoginForm();
-            //frm.ShowDialog();
+            LoginForm frm = new LoginForm();
+            frm.ShowDialog();
 
-            //if (frm.DialogResult == DialogResult.OK)
-            //    Application.Run(new Upiti.PregledUpita());
+            if (frm.DialogResult == DialogResult.OK)
+                Application.Run(new Upiti.PregledUpita());
         }
     }
 }

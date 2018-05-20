@@ -16,6 +16,12 @@ namespace ServisInfo_UI
         public const string KompanijeRoute = "api/Kompanije";
         public const string UpitiRoute = "api/Upiti";
         public const string GradoviRoute = "api/Gradovi";
+        public const string PonudeRoute = "api/Ponude";
+        public const string KlijentiRoute = "api/Klijenti";
+        public const string KompanijeUpitiRoute = "api/KompanijeUpiti";
+
+
+
 
 
 
