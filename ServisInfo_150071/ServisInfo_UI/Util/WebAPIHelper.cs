@@ -35,6 +35,10 @@ namespace ServisInfo_UI.Util
         {
             return client.GetAsync(route +"/"+action+ "/" + parameter1 + "/"+ parameter2).Result;
         }
+        public HttpResponseMessage GetActionResponse(string action, string parameter1, string parameter2, string parameter3)
+        {
+            return client.GetAsync(route + "/" + action + "/" + parameter1 + "/" + parameter2 + "/" + parameter3).Result;
+        }
 
         public HttpResponseMessage PostResponse(Object newObject)
         {

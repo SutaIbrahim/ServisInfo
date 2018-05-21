@@ -13,6 +13,9 @@ namespace ServisInfo_API.Models
     
     public partial class DetaljiUpita_Result
     {
+        public int UpitID { get; set; }
+        public int KlijentID { get; set; }
+        public int KompanijaUpitID { get; set; }
         public Nullable<System.DateTime> Datum_upita { get; set; }
         public string Marka_uredjaja { get; set; }
         public string Model_uredjaja { get; set; }

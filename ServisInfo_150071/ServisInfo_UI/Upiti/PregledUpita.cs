@@ -35,10 +35,9 @@ namespace ServisInfo_UI.Upiti
 
             ///    HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", OdDtm.ToString(),DoDtm.ToString());
 
-            //HttpResponseMessage response = UpitiService.GetActionResponse("SearchByDate",OdDtm.Value.ToString());
-            //HttpResponseMessage response = UpitiService.GetActionResponse("SearchByDate",OdDtm.Value.ToString(),DoDtm.Value.ToString());
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(),DoDtm.Value.ToUniversalTime().ToString());
 
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate","2","2"); // poslati datum za provjeru i kompanija id
+           // HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate","2","2"); // poslati datum za provjeru i kompanija id
 
 
 

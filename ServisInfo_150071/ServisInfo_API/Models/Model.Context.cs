@@ -21,6 +21,7 @@ namespace ServisInfo_API.Models
             : base("name=ServisInfoEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -60,17 +61,21 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Kompanije_GetByKorisnickoIme", mergeOption, korisnickoImeParameter);
         }
     
-        public virtual ObjectResult<KompanijaUpiti_Result> esp_KompanijeUpiti_GetByDate(string datum1, string datum2)
+        public virtual ObjectResult<KompanijaUpiti_Result> esp_KompanijeUpiti_GetByDate(Nullable<int> kompanijaID, Nullable<System.DateTime> datum1, Nullable<System.DateTime> datum2)
         {
-            var datum1Parameter = datum1 != null ?
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var datum1Parameter = datum1.HasValue ?
                 new ObjectParameter("Datum1", datum1) :
-                new ObjectParameter("Datum1", typeof(string));
+                new ObjectParameter("Datum1", typeof(System.DateTime));
     
-            var datum2Parameter = datum2 != null ?
+            var datum2Parameter = datum2.HasValue ?
                 new ObjectParameter("Datum2", datum2) :
-                new ObjectParameter("Datum2", typeof(string));
+                new ObjectParameter("Datum2", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaUpiti_Result>("esp_KompanijeUpiti_GetByDate", datum1Parameter, datum2Parameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaUpiti_Result>("esp_KompanijeUpiti_GetByDate", kompanijaIDParameter, datum1Parameter, datum2Parameter);
         }
     
         public virtual ObjectResult<DetaljiUpita_Result> esp_Upiti_GetDetalji(Nullable<int> upitID)
@@ -89,6 +94,20 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("Naziv", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije_Result>("esp_Kompanije_SearchByNaziv", nazivParameter);
+        }
+    
+        public virtual ObjectResult<Ponude_Result> esp_KompanijePonude_GetByDate()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Ponude_Result>("esp_KompanijePonude_GetByDate");
+        }
+    
+        public virtual ObjectResult<PonudaDetalji_Result> edp_Ponude_DetaljiByID(Nullable<int> ponudaID)
+        {
+            var ponudaIDParameter = ponudaID.HasValue ?
+                new ObjectParameter("PonudaID", ponudaID) :
+                new ObjectParameter("PonudaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PonudaDetalji_Result>("edp_Ponude_DetaljiByID", ponudaIDParameter);
         }
     }
 }

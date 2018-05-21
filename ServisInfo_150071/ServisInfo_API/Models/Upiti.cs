@@ -31,6 +31,7 @@ namespace ServisInfo_API.Models
         public int KlijentID { get; set; }
         public int ModelUredjajaID { get; set; }
         public Nullable<System.DateTime> Datum { get; set; }
+        public Nullable<int> KategorijaID { get; set; }
     
         public virtual Klijenti Klijenti { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -38,5 +39,6 @@ namespace ServisInfo_API.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ponude> Ponude { get; set; }
         public virtual ModeliUredjaja ModeliUredjaja { get; set; }
+        public virtual Kategorije Kategorije { get; set; }
     }
 }

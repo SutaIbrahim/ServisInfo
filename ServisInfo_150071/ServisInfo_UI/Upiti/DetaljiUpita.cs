@@ -94,13 +94,14 @@ namespace ServisInfo_UI.Upiti
 
         private void KreirajPonuduBtn_Click(object sender, EventArgs e)
         {
-            Ponude.KreirajPonudu frm= new Ponude.KreirajPonudu(UID, 1,1, OdLbl.Text,DoLbl.Text); // DODATI KLIJENT ID i KompanijaUpitID U PROCEDURU !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            Ponude.KreirajPonudu frm= new Ponude.KreirajPonudu(UID, u.KlijentID,u.KompanijaUpitID, OdLbl.Text,DoLbl.Text,u.Opis_kvara);
             frm.ShowDialog();
             this.Close();
+        }
 
-
-
-
+        private void NazadBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace ServisInfo_API.Models
         public Kategorije()
         {
             this.KompanijeKategorije = new HashSet<KompanijeKategorije>();
+            this.Upiti = new HashSet<Upiti>();
         }
     
         public int KategorijaID { get; set; }
@@ -25,5 +26,7 @@ namespace ServisInfo_API.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KompanijeKategorije> KompanijeKategorije { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Upiti> Upiti { get; set; }
     }
 }

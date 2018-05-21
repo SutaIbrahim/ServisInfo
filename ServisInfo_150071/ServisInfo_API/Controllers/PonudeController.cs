@@ -35,6 +35,18 @@ namespace ServisInfo_API.Controllers
             return Ok(ponude);
         }
 
+
+        [HttpGet]
+        [Route("api/Ponude/GetByDate/{datum?}/{datum2}")]
+        public List<Ponude_Result> GetByDate(string datum = "", string datum2 = "")
+        {
+
+            //DateTime Datum1 = DateTime.Parse(datum1);
+            // DateTime Datum2 = DateTime.Parse(datum2);
+            List<Ponude_Result> ponude = db.esp_KompanijePonude_GetByDate().ToList();
+
+            return ponude;
+        }
         // PUT: api/Ponude/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPonude(int id, Ponude ponude)

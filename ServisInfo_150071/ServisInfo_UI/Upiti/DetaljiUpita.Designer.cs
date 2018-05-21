@@ -242,6 +242,7 @@
             this.NazadBtn.TabIndex = 21;
             this.NazadBtn.Text = "Nazad";
             this.NazadBtn.UseVisualStyleBackColor = true;
+            this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
             // 
             // NeLbl
             // 

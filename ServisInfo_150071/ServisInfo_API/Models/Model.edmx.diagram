@@ -35,6 +35,7 @@
         <AssociationConnector Association="ServisInfoModel.FK__Ponude__UpitID__44FF419A" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__Servisi__PonudaI__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="ServisInfoModel.FK__Upiti__ModelUred__00200768" />
+        <AssociationConnector Association="ServisInfoModel.FK__Upiti__Kategorij__2739D489" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -50,14 +50,17 @@ namespace ServisInfo_API.App_Start
 
 
         [HttpGet]
-        [Route("api/Upiti/GetByDate/{datum?}/{datum2}")]
-        public List<KompanijaUpiti_Result> GetByDate(string datum="", string datum2="")
+        [Route("api/Upiti/GetByDate/{kompanijaID}/{datum}/{datum2}")]
+        public List<KompanijaUpiti_Result> GetByDate(string kompanijaID,string datum, string datum2)
         {
+            DateTime Datum = Convert.ToDateTime(datum);
+            DateTime Datum2 = Convert.ToDateTime(datum2);
 
-            datum="ehehhe";
-            //DateTime Datum1 = DateTime.Parse(datum1);
-            // DateTime Datum2 = DateTime.Parse(datum2);
-            List<KompanijaUpiti_Result> upiti= db.esp_KompanijeUpiti_GetByDate(null, null).ToList();
+
+
+            List<KompanijaUpiti_Result> upiti= db.esp_KompanijeUpiti_GetByDate(Convert.ToInt32(kompanijaID),Datum,Datum2).ToList();
+
+            //return upiti;
 
             return upiti;
         }
