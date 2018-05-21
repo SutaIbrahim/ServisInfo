@@ -75,6 +75,15 @@ namespace ServisInfo_API.App_Start
             return Ok(upit);
         }
 
+        [HttpGet]
+        [Route("api/Upiti/GetPonudaID/{KompanijaID}/{UpitID}")]
+        public IHttpActionResult GetPonudaID(string KompanijaID, string UpitID)
+        {
+
+            int? ponudaID = db.esp_Upiti_GetPonudaID(Convert.ToInt32(KompanijaID), Convert.ToInt32(UpitID)).FirstOrDefault();
+
+            return Ok(ponudaID);
+        }
 
         // PUT: api/Upiti/5
         [ResponseType(typeof(void))]

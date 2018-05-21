@@ -62,8 +62,9 @@ namespace ServisInfo_UI.Upiti
             DoLbl.Text = u.ZeljeniDatumPrijemaDo.ToString();
             KlijentLbl.Text = u.NazivKlijenta;
             OpisTxt.Text = u.Opis_kvara;
+            UpitIDLbl.Text = UID.ToString();
+            //naziv kategorije dodati!!! u.Kategorija ..!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-            //nazik kategorije dodati!!! u.Kategorija ..
             if (u.Odgovoreno == true)
             {
                 KreirajPonuduBtn.Hide();
@@ -72,6 +73,7 @@ namespace ServisInfo_UI.Upiti
             }
             else
             {
+                PregledajPonuduBtn.Hide();
                 DaLbl.Hide();
                 NeLbl.Text = "NE";
             }
@@ -103,6 +105,17 @@ namespace ServisInfo_UI.Upiti
         private void NazadBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PregledajPonuduBtn_Click(object sender, EventArgs e)
+        {
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetPonudaID", Global.prijavljenaKompanija.KompanijaID.ToString(), UID.ToString());
+
+            if (response.IsSuccessStatusCode)
+            {
+                Ponude.DetaljiPonude frm = new Ponude.DetaljiPonude(response.Content.ReadAsAsync<int>().Result);
+                frm.ShowDialog();
+            }
         }
     }
 }

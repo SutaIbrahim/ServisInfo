@@ -120,5 +120,18 @@ namespace ServisInfo_API.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PonudaDetalji_Result>("edp_Ponude_DetaljiByID", ponudaIDParameter);
         }
+    
+        public virtual ObjectResult<Nullable<int>> esp_Upiti_GetPonudaID(Nullable<int> kompanijaID, Nullable<int> upitID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var upitIDParameter = upitID.HasValue ?
+                new ObjectParameter("UpitID", upitID) :
+                new ObjectParameter("UpitID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("esp_Upiti_GetPonudaID", kompanijaIDParameter, upitIDParameter);
+        }
     }
 }

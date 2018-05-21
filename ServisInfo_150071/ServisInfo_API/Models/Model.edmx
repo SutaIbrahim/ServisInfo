@@ -381,6 +381,10 @@
         <Function Name="esp_Upiti_GetDetalji" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UpitID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_Upiti_GetPonudaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+          <Parameter Name="UpitID" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="ServisInfoModelStoreContainer">
           <EntitySet Name="Gradovi" EntityType="Self.Gradovi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kategorije" EntityType="Self.Kategorije" Schema="dbo" store:Type="Tables" />
@@ -946,6 +950,10 @@
           <FunctionImport Name="edp_Ponude_DetaljiByID" ReturnType="Collection(ServisInfoModel.PonudaDetalji_Result)">
           <Parameter Name="PonudaID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="esp_Upiti_GetPonudaID" ReturnType="Collection(Int32)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+            <Parameter Name="UpitID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1276,6 +1284,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Upiti_GetPonudaID" FunctionName="ServisInfoModel.Store.esp_Upiti_GetPonudaID" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -48,6 +48,17 @@ namespace ServisInfo_API.Controllers
 
             return ponude;
         }
+
+
+        [HttpGet]
+        [Route("api/Ponude/GetDetalji/{id}")]
+        public PonudaDetalji_Result GetDetalji(int id)
+        {
+            PonudaDetalji_Result ponuda = db.edp_Ponude_DetaljiByID(Convert.ToInt32(id)).FirstOrDefault();
+            
+            return ponuda;
+        }
+
         // PUT: api/Ponude/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPonude(int id, Ponude ponude)

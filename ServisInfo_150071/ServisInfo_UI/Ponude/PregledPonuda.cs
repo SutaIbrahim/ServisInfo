@@ -54,8 +54,8 @@ namespace ServisInfo_UI.Ponude
 
         private void PonudeGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DetaljiPonude frm = new DetaljiPonude();
-            frm.Show();
+            DetaljiPonude frm = new DetaljiPonude(Convert.ToInt32(PonudeGrid.SelectedRows[0].Cells[0].Value));
+            frm.ShowDialog();
             BindGrid();
         }
 
