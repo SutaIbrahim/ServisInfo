@@ -43,7 +43,7 @@
             this.OdustaniBtn = new System.Windows.Forms.Button();
             this.NajranijiPrijemDateTime = new System.Windows.Forms.DateTimePicker();
             this.KlijentLbl = new System.Windows.Forms.Label();
-            this.UpitLbl = new System.Windows.Forms.Label();
+            this.kategorijaLbl = new System.Windows.Forms.Label();
             this.CijenaTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -201,15 +201,15 @@
             this.KlijentLbl.TabIndex = 16;
             this.KlijentLbl.Text = "Klijent:";
             // 
-            // UpitLbl
+            // kategorijaLbl
             // 
-            this.UpitLbl.AutoSize = true;
-            this.UpitLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitLbl.Location = new System.Drawing.Point(193, 112);
-            this.UpitLbl.Name = "UpitLbl";
-            this.UpitLbl.Size = new System.Drawing.Size(46, 16);
-            this.UpitLbl.TabIndex = 17;
-            this.UpitLbl.Text = "Klijent:";
+            this.kategorijaLbl.AutoSize = true;
+            this.kategorijaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kategorijaLbl.Location = new System.Drawing.Point(193, 112);
+            this.kategorijaLbl.Name = "kategorijaLbl";
+            this.kategorijaLbl.Size = new System.Drawing.Size(46, 16);
+            this.kategorijaLbl.TabIndex = 17;
+            this.kategorijaLbl.Text = "Klijent:";
             // 
             // CijenaTxt
             // 
@@ -314,7 +314,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.CijenaTxt);
-            this.Controls.Add(this.UpitLbl);
+            this.Controls.Add(this.kategorijaLbl);
             this.Controls.Add(this.KlijentLbl);
             this.Controls.Add(this.NajranijiPrijemDateTime);
             this.Controls.Add(this.OdustaniBtn);
@@ -357,7 +357,7 @@
         private System.Windows.Forms.Button OdustaniBtn;
         private System.Windows.Forms.DateTimePicker NajranijiPrijemDateTime;
         private System.Windows.Forms.Label KlijentLbl;
-        private System.Windows.Forms.Label UpitLbl;
+        private System.Windows.Forms.Label kategorijaLbl;
         private System.Windows.Forms.TextBox CijenaTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

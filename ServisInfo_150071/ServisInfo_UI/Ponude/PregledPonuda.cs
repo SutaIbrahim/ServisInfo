@@ -26,18 +26,21 @@ namespace ServisInfo_UI.Ponude
 
         private void PregledPonuda_Load(object sender, EventArgs e)
         {
+            OdDtm.Value = DateTime.Now.AddDays(-30);
+            DoDtm.Value = DateTime.Now.AddDays(1);
+
             BindGrid();
         }
 
         private void BindGrid()
         {
 
-            HttpResponseMessage response = PonudeService.GetActionResponse("GetByDate", "2", "2"); // poslati datum za provjeru i kompanija id !!!!!!!!!!!!
+            HttpResponseMessage response = PonudeService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(),DoDtm.Value.ToUniversalTime().ToString()); 
 
 
             if (response.IsSuccessStatusCode)
             {
-                List<Ponude_Result> ponude = response.Content.ReadAsAsync<List<Ponude_Result>>().Result;
+                List<KompanijaPonude_Result> ponude = response.Content.ReadAsAsync<List<KompanijaPonude_Result>>().Result;
                 PonudeGrid.DataSource = ponude;
                 PonudeGrid.ClearSelection();
 
@@ -53,6 +56,11 @@ namespace ServisInfo_UI.Ponude
         {
             DetaljiPonude frm = new DetaljiPonude();
             frm.Show();
+            BindGrid();
+        }
+
+        private void PrikaziBtn_Click(object sender, EventArgs e)
+        {
             BindGrid();
         }
     }

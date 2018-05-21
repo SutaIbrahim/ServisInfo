@@ -37,13 +37,14 @@ namespace ServisInfo_API.Controllers
 
 
         [HttpGet]
-        [Route("api/Ponude/GetByDate/{datum?}/{datum2}")]
-        public List<Ponude_Result> GetByDate(string datum = "", string datum2 = "")
+        [Route("api/Ponude/GetByDate/{kompanijaID}/{datum}/{datum2}")]
+        public List<KompanijaPonude_Result> GetByDate(string kompanijaID,string datum, string datum2)
         {
+            DateTime Datum = Convert.ToDateTime(datum);
+            DateTime Datum2 = Convert.ToDateTime(datum2);
 
-            //DateTime Datum1 = DateTime.Parse(datum1);
-            // DateTime Datum2 = DateTime.Parse(datum2);
-            List<Ponude_Result> ponude = db.esp_KompanijePonude_GetByDate().ToList();
+
+            List<KompanijaPonude_Result> ponude = db.esp_KompanijePonude_GetByDate(Convert.ToInt32(kompanijaID), Datum, Datum2).ToList();
 
             return ponude;
         }

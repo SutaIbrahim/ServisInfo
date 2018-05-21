@@ -26,21 +26,15 @@ namespace ServisInfo_UI.Upiti
 
         private void PregledUpita_Load(object sender, EventArgs e)
         {
+            OdDtm.Value = DateTime.Now.AddDays(-30);
+            DoDtm.Value = DateTime.Now.AddDays(1);
+
             BindGrid();
         }
 
         private void BindGrid()
         {
-
-
-            ///    HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", OdDtm.ToString(),DoDtm.ToString());
-
             HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(),DoDtm.Value.ToUniversalTime().ToString());
-
-           // HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate","2","2"); // poslati datum za provjeru i kompanija id
-
-
-
 
             if (response.IsSuccessStatusCode)
             {

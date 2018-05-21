@@ -63,6 +63,7 @@ namespace ServisInfo_UI.Upiti
             KlijentLbl.Text = u.NazivKlijenta;
             OpisTxt.Text = u.Opis_kvara;
 
+            //nazik kategorije dodati!!! u.Kategorija ..
             if (u.Odgovoreno == true)
             {
                 KreirajPonuduBtn.Hide();
@@ -94,7 +95,7 @@ namespace ServisInfo_UI.Upiti
 
         private void KreirajPonuduBtn_Click(object sender, EventArgs e)
         {
-            Ponude.KreirajPonudu frm= new Ponude.KreirajPonudu(UID, u.KlijentID,u.KompanijaUpitID, OdLbl.Text,DoLbl.Text,u.Opis_kvara);
+            Ponude.KreirajPonudu frm= new Ponude.KreirajPonudu(UID, u.KlijentID,u.KompanijaUpitID, OdLbl.Text,DoLbl.Text,u.Opis_kvara,"Naziv kategorije !!! DODATI");
             frm.ShowDialog();
             this.Close();
         }

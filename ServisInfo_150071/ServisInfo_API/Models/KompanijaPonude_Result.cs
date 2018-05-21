@@ -11,7 +11,7 @@ namespace ServisInfo_API.Models
 {
     using System;
     
-    public partial class Ponude_Result
+    public partial class KompanijaPonude_Result
     {
         public int PonudaID { get; set; }
         public System.DateTime DatumKreiranja { get; set; }

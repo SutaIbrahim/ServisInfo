@@ -61,6 +61,7 @@
             this.PrikaziBtn.TabIndex = 13;
             this.PrikaziBtn.Text = "Prikaži";
             this.PrikaziBtn.UseVisualStyleBackColor = true;
+            this.PrikaziBtn.Click += new System.EventHandler(this.PrikaziBtn_Click);
             // 
             // DoDtm
             // 

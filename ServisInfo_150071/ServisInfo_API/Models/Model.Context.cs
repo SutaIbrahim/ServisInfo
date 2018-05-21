@@ -21,7 +21,6 @@ namespace ServisInfo_API.Models
             : base("name=ServisInfoEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -96,9 +95,21 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije_Result>("esp_Kompanije_SearchByNaziv", nazivParameter);
         }
     
-        public virtual ObjectResult<Ponude_Result> esp_KompanijePonude_GetByDate()
+        public virtual ObjectResult<KompanijaPonude_Result> esp_KompanijePonude_GetByDate(Nullable<int> kompanijaID, Nullable<System.DateTime> datum1, Nullable<System.DateTime> datum2)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Ponude_Result>("esp_KompanijePonude_GetByDate");
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var datum1Parameter = datum1.HasValue ?
+                new ObjectParameter("Datum1", datum1) :
+                new ObjectParameter("Datum1", typeof(System.DateTime));
+    
+            var datum2Parameter = datum2.HasValue ?
+                new ObjectParameter("Datum2", datum2) :
+                new ObjectParameter("Datum2", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaPonude_Result>("esp_KompanijePonude_GetByDate", kompanijaIDParameter, datum1Parameter, datum2Parameter);
         }
     
         public virtual ObjectResult<PonudaDetalji_Result> edp_Ponude_DetaljiByID(Nullable<int> ponudaID)

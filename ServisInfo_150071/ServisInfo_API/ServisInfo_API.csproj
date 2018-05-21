@@ -127,6 +127,9 @@
     <Compile Include="Models\Klijenti.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\KompanijaPonude_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\KompanijaUpiti_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -170,9 +173,6 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ponude.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Ponude_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Servisi.cs">

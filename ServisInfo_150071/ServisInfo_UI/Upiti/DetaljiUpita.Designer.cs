@@ -49,6 +49,8 @@
             this.NazadBtn = new System.Windows.Forms.Button();
             this.NeLbl = new System.Windows.Forms.Label();
             this.DaLbl = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.KategorijaLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -146,7 +148,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(427, 94);
+            this.label10.Location = new System.Drawing.Point(427, 121);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 15);
             this.label10.TabIndex = 9;
@@ -249,7 +251,7 @@
             this.NeLbl.AutoSize = true;
             this.NeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NeLbl.ForeColor = System.Drawing.Color.Red;
-            this.NeLbl.Location = new System.Drawing.Point(558, 94);
+            this.NeLbl.Location = new System.Drawing.Point(558, 121);
             this.NeLbl.Name = "NeLbl";
             this.NeLbl.Size = new System.Drawing.Size(52, 16);
             this.NeLbl.TabIndex = 22;
@@ -260,11 +262,31 @@
             this.DaLbl.AutoSize = true;
             this.DaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DaLbl.ForeColor = System.Drawing.Color.Green;
-            this.DaLbl.Location = new System.Drawing.Point(558, 94);
+            this.DaLbl.Location = new System.Drawing.Point(558, 121);
             this.DaLbl.Name = "DaLbl";
             this.DaLbl.Size = new System.Drawing.Size(52, 16);
             this.DaLbl.TabIndex = 23;
             this.DaLbl.Text = "label12";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(438, 94);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 15);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Kategorija:";
+            // 
+            // KategorijaLbl
+            // 
+            this.KategorijaLbl.AutoSize = true;
+            this.KategorijaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.KategorijaLbl.Location = new System.Drawing.Point(558, 93);
+            this.KategorijaLbl.Name = "KategorijaLbl";
+            this.KategorijaLbl.Size = new System.Drawing.Size(52, 16);
+            this.KategorijaLbl.TabIndex = 25;
+            this.KategorijaLbl.Text = "label12";
             // 
             // DetaljiUpita
             // 
@@ -272,6 +294,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(683, 585);
+            this.Controls.Add(this.KategorijaLbl);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.DaLbl);
             this.Controls.Add(this.NeLbl);
             this.Controls.Add(this.NazadBtn);
@@ -324,5 +348,7 @@
         private System.Windows.Forms.Button NazadBtn;
         private System.Windows.Forms.Label NeLbl;
         private System.Windows.Forms.Label DaLbl;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label KategorijaLbl;
     }
 }

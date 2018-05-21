@@ -28,6 +28,8 @@ namespace ServisInfo_UI.Ponude
         private string Od { get; set; }
         private string Do { get; set; }
         private string OpisKvara { get; set; }
+        private string Kategorija { get; set; }
+
 
 
         private Klijenti Klijent { get; set; }
@@ -36,7 +38,7 @@ namespace ServisInfo_UI.Ponude
 
 
 
-        public KreirajPonudu(int upitID, int klijentID, int kuID, string Od, string Do, string opisKvara)
+        public KreirajPonudu(int upitID, int klijentID, int kuID, string Od, string Do, string opisKvara,string kategorija)
         {
             UpitID = upitID;
             KlijentID = klijentID;
@@ -44,6 +46,8 @@ namespace ServisInfo_UI.Ponude
             this.Od = Od;
             this.Do = Do;
             OpisKvara = opisKvara;
+            Kategorija = kategorija;
+
 
             InitializeComponent();
         }
@@ -65,6 +69,8 @@ namespace ServisInfo_UI.Ponude
             OdLbl.Text = Od;
             DoLbl.Text = Do;
             PitanjeTxt.Text = OpisKvara;
+            kategorijaLbl.Text = Kategorija;
+
         }
 
         private void KreirajBtn_Click(object sender, EventArgs e)
