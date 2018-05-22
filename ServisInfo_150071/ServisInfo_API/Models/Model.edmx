@@ -367,6 +367,11 @@
           <Parameter Name="Datum1" Type="datetime" Mode="In" />
           <Parameter Name="Datum2" Type="datetime" Mode="In" />
         </Function>
+        <Function Name="esp_KompanijeServisi_GetByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+          <Parameter Name="Datum1" Type="datetime" Mode="In" />
+          <Parameter Name="Datum2" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="esp_KompanijeUpiti_GetByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="Datum1" Type="datetime" Mode="In" />
@@ -954,6 +959,11 @@
             <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
             <Parameter Name="UpitID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="esp_KompanijeServisi_GetByDate" ReturnType="Collection(ServisInfoModel.KompanijaServisi_Result)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+            <Parameter Name="Datum1" Mode="In" Type="DateTime" />
+            <Parameter Name="Datum2" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1041,6 +1051,17 @@
           <Property Type="String" Name="Klijent_ime_i_prezime" Nullable="false" MaxLength="101" />
           <Property Type="Int32" Name="KategorijaID" Nullable="true" />
           <Property Type="String" Name="Naziv" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="KompanijaServisi_Result">
+          <Property Type="Int32" Name="ServisID" Nullable="false" />
+          <Property Type="Int32" Name="PonudaID" Nullable="false" />
+          <Property Type="Int32" Name="UpitID" Nullable="false" />
+          <Property Type="Int32" Name="KlijentID" Nullable="false" />
+          <Property Type="String" Name="Ime_klijenta" Nullable="false" MaxLength="101" />
+          <Property Type="Decimal" Name="Završna_cijena" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="DatumPocetka" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DatumPrihvatanja" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="DatumZavršetka" Nullable="true" Precision="23" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1285,6 +1306,21 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_Upiti_GetPonudaID" FunctionName="ServisInfoModel.Store.esp_Upiti_GetPonudaID" />
+          <FunctionImportMapping FunctionImportName="esp_KompanijeServisi_GetByDate" FunctionName="ServisInfoModel.Store.esp_KompanijeServisi_GetByDate">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.KompanijaServisi_Result">
+                <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+                <ScalarProperty Name="PonudaID" ColumnName="PonudaID" />
+                <ScalarProperty Name="UpitID" ColumnName="UpitID" />
+                <ScalarProperty Name="KlijentID" ColumnName="KlijentID" />
+                <ScalarProperty Name="Ime_klijenta" ColumnName="Ime klijenta" />
+                <ScalarProperty Name="Završna_cijena" ColumnName="Završna cijena" />
+                <ScalarProperty Name="DatumPocetka" ColumnName="DatumPocetka" />
+                <ScalarProperty Name="DatumPrihvatanja" ColumnName="DatumPrihvatanja" />
+                <ScalarProperty Name="DatumZavršetka" ColumnName="DatumZavršetka" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

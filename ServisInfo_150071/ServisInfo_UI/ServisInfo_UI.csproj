@@ -91,6 +91,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servisi\DetaljiServisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servisi\DetaljiServisa.Designer.cs">
+      <DependentUpon>DetaljiServisa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servisi\PregledServisa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Servisi\DetaljiServisa.resx">
+      <DependentUpon>DetaljiServisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servisi\PregledServisa.resx">
+      <DependentUpon>PregledServisa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Upiti\DetaljiUpita.resx">
       <DependentUpon>DetaljiUpita.cs</DependentUpon>
     </EmbeddedResource>

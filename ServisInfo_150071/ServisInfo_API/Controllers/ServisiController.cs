@@ -35,6 +35,18 @@ namespace ServisInfo_API.Controllers
             return Ok(servisi);
         }
 
+        [HttpGet]
+        [Route("api/Servisi/GetByDate/{kompanijaID}/{datum}/{datum2}")]
+        public List<KompanijaServisi_Result> GetByDate(string kompanijaID, string datum, string datum2)
+        {
+            DateTime Datum = Convert.ToDateTime(datum);
+            DateTime Datum2 = Convert.ToDateTime(datum2);
+
+
+            List<KompanijaServisi_Result> servisi = db.esp_KompanijeServisi_GetByDate(Convert.ToInt32(kompanijaID), Datum, Datum2).ToList();
+
+            return servisi;
+        }
         // PUT: api/Servisi/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutServisi(int id, Servisi servisi)
