@@ -66,6 +66,11 @@ namespace ServisInfo_UI.Ponude
             }
 
         }
+    
+        private void NazadBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -81,10 +86,7 @@ namespace ServisInfo_UI.Ponude
 
         }
 
-        private void NazadBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+   
 
         private void label10_Click(object sender, EventArgs e)
         {
@@ -110,5 +112,7 @@ namespace ServisInfo_UI.Ponude
         {
 
         }
+
+    
     }
 }

@@ -99,7 +99,7 @@
             // 
             // NazadBtn
             // 
-            this.NazadBtn.Location = new System.Drawing.Point(23, 545);
+            this.NazadBtn.Location = new System.Drawing.Point(23, 530);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(149, 37);
             this.NazadBtn.TabIndex = 44;
@@ -308,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 635);
+            this.ClientSize = new System.Drawing.Size(660, 597);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CijenaLbl);
             this.Controls.Add(this.label4);

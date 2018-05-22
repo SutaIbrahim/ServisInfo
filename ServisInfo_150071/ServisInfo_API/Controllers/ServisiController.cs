@@ -47,6 +47,17 @@ namespace ServisInfo_API.Controllers
 
             return servisi;
         }
+
+        [HttpGet]
+        [Route("api/Servisi/GetDetalji/{id}")]
+        public IHttpActionResult GetDetalji(string id)
+        {
+
+            ServisDetalji_Result servis = db.esp_Servisi_DetaljiByID(Convert.ToInt32(id)).FirstOrDefault();
+
+            return Ok(servis);
+        }
+
         // PUT: api/Servisi/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutServisi(int id, Servisi servisi)

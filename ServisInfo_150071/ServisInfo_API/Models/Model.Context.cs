@@ -150,5 +150,14 @@ namespace ServisInfo_API.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaServisi_Result>("esp_KompanijeServisi_GetByDate", kompanijaIDParameter, datum1Parameter, datum2Parameter);
         }
+    
+        public virtual ObjectResult<ServisDetalji_Result> esp_Servisi_DetaljiByID(Nullable<int> servisID)
+        {
+            var servisIDParameter = servisID.HasValue ?
+                new ObjectParameter("ServisID", servisID) :
+                new ObjectParameter("ServisID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ServisDetalji_Result>("esp_Servisi_DetaljiByID", servisIDParameter);
+        }
     }
 }
