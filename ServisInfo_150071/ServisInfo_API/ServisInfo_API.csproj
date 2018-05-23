@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\GradoviController.cs" />
+    <Compile Include="Controllers\KategorijeController.cs" />
     <Compile Include="Controllers\KlijentiController.cs" />
     <Compile Include="Controllers\KompanijeUpitiController.cs" />
     <Compile Include="Controllers\PonudeController.cs" />

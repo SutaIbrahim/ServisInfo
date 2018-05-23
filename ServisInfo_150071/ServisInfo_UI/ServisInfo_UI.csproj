@@ -52,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracija\AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracija\AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracija\DodajKategoriju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracija\DodajKategoriju.Designer.cs">
+      <DependentUpon>DodajKategoriju.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracija\DodajKompaniju.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     </Compile>
     <Compile Include="Util\UIHelper.cs" />
     <Compile Include="Util\WebAPIHelper.cs" />
+    <EmbeddedResource Include="Administracija\AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracija\DodajKategoriju.resx">
+      <DependentUpon>DodajKategoriju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracija\DodajKompaniju.resx">
       <DependentUpon>DodajKompaniju.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +215,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mobile_maintenance-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComputerAdministrator_Male_Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

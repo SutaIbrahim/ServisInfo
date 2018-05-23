@@ -111,5 +111,15 @@ namespace ServisInfo_UI
             frm.ShowDialog();
             BindGrid();
         }
+
+        private void izmjenaKategorijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OdjavaBtn_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

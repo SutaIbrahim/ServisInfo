@@ -18,13 +18,18 @@ namespace ServisInfo_UI
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm());
 
-             //Application.Run(new Ponude.PregledPonuda());
+            //Application.Run(new Ponude.PregledPonuda());
 
             LoginForm frm = new LoginForm();
             frm.ShowDialog();
 
             if (frm.DialogResult == DialogResult.OK)
-                Application.Run(new MainForm());
+            {
+                if (Global.prijavljenaKompanija.Naziv == "Admin")
+                    Application.Run(new Administracija.AdminPage());
+                else
+                    Application.Run(new MainForm());
+            }
         }
     }
 }

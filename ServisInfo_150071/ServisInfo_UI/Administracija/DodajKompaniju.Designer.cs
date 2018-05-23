@@ -43,8 +43,9 @@
             this.KorisickoImeTxt = new System.Windows.Forms.TextBox();
             this.LozinkaTxt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.GradoviCmb = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.NazadBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -184,6 +185,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Osnovni podaci";
             // 
+            // GradoviCmb
+            // 
+            this.GradoviCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GradoviCmb.FormattingEnabled = true;
+            this.GradoviCmb.ItemHeight = 16;
+            this.GradoviCmb.Location = new System.Drawing.Point(149, 127);
+            this.GradoviCmb.Name = "GradoviCmb";
+            this.GradoviCmb.Size = new System.Drawing.Size(157, 24);
+            this.GradoviCmb.TabIndex = 18;
+            this.GradoviCmb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.LozinkaTxt);
@@ -198,22 +210,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Korisnicki podaci";
             // 
-            // GradoviCmb
+            // NazadBtn
             // 
-            this.GradoviCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.GradoviCmb.FormattingEnabled = true;
-            this.GradoviCmb.ItemHeight = 16;
-            this.GradoviCmb.Location = new System.Drawing.Point(149, 127);
-            this.GradoviCmb.Name = "GradoviCmb";
-            this.GradoviCmb.Size = new System.Drawing.Size(157, 24);
-            this.GradoviCmb.TabIndex = 18;
-            this.GradoviCmb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.NazadBtn.Location = new System.Drawing.Point(23, 359);
+            this.NazadBtn.Name = "NazadBtn";
+            this.NazadBtn.Size = new System.Drawing.Size(126, 38);
+            this.NazadBtn.TabIndex = 18;
+            this.NazadBtn.Text = "Nazad";
+            this.NazadBtn.UseVisualStyleBackColor = true;
+            this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
             // 
             // DodajKompaniju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 466);
+            this.Controls.Add(this.NazadBtn);
             this.Controls.Add(this.TelefonTxt);
             this.Controls.Add(this.EmailTxt);
             this.Controls.Add(this.AdresaTxt);
@@ -256,5 +268,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox GradoviCmb;
+        private System.Windows.Forms.Button NazadBtn;
     }
 }

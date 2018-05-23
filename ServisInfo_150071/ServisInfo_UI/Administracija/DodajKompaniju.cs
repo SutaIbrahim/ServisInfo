@@ -85,5 +85,10 @@ namespace ServisInfo_UI.Administracija
         {
 
         }
+
+        private void NazadBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
