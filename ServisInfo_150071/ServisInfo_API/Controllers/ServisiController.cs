@@ -36,14 +36,14 @@ namespace ServisInfo_API.Controllers
         }
 
         [HttpGet]
-        [Route("api/Servisi/GetByDate/{kompanijaID}/{datum}/{datum2}")]
-        public List<KompanijaServisi_Result> GetByDate(string kompanijaID, string datum, string datum2)
+        [Route("api/Servisi/GetByDate/{kompanijaID}/{datum}/{datum2}/{status}")]
+        public List<KompanijaServisi_Result> GetByDate(string kompanijaID, string datum, string datum2,string status)
         {
             DateTime Datum = Convert.ToDateTime(datum);
             DateTime Datum2 = Convert.ToDateTime(datum2);
 
 
-            List<KompanijaServisi_Result> servisi = db.esp_KompanijeServisi_GetByDate(Convert.ToInt32(kompanijaID), Datum, Datum2).ToList();
+            List<KompanijaServisi_Result> servisi = db.esp_KompanijeServisi_GetByDate(Convert.ToInt32(kompanijaID), Datum, Datum2,status).ToList();
 
             return servisi;
         }
@@ -56,6 +56,13 @@ namespace ServisInfo_API.Controllers
             ServisDetalji_Result servis = db.esp_Servisi_DetaljiByID(Convert.ToInt32(id)).FirstOrDefault();
 
             return Ok(servis);
+        }
+
+        [HttpGet]
+        [Route("api/Servisi/GetCountUtoku/{id}")]
+        public int? GetCountUtoku(string id)
+        {
+            return db.esp_ServisiUTokuCount(Convert.ToInt32(id)).FirstOrDefault();
         }
 
         // PUT: api/Servisi/5

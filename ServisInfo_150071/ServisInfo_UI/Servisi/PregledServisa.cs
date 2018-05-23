@@ -29,11 +29,41 @@ namespace ServisInfo_UI.Servisi
         {
             OdDtm.Value = DateTime.Now.AddDays(-30);
             DoDtm.Value = DateTime.Now.AddDays(1);
+            UtokuChck.Checked = true;
+            ZavrseniChck.Checked = true;
+
             BindGrid();
         }
-        private void BindGrid()
+
+        private string getStatus()
         {
-            HttpResponseMessage response = ServisiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
+            string status = "";
+
+            if (UtokuChck.Checked && ZavrseniChck.Checked)
+            {
+                status = "sve";
+            }
+            else if (UtokuChck.Checked && ZavrseniChck.Checked == false)
+            {
+                status = "utoku";
+            }
+            else if (UtokuChck.Checked == false && ZavrseniChck.Checked == true)
+            {
+                status = "zavrseni";
+            }
+            else
+            {
+                status = "nista";
+            }
+
+            return status;
+        }
+        private void BindGrid() 
+        {
+
+            string status = getStatus();
+
+            HttpResponseMessage response = ServisiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString(),status);
 
             if (response.IsSuccessStatusCode)
             {
@@ -47,10 +77,8 @@ namespace ServisInfo_UI.Servisi
                 MessageBox.Show("Error Code" +
                 response.StatusCode + " : Message - " + response.ReasonPhrase);
             }
-
-
-
         }
+
 
         private void DetaljiBtn_Click(object sender, EventArgs e)
         {

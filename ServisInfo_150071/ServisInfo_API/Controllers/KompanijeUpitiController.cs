@@ -35,6 +35,13 @@ namespace ServisInfo_API.Controllers
             return Ok(kompanijeUpiti);
         }
 
+        [HttpGet]
+        [Route("api/KompanijeUpiti/GetCountNeodgovoreni/{kompanijaID}")]
+        public int? GetByDate(string kompanijaID)
+        {
+            return db.esp_NeodgovoreniUpiti(Convert.ToInt32(kompanijaID)).FirstOrDefault();
+        }
+
         // PUT: api/KompanijeUpiti/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutKompanijeUpiti(int id, KompanijeUpiti kompanijeUpiti)

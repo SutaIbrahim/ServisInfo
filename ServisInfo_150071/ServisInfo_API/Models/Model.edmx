@@ -371,6 +371,7 @@
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="Datum1" Type="datetime" Mode="In" />
           <Parameter Name="Datum2" Type="datetime" Mode="In" />
+          <Parameter Name="Status" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="esp_KompanijeUpiti_GetByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
@@ -382,6 +383,12 @@
         </Function>
         <Function Name="esp_Kompanije_SearchByNaziv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="esp_NeodgovoreniUpiti" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="esp_ServisiUTokuCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
         </Function>
         <Function Name="esp_Servisi_DetaljiByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ServisID" Type="int" Mode="In" />
@@ -966,9 +973,16 @@
             <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
             <Parameter Name="Datum1" Mode="In" Type="DateTime" />
             <Parameter Name="Datum2" Mode="In" Type="DateTime" />
+            <Parameter Name="Status" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="esp_Servisi_DetaljiByID" ReturnType="Collection(ServisInfoModel.ServisDetalji_Result)">
-            <Parameter Name="ServisID" Mode="In" Type="Int32" />
+          <Parameter Name="ServisID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_NeodgovoreniUpiti" ReturnType="Collection(Int32)">
+          <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_ServisiUTokuCount" ReturnType="Collection(Int32)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -1361,6 +1375,8 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_NeodgovoreniUpiti" FunctionName="ServisInfoModel.Store.esp_NeodgovoreniUpiti" />
+          <FunctionImportMapping FunctionImportName="esp_ServisiUTokuCount" FunctionName="ServisInfoModel.Store.esp_ServisiUTokuCount" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

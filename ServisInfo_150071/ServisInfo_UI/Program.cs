@@ -24,7 +24,7 @@ namespace ServisInfo_UI
             frm.ShowDialog();
 
             if (frm.DialogResult == DialogResult.OK)
-                Application.Run(new Servisi.PregledServisa());
+                Application.Run(new MainForm());
         }
     }
 }

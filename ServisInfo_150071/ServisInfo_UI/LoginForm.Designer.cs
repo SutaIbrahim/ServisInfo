@@ -34,13 +34,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.korisnickoImeInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // odustaniButton
             // 
             this.odustaniButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.odustaniButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.odustaniButton.Location = new System.Drawing.Point(161, 86);
+            this.odustaniButton.Location = new System.Drawing.Point(148, 218);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(81, 30);
             this.odustaniButton.TabIndex = 17;
@@ -52,7 +55,7 @@
             // potvrdiButton
             // 
             this.potvrdiButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.potvrdiButton.Location = new System.Drawing.Point(248, 86);
+            this.potvrdiButton.Location = new System.Drawing.Point(235, 218);
             this.potvrdiButton.Name = "potvrdiButton";
             this.potvrdiButton.Size = new System.Drawing.Size(81, 30);
             this.potvrdiButton.TabIndex = 16;
@@ -63,7 +66,7 @@
             // 
             // lozinkaInput
             // 
-            this.lozinkaInput.Location = new System.Drawing.Point(122, 49);
+            this.lozinkaInput.Location = new System.Drawing.Point(109, 181);
             this.lozinkaInput.Name = "lozinkaInput";
             this.lozinkaInput.PasswordChar = '*';
             this.lozinkaInput.Size = new System.Drawing.Size(207, 20);
@@ -74,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 52);
+            this.label2.Location = new System.Drawing.Point(56, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 14;
@@ -82,7 +85,7 @@
             // 
             // korisnickoImeInput
             // 
-            this.korisnickoImeInput.Location = new System.Drawing.Point(122, 23);
+            this.korisnickoImeInput.Location = new System.Drawing.Point(109, 155);
             this.korisnickoImeInput.Name = "korisnickoImeInput";
             this.korisnickoImeInput.Size = new System.Drawing.Size(207, 20);
             this.korisnickoImeInput.TabIndex = 13;
@@ -91,18 +94,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 26);
+            this.label1.Location = new System.Drawing.Point(25, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Korisničko ime:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ServisInfo_UI.Properties.Resources.mobile_maintenance_256;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(59, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 108);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(199, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 25);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "ServisInfo";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(390, 144);
+            this.ClientSize = new System.Drawing.Size(346, 261);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.odustaniButton);
             this.Controls.Add(this.potvrdiButton);
             this.Controls.Add(this.lozinkaInput);
@@ -113,6 +138,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava na sistem";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +152,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox korisnickoImeInput;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

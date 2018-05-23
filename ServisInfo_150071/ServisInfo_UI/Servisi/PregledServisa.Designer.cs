@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.OdDtm = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.ZavrseniChck = new System.Windows.Forms.CheckBox();
+            this.UtokuChck = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ServisiGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // 
             // PrikaziBtn
             // 
-            this.PrikaziBtn.Location = new System.Drawing.Point(192, 170);
+            this.PrikaziBtn.Location = new System.Drawing.Point(253, 170);
             this.PrikaziBtn.Name = "PrikaziBtn";
             this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
             this.PrikaziBtn.TabIndex = 13;
@@ -121,11 +123,33 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Izabrani raspon za prikaz:";
             // 
+            // ZavrseniChck
+            // 
+            this.ZavrseniChck.AutoSize = true;
+            this.ZavrseniChck.Location = new System.Drawing.Point(169, 210);
+            this.ZavrseniChck.Name = "ZavrseniChck";
+            this.ZavrseniChck.Size = new System.Drawing.Size(67, 17);
+            this.ZavrseniChck.TabIndex = 17;
+            this.ZavrseniChck.Text = "Zavrseni";
+            this.ZavrseniChck.UseVisualStyleBackColor = true;
+            // 
+            // UtokuChck
+            // 
+            this.UtokuChck.AutoSize = true;
+            this.UtokuChck.Location = new System.Drawing.Point(169, 173);
+            this.UtokuChck.Name = "UtokuChck";
+            this.UtokuChck.Size = new System.Drawing.Size(58, 17);
+            this.UtokuChck.TabIndex = 16;
+            this.UtokuChck.Text = "U toku";
+            this.UtokuChck.UseVisualStyleBackColor = true;
+            // 
             // PregledServisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 594);
+            this.Controls.Add(this.ZavrseniChck);
+            this.Controls.Add(this.UtokuChck);
             this.Controls.Add(this.DetaljiBtn);
             this.Controls.Add(this.ServisiGrid);
             this.Controls.Add(this.PrikaziBtn);
@@ -154,5 +178,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker OdDtm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox ZavrseniChck;
+        private System.Windows.Forms.CheckBox UtokuChck;
     }
 }

@@ -28,12 +28,14 @@ namespace ServisInfo_UI.Upiti
         {
             OdDtm.Value = DateTime.Now.AddDays(-30);
             DoDtm.Value = DateTime.Now.AddDays(1);
-
+      
             BindGrid();
         }
 
         private void BindGrid()
         {
+           
+
             HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(),DoDtm.Value.ToUniversalTime().ToString());
 
             if (response.IsSuccessStatusCode)

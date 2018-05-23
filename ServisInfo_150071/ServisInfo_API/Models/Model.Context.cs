@@ -134,7 +134,7 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("esp_Upiti_GetPonudaID", kompanijaIDParameter, upitIDParameter);
         }
     
-        public virtual ObjectResult<KompanijaServisi_Result> esp_KompanijeServisi_GetByDate(Nullable<int> kompanijaID, Nullable<System.DateTime> datum1, Nullable<System.DateTime> datum2)
+        public virtual ObjectResult<KompanijaServisi_Result> esp_KompanijeServisi_GetByDate(Nullable<int> kompanijaID, Nullable<System.DateTime> datum1, Nullable<System.DateTime> datum2, string status)
         {
             var kompanijaIDParameter = kompanijaID.HasValue ?
                 new ObjectParameter("KompanijaID", kompanijaID) :
@@ -148,7 +148,11 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("Datum2", datum2) :
                 new ObjectParameter("Datum2", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaServisi_Result>("esp_KompanijeServisi_GetByDate", kompanijaIDParameter, datum1Parameter, datum2Parameter);
+            var statusParameter = status != null ?
+                new ObjectParameter("Status", status) :
+                new ObjectParameter("Status", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaServisi_Result>("esp_KompanijeServisi_GetByDate", kompanijaIDParameter, datum1Parameter, datum2Parameter, statusParameter);
         }
     
         public virtual ObjectResult<ServisDetalji_Result> esp_Servisi_DetaljiByID(Nullable<int> servisID)
@@ -158,6 +162,24 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("ServisID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ServisDetalji_Result>("esp_Servisi_DetaljiByID", servisIDParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> esp_NeodgovoreniUpiti(Nullable<int> kompanijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("esp_NeodgovoreniUpiti", kompanijaIDParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> esp_ServisiUTokuCount(Nullable<int> kompanijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("esp_ServisiUTokuCount", kompanijaIDParameter);
         }
     }
 }

@@ -92,7 +92,7 @@
             // 
             // PrikaziBtn
             // 
-            this.PrikaziBtn.Location = new System.Drawing.Point(188, 73);
+            this.PrikaziBtn.Location = new System.Drawing.Point(169, 73);
             this.PrikaziBtn.Name = "PrikaziBtn";
             this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
             this.PrikaziBtn.TabIndex = 5;
