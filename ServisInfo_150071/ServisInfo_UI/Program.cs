@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +19,18 @@ namespace ServisInfo_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+
+            #region Culture set
+            // koristeno za potrebe promjene formata datuma (pogledati app.config(UI) i web.config(API)
+            CultureInfo culture = new CultureInfo(ConfigurationManager.AppSettings["DefaultCulture"]);
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
+            //
+            # endregion
+
+
+
             //Application.Run(new LoginForm());
 
             //Application.Run(new Ponude.PregledPonuda());
