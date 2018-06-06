@@ -33,5 +33,17 @@ namespace ServisInfo_UI.Administracija
             Administracija.DodajKategoriju frm = new Administracija.DodajKategoriju();
             frm.ShowDialog();
         }
+
+        private void PregledKompanijaBtn_Click(object sender, EventArgs e)
+        {
+            Administracija.PregledKompanija frm = new Administracija.PregledKompanija();
+            frm.ShowDialog();
+        }
+
+        private void pregledKategorijaBtn_Click(object sender, EventArgs e)
+        {
+            Administracija.PregledKategorija frm = new Administracija.PregledKategorija();
+            frm.ShowDialog();
+        }
     }
 }

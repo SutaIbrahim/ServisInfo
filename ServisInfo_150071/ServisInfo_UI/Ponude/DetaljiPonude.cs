@@ -17,6 +17,8 @@ namespace ServisInfo_UI.Ponude
     public partial class DetaljiPonude : Form
     {
         private WebAPIHelper PonudeService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.PonudeRoute);
+        private WebAPIHelper ServisiService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.ServisiRoute);
+
 
         private int PonudaID { get; set; }
         private PonudaDetalji_Result p { get; set; }
@@ -58,13 +60,14 @@ namespace ServisInfo_UI.Ponude
             {
                 DaLbl.Text = "DA";
                 NeLbl.Hide();
+                servisBtn.Show();
             }
             else
             {
                 DaLbl.Hide();
                 NeLbl.Text = "NE";
+                servisBtn.Hide();
             }
-
         }
     
         private void NazadBtn_Click(object sender, EventArgs e)
@@ -113,6 +116,12 @@ namespace ServisInfo_UI.Ponude
 
         }
 
-    
+        private void servisBtn_Click(object sender, EventArgs e)
+        {
+            HttpResponseMessage response = ServisiService.GetActionResponse("GetServisByPonudaID", PonudaID.ToString());
+
+                Servisi.DetaljiServisa frm=new Servisi.DetaljiServisa(response.Content.ReadAsAsync<int>().Result);
+                frm.ShowDialog();
+        }
     }
 }

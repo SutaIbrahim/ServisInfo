@@ -91,7 +91,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.OdustaniBtn);
             this.Controls.Add(this.SacuvajBtn);
+            this.MaximumSize = new System.Drawing.Size(440, 519);
+            this.MinimumSize = new System.Drawing.Size(440, 519);
             this.Name = "IzmjenaKategorija";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "IzmjenaKategorija";
             this.Load += new System.EventHandler(this.IzmjenaKategorija_Load);
             this.ResumeLayout(false);

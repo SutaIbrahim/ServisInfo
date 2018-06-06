@@ -54,6 +54,7 @@
             this.PitanjeTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DaniSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SatiSelect)).BeginInit();
             this.SuspendLayout();
@@ -165,7 +166,7 @@
             // 
             // KreirajBtn
             // 
-            this.KreirajBtn.Location = new System.Drawing.Point(492, 685);
+            this.KreirajBtn.Location = new System.Drawing.Point(481, 689);
             this.KreirajBtn.Name = "KreirajBtn";
             this.KreirajBtn.Size = new System.Drawing.Size(117, 48);
             this.KreirajBtn.TabIndex = 13;
@@ -175,7 +176,7 @@
             // 
             // OdustaniBtn
             // 
-            this.OdustaniBtn.Location = new System.Drawing.Point(361, 703);
+            this.OdustaniBtn.Location = new System.Drawing.Point(349, 703);
             this.OdustaniBtn.Name = "OdustaniBtn";
             this.OdustaniBtn.Size = new System.Drawing.Size(116, 30);
             this.OdustaniBtn.TabIndex = 14;
@@ -300,11 +301,22 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "Opis kvara:";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label15.Location = new System.Drawing.Point(189, 23);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(276, 37);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "Kreiranje ponude";
+            // 
             // KreirajPonudu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 753);
+            this.ClientSize = new System.Drawing.Size(627, 759);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.PitanjeTxt);
             this.Controls.Add(this.DoLbl);
@@ -330,7 +342,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
+            this.MaximumSize = new System.Drawing.Size(643, 798);
+            this.MinimumSize = new System.Drawing.Size(643, 798);
             this.Name = "KreirajPonudu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KreirajPonudu";
             this.Load += new System.EventHandler(this.KreirajPonudu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DaniSelect)).EndInit();
@@ -368,5 +383,6 @@
         private System.Windows.Forms.TextBox PitanjeTxt;
         private System.Windows.Forms.Label label13;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label15;
     }
 }

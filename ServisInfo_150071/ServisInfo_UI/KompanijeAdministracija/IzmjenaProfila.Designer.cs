@@ -164,7 +164,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nazivInput);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(390, 428);
+            this.MinimumSize = new System.Drawing.Size(390, 428);
             this.Name = "IzmjenaProfila";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "IzmjenaProfila";
             this.Load += new System.EventHandler(this.IzmjenaProfila_Load);
             this.ResumeLayout(false);

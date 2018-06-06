@@ -362,6 +362,9 @@
         <Function Name="edp_Ponude_DetaljiByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="PonudaID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_GetServisIDbyPonudaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PonudaID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_KompanijeKategorije_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="KategorijaID" Type="int" Mode="In" />
@@ -1015,6 +1018,9 @@
             <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
             <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="esp_GetServisIDbyPonudaID" ReturnType="Collection(Int32)">
+            <Parameter Name="PonudaID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1410,6 +1416,7 @@
           <FunctionImportMapping FunctionImportName="esp_ServisiUTokuCount" FunctionName="ServisInfoModel.Store.esp_ServisiUTokuCount" />
           <FunctionImportMapping FunctionImportName="esp_KompanijeUpdate" FunctionName="ServisInfoModel.Store.esp_KompanijeUpdate" />
           <FunctionImportMapping FunctionImportName="esp_KompanijeKategorije_Insert" FunctionName="ServisInfoModel.Store.esp_KompanijeKategorije_Insert" />
+          <FunctionImportMapping FunctionImportName="esp_GetServisIDbyPonudaID" FunctionName="ServisInfoModel.Store.esp_GetServisIDbyPonudaID" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

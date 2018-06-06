@@ -52,6 +52,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.CijenaLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.servisBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // KategorijaLbl
@@ -79,7 +80,7 @@
             this.DaLbl.AutoSize = true;
             this.DaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DaLbl.ForeColor = System.Drawing.Color.Green;
-            this.DaLbl.Location = new System.Drawing.Point(546, 170);
+            this.DaLbl.Location = new System.Drawing.Point(546, 171);
             this.DaLbl.Name = "DaLbl";
             this.DaLbl.Size = new System.Drawing.Size(52, 16);
             this.DaLbl.TabIndex = 46;
@@ -304,11 +305,22 @@
             this.label5.Text = "KM";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // servisBtn
+            // 
+            this.servisBtn.Location = new System.Drawing.Point(487, 530);
+            this.servisBtn.Name = "servisBtn";
+            this.servisBtn.Size = new System.Drawing.Size(145, 37);
+            this.servisBtn.TabIndex = 57;
+            this.servisBtn.Text = "Otvori kreirani servis";
+            this.servisBtn.UseVisualStyleBackColor = true;
+            this.servisBtn.Click += new System.EventHandler(this.servisBtn_Click);
+            // 
             // DetaljiPonude
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 597);
+            this.Controls.Add(this.servisBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CijenaLbl);
             this.Controls.Add(this.label4);
@@ -333,7 +345,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(676, 636);
+            this.MinimumSize = new System.Drawing.Size(676, 636);
             this.Name = "DetaljiPonude";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiPonude";
             this.Load += new System.EventHandler(this.DetaljiPonude_Load);
             this.ResumeLayout(false);
@@ -367,5 +382,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label CijenaLbl;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button servisBtn;
     }
 }

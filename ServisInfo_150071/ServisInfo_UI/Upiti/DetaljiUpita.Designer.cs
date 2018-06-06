@@ -70,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(463, 98);
+            this.label2.Location = new System.Drawing.Point(463, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 1;
@@ -121,7 +121,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(58, 213);
+            this.label7.Location = new System.Drawing.Point(58, 212);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 15);
             this.label7.TabIndex = 6;
@@ -202,7 +202,7 @@
             // 
             this.KlijentLbl.AutoSize = true;
             this.KlijentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KlijentLbl.Location = new System.Drawing.Point(558, 98);
+            this.KlijentLbl.Location = new System.Drawing.Point(558, 101);
             this.KlijentLbl.Name = "KlijentLbl";
             this.KlijentLbl.Size = new System.Drawing.Size(52, 16);
             this.KlijentLbl.TabIndex = 16;
@@ -285,11 +285,12 @@
             // 
             this.KategorijaLbl.AutoSize = true;
             this.KategorijaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KategorijaLbl.Location = new System.Drawing.Point(558, 126);
+            this.KategorijaLbl.Location = new System.Drawing.Point(558, 127);
             this.KategorijaLbl.Name = "KategorijaLbl";
             this.KategorijaLbl.Size = new System.Drawing.Size(52, 16);
             this.KategorijaLbl.TabIndex = 25;
             this.KategorijaLbl.Text = "label12";
+            this.KategorijaLbl.Click += new System.EventHandler(this.KategorijaLbl_Click);
             // 
             // UpitIDLbl
             // 
@@ -354,7 +355,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(701, 648);
+            this.MinimumSize = new System.Drawing.Size(701, 648);
             this.Name = "DetaljiUpita";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiUpita";
             this.Load += new System.EventHandler(this.DetaljiUpita_Load);
             this.ResumeLayout(false);

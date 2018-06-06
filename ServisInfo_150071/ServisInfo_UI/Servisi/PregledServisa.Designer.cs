@@ -133,6 +133,7 @@
             this.ZavrseniChck.TabIndex = 17;
             this.ZavrseniChck.Text = "Zavrseni";
             this.ZavrseniChck.UseVisualStyleBackColor = true;
+            this.ZavrseniChck.CheckedChanged += new System.EventHandler(this.ZavrseniChck_CheckedChanged);
             // 
             // UtokuChck
             // 
@@ -143,6 +144,7 @@
             this.UtokuChck.TabIndex = 16;
             this.UtokuChck.Text = "U toku";
             this.UtokuChck.UseVisualStyleBackColor = true;
+            this.UtokuChck.CheckedChanged += new System.EventHandler(this.UtokuChck_CheckedChanged);
             // 
             // label4
             // 
@@ -169,7 +171,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OdDtm);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(1007, 528);
+            this.MinimumSize = new System.Drawing.Size(1007, 528);
             this.Name = "PregledServisa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PregledServisa";
             this.Load += new System.EventHandler(this.PregledServisa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ServisiGrid)).EndInit();

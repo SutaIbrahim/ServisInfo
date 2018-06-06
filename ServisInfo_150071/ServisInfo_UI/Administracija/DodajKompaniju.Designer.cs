@@ -42,10 +42,10 @@
             this.KorisickoImeTxt = new System.Windows.Forms.TextBox();
             this.LozinkaTxt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TelefonTxt = new System.Windows.Forms.MaskedTextBox();
             this.GradoviCmb = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.NazadBtn = new System.Windows.Forms.Button();
-            this.TelefonTxt = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -154,17 +154,19 @@
             // 
             // KorisickoImeTxt
             // 
+            this.KorisickoImeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.KorisickoImeTxt.Location = new System.Drawing.Point(149, 49);
             this.KorisickoImeTxt.Name = "KorisickoImeTxt";
-            this.KorisickoImeTxt.Size = new System.Drawing.Size(157, 26);
+            this.KorisickoImeTxt.Size = new System.Drawing.Size(157, 20);
             this.KorisickoImeTxt.TabIndex = 14;
             // 
             // LozinkaTxt
             // 
+            this.LozinkaTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LozinkaTxt.Location = new System.Drawing.Point(473, 50);
             this.LozinkaTxt.Name = "LozinkaTxt";
             this.LozinkaTxt.PasswordChar = '*';
-            this.LozinkaTxt.Size = new System.Drawing.Size(157, 26);
+            this.LozinkaTxt.Size = new System.Drawing.Size(157, 20);
             this.LozinkaTxt.TabIndex = 15;
             // 
             // groupBox1
@@ -179,14 +181,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Osnovni podaci";
             // 
+            // TelefonTxt
+            // 
+            this.TelefonTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TelefonTxt.Location = new System.Drawing.Point(473, 34);
+            this.TelefonTxt.Mask = "(999) 000-000";
+            this.TelefonTxt.Name = "TelefonTxt";
+            this.TelefonTxt.Size = new System.Drawing.Size(157, 20);
+            this.TelefonTxt.TabIndex = 54;
+            // 
             // GradoviCmb
             // 
-            this.GradoviCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GradoviCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GradoviCmb.FormattingEnabled = true;
-            this.GradoviCmb.ItemHeight = 16;
+            this.GradoviCmb.ItemHeight = 13;
             this.GradoviCmb.Location = new System.Drawing.Point(149, 127);
             this.GradoviCmb.Name = "GradoviCmb";
-            this.GradoviCmb.Size = new System.Drawing.Size(157, 24);
+            this.GradoviCmb.Size = new System.Drawing.Size(157, 21);
             this.GradoviCmb.TabIndex = 18;
             this.GradoviCmb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -214,15 +225,6 @@
             this.NazadBtn.UseVisualStyleBackColor = true;
             this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
             // 
-            // TelefonTxt
-            // 
-            this.TelefonTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TelefonTxt.Location = new System.Drawing.Point(473, 34);
-            this.TelefonTxt.Mask = "(999) 000-000";
-            this.TelefonTxt.Name = "TelefonTxt";
-            this.TelefonTxt.Size = new System.Drawing.Size(157, 20);
-            this.TelefonTxt.TabIndex = 54;
-            // 
             // DodajKompaniju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,7 +242,10 @@
             this.Controls.Add(this.DodajBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.MaximumSize = new System.Drawing.Size(715, 505);
+            this.MinimumSize = new System.Drawing.Size(715, 505);
             this.Name = "DodajKompaniju";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DodajKompaniju";
             this.Load += new System.EventHandler(this.DodajKompaniju_Load);
             this.groupBox1.ResumeLayout(false);

@@ -58,6 +58,18 @@ namespace ServisInfo_API.Controllers
             return Ok(servis);
         }
 
+
+        [HttpGet]
+        [Route("api/Servisi/GetServisByPonudaID/{id}")]
+        public IHttpActionResult GetServisIDByPonudaID(string id)
+        {
+
+            int servisID = Convert.ToInt32(  db.esp_GetServisIDbyPonudaID(Convert.ToInt32(id)).FirstOrDefault());
+
+            return Ok(servisID);
+        }
+
+
         [HttpGet]
         [Route("api/Servisi/GetCountUtoku/{id}")]
         public int? GetCountUtoku(string id)

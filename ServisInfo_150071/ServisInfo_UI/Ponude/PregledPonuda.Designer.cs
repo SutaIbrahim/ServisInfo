@@ -146,7 +146,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OdDtm);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(1007, 528);
+            this.MinimumSize = new System.Drawing.Size(1007, 528);
             this.Name = "PregledPonuda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PregledPonuda";
             this.Load += new System.EventHandler(this.PregledPonuda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PonudeGrid)).EndInit();

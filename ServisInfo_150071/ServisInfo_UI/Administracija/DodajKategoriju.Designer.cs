@@ -88,7 +88,9 @@
             this.Controls.Add(this.NazivTxt);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(393, 173);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(393, 173);
             this.Name = "DodajKategoriju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje nove kategorije";

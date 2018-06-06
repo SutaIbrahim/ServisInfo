@@ -117,5 +117,10 @@ namespace ServisInfo_UI.Upiti
                 frm.ShowDialog();
             }
         }
+
+        private void KategorijaLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

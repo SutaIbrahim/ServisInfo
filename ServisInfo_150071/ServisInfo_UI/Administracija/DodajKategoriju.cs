@@ -41,8 +41,7 @@ namespace ServisInfo_UI.Administracija
             {
                 string msg = response.ReasonPhrase;
 
-                MessageBox.Show("Error Code" +
-                response.StatusCode + " : Message - " + msg);
+                MessageBox.Show("Kategorija vec postoji");
             }
         }
 

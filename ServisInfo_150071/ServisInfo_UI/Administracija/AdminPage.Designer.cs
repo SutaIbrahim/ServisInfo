@@ -37,6 +37,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.OdjavaBtn = new System.Windows.Forms.Button();
+            this.PregledKompanijaBtn = new System.Windows.Forms.Button();
+            this.pregledKategorijaBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +76,9 @@
             // KompanijaBtn
             // 
             this.KompanijaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KompanijaBtn.Location = new System.Drawing.Point(55, 264);
+            this.KompanijaBtn.Location = new System.Drawing.Point(24, 333);
             this.KompanijaBtn.Name = "KompanijaBtn";
-            this.KompanijaBtn.Size = new System.Drawing.Size(224, 101);
+            this.KompanijaBtn.Size = new System.Drawing.Size(222, 59);
             this.KompanijaBtn.TabIndex = 17;
             this.KompanijaBtn.Text = "Dodaj kompaniju";
             this.KompanijaBtn.UseVisualStyleBackColor = true;
@@ -85,9 +87,9 @@
             // KategorijaBtn
             // 
             this.KategorijaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KategorijaBtn.Location = new System.Drawing.Point(530, 264);
+            this.KategorijaBtn.Location = new System.Drawing.Point(560, 333);
             this.KategorijaBtn.Name = "KategorijaBtn";
-            this.KategorijaBtn.Size = new System.Drawing.Size(224, 101);
+            this.KategorijaBtn.Size = new System.Drawing.Size(222, 59);
             this.KategorijaBtn.TabIndex = 18;
             this.KategorijaBtn.Text = "Dodaj kategoriju";
             this.KategorijaBtn.UseVisualStyleBackColor = true;
@@ -131,11 +133,35 @@
             this.OdjavaBtn.UseVisualStyleBackColor = true;
             this.OdjavaBtn.Click += new System.EventHandler(this.OdjavaBtn_Click);
             // 
+            // PregledKompanijaBtn
+            // 
+            this.PregledKompanijaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PregledKompanijaBtn.Location = new System.Drawing.Point(24, 264);
+            this.PregledKompanijaBtn.Name = "PregledKompanijaBtn";
+            this.PregledKompanijaBtn.Size = new System.Drawing.Size(222, 59);
+            this.PregledKompanijaBtn.TabIndex = 41;
+            this.PregledKompanijaBtn.Text = "Pregled kompanija";
+            this.PregledKompanijaBtn.UseVisualStyleBackColor = true;
+            this.PregledKompanijaBtn.Click += new System.EventHandler(this.PregledKompanijaBtn_Click);
+            // 
+            // pregledKategorijaBtn
+            // 
+            this.pregledKategorijaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pregledKategorijaBtn.Location = new System.Drawing.Point(560, 264);
+            this.pregledKategorijaBtn.Name = "pregledKategorijaBtn";
+            this.pregledKategorijaBtn.Size = new System.Drawing.Size(222, 59);
+            this.pregledKategorijaBtn.TabIndex = 42;
+            this.pregledKategorijaBtn.Text = "Pregled kategorija";
+            this.pregledKategorijaBtn.UseVisualStyleBackColor = true;
+            this.pregledKategorijaBtn.Click += new System.EventHandler(this.pregledKategorijaBtn_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 438);
+            this.Controls.Add(this.pregledKategorijaBtn);
+            this.Controls.Add(this.PregledKompanijaBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OdjavaBtn);
@@ -145,7 +171,10 @@
             this.Controls.Add(this.KategorijaBtn);
             this.Controls.Add(this.KompanijaBtn);
             this.Controls.Add(this.pictureBox1);
+            this.MaximumSize = new System.Drawing.Size(822, 477);
+            this.MinimumSize = new System.Drawing.Size(822, 477);
             this.Name = "AdminPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -165,5 +194,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button OdjavaBtn;
+        private System.Windows.Forms.Button PregledKompanijaBtn;
+        private System.Windows.Forms.Button pregledKategorijaBtn;
     }
 }

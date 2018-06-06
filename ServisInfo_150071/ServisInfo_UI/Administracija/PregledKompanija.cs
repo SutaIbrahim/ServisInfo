@@ -38,6 +38,10 @@ namespace ServisInfo_UI.Administracija
                 List<Kompanije_Result> kompanije = response.Content.ReadAsAsync<List<Kompanije_Result>>().Result;
                 KompanijeGrid.DataSource = kompanije;
                 KompanijeGrid.ClearSelection();
+
+                KompanijeGrid.Columns[0].HeaderText = "ID kompanije";
+                KompanijeGrid.Columns[1].HeaderText = "Naziv kompanije";
+
             }
             else
             {

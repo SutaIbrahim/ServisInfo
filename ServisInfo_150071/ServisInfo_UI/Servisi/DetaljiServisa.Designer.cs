@@ -286,7 +286,7 @@
             // 
             // PonudaBtn
             // 
-            this.PonudaBtn.Location = new System.Drawing.Point(293, 129);
+            this.PonudaBtn.Location = new System.Drawing.Point(287, 129);
             this.PonudaBtn.Name = "PonudaBtn";
             this.PonudaBtn.Size = new System.Drawing.Size(87, 27);
             this.PonudaBtn.TabIndex = 41;
@@ -323,7 +323,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ZapocniBtn);
+            this.MaximumSize = new System.Drawing.Size(801, 758);
+            this.MinimumSize = new System.Drawing.Size(801, 758);
             this.Name = "DetaljiServisa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiServisa";
             this.ResumeLayout(false);
             this.PerformLayout();

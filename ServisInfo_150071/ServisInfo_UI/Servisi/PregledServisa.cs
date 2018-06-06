@@ -81,7 +81,6 @@ namespace ServisInfo_UI.Servisi
 
         private void LayoutSet()
         {
-
             ServisiGrid.Columns["ServisID"].Visible = false;
             ServisiGrid.Columns["PonudaID"].Visible = false;
             ServisiGrid.Columns["UpitID"].Visible = false;
@@ -98,7 +97,6 @@ namespace ServisInfo_UI.Servisi
             ServisiGrid.Columns["DatumPocetka"].DisplayIndex = 6;
             ServisiGrid.Columns["DatumZavršetka"].DisplayIndex = 7;
             ServisiGrid.Columns["Završna_Cijena"].DisplayIndex = 8;
-
         }
 
 
@@ -119,6 +117,16 @@ namespace ServisInfo_UI.Servisi
         }
 
         private void PrikaziBtn_Click(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
+
+        private void UtokuChck_CheckedChanged(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
+
+        private void ZavrseniChck_CheckedChanged(object sender, EventArgs e)
         {
             BindGrid();
         }
