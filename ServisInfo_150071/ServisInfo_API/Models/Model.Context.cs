@@ -181,5 +181,64 @@ namespace ServisInfo_API.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("esp_ServisiUTokuCount", kompanijaIDParameter);
         }
+    
+        public virtual ObjectResult<string> esp_GetKategorijeByKompanijaID(Nullable<int> kompanijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("esp_GetKategorijeByKompanijaID", kompanijaIDParameter);
+        }
+    
+        public virtual int esp_KompanijeUpdate(Nullable<int> kompanijaID, string naziv, string adresa, string email, string telefon, string korisnickoIme, string lozinkaSalt, string lozinkaHash)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var nazivParameter = naziv != null ?
+                new ObjectParameter("Naziv", naziv) :
+                new ObjectParameter("Naziv", typeof(string));
+    
+            var adresaParameter = adresa != null ?
+                new ObjectParameter("Adresa", adresa) :
+                new ObjectParameter("Adresa", typeof(string));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var telefonParameter = telefon != null ?
+                new ObjectParameter("Telefon", telefon) :
+                new ObjectParameter("Telefon", typeof(string));
+    
+            var korisnickoImeParameter = korisnickoIme != null ?
+                new ObjectParameter("KorisnickoIme", korisnickoIme) :
+                new ObjectParameter("KorisnickoIme", typeof(string));
+    
+            var lozinkaSaltParameter = lozinkaSalt != null ?
+                new ObjectParameter("LozinkaSalt", lozinkaSalt) :
+                new ObjectParameter("LozinkaSalt", typeof(string));
+    
+            var lozinkaHashParameter = lozinkaHash != null ?
+                new ObjectParameter("LozinkaHash", lozinkaHash) :
+                new ObjectParameter("LozinkaHash", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("esp_KompanijeUpdate", kompanijaIDParameter, nazivParameter, adresaParameter, emailParameter, telefonParameter, korisnickoImeParameter, lozinkaSaltParameter, lozinkaHashParameter);
+        }
+    
+        public virtual int esp_KompanijeKategorije_Insert(Nullable<int> kompanijaID, Nullable<int> kategorijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var kategorijaIDParameter = kategorijaID.HasValue ?
+                new ObjectParameter("KategorijaID", kategorijaID) :
+                new ObjectParameter("KategorijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("esp_KompanijeKategorije_Insert", kompanijaIDParameter, kategorijaIDParameter);
+        }
     }
 }

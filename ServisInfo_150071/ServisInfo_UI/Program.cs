@@ -40,9 +40,9 @@ namespace ServisInfo_UI
 
             if (frm.DialogResult == DialogResult.OK)
             {
-                if (Global.prijavljenaKompanija.Naziv == "Admin")
-                    Application.Run(new Administracija.AdminPage());
-                else
+                //if (Global.prijavljenaKompanija.Naziv == "Admin")
+                //    Application.Run(new Administracija.AdminPage());
+                //else
                     Application.Run(new MainForm());
             }
         }

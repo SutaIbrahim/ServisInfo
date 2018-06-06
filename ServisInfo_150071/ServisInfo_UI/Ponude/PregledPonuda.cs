@@ -35,7 +35,7 @@ namespace ServisInfo_UI.Ponude
         private void BindGrid()
         {
 
-            HttpResponseMessage response = PonudeService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(),DoDtm.Value.ToUniversalTime().ToString()); 
+            HttpResponseMessage response = PonudeService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
 
 
             if (response.IsSuccessStatusCode)
@@ -43,6 +43,9 @@ namespace ServisInfo_UI.Ponude
                 List<KompanijaPonude_Result> ponude = response.Content.ReadAsAsync<List<KompanijaPonude_Result>>().Result;
                 PonudeGrid.DataSource = ponude;
                 PonudeGrid.ClearSelection();
+                PonudeGrid.Columns["PonudaID"].Visible = false;
+
+
 
             }
             else
@@ -62,6 +65,22 @@ namespace ServisInfo_UI.Ponude
         private void PrikaziBtn_Click(object sender, EventArgs e)
         {
             BindGrid();
+        }
+
+        private void DetaljiBtn_Click(object sender, EventArgs e)
+        {
+
+            if (PonudeGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati ponudu");
+            }
+            else
+            {
+                DetaljiPonude frm = new DetaljiPonude(Convert.ToInt32(PonudeGrid.SelectedRows[0].Cells[0].Value));
+                frm.ShowDialog();
+                BindGrid();
+            }
+
         }
     }
 }

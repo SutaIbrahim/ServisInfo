@@ -39,13 +39,13 @@
             this.NazivTxt = new System.Windows.Forms.TextBox();
             this.AdresaTxt = new System.Windows.Forms.TextBox();
             this.EmailTxt = new System.Windows.Forms.TextBox();
-            this.TelefonTxt = new System.Windows.Forms.TextBox();
             this.KorisickoImeTxt = new System.Windows.Forms.TextBox();
             this.LozinkaTxt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.GradoviCmb = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.NazadBtn = new System.Windows.Forms.Button();
+            this.TelefonTxt = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -152,13 +152,6 @@
             this.EmailTxt.Size = new System.Drawing.Size(157, 20);
             this.EmailTxt.TabIndex = 12;
             // 
-            // TelefonTxt
-            // 
-            this.TelefonTxt.Location = new System.Drawing.Point(496, 69);
-            this.TelefonTxt.Name = "TelefonTxt";
-            this.TelefonTxt.Size = new System.Drawing.Size(157, 20);
-            this.TelefonTxt.TabIndex = 13;
-            // 
             // KorisickoImeTxt
             // 
             this.KorisickoImeTxt.Location = new System.Drawing.Point(149, 49);
@@ -176,6 +169,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TelefonTxt);
             this.groupBox1.Controls.Add(this.GradoviCmb);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(23, 35);
@@ -220,13 +214,21 @@
             this.NazadBtn.UseVisualStyleBackColor = true;
             this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
             // 
+            // TelefonTxt
+            // 
+            this.TelefonTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TelefonTxt.Location = new System.Drawing.Point(473, 34);
+            this.TelefonTxt.Mask = "(999) 000-000";
+            this.TelefonTxt.Name = "TelefonTxt";
+            this.TelefonTxt.Size = new System.Drawing.Size(157, 20);
+            this.TelefonTxt.TabIndex = 54;
+            // 
             // DodajKompaniju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 466);
             this.Controls.Add(this.NazadBtn);
-            this.Controls.Add(this.TelefonTxt);
             this.Controls.Add(this.EmailTxt);
             this.Controls.Add(this.AdresaTxt);
             this.Controls.Add(this.NazivTxt);
@@ -242,6 +244,7 @@
             this.Text = "DodajKompaniju";
             this.Load += new System.EventHandler(this.DodajKompaniju_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -262,12 +265,12 @@
         private System.Windows.Forms.TextBox NazivTxt;
         private System.Windows.Forms.TextBox AdresaTxt;
         private System.Windows.Forms.TextBox EmailTxt;
-        private System.Windows.Forms.TextBox TelefonTxt;
         private System.Windows.Forms.TextBox KorisickoImeTxt;
         private System.Windows.Forms.TextBox LozinkaTxt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox GradoviCmb;
         private System.Windows.Forms.Button NazadBtn;
+        private System.Windows.Forms.MaskedTextBox TelefonTxt;
     }
 }

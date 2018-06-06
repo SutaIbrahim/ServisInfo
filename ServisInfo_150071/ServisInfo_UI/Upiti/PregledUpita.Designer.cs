@@ -37,6 +37,7 @@
             this.PrikaziBtn = new System.Windows.Forms.Button();
             this.UpitiGrid = new System.Windows.Forms.DataGridView();
             this.DetaljiBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UpitiGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +116,7 @@
             // 
             // DetaljiBtn
             // 
-            this.DetaljiBtn.Location = new System.Drawing.Point(852, 102);
+            this.DetaljiBtn.Location = new System.Drawing.Point(852, 88);
             this.DetaljiBtn.Name = "DetaljiBtn";
             this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
             this.DetaljiBtn.TabIndex = 7;
@@ -123,11 +124,21 @@
             this.DetaljiBtn.UseVisualStyleBackColor = true;
             this.DetaljiBtn.Click += new System.EventHandler(this.DetaljiBtn_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(824, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "*potrebno je oznaciti zeljeni upit";
+            // 
             // PregledUpita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 489);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.DetaljiBtn);
             this.Controls.Add(this.UpitiGrid);
             this.Controls.Add(this.PrikaziBtn);
@@ -136,7 +147,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OdDtm);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(1007, 528);
+            this.MinimumSize = new System.Drawing.Size(1007, 528);
             this.Name = "PregledUpita";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PregledUpita";
             this.Load += new System.EventHandler(this.PregledUpita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpitiGrid)).EndInit();
@@ -156,5 +170,6 @@
         private System.Windows.Forms.Button PrikaziBtn;
         private System.Windows.Forms.DataGridView UpitiGrid;
         private System.Windows.Forms.Button DetaljiBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

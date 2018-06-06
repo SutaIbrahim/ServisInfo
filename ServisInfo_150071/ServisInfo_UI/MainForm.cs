@@ -67,7 +67,6 @@ namespace ServisInfo_UI
             DatumLbl.Text = DateTime.Now.ToShortDateString();
 
 
-
         }
 
         private void pregledUpitaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,7 +99,7 @@ namespace ServisInfo_UI
 
         private void PonudeBtn_Click(object sender, EventArgs e)
         {
-            Servisi.PregledServisa frm = new Servisi.PregledServisa();
+            Ponude.PregledPonuda frm = new Ponude.PregledPonuda();
             frm.ShowDialog();
             BindGrid();
         }
@@ -114,12 +113,30 @@ namespace ServisInfo_UI
 
         private void izmjenaKategorijaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            KompanijeAdministracija.IzmjenaKategorija frm = new KompanijeAdministracija.IzmjenaKategorija();
+            frm.ShowDialog();
+            BindGrid();
         }
 
         private void OdjavaBtn_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void KategorijeBtn_Click(object sender, EventArgs e)
+        {
+            KompanijeAdministracija.IzmjenaKategorija frm = new KompanijeAdministracija.IzmjenaKategorija();
+            frm.ShowDialog();
+            BindGrid();
+        }
+
+        private void uredjivanjeProfilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KompanijeAdministracija.IzmjenaProfila frm = new KompanijeAdministracija.IzmjenaProfila();
+            frm.ShowDialog();
+
+            BindGrid();
+
         }
     }
 }

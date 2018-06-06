@@ -52,7 +52,7 @@ namespace ServisInfo_API.Controllers
 
         [Route("api/Kompanije/SearchByNaziv/{naziv?}")]
         [HttpGet]
-        public IHttpActionResult SearchByNaziv(string naziv="")
+        public IHttpActionResult SearchByNaziv(string naziv = "")
         {
 
             List<Kompanije_Result> kompanije = db.esp_Kompanije_SearchByNaziv(naziv).ToList();
@@ -68,35 +68,71 @@ namespace ServisInfo_API.Controllers
 
         // PUT: api/Kompanije/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutKompanije(int id, Kompanije kompanije)
+        public IHttpActionResult PutKompanije(int id, Kompanije k)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            if (id != kompanije.KompanijaID)
+            if (id != k.KompanijaID)
             {
                 return BadRequest();
             }
 
-            db.Entry(kompanije).State = EntityState.Modified;
+            db.esp_KompanijeUpdate(id, k.Naziv, k.Adresa, k.Email, k.Telefon, k.KorisickoIme, k.LozinkaSalt, k.LozinkaHash);
 
-            try
+            if (k.kategorije != null)
             {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!KompanijeExists(id))
+
+                List<KompanijeKategorije> Kategorije = db.KompanijeKategorije.Where(y => y.KompanijaID == k.KompanijaID).ToList(); //trenutne kategorije
+
+                List<int> trenutneKategorije = new List<int>();
+                // dodavanje ID trenutnih kategorija
+                foreach (var i in Kategorije)
                 {
-                    return NotFound();
+                    trenutneKategorije.Add(i.KategorijaID);
                 }
-                else
+
+                List<int> isteKategorije = new List<int>();
+                // dodavanje ID istih kategorija
+                foreach (var ku in Kategorije)
                 {
-                    throw;
+                    foreach (var u in k.kategorije)
+                    {
+                        if (ku.KategorijaID == u.KategorijaID)
+                        {
+                            isteKategorije.Add(ku.KategorijaID);
+                        }
+                    }
+                }
+
+                foreach (var u in k.kategorije)
+                {
+                    if (isteKategorije.Contains(u.KategorijaID))
+                    {
+                    }
+                    else
+                    {
+                        db.esp_KompanijeKategorije_Insert(k.KompanijaID, u.KategorijaID);
+                        isteKategorije.Add(u.KategorijaID); // dodavanje ID -a kako bi kasnije provjerili koje uloge treba brisati
+                    }
+                }
+
+                //brisanje neoznacenih uloga
+                foreach (var x in trenutneKategorije)
+                {
+                    if (isteKategorije.Contains(x))
+                    {
+                    }
+                    else
+                    {
+                        KompanijeKategorije zaBrisanje = db.KompanijeKategorije.Where(y => y.KompanijaID == k.KompanijaID && y.KategorijaID == x).FirstOrDefault();
+                        db.KompanijeKategorije.Remove(zaBrisanje);
+                        db.SaveChanges();
+                    }
                 }
             }
+
 
             return StatusCode(HttpStatusCode.NoContent);
         }

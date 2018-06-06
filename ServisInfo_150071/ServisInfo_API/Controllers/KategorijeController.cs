@@ -19,7 +19,7 @@ namespace ServisInfo_API.Controllers
         // GET: api/Kategorije
         public IQueryable<Kategorije> GetKategorije()
         {
-            return db.Kategorije;
+            return db.Kategorije.OrderBy(x=>x.KategorijaID);
         }
 
         // GET: api/Kategorije/5
@@ -33,6 +33,16 @@ namespace ServisInfo_API.Controllers
             }
 
             return Ok(kategorije);
+        }
+
+
+        [HttpGet]
+        [Route("api/Kategorije/GetKategorijeByKompanijaID/{id}")]
+        public IHttpActionResult GetKategorijeByKompanijaID(int id)
+        {
+            List<KompanijeKategorije> lista = db.KompanijeKategorije.Where(x => x.KompanijaID == id).OrderBy(p=>p.KategorijaID).ToList();
+
+            return Ok(lista);
         }
 
         // PUT: api/Kategorije/5

@@ -140,6 +140,7 @@
     <Compile Include="Models\Kompanije.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\KompanijeExtension.cs" />
     <Compile Include="Models\KompanijeKategorije.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

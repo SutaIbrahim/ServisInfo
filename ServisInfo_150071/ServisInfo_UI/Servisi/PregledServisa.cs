@@ -20,7 +20,7 @@ namespace ServisInfo_UI.Servisi
 
         public PregledServisa()
         {
-          
+
             InitializeComponent();
         }
 
@@ -58,19 +58,19 @@ namespace ServisInfo_UI.Servisi
 
             return status;
         }
-        private void BindGrid() 
+        private void BindGrid()
         {
 
             string status = getStatus();
 
-            HttpResponseMessage response = ServisiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString(),status);
+            HttpResponseMessage response = ServisiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString(), status);
 
             if (response.IsSuccessStatusCode)
             {
                 List<KompanijaServisi_Result> upiti = response.Content.ReadAsAsync<List<KompanijaServisi_Result>>().Result;
                 ServisiGrid.DataSource = upiti;
                 ServisiGrid.ClearSelection();
-
+                LayoutSet();
             }
             else
             {
@@ -79,12 +79,43 @@ namespace ServisInfo_UI.Servisi
             }
         }
 
+        private void LayoutSet()
+        {
+
+            ServisiGrid.Columns["ServisID"].Visible = false;
+            ServisiGrid.Columns["PonudaID"].Visible = false;
+            ServisiGrid.Columns["UpitID"].Visible = false;
+            ServisiGrid.Columns["KlijentID"].Visible = false;
+
+            ServisiGrid.Columns["Ime_klijenta"].HeaderText = "Ime klijenta";
+            ServisiGrid.Columns["Završna_Cijena"].HeaderText = "Zavrsna cijena";
+            ServisiGrid.Columns["DatumPocetka"].HeaderText = "Datum pocetka servisa";
+            ServisiGrid.Columns["DatumPrihvatanja"].HeaderText = "Datum prihvatanja servisa";
+            ServisiGrid.Columns["DatumZavršetka"].HeaderText = "Datum zavrsetka servisa";
+
+
+            ServisiGrid.Columns["DatumPrihvatanja"].DisplayIndex = 5;
+            ServisiGrid.Columns["DatumPocetka"].DisplayIndex = 6;
+            ServisiGrid.Columns["DatumZavršetka"].DisplayIndex = 7;
+            ServisiGrid.Columns["Završna_Cijena"].DisplayIndex = 8;
+
+        }
+
+
 
         private void DetaljiBtn_Click(object sender, EventArgs e)
         {
-            DetaljiServisa frm = new DetaljiServisa(Convert.ToInt32(ServisiGrid.SelectedRows[0].Cells[0].Value));
-            frm.ShowDialog();
-            BindGrid();
+
+            if (ServisiGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati servis");
+            }
+            else
+            {
+                DetaljiServisa frm = new DetaljiServisa(Convert.ToInt32(ServisiGrid.SelectedRows[0].Cells[0].Value));
+                frm.ShowDialog();
+                BindGrid();
+            }
         }
 
         private void PrikaziBtn_Click(object sender, EventArgs e)

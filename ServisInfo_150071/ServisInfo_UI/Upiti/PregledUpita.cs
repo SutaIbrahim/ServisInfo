@@ -28,21 +28,26 @@ namespace ServisInfo_UI.Upiti
         {
             OdDtm.Value = DateTime.Now.AddDays(-30);
             DoDtm.Value = DateTime.Now.AddDays(1);
-      
+
             BindGrid();
         }
 
         private void BindGrid()
         {
-           
 
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(),DoDtm.Value.ToUniversalTime().ToString());
+
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
 
             if (response.IsSuccessStatusCode)
             {
                 List<KompanijaUpiti_Result> upiti = response.Content.ReadAsAsync<List<KompanijaUpiti_Result>>().Result;
                 UpitiGrid.DataSource = upiti;
                 UpitiGrid.ClearSelection();
+                UpitiGrid.Columns[0].Visible = false;
+                UpitiGrid.Columns[1].Visible = false;
+                UpitiGrid.Columns[2].Visible = false;
+
+
 
             }
             else
@@ -71,9 +76,16 @@ namespace ServisInfo_UI.Upiti
 
         private void DetaljiBtn_Click(object sender, EventArgs e)
         {
-            DetaljiUpita frm = new DetaljiUpita(Convert.ToInt32(UpitiGrid.SelectedRows[0].Cells[0].Value));
-            frm.ShowDialog();
-            BindGrid();
+            if (UpitiGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati upit");
+            }
+            else
+            {
+                DetaljiUpita frm = new DetaljiUpita(Convert.ToInt32(UpitiGrid.SelectedRows[0].Cells[0].Value));
+                frm.ShowDialog();
+                BindGrid();
+            }
 
 
         }

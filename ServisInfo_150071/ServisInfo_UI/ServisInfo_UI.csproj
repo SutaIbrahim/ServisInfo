@@ -77,6 +77,18 @@
       <DependentUpon>PregledKompanija.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="KompanijeAdministracija\IzmjenaKategorija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KompanijeAdministracija\IzmjenaKategorija.Designer.cs">
+      <DependentUpon>IzmjenaKategorija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KompanijeAdministracija\IzmjenaProfila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KompanijeAdministracija\IzmjenaProfila.Designer.cs">
+      <DependentUpon>IzmjenaProfila.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracija\PregledKompanija.resx">
       <DependentUpon>PregledKompanija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KompanijeAdministracija\IzmjenaKategorija.resx">
+      <DependentUpon>IzmjenaKategorija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KompanijeAdministracija\IzmjenaProfila.resx">
+      <DependentUpon>IzmjenaProfila.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

@@ -37,6 +37,7 @@
             this.pregledServisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postavkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izmjenaKategorijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uredjivanjeProfilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.ServisLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -119,7 +120,8 @@
             // postavkeToolStripMenuItem
             // 
             this.postavkeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izmjenaKategorijaToolStripMenuItem});
+            this.izmjenaKategorijaToolStripMenuItem,
+            this.uredjivanjeProfilaToolStripMenuItem});
             this.postavkeToolStripMenuItem.Name = "postavkeToolStripMenuItem";
             this.postavkeToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.postavkeToolStripMenuItem.Text = "Postavke";
@@ -131,21 +133,28 @@
             this.izmjenaKategorijaToolStripMenuItem.Text = "Izmjena kategorija";
             this.izmjenaKategorijaToolStripMenuItem.Click += new System.EventHandler(this.izmjenaKategorijaToolStripMenuItem_Click);
             // 
+            // uredjivanjeProfilaToolStripMenuItem
+            // 
+            this.uredjivanjeProfilaToolStripMenuItem.Name = "uredjivanjeProfilaToolStripMenuItem";
+            this.uredjivanjeProfilaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.uredjivanjeProfilaToolStripMenuItem.Text = "Uredjivanje profila";
+            this.uredjivanjeProfilaToolStripMenuItem.Click += new System.EventHandler(this.uredjivanjeProfilaToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(12, 207);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 24);
+            this.label1.Size = new System.Drawing.Size(213, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Prijavljeni ste kao:";
+            this.label1.Text = "Prijavljena kompanija:";
             // 
             // ServisLbl
             // 
             this.ServisLbl.AutoSize = true;
             this.ServisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ServisLbl.Location = new System.Drawing.Point(200, 207);
+            this.ServisLbl.Location = new System.Drawing.Point(231, 207);
             this.ServisLbl.Name = "ServisLbl";
             this.ServisLbl.Size = new System.Drawing.Size(40, 24);
             this.ServisLbl.TabIndex = 3;
@@ -195,7 +204,7 @@
             // 
             this.DatumLbl.AutoSize = true;
             this.DatumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumLbl.Location = new System.Drawing.Point(647, 207);
+            this.DatumLbl.Location = new System.Drawing.Point(632, 207);
             this.DatumLbl.Name = "DatumLbl";
             this.DatumLbl.Size = new System.Drawing.Size(62, 24);
             this.DatumLbl.TabIndex = 9;
@@ -238,7 +247,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(566, 207);
+            this.label6.Location = new System.Drawing.Point(551, 207);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 13;
@@ -274,13 +283,15 @@
             // 
             // OdjavaBtn
             // 
+            this.OdjavaBtn.BackColor = System.Drawing.Color.Tomato;
             this.OdjavaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.OdjavaBtn.ForeColor = System.Drawing.Color.Snow;
             this.OdjavaBtn.Location = new System.Drawing.Point(16, 466);
             this.OdjavaBtn.Name = "OdjavaBtn";
             this.OdjavaBtn.Size = new System.Drawing.Size(224, 36);
             this.OdjavaBtn.TabIndex = 38;
             this.OdjavaBtn.Text = "Odjava";
-            this.OdjavaBtn.UseVisualStyleBackColor = true;
+            this.OdjavaBtn.UseVisualStyleBackColor = false;
             this.OdjavaBtn.Click += new System.EventHandler(this.OdjavaBtn_Click);
             // 
             // KategorijeBtn
@@ -292,6 +303,7 @@
             this.KategorijeBtn.TabIndex = 39;
             this.KategorijeBtn.Text = "Izmjena kategorija";
             this.KategorijeBtn.UseVisualStyleBackColor = true;
+            this.KategorijeBtn.Click += new System.EventHandler(this.KategorijeBtn_Click);
             // 
             // pictureBox1
             // 
@@ -329,8 +341,11 @@
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(810, 592);
+            this.MinimumSize = new System.Drawing.Size(810, 592);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ServisInfo@Pocetna";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -367,5 +382,6 @@
         private System.Windows.Forms.ToolStripMenuItem izmjenaKategorijaToolStripMenuItem;
         private System.Windows.Forms.Button OdjavaBtn;
         private System.Windows.Forms.Button KategorijeBtn;
+        private System.Windows.Forms.ToolStripMenuItem uredjivanjeProfilaToolStripMenuItem;
     }
 }

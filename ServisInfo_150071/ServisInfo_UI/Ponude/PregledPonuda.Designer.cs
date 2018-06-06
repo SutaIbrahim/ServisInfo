@@ -36,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.OdDtm = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DetaljiBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PonudeGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,17 +47,17 @@
             this.PonudeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PonudeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PonudeGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PonudeGrid.Location = new System.Drawing.Point(0, 208);
+            this.PonudeGrid.Location = new System.Drawing.Point(0, 153);
             this.PonudeGrid.Name = "PonudeGrid";
             this.PonudeGrid.ReadOnly = true;
             this.PonudeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PonudeGrid.Size = new System.Drawing.Size(1085, 336);
+            this.PonudeGrid.Size = new System.Drawing.Size(991, 336);
             this.PonudeGrid.TabIndex = 14;
             this.PonudeGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PonudeGrid_CellContentDoubleClick);
             // 
             // PrikaziBtn
             // 
-            this.PrikaziBtn.Location = new System.Drawing.Point(186, 128);
+            this.PrikaziBtn.Location = new System.Drawing.Point(186, 67);
             this.PrikaziBtn.Name = "PrikaziBtn";
             this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
             this.PrikaziBtn.TabIndex = 13;
@@ -66,7 +68,7 @@
             // DoDtm
             // 
             this.DoDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DoDtm.Location = new System.Drawing.Point(60, 168);
+            this.DoDtm.Location = new System.Drawing.Point(60, 107);
             this.DoDtm.Name = "DoDtm";
             this.DoDtm.Size = new System.Drawing.Size(85, 20);
             this.DoDtm.TabIndex = 12;
@@ -76,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(14, 173);
+            this.label3.Location = new System.Drawing.Point(14, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 11;
@@ -86,7 +88,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(14, 133);
+            this.label2.Location = new System.Drawing.Point(14, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 10;
@@ -95,7 +97,7 @@
             // OdDtm
             // 
             this.OdDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.OdDtm.Location = new System.Drawing.Point(60, 128);
+            this.OdDtm.Location = new System.Drawing.Point(60, 67);
             this.OdDtm.Name = "OdDtm";
             this.OdDtm.Size = new System.Drawing.Size(85, 20);
             this.OdDtm.TabIndex = 9;
@@ -105,17 +107,38 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(10, 95);
+            this.label1.Location = new System.Drawing.Point(10, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Izabrani raspon za prikaz:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(799, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(180, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "*potrebno je oznaciti zeljeniu ponudu";
+            // 
+            // DetaljiBtn
+            // 
+            this.DetaljiBtn.Location = new System.Drawing.Point(852, 80);
+            this.DetaljiBtn.Name = "DetaljiBtn";
+            this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
+            this.DetaljiBtn.TabIndex = 15;
+            this.DetaljiBtn.Text = "Prikaz detalja o ponudi";
+            this.DetaljiBtn.UseVisualStyleBackColor = true;
+            this.DetaljiBtn.Click += new System.EventHandler(this.DetaljiBtn_Click);
+            // 
             // PregledPonuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 544);
+            this.ClientSize = new System.Drawing.Size(991, 489);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.DetaljiBtn);
             this.Controls.Add(this.PonudeGrid);
             this.Controls.Add(this.PrikaziBtn);
             this.Controls.Add(this.DoDtm);
@@ -142,5 +165,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker OdDtm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button DetaljiBtn;
     }
 }
