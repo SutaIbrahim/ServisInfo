@@ -40,6 +40,12 @@ namespace ServisInfoSolution
                     this.Navigation.PushAsync(new MainPage());
                 }
             }
+            else
+            {
+                DisplayAlert("Greska!", "Pogresni korisnicki podaci", "OK");
+                lozinkaInput.Text = "";
+                korisnickoImeInput.Text = "";
+            }
 
         }
 

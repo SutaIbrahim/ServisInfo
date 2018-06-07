@@ -18,21 +18,52 @@ namespace ServisInfoSolution
 	{
 
         private WebAPIHelper klijentiService = new WebAPIHelper("http://localhost:64158/", "api/Klijenti");
+        private WebAPIHelper gradoviService = new WebAPIHelper("http://localhost:64158/", "api/Gradovi");
 
-		public Registracija ()
+
+        public Registracija ()
 		{
 			InitializeComponent();
 		}
 
-        private void registrujSeButton_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-
-            HttpResponseMessage response = klijentiService.GetResponse("1");
+            HttpResponseMessage response = gradoviService.GetResponse();
 
             if (response.IsSuccessStatusCode)
             {
+                var jsonObject = response.Content.ReadAsStringAsync();
+                List<Gradovi> vrste = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Gradovi>>(jsonObject.Result);
 
+                gradList.ItemsSource = vrste;
+                gradList.ItemDisplayBinding = new Binding("Naziv");
 
+            }
+
+            base.OnAppearing();
+        }
+
+        private void registrujSeButton_Clicked(object sender, EventArgs e)
+        {
+            Klijenti klijent = new Klijenti();
+            klijent.Ime = imeInput.Text;
+            klijent.Prezime = prezimeInput.Text;
+            klijent.Email = emailInput.Text;
+            klijent.KorisickoIme = korisnickoImeInput.Text;
+            klijent.Telefon = telefonInput.Text;
+            klijent.Adresa = adresaInput.Text;
+
+            int gradID = (gradList.SelectedItem as Gradovi).GradID;
+            klijent.GradID = gradID;
+
+            klijent.LozinkaSalt = UIHelper.GenerateSalt();
+            klijent.LozinkaHash = UIHelper.GenerateHash(klijent.LozinkaSalt, lozinkaInput.Text);
+
+            HttpResponseMessage response = klijentiService.PostResponse(klijent);
+            if (response.IsSuccessStatusCode)
+            {
+                DisplayAlert("Uspjesna registracija", "Uspjesno ste se registrovali", "OK");
+                this.Navigation.PopAsync();
             }
         }
     }

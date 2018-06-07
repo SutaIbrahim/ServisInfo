@@ -17,6 +17,8 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+
 
 
                 </Grid.RowDefinitions>
@@ -35,19 +37,22 @@
                 <Entry x:Name="adresaInput" Grid.Row="2" Grid.Column="1"></Entry>
 
                 <Label Text="Telefon:" Grid.Row="3" Grid.Column="0"></Label>
-                <Entry x:Name="telefonInput" Grid.Row="2" Grid.Column="1"></Entry>
+                <Entry x:Name="telefonInput" Grid.Row="3" Grid.Column="1"></Entry>
 
                 <Label Text="Email:" Grid.Row="4" Grid.Column="0"></Label>
-                <Entry x:Name="emailInput" Grid.Row="2" Grid.Column="1"></Entry>
+                <Entry x:Name="emailInput" Grid.Row="4" Grid.Column="1"></Entry>
 
-                <Label Text="Korisnicko ime:" Grid.Row="5" Grid.Column="0"></Label>
-                <Entry x:Name="korisnickoImeInput" Grid.Row="3" Grid.Column="1"></Entry>
+                <Label Text="Grad:" Grid.Row="5" Grid.Column="0"></Label>
+                <Picker x:Name="gradList" Grid.Row="5" Grid.Column="1"></Picker>
+                
+                <Label Text="Korisnicko ime:" Grid.Row="6" Grid.Column="0"></Label>
+                <Entry x:Name="korisnickoImeInput" Grid.Row="6" Grid.Column="1"></Entry>
 
-                <Label Text="Lozinka:" Grid.Row="6" Grid.Column="0"></Label>
-                <Entry x:Name="lozinkaInput" Grid.Row="4" Grid.Column="1" IsPassword="True"></Entry>
+                <Label Text="Lozinka:" Grid.Row="7" Grid.Column="0"></Label>
+                <Entry x:Name="lozinkaInput" Grid.Row="7" Grid.Column="1" IsPassword="True"></Entry>
 
                 <Button x:Name="registrujSeButton" Text="Registruj se"
-                        Grid.Row="7" Grid.Column="1"
+                        Grid.Row="8" Grid.Column="1"
                         Clicked="registrujSeButton_Clicked"></Button>
 
             </Grid>
