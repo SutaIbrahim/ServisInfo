@@ -13,7 +13,7 @@ namespace ServisInfoSolution
 		{
 			InitializeComponent();
 
-			MainPage = new ServisInfoSolution.MainPage();
+			MainPage = new NavigationPage(new Prijava());
 		}
 
 		protected override void OnStart ()

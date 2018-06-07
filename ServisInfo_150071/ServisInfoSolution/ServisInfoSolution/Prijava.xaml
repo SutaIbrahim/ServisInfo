@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServisInfoSolution.Prijava">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
+            <Label Text="Prijava @ eProdaja"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Medium" />
+
+            <Entry x:Name="korisnickoImeInput" Placeholder="Korisničko ime"></Entry>
+            <Entry x:Name="lozinkaInput" Placeholder="Lozinka" IsPassword="True"></Entry>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <Button x:Name="registerButton" Text="Registracija" Clicked="registerButton_Clicked"></Button>
+
+                <Button Text="Prijavi se" Clicked="Button_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

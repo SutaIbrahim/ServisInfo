@@ -35,6 +35,20 @@ namespace ServisInfo_API.Controllers
             return Ok(klijenti);
         }
 
+        [ResponseType(typeof(Klijenti))]
+        [Route("api/Klijenti/GetByUsername/{username}")]
+        public IHttpActionResult GetByUsername(string username)
+        {
+            Klijenti k = db.Klijenti.Where(x => x.KorisickoIme == username).FirstOrDefault();
+
+            if (k == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(k);
+        }
+
         // PUT: api/Klijenti/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutKlijenti(int id, Klijenti klijenti)

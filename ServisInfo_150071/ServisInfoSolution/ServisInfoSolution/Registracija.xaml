@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServisInfoSolution.Registracija">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
+            <Label Text="Registracija @ eProdaja"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Medium" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ime:" Grid.Row="0" Grid.Column="0"></Label>
+                <Entry x:Name="imeInput" Grid.Row="0" Grid.Column="1"></Entry>
+
+                <Label Text="Prezime:" Grid.Row="1" Grid.Column="0"></Label>
+                <Entry x:Name="prezimeInput" Grid.Row="1" Grid.Column="1"></Entry>
+                
+                <Label Text="Adresa:" Grid.Row="2" Grid.Column="0"></Label>
+                <Entry x:Name="adresaInput" Grid.Row="2" Grid.Column="1"></Entry>
+
+                <Label Text="Telefon:" Grid.Row="3" Grid.Column="0"></Label>
+                <Entry x:Name="telefonInput" Grid.Row="2" Grid.Column="1"></Entry>
+
+                <Label Text="Email:" Grid.Row="4" Grid.Column="0"></Label>
+                <Entry x:Name="emailInput" Grid.Row="2" Grid.Column="1"></Entry>
+
+                <Label Text="Korisnicko ime:" Grid.Row="5" Grid.Column="0"></Label>
+                <Entry x:Name="korisnickoImeInput" Grid.Row="3" Grid.Column="1"></Entry>
+
+                <Label Text="Lozinka:" Grid.Row="6" Grid.Column="0"></Label>
+                <Entry x:Name="lozinkaInput" Grid.Row="4" Grid.Column="1" IsPassword="True"></Entry>
+
+                <Button x:Name="registrujSeButton" Text="Registruj se"
+                        Grid.Row="7" Grid.Column="1"
+                        Clicked="registrujSeButton_Clicked"></Button>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
