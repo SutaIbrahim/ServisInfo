@@ -187,7 +187,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(137, 32);
+            this.label9.Location = new System.Drawing.Point(176, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(289, 33);
             this.label9.TabIndex = 31;
@@ -197,7 +197,7 @@
             // 
             this.ServisIDLbl.AutoSize = true;
             this.ServisIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ServisIDLbl.Location = new System.Drawing.Point(432, 32);
+            this.ServisIDLbl.Location = new System.Drawing.Point(471, 29);
             this.ServisIDLbl.Name = "ServisIDLbl";
             this.ServisIDLbl.Size = new System.Drawing.Size(289, 33);
             this.ServisIDLbl.TabIndex = 32;
@@ -233,7 +233,8 @@
             // 
             // ZapocniBtn
             // 
-            this.ZapocniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZapocniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZapocniBtn.ForeColor = System.Drawing.Color.Green;
             this.ZapocniBtn.Location = new System.Drawing.Point(192, 270);
             this.ZapocniBtn.Name = "ZapocniBtn";
             this.ZapocniBtn.Size = new System.Drawing.Size(430, 142);
@@ -256,6 +257,7 @@
             // ZavrsiBtn
             // 
             this.ZavrsiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZavrsiBtn.ForeColor = System.Drawing.Color.Green;
             this.ZavrsiBtn.Location = new System.Drawing.Point(518, 315);
             this.ZavrsiBtn.Name = "ZavrsiBtn";
             this.ZavrsiBtn.Size = new System.Drawing.Size(216, 37);

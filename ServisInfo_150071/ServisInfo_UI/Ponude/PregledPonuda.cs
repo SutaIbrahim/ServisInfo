@@ -43,7 +43,7 @@ namespace ServisInfo_UI.Ponude
                 List<KompanijaPonude_Result> ponude = response.Content.ReadAsAsync<List<KompanijaPonude_Result>>().Result;
                 PonudeGrid.DataSource = ponude;
                 PonudeGrid.ClearSelection();
-                PonudeGrid.Columns["PonudaID"].Visible = false;
+                LayoutSet();
 
 
 
@@ -53,6 +53,22 @@ namespace ServisInfo_UI.Ponude
                 MessageBox.Show("Error Code" +
                 response.StatusCode + " : Message - " + response.ReasonPhrase);
             }
+        }
+
+
+        private void LayoutSet()
+        {
+            PonudeGrid.Columns["PonudaID"].Visible = false;
+            PonudeGrid.Columns["UpitID"].Visible = false;
+            PonudeGrid.Columns["KlijentID"].Visible = false;
+            PonudeGrid.Columns["KategorijaID"].Visible = false;
+
+            PonudeGrid.Columns["Naziv"].HeaderText = "Kategorija";
+            PonudeGrid.Columns["Klijent_ime_i_prezime"].HeaderText = "Ime klijenta";
+            PonudeGrid.Columns["Cijena"].HeaderText = "Predlozena cijena";
+
+            PonudeGrid.Columns["Cijena"].DisplayIndex = 7;
+            PonudeGrid.Columns["Prihvacena"].DisplayIndex = 8;
         }
 
         private void PonudeGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

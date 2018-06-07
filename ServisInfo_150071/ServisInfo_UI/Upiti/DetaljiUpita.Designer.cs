@@ -231,6 +231,7 @@
             // KreirajPonuduBtn
             // 
             this.KreirajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.KreirajPonuduBtn.ForeColor = System.Drawing.Color.Green;
             this.KreirajPonuduBtn.Location = new System.Drawing.Point(473, 543);
             this.KreirajPonuduBtn.Name = "KreirajPonuduBtn";
             this.KreirajPonuduBtn.Size = new System.Drawing.Size(180, 37);

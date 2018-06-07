@@ -166,6 +166,7 @@
             // 
             // KreirajBtn
             // 
+            this.KreirajBtn.ForeColor = System.Drawing.Color.Green;
             this.KreirajBtn.Location = new System.Drawing.Point(481, 689);
             this.KreirajBtn.Name = "KreirajBtn";
             this.KreirajBtn.Size = new System.Drawing.Size(117, 48);

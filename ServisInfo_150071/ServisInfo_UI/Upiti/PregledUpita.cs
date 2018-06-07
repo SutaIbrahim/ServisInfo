@@ -43,20 +43,28 @@ namespace ServisInfo_UI.Upiti
                 List<KompanijaUpiti_Result> upiti = response.Content.ReadAsAsync<List<KompanijaUpiti_Result>>().Result;
                 UpitiGrid.DataSource = upiti;
                 UpitiGrid.ClearSelection();
-                UpitiGrid.Columns[0].Visible = false;
-                UpitiGrid.Columns[1].Visible = false;
-                UpitiGrid.Columns[2].Visible = false;
 
-
-
+                LayoutSet();
             }
             else
             {
                 MessageBox.Show("Error Code" +
                 response.StatusCode + " : Message - " + response.ReasonPhrase);
             }
+        }
 
+        private void LayoutSet()
+        {
+            UpitiGrid.Columns[0].Visible = false;
+            UpitiGrid.Columns[1].Visible = false;
+            UpitiGrid.Columns[2].Visible = false;
 
+            UpitiGrid.Columns["KAtegorija"].HeaderText = "Kategorija";
+            UpitiGrid.Columns["Datum_upita"].HeaderText = "Datum kreiranja upita";
+            UpitiGrid.Columns["Marka_uredjaja"].HeaderText = "Marka uredjaja";
+            UpitiGrid.Columns["Zeljeni_datum_prijema_Od"].HeaderText = "Zeljeni datum prijema OD";
+            UpitiGrid.Columns["Zeljeni_datum_prijema_Do"].HeaderText = "Zeljeni datum prijema DO";
+            UpitiGrid.Columns["Odgovoreno"].DisplayIndex = 9;
         }
 
         private void label1_Click(object sender, EventArgs e)
