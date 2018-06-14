@@ -304,7 +304,7 @@
             // 
             this.ocjena1Lbl.AutoSize = true;
             this.ocjena1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ocjena1Lbl.Location = new System.Drawing.Point(42, 312);
+            this.ocjena1Lbl.Location = new System.Drawing.Point(438, 351);
             this.ocjena1Lbl.Name = "ocjena1Lbl";
             this.ocjena1Lbl.Size = new System.Drawing.Size(61, 16);
             this.ocjena1Lbl.TabIndex = 43;
@@ -314,7 +314,7 @@
             // 
             this.ocjena2Lbl.AutoSize = true;
             this.ocjena2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ocjena2Lbl.Location = new System.Drawing.Point(42, 345);
+            this.ocjena2Lbl.Location = new System.Drawing.Point(438, 384);
             this.ocjena2Lbl.Name = "ocjena2Lbl";
             this.ocjena2Lbl.Size = new System.Drawing.Size(61, 16);
             this.ocjena2Lbl.TabIndex = 44;
@@ -324,7 +324,7 @@
             // 
             this.ocjena3Lbl.AutoSize = true;
             this.ocjena3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ocjena3Lbl.Location = new System.Drawing.Point(42, 377);
+            this.ocjena3Lbl.Location = new System.Drawing.Point(438, 416);
             this.ocjena3Lbl.Name = "ocjena3Lbl";
             this.ocjena3Lbl.Size = new System.Drawing.Size(61, 16);
             this.ocjena3Lbl.TabIndex = 45;
@@ -334,7 +334,7 @@
             // 
             this.OcjeneLbl.AutoSize = true;
             this.OcjeneLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.OcjeneLbl.Location = new System.Drawing.Point(42, 284);
+            this.OcjeneLbl.Location = new System.Drawing.Point(438, 323);
             this.OcjeneLbl.Name = "OcjeneLbl";
             this.OcjeneLbl.Size = new System.Drawing.Size(157, 20);
             this.OcjeneLbl.TabIndex = 46;
@@ -344,7 +344,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 719);
+            this.ClientSize = new System.Drawing.Size(785, 461);
             this.Controls.Add(this.OcjeneLbl);
             this.Controls.Add(this.ocjena3Lbl);
             this.Controls.Add(this.ocjena2Lbl);
@@ -373,8 +373,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ZapocniBtn);
-            this.MaximumSize = new System.Drawing.Size(801, 758);
-            this.MinimumSize = new System.Drawing.Size(801, 758);
+            this.MaximumSize = new System.Drawing.Size(801, 500);
+            this.MinimumSize = new System.Drawing.Size(801, 500);
             this.Name = "DetaljiServisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiServisa";

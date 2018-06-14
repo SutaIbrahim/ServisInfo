@@ -30,11 +30,8 @@ namespace ServisInfo_UI.Ponude
         private string OpisKvara { get; set; }
         private string Kategorija { get; set; }
 
-
-
         private Klijenti Klijent { get; set; }
         private ServisInfo_API.Models.Upiti Upit { get; set; }
-
 
 
 
@@ -113,8 +110,6 @@ namespace ServisInfo_UI.Ponude
                 MessageBox.Show("Error Code" +
                 response.StatusCode + " : Message - " + msg);
             }
-
-
         }
 
         private void OdustaniBtn_Click(object sender, EventArgs e)

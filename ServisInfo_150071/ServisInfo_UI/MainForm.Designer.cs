@@ -311,7 +311,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::ServisInfo_UI.Properties.Resources.mobile_maintenance_256;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(295, 204);
+            this.pictureBox1.Location = new System.Drawing.Point(280, 204);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(261, 225);
             this.pictureBox1.TabIndex = 15;

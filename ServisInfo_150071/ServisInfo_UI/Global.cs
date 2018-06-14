@@ -24,15 +24,6 @@ namespace ServisInfo_UI
         public const string OcjeneRoute = "api/Ocjene";
 
 
-
-
-
-
-
-
-
-
-
         #endregion
     }
 }

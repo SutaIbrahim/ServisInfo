@@ -52,8 +52,8 @@ namespace ServisInfo_UI.Administracija
                 KategorijeGrid.Columns[2].Visible = false;
                 KategorijeGrid.Columns[3].Visible = false;
             }
-
-
         }
+
+
     }
 }

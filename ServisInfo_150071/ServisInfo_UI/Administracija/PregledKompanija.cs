@@ -34,14 +34,12 @@ namespace ServisInfo_UI.Administracija
 
             if (response.IsSuccessStatusCode)
             {
-
                 List<Kompanije_Result> kompanije = response.Content.ReadAsAsync<List<Kompanije_Result>>().Result;
                 KompanijeGrid.DataSource = kompanije;
                 KompanijeGrid.ClearSelection();
 
                 KompanijeGrid.Columns[0].HeaderText = "ID kompanije";
                 KompanijeGrid.Columns[1].HeaderText = "Naziv kompanije";
-
             }
             else
             {
@@ -62,7 +60,6 @@ namespace ServisInfo_UI.Administracija
             DodajKompaniju frm = new DodajKompaniju();
             frm.ShowDialog();
             BindGrid();
-
         }
     }
 }

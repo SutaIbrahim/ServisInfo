@@ -26,7 +26,6 @@ namespace ServisInfo_UI.Administracija
     
         private void DodajBtn_Click(object sender, EventArgs e)
         {
-
             Kategorije k = new Kategorije();
             k.Naziv = NazivTxt.Text;
 

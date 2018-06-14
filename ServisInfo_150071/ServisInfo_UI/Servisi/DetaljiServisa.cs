@@ -29,8 +29,6 @@ namespace ServisInfo_UI.Servisi
             ServisID = servisID;
             InitializeComponent();
             Bind();
-           
-
         }
 
         private void Bind()
@@ -80,7 +78,6 @@ namespace ServisInfo_UI.Servisi
                 label5.Hide();
                 label4.Hide();
                 label7.Hide();
-
             }
 
             else
@@ -124,7 +121,7 @@ namespace ServisInfo_UI.Servisi
                     TrajanjeLbl.Show();
                     TrajanjeLbl.Text = s.TrajanjeDani.ToString();
 
-
+                    //
                     PostaviOcjene();
                 }
             }
