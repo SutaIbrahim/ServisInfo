@@ -55,6 +55,9 @@ namespace ServisInfo_UI.Ponude
             DaniLbl.Text = (Convert.ToInt32(p.TrajanjeDani)).ToString();
             SatiLbl.Text = p.TrajanjeSati.ToString();
             CijenaLbl.Text = p.Cijena.ToString();
+            OdgovorTxt.Text = p.Odgovor;
+            KategorijaLbl.Text = p.Naziv;
+            
 
             if (p.Prihvacena == true)
             {

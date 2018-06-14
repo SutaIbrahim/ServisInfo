@@ -144,7 +144,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(12, 207);
+            this.label1.Location = new System.Drawing.Point(15, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 24);
             this.label1.TabIndex = 2;
@@ -154,7 +154,7 @@
             // 
             this.ServisLbl.AutoSize = true;
             this.ServisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ServisLbl.Location = new System.Drawing.Point(231, 207);
+            this.ServisLbl.Location = new System.Drawing.Point(234, 172);
             this.ServisLbl.Name = "ServisLbl";
             this.ServisLbl.Size = new System.Drawing.Size(40, 24);
             this.ServisLbl.TabIndex = 3;
@@ -174,7 +174,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(40, 292);
+            this.label3.Location = new System.Drawing.Point(15, 405);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 24);
             this.label3.TabIndex = 5;
@@ -184,7 +184,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(531, 292);
+            this.label4.Location = new System.Drawing.Point(579, 405);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 24);
             this.label4.TabIndex = 6;
@@ -194,7 +194,7 @@
             // 
             this.UpitiLbl.AutoSize = true;
             this.UpitiLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitiLbl.Location = new System.Drawing.Point(259, 292);
+            this.UpitiLbl.Location = new System.Drawing.Point(234, 405);
             this.UpitiLbl.Name = "UpitiLbl";
             this.UpitiLbl.Size = new System.Drawing.Size(40, 24);
             this.UpitiLbl.TabIndex = 8;
@@ -204,16 +204,17 @@
             // 
             this.DatumLbl.AutoSize = true;
             this.DatumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumLbl.Location = new System.Drawing.Point(632, 207);
+            this.DatumLbl.Location = new System.Drawing.Point(660, 172);
             this.DatumLbl.Name = "DatumLbl";
             this.DatumLbl.Size = new System.Drawing.Size(62, 24);
             this.DatumLbl.TabIndex = 9;
             this.DatumLbl.Text = "datum";
+            this.DatumLbl.Click += new System.EventHandler(this.DatumLbl_Click);
             // 
             // UpitiBtn
             // 
             this.UpitiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitiBtn.Location = new System.Drawing.Point(16, 351);
+            this.UpitiBtn.Location = new System.Drawing.Point(19, 445);
             this.UpitiBtn.Name = "UpitiBtn";
             this.UpitiBtn.Size = new System.Drawing.Size(224, 101);
             this.UpitiBtn.TabIndex = 10;
@@ -224,7 +225,7 @@
             // ServisiBtn
             // 
             this.ServisiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ServisiBtn.Location = new System.Drawing.Point(555, 351);
+            this.ServisiBtn.Location = new System.Drawing.Point(558, 445);
             this.ServisiBtn.Name = "ServisiBtn";
             this.ServisiBtn.Size = new System.Drawing.Size(224, 101);
             this.ServisiBtn.TabIndex = 11;
@@ -235,7 +236,7 @@
             // PonudeBtn
             // 
             this.PonudeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PonudeBtn.Location = new System.Drawing.Point(293, 401);
+            this.PonudeBtn.Location = new System.Drawing.Point(296, 495);
             this.PonudeBtn.Name = "PonudeBtn";
             this.PonudeBtn.Size = new System.Drawing.Size(224, 101);
             this.PonudeBtn.TabIndex = 12;
@@ -247,17 +248,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(551, 207);
+            this.label6.Location = new System.Drawing.Point(579, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 13;
             this.label6.Text = "Datum:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // BrojServisaLbl
             // 
             this.BrojServisaLbl.AutoSize = true;
             this.BrojServisaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BrojServisaLbl.Location = new System.Drawing.Point(678, 292);
+            this.BrojServisaLbl.Location = new System.Drawing.Point(726, 405);
             this.BrojServisaLbl.Name = "BrojServisaLbl";
             this.BrojServisaLbl.Size = new System.Drawing.Size(40, 24);
             this.BrojServisaLbl.TabIndex = 14;
@@ -265,7 +267,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(12, 517);
+            this.groupBox1.Location = new System.Drawing.Point(10, 615);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(785, 10);
             this.groupBox1.TabIndex = 36;
@@ -275,7 +277,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(644, 533);
+            this.label5.Location = new System.Drawing.Point(642, 631);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 13);
             this.label5.TabIndex = 37;
@@ -286,7 +288,7 @@
             this.OdjavaBtn.BackColor = System.Drawing.Color.Tomato;
             this.OdjavaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.OdjavaBtn.ForeColor = System.Drawing.Color.Snow;
-            this.OdjavaBtn.Location = new System.Drawing.Point(16, 466);
+            this.OdjavaBtn.Location = new System.Drawing.Point(19, 560);
             this.OdjavaBtn.Name = "OdjavaBtn";
             this.OdjavaBtn.Size = new System.Drawing.Size(224, 36);
             this.OdjavaBtn.TabIndex = 38;
@@ -297,7 +299,7 @@
             // KategorijeBtn
             // 
             this.KategorijeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KategorijeBtn.Location = new System.Drawing.Point(555, 466);
+            this.KategorijeBtn.Location = new System.Drawing.Point(558, 560);
             this.KategorijeBtn.Name = "KategorijeBtn";
             this.KategorijeBtn.Size = new System.Drawing.Size(224, 36);
             this.KategorijeBtn.TabIndex = 39;
@@ -309,9 +311,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::ServisInfo_UI.Properties.Resources.mobile_maintenance_256;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(293, 153);
+            this.pictureBox1.Location = new System.Drawing.Point(295, 204);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(261, 225);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
@@ -320,12 +322,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(794, 553);
+            this.ClientSize = new System.Drawing.Size(794, 653);
             this.Controls.Add(this.KategorijeBtn);
             this.Controls.Add(this.OdjavaBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BrojServisaLbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PonudeBtn);
@@ -339,10 +340,11 @@
             this.Controls.Add(this.ServisLbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(810, 592);
-            this.MinimumSize = new System.Drawing.Size(810, 592);
+            this.MaximumSize = new System.Drawing.Size(810, 692);
+            this.MinimumSize = new System.Drawing.Size(810, 692);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServisInfo@Pocetna";

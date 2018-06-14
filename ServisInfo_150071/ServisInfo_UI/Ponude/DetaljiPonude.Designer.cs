@@ -225,7 +225,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(181, 31);
+            this.label12.Location = new System.Drawing.Point(211, 33);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(169, 33);
             this.label12.TabIndex = 49;
@@ -235,7 +235,7 @@
             // 
             this.PonudaIDLbl.AutoSize = true;
             this.PonudaIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PonudaIDLbl.Location = new System.Drawing.Point(354, 31);
+            this.PonudaIDLbl.Location = new System.Drawing.Point(384, 33);
             this.PonudaIDLbl.Name = "PonudaIDLbl";
             this.PonudaIDLbl.Size = new System.Drawing.Size(159, 33);
             this.PonudaIDLbl.TabIndex = 50;

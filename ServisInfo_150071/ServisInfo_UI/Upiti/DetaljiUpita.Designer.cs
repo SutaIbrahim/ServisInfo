@@ -297,7 +297,7 @@
             // 
             this.UpitIDLbl.AutoSize = true;
             this.UpitIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitIDLbl.Location = new System.Drawing.Point(339, 9);
+            this.UpitIDLbl.Location = new System.Drawing.Point(374, 19);
             this.UpitIDLbl.Name = "UpitIDLbl";
             this.UpitIDLbl.Size = new System.Drawing.Size(104, 33);
             this.UpitIDLbl.TabIndex = 52;
@@ -307,7 +307,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(222, 9);
+            this.label12.Location = new System.Drawing.Point(257, 19);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 33);
             this.label12.TabIndex = 51;

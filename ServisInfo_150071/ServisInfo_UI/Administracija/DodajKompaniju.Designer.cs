@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DodajBtn = new System.Windows.Forms.Button();
             this.NazivLbl = new System.Windows.Forms.Label();
             this.KorisicnkImeLbl = new System.Windows.Forms.Label();
@@ -46,8 +47,10 @@
             this.GradoviCmb = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.NazadBtn = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // DodajBtn
@@ -137,6 +140,7 @@
             this.NazivTxt.Name = "NazivTxt";
             this.NazivTxt.Size = new System.Drawing.Size(157, 20);
             this.NazivTxt.TabIndex = 8;
+            this.NazivTxt.Validating += new System.ComponentModel.CancelEventHandler(this.NazivTxt_Validating);
             // 
             // AdresaTxt
             // 
@@ -144,6 +148,7 @@
             this.AdresaTxt.Name = "AdresaTxt";
             this.AdresaTxt.Size = new System.Drawing.Size(157, 20);
             this.AdresaTxt.TabIndex = 10;
+            this.AdresaTxt.Validating += new System.ComponentModel.CancelEventHandler(this.AdresaTxt_Validating);
             // 
             // EmailTxt
             // 
@@ -151,6 +156,7 @@
             this.EmailTxt.Name = "EmailTxt";
             this.EmailTxt.Size = new System.Drawing.Size(157, 20);
             this.EmailTxt.TabIndex = 12;
+            this.EmailTxt.Validating += new System.ComponentModel.CancelEventHandler(this.EmailTxt_Validating);
             // 
             // KorisickoImeTxt
             // 
@@ -159,6 +165,7 @@
             this.KorisickoImeTxt.Name = "KorisickoImeTxt";
             this.KorisickoImeTxt.Size = new System.Drawing.Size(157, 20);
             this.KorisickoImeTxt.TabIndex = 14;
+            this.KorisickoImeTxt.Validating += new System.ComponentModel.CancelEventHandler(this.KorisickoImeTxt_Validating);
             // 
             // LozinkaTxt
             // 
@@ -168,6 +175,7 @@
             this.LozinkaTxt.PasswordChar = '*';
             this.LozinkaTxt.Size = new System.Drawing.Size(157, 20);
             this.LozinkaTxt.TabIndex = 15;
+            this.LozinkaTxt.Validating += new System.ComponentModel.CancelEventHandler(this.LozinkaTxt_Validating);
             // 
             // groupBox1
             // 
@@ -189,6 +197,7 @@
             this.TelefonTxt.Name = "TelefonTxt";
             this.TelefonTxt.Size = new System.Drawing.Size(157, 20);
             this.TelefonTxt.TabIndex = 54;
+            this.TelefonTxt.Validating += new System.ComponentModel.CancelEventHandler(this.TelefonTxt_Validating);
             // 
             // GradoviCmb
             // 
@@ -200,6 +209,7 @@
             this.GradoviCmb.Size = new System.Drawing.Size(157, 21);
             this.GradoviCmb.TabIndex = 18;
             this.GradoviCmb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.GradoviCmb.Validating += new System.ComponentModel.CancelEventHandler(this.GradoviCmb_Validating);
             // 
             // groupBox2
             // 
@@ -224,6 +234,10 @@
             this.NazadBtn.Text = "Nazad";
             this.NazadBtn.UseVisualStyleBackColor = true;
             this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // DodajKompaniju
             // 
@@ -252,6 +266,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +292,6 @@
         private System.Windows.Forms.ComboBox GradoviCmb;
         private System.Windows.Forms.Button NazadBtn;
         private System.Windows.Forms.MaskedTextBox TelefonTxt;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

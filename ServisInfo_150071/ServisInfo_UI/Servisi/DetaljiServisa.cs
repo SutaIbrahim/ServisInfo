@@ -17,6 +17,7 @@ namespace ServisInfo_UI.Servisi
     public partial class DetaljiServisa : Form
     {
         private WebAPIHelper ServisiService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.ServisiRoute);
+        private WebAPIHelper OcjeneService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.OcjeneRoute);
 
 
         private int ServisID { get; set; }
@@ -56,6 +57,11 @@ namespace ServisInfo_UI.Servisi
             KlijentLbl.Text = s.Ime_klijenta;
             ServisIDLbl.Text = ServisID.ToString();
 
+            ocjena1Lbl.Text = "";
+            ocjena2Lbl.Text = "";
+            ocjena3Lbl.Text = "";
+            OcjeneLbl.Text = "";
+
             if (s.DatumPocetka == null)
             {
                 ZapocniBtn.Show();
@@ -74,7 +80,6 @@ namespace ServisInfo_UI.Servisi
                 label5.Hide();
                 label4.Hide();
                 label7.Hide();
-
 
             }
 
@@ -119,6 +124,38 @@ namespace ServisInfo_UI.Servisi
                     TrajanjeLbl.Show();
                     TrajanjeLbl.Text = s.TrajanjeDani.ToString();
 
+
+                    PostaviOcjene();
+                }
+            }
+        }
+
+        private void PostaviOcjene()
+        {
+            HttpResponseMessage response = OcjeneService.GetActionResponse("GetOcjeneList",ServisID.ToString());
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                List<Ocjene> ocjene = response.Content.ReadAsAsync<List<Ocjene>>().Result;
+
+                OcjeneLbl.Text = "Klijent jos uvijek nije ocijenio ovaj servis";
+
+                foreach(var x in ocjene)
+                {
+                    if (x.VrstaOcjeneID == 1)
+                    {
+                        ocjena1Lbl.Text = "Brzina usluge: " + x.Ocjena.ToString();
+                        OcjeneLbl.Text = "Ocjene od klijenta:";
+                    }
+                    if (x.VrstaOcjeneID == 2)
+                    {
+                        ocjena2Lbl.Text = "Kvalitet usluge: " + x.Ocjena.ToString();
+                    }
+                    if (x.VrstaOcjeneID == 3)
+                    {
+                        ocjena3Lbl.Text = "Komunikacija: " + x.Ocjena.ToString();
+                    }
                 }
             }
         }

@@ -52,6 +52,10 @@
             this.NapomenaLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.PonudaBtn = new System.Windows.Forms.Button();
+            this.ocjena1Lbl = new System.Windows.Forms.Label();
+            this.ocjena2Lbl = new System.Windows.Forms.Label();
+            this.ocjena3Lbl = new System.Windows.Forms.Label();
+            this.OcjeneLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -117,9 +121,9 @@
             // 
             // NazadBtn
             // 
-            this.NazadBtn.Location = new System.Drawing.Point(37, 277);
+            this.NazadBtn.Location = new System.Drawing.Point(45, 400);
             this.NazadBtn.Name = "NazadBtn";
-            this.NazadBtn.Size = new System.Drawing.Size(149, 37);
+            this.NazadBtn.Size = new System.Drawing.Size(141, 37);
             this.NazadBtn.TabIndex = 22;
             this.NazadBtn.Text = "Nazad";
             this.NazadBtn.UseVisualStyleBackColor = true;
@@ -187,7 +191,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(176, 29);
+            this.label9.Location = new System.Drawing.Point(196, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(289, 33);
             this.label9.TabIndex = 31;
@@ -197,7 +201,7 @@
             // 
             this.ServisIDLbl.AutoSize = true;
             this.ServisIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ServisIDLbl.Location = new System.Drawing.Point(471, 29);
+            this.ServisIDLbl.Location = new System.Drawing.Point(491, 29);
             this.ServisIDLbl.Name = "ServisIDLbl";
             this.ServisIDLbl.Size = new System.Drawing.Size(289, 33);
             this.ServisIDLbl.TabIndex = 32;
@@ -235,7 +239,7 @@
             // 
             this.ZapocniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ZapocniBtn.ForeColor = System.Drawing.Color.Green;
-            this.ZapocniBtn.Location = new System.Drawing.Point(192, 270);
+            this.ZapocniBtn.Location = new System.Drawing.Point(192, 295);
             this.ZapocniBtn.Name = "ZapocniBtn";
             this.ZapocniBtn.Size = new System.Drawing.Size(430, 142);
             this.ZapocniBtn.TabIndex = 36;
@@ -296,11 +300,55 @@
             this.PonudaBtn.UseVisualStyleBackColor = true;
             this.PonudaBtn.Click += new System.EventHandler(this.PonudaBtn_Click);
             // 
+            // ocjena1Lbl
+            // 
+            this.ocjena1Lbl.AutoSize = true;
+            this.ocjena1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ocjena1Lbl.Location = new System.Drawing.Point(42, 312);
+            this.ocjena1Lbl.Name = "ocjena1Lbl";
+            this.ocjena1Lbl.Size = new System.Drawing.Size(61, 16);
+            this.ocjena1Lbl.TabIndex = 43;
+            this.ocjena1Lbl.Text = "Ocjena 1";
+            // 
+            // ocjena2Lbl
+            // 
+            this.ocjena2Lbl.AutoSize = true;
+            this.ocjena2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ocjena2Lbl.Location = new System.Drawing.Point(42, 345);
+            this.ocjena2Lbl.Name = "ocjena2Lbl";
+            this.ocjena2Lbl.Size = new System.Drawing.Size(61, 16);
+            this.ocjena2Lbl.TabIndex = 44;
+            this.ocjena2Lbl.Text = "Ocjena 2";
+            // 
+            // ocjena3Lbl
+            // 
+            this.ocjena3Lbl.AutoSize = true;
+            this.ocjena3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ocjena3Lbl.Location = new System.Drawing.Point(42, 377);
+            this.ocjena3Lbl.Name = "ocjena3Lbl";
+            this.ocjena3Lbl.Size = new System.Drawing.Size(61, 16);
+            this.ocjena3Lbl.TabIndex = 45;
+            this.ocjena3Lbl.Text = "Ocjena 3";
+            // 
+            // OcjeneLbl
+            // 
+            this.OcjeneLbl.AutoSize = true;
+            this.OcjeneLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.OcjeneLbl.Location = new System.Drawing.Point(42, 284);
+            this.OcjeneLbl.Name = "OcjeneLbl";
+            this.OcjeneLbl.Size = new System.Drawing.Size(157, 20);
+            this.OcjeneLbl.TabIndex = 46;
+            this.OcjeneLbl.Text = "Ocjene od klijenta:";
+            // 
             // DetaljiServisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 719);
+            this.Controls.Add(this.OcjeneLbl);
+            this.Controls.Add(this.ocjena3Lbl);
+            this.Controls.Add(this.ocjena2Lbl);
+            this.Controls.Add(this.ocjena1Lbl);
             this.Controls.Add(this.PonudaBtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.NapomenaLbl);
@@ -361,5 +409,9 @@
         private System.Windows.Forms.Label NapomenaLbl;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button PonudaBtn;
+        private System.Windows.Forms.Label ocjena1Lbl;
+        private System.Windows.Forms.Label ocjena2Lbl;
+        private System.Windows.Forms.Label ocjena3Lbl;
+        private System.Windows.Forms.Label OcjeneLbl;
     }
 }

@@ -138,5 +138,15 @@ namespace ServisInfo_UI
             BindGrid();
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DatumLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

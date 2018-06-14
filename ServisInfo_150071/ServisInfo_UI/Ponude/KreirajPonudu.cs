@@ -116,5 +116,10 @@ namespace ServisInfo_UI.Ponude
 
 
         }
+
+        private void OdustaniBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

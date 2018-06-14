@@ -183,6 +183,7 @@
             this.OdustaniBtn.TabIndex = 14;
             this.OdustaniBtn.Text = "Odustani";
             this.OdustaniBtn.UseVisualStyleBackColor = true;
+            this.OdustaniBtn.Click += new System.EventHandler(this.OdustaniBtn_Click);
             // 
             // NajranijiPrijemDateTime
             // 
