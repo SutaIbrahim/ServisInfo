@@ -16,7 +16,7 @@
 
 
             <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
-            
+
             <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -31,14 +31,11 @@
 
                                 </Grid.ColumnDefinitions>
 
-                                <StackLayout Grid.Column="0" Padding="10">
-                                    <StackLayout Grid.Column="1" Padding="10">
-                                        <Label Text="{Binding Email}" />
 
-                                    </StackLayout>
-                                </StackLayout>
+                                <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg"></Image>
 
                                 <StackLayout Grid.Column="1" Padding="10">
+                                    
                                     <Label Text="{Binding Naziv}" FontAttributes="Bold" />
                                     <Label Text="{Binding Adresa}" />
                                     <Label Text="{Binding Telefon}"/>

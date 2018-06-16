@@ -52,6 +52,7 @@ namespace ServisInfoSolution
 
             GreskaLbl.Text = "Nema rezultata";
 
+
             base.OnAppearing();
         }
 
