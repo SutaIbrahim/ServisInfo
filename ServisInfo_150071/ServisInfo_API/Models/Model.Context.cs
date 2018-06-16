@@ -250,5 +250,31 @@ namespace ServisInfo_API.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("esp_GetServisIDbyPonudaID", ponudaIDParameter);
         }
+    
+        public virtual ObjectResult<Kompanije> esp_SearchByKategorijaGrad(Nullable<int> kategorijaId, Nullable<int> gradId)
+        {
+            var kategorijaIdParameter = kategorijaId.HasValue ?
+                new ObjectParameter("kategorijaId", kategorijaId) :
+                new ObjectParameter("kategorijaId", typeof(int));
+    
+            var gradIdParameter = gradId.HasValue ?
+                new ObjectParameter("gradId", gradId) :
+                new ObjectParameter("gradId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_SearchByKategorijaGrad", kategorijaIdParameter, gradIdParameter);
+        }
+    
+        public virtual ObjectResult<Kompanije> esp_SearchByKategorijaGrad(Nullable<int> kategorijaId, Nullable<int> gradId, MergeOption mergeOption)
+        {
+            var kategorijaIdParameter = kategorijaId.HasValue ?
+                new ObjectParameter("kategorijaId", kategorijaId) :
+                new ObjectParameter("kategorijaId", typeof(int));
+    
+            var gradIdParameter = gradId.HasValue ?
+                new ObjectParameter("gradId", gradId) :
+                new ObjectParameter("gradId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_SearchByKategorijaGrad", mergeOption, kategorijaIdParameter, gradIdParameter);
+        }
     }
 }

@@ -404,6 +404,10 @@
         <Function Name="esp_NeodgovoreniUpiti" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_SearchByKategorijaGrad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="kategorijaId" Type="int" Mode="In" />
+          <Parameter Name="gradId" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_ServisiUTokuCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
         </Function>
@@ -1019,7 +1023,11 @@
             <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_GetServisIDbyPonudaID" ReturnType="Collection(Int32)">
-            <Parameter Name="PonudaID" Mode="In" Type="Int32" />
+          <Parameter Name="PonudaID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_SearchByKategorijaGrad" EntitySet="Kompanije" ReturnType="Collection(ServisInfoModel.Kompanije)">
+            <Parameter Name="kategorijaId" Mode="In" Type="Int32" />
+            <Parameter Name="gradId" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -1417,6 +1425,8 @@
           <FunctionImportMapping FunctionImportName="esp_KompanijeUpdate" FunctionName="ServisInfoModel.Store.esp_KompanijeUpdate" />
           <FunctionImportMapping FunctionImportName="esp_KompanijeKategorije_Insert" FunctionName="ServisInfoModel.Store.esp_KompanijeKategorije_Insert" />
           <FunctionImportMapping FunctionImportName="esp_GetServisIDbyPonudaID" FunctionName="ServisInfoModel.Store.esp_GetServisIDbyPonudaID" />
+          <FunctionImportMapping FunctionImportName="esp_SearchByKategorijaGrad" FunctionName="ServisInfoModel.Store.esp_SearchByKategorijaGrad">
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

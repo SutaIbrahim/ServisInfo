@@ -14,6 +14,7 @@ namespace ServisInfoSolution
 			InitializeComponent();
 
 			MainPage = new NavigationPage(new Prijava());
+
 		}
 
 		protected override void OnStart ()

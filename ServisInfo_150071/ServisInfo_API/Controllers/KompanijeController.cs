@@ -65,6 +65,21 @@ namespace ServisInfo_API.Controllers
 
 
 
+        [Route("api/Kompanije/SearchByKategorijaGradovi/{kategorijaId?}/{gradId?}")]
+        [HttpGet]
+        public IHttpActionResult SearchByKategorijaGradovi(string kategorijaId="", string gradId="")
+        {
+
+
+            int kid = Convert.ToInt32(kategorijaId);
+            int gid = Convert.ToInt32(gradId);
+
+
+            List<Kompanije> kompanije = db.esp_SearchByKategorijaGrad(kid, gid).ToList();
+
+            return Ok(kompanije);
+        }
+
 
         // PUT: api/Kompanije/5
         [ResponseType(typeof(void))]

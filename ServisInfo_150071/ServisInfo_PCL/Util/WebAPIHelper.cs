@@ -31,6 +31,11 @@ namespace ServisInfo_PCL.Util
             return client.GetAsync(route + "/" + action + "/" + parameter).Result;
         }
 
+        public HttpResponseMessage GetActionResponse(string action, string parameter = "", string parameter2 = "")
+        {
+            return client.GetAsync(route + "/" + action + "/" + parameter+ "/" +  parameter2).Result;
+        }
+
         public HttpResponseMessage PostResponse(Object newObject)
         {
             StringContent jsonObject = new StringContent(JsonConvert.SerializeObject(newObject),

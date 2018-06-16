@@ -38,7 +38,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Model\Gradovi.cs" />
+    <Compile Include="Model\Kategorije.cs" />
     <Compile Include="Model\Klijenti.cs" />
+    <Compile Include="Model\Kompanije.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\UIHelper.cs" />
     <Compile Include="Util\WebAPIHelper.cs" />
