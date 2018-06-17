@@ -13,11 +13,11 @@
             <Picker x:Name="gradoviPicker" Title="Izaberite grad" SelectedIndexChanged="gradoviPicker_SelectedIndexChanged"></Picker>
 
             <Button x:Name="kreirajUpitBtn" Text="Kreiraj upit" Clicked="kreirajUpitBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"></Button>
-
+            <Label x:Name="errorLbl" TextColor="Red" FontSize="Micro" HorizontalOptions="End"></Label>
 
             <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
 
-            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="100">
+            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="100" ItemTapped="kompanijeList_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -26,7 +26,9 @@
 
 
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
+
 
 
                                 </Grid.ColumnDefinitions>
@@ -34,13 +36,16 @@
 
                                 <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg"></Image>
 
-                                <StackLayout Grid.Column="1" Padding="10">
+                                <StackLayout Grid.Column="1" Padding="15">
                                     
                                     <Label Text="{Binding Naziv}" FontAttributes="Bold" />
                                     <Label Text="{Binding Adresa}" />
                                     <Label Text="{Binding Telefon}"/>
-
                                 </StackLayout>
+
+
+                                <Label x:Name="checkbox" Grid.Column="2" Text="{Binding Izabrana}" TextColor="Green" FontSize="Large" Margin="10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
 
 
                             </Grid>

@@ -11,6 +11,7 @@ namespace ServisInfo_UI
     {
         public static Kompanije prijavljenaKompanija { get; set; }
 
+
         #region API Routes 
 
         public const string KompanijeRoute = "api/Kompanije";

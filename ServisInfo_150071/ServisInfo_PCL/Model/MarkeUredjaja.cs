@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ServisInfo_PCL.Model
 {
-    public class ModeliUredjaja
+   public  class MarkeUredjaja
     {
 
-        public int KategorijaID { get; set; }
+        public int MarkaUredjajaID { get; set; }
         public string Naziv { get; set; }
     }
 }
