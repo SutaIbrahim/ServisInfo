@@ -22,6 +22,7 @@ namespace ServisInfoSolution
 
         public MainPage()
         {
+            Global.izabraneKompanijeID = new List<int>();
             InitializeComponent();
         }
 
@@ -81,13 +82,17 @@ namespace ServisInfoSolution
                 {
                     var jsonObject = response.Content.ReadAsStringAsync();
                     kompanije = JsonConvert.DeserializeObject<List<Kompanije>>(jsonObject.Result);
+
+                    PostaviCheckBox();
+
                     kompanijeList.ItemsSource = kompanije;
 
                     if (kompanije.Count() > 0)
                     {
                         GreskaLbl.Text = "Odaberite kompaniju/e";
                     }
-                    else {
+                    else
+                    {
                         GreskaLbl.Text = "Nema rezultata";
                     }
                 }
@@ -95,15 +100,71 @@ namespace ServisInfoSolution
             else
             {
                 GreskaLbl.Text = "Nema rezultata";
-                
+                kompanijeList.ItemsSource = new List<Kompanije>();
             }
 
 
         }
 
+        private void PostaviCheckBox()
+        {
+            if (Global.izabraneKompanijeID.Count > 0)
+            {
+                foreach (var x in Global.izabraneKompanijeID)
+                {
+                    foreach (var k in kompanije)
+                    {
+                        if (k.KompanijaID == x)
+                        {
+                            k.Izabrana = "✓";
+                        }
+                    }
+                }
+            }
+
+        }
+
         private void kreirajUpitBtn_Clicked(object sender, EventArgs e)
         {
+            if (!(Global.izabraneKompanijeID.Count() > 0))
+            {
+                errorLbl.Text = "*potrebno je izabrati minimalno jednu kompaniju";
+            }
+            else
+            {
+                this.Navigation.PushAsync(new KreirajUpit());
+            }
 
+        }
+
+        private void kompanijeList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            errorLbl.Text = "";
+
+            int id = (e.Item as Kompanije).KompanijaID;
+
+            bool postoji = false;
+            foreach (var x in Global.izabraneKompanijeID.ToList())
+            {
+                if (id == x)
+                {
+                    Global.izabraneKompanijeID.Remove(x);
+                    postoji = true;
+
+                    foreach (var k in kompanije)
+                    {
+                        if (x == k.KompanijaID)
+                            k.Izabrana = "";
+                    }
+                }
+            }
+
+            if (postoji == false)
+            {
+                Global.izabraneKompanijeID.Add(id);
+            }
+
+            Search();
         }
     }
 }

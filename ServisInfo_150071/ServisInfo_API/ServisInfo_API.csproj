@@ -107,6 +107,8 @@
     <Compile Include="Controllers\KategorijeController.cs" />
     <Compile Include="Controllers\KlijentiController.cs" />
     <Compile Include="Controllers\KompanijeUpitiController.cs" />
+    <Compile Include="Controllers\MarkeUredjajaController.cs" />
+    <Compile Include="Controllers\ModeliUredjajaController.cs" />
     <Compile Include="Controllers\OcjeneController.cs" />
     <Compile Include="Controllers\PonudeController.cs" />
     <Compile Include="Controllers\ServisiController.cs" />

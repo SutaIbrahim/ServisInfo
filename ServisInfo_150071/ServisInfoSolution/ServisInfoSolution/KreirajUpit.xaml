@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServisInfoSolution.KreirajUpit">
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+
+
+
+                <Label Text="Marka uredjaja" Grid.Row="0" Grid.Column="0"></Label>
+                <Picker x:Name="markaUredjajaPicker" Grid.Row="0" Grid.Column="1" SelectedIndexChanged="markaUredjajaPicker_SelectedIndexChanged"></Picker>
+
+                <Label Text="Model uredjaja:" Grid.Row="1" Grid.Column="0"></Label>
+                <Picker x:Name="modelUredjajaPicker" Grid.Row="1" Grid.Column="1"></Picker>
+
+                <!--<Label Text="Opis kvara:" Grid.Row="2" Grid.Column="0"></Label>
+                <Editor x:Name="opisKvaraTxt" Grid.Row="2" Grid.Column="1"></Editor>
+
+                <Label Text="Telefon:" Grid.Row="3" Grid.Column="0"></Label>
+                <Entry x:Name="telefonInput" Grid.Row="3" Grid.Column="1"></Entry>
+
+                <Label Text="Email:" Grid.Row="4" Grid.Column="0"></Label>
+                <Entry x:Name="emailInput" Grid.Row="4" Grid.Column="1"></Entry>
+
+                <Label Text="Grad:" Grid.Row="5" Grid.Column="0"></Label>
+                <Picker x:Name="gradList" Grid.Row="5" Grid.Column="1"></Picker>
+
+                <Label Text="Korisnicko ime:" Grid.Row="6" Grid.Column="0"></Label>
+                <Entry x:Name="korisnickoImeInput" Grid.Row="6" Grid.Column="1"></Entry>
+
+                <Label Text="Lozinka:" Grid.Row="7" Grid.Column="0"></Label>
+                <Entry x:Name="lozinkaInput" Grid.Row="7" Grid.Column="1" IsPassword="True"></Entry>-->
+
+                <Button x:Name="registrujSeButton" Text="Registruj se"
+                        Grid.Row="8" Grid.Column="1"
+                       ></Button>
+
+
+            </Grid>
+
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

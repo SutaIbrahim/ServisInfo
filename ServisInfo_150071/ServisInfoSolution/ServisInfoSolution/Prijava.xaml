@@ -4,7 +4,7 @@
              x:Class="ServisInfoSolution.Prijava">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
-            <Label Text="Prijava @ eProdaja"
+            <Label Text="Prijava @ Servis Info"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" FontSize="Medium" />
 
