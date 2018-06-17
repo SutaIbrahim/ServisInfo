@@ -4,9 +4,15 @@
              x:Class="ServisInfoSolution.KreirajUpit">
     <ScrollView>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
+            
+            <Label Text="Novi upit"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="10"/>
+            
+            <Label x:Name="kategorijaLbl" Text=" "  FontSize="Micro" TextColor="Gray" Margin="5"></Label>
+            <Label x:Name="kompanijeLbl" Text="Izabrane kompanije: "  FontSize="Micro" TextColor="Gray" Margin="5"></Label>
 
-
-            <Grid>
+            <Grid Padding="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -28,39 +34,33 @@
 
 
 
+                <Label Text="Marka uredjaja" Grid.Row="1" Grid.Column="0"></Label>
+                <Picker x:Name="markaUredjajaPicker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="markaUredjajaPicker_SelectedIndexChanged"></Picker>
 
-                <Label Text="Marka uredjaja" Grid.Row="0" Grid.Column="0"></Label>
-                <Picker x:Name="markaUredjajaPicker" Grid.Row="0" Grid.Column="1" SelectedIndexChanged="markaUredjajaPicker_SelectedIndexChanged"></Picker>
+                <Label Text="Model uredjaja:" Grid.Row="2" Grid.Column="0"></Label>
+                <Picker x:Name="modelUredjajaPicker" Grid.Row="2" Grid.Column="1"></Picker>
 
-                <Label Text="Model uredjaja:" Grid.Row="1" Grid.Column="0"></Label>
-                <Picker x:Name="modelUredjajaPicker" Grid.Row="1" Grid.Column="1"></Picker>
+                <Label Text="Opis kvara:" Grid.Row="3" Grid.Column="0"></Label>
+                <Editor x:Name="opisKvaraTxt" Grid.Row="3" Grid.Column="1" HeightRequest="150"></Editor>
 
-                <!--<Label Text="Opis kvara:" Grid.Row="2" Grid.Column="0"></Label>
-                <Editor x:Name="opisKvaraTxt" Grid.Row="2" Grid.Column="1"></Editor>
 
-                <Label Text="Telefon:" Grid.Row="3" Grid.Column="0"></Label>
-                <Entry x:Name="telefonInput" Grid.Row="3" Grid.Column="1"></Entry>
+                <Button x:Name="dodajSlikuBtn" Text="Dodaj sliku" Grid.Row="4" Grid.Column="0" HeightRequest="40" Clicked="dodajSlikuBtn_Clicked"></Button>
+                <Image x:Name="slika" Grid.Row="4" Grid.Column="1" HeightRequest="40" Margin="5"></Image>
 
-                <Label Text="Email:" Grid.Row="4" Grid.Column="0"></Label>
-                <Entry x:Name="emailInput" Grid.Row="4" Grid.Column="1"></Entry>
+                <Label Text="Zeljeni raspon prijema:" Grid.Row="5" Grid.Column="0"></Label>
 
-                <Label Text="Grad:" Grid.Row="5" Grid.Column="0"></Label>
-                <Picker x:Name="gradList" Grid.Row="5" Grid.Column="1"></Picker>
+                <Label Text="Od" Grid.Row="6" Grid.Column="0"></Label>
+                <DatePicker x:Name="datumOd"  Grid.Row="6" Grid.Column="1"></DatePicker>
 
-                <Label Text="Korisnicko ime:" Grid.Row="6" Grid.Column="0"></Label>
-                <Entry x:Name="korisnickoImeInput" Grid.Row="6" Grid.Column="1"></Entry>
+                <Label Text="Do" Grid.Row="7" Grid.Column="0"></Label>
+                <DatePicker x:Name="datumDo"  Grid.Row="7" Grid.Column="1"></DatePicker>
 
-                <Label Text="Lozinka:" Grid.Row="7" Grid.Column="0"></Label>
-                <Entry x:Name="lozinkaInput" Grid.Row="7" Grid.Column="1" IsPassword="True"></Entry>-->
-
-                <Button x:Name="registrujSeButton" Text="Registruj se"
-                        Grid.Row="8" Grid.Column="1"
-                       ></Button>
-
+         
 
             </Grid>
 
 
+            <Button x:Name="posaljiBtn" Text="Posalji upit" HeightRequest="60" BackgroundColor="#13818d" TextColor="White" Clicked="posaljiBtn_Clicked" FontSize="Small"></Button>
         </StackLayout>
 
     </ScrollView>

@@ -23,6 +23,8 @@ namespace ServisInfoSolution
         public MainPage()
         {
             Global.izabraneKompanijeID = new List<int>();
+            Global.izabraneKompanije = new List<string>();
+
             InitializeComponent();
         }
 
@@ -51,14 +53,17 @@ namespace ServisInfoSolution
                 gradoviPicker.ItemDisplayBinding = new Binding("Naziv");
             }
 
-            GreskaLbl.Text = "Nema rezultata";
-
 
             base.OnAppearing();
         }
 
         private void kategorijePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Global.izabraneKompanijeID = new List<int>();
+            Global.izabraneKompanije = new List<string>();
+
+            Global.izabranaKategorija = (kategorijePicker.SelectedItem as Kategorije);
+
             Search();
         }
 
@@ -149,6 +154,8 @@ namespace ServisInfoSolution
                 if (id == x)
                 {
                     Global.izabraneKompanijeID.Remove(x);
+                    Global.izabraneKompanije.Remove((e.Item as Kompanije).Naziv);
+
                     postoji = true;
 
                     foreach (var k in kompanije)
@@ -162,6 +169,7 @@ namespace ServisInfoSolution
             if (postoji == false)
             {
                 Global.izabraneKompanijeID.Add(id);
+                Global.izabraneKompanije.Add((e.Item as Kompanije).Naziv);
             }
 
             Search();

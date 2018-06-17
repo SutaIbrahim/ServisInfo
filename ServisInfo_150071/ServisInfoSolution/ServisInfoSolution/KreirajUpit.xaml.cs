@@ -23,7 +23,23 @@ namespace ServisInfoSolution
 
         public KreirajUpit()
         {
+
             InitializeComponent();
+
+            kategorijaLbl.Text = "Izabrana kategorija: " + Global.izabranaKategorija.Naziv;
+
+            string last = "";
+            string kompanije = "";
+            kompanije = "Izabrane kompanije: ";
+            for (int x = 0; x < Global.izabraneKompanije.Count() - 1; x++)
+            {
+                kompanije += Global.izabraneKompanije[x] + ", ";
+            }
+
+            last = Global.izabraneKompanije[Global.izabraneKompanije.Count() - 1];
+            kompanije += last;
+            kompanijeLbl.Text = kompanije;
+
         }
 
         protected override void OnAppearing()
@@ -40,15 +56,11 @@ namespace ServisInfoSolution
             }
 
 
-          
-
-
-
         }
 
         private void markaUredjajaPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            HttpResponseMessage response2 = modeliUredjajaService.GetActionResponse("GetByMarkaId",((markaUredjajaPicker.SelectedItem as MarkeUredjaja).MarkaUredjajaID).ToString());
+            HttpResponseMessage response2 = modeliUredjajaService.GetActionResponse("GetByMarkaId", ((markaUredjajaPicker.SelectedItem as MarkeUredjaja).MarkaUredjajaID).ToString());
 
             if (response2.IsSuccessStatusCode)
             {
@@ -58,6 +70,26 @@ namespace ServisInfoSolution
 
                 modelUredjajaPicker.ItemDisplayBinding = new Binding("Naziv");
             }
+        }
+
+        private void posaljiBtn_Clicked(object sender, EventArgs e)
+        {
+            validacija();
+
+
+        }
+
+        private void dodajSlikuBtn_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void validacija()
+        {
+
+
+
         }
     }
 }
