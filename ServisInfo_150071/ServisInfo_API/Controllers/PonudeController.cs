@@ -49,6 +49,15 @@ namespace ServisInfo_API.Controllers
             return ponude;
         }
 
+        [HttpGet]
+        [Route("api/Ponude/GetPonudeByKlijentID/{klijentId}")]
+        public List<PonudeKlijent_Result> GetPonudeByKlijentID(string klijentId)
+        {
+
+            List<PonudeKlijent_Result> ponude = db.esp_GetPonudeByKlijentID(Convert.ToInt32(klijentId)).ToList();
+
+            return ponude;
+        }
 
         [HttpGet]
         [Route("api/Ponude/GetDetalji/{id}")]

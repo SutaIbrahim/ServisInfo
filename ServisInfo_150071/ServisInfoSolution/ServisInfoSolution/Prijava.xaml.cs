@@ -37,7 +37,7 @@ namespace ServisInfoSolution
                     (klijent.LozinkaSalt, lozinkaInput.Text))
                 {
                     Global.prijavljeniKlijent = klijent;
-                    this.Navigation.PushAsync(new MainPage());
+                    this.Navigation.PushAsync(new PregledPonuda());
                 }
             }
             else

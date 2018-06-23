@@ -43,6 +43,7 @@
     <Compile Include="Model\Kompanije.cs" />
     <Compile Include="Model\MarkeUredjaja.cs" />
     <Compile Include="Model\ModeliUredjaja.cs" />
+    <Compile Include="Model\PonudeKlijent_Result.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\UIHelper.cs" />
     <Compile Include="Util\WebAPIHelper.cs" />

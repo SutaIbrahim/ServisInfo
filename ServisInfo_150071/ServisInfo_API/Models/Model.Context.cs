@@ -21,7 +21,6 @@ namespace ServisInfo_API.Models
             : base("name=ServisInfoEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -275,6 +274,15 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("gradId", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_SearchByKategorijaGrad", mergeOption, kategorijaIdParameter, gradIdParameter);
+        }
+    
+        public virtual ObjectResult<PonudeKlijent_Result> esp_GetPonudeByKlijentID(Nullable<int> klijentID)
+        {
+            var klijentIDParameter = klijentID.HasValue ?
+                new ObjectParameter("klijentID", klijentID) :
+                new ObjectParameter("klijentID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PonudeKlijent_Result>("esp_GetPonudeByKlijentID", klijentIDParameter);
         }
     }
 }
