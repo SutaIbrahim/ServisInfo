@@ -47,6 +47,7 @@ namespace ServisInfo_UI.Ponude
 
 
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
         }
 
 
@@ -73,48 +74,74 @@ namespace ServisInfo_UI.Ponude
         private void KreirajBtn_Click(object sender, EventArgs e)
         {
 
-            ServisInfo_API.Models.Ponude p = new ServisInfo_API.Models.Ponude();
-
-            p.Prihvacena = false;
-            p.UpitID = UpitID;
-            p.KlijentID = KlijentID;
-            p.DatumKreiranja = DateTime.Now;
-            p.KompanijaID = Global.prijavljenaKompanija.KompanijaID;
-
-            p.Odgovor = OdgovorTxt.Text;
-            p.DatumNajranijegMogucegPrijema = DateTime.Parse(NajranijiPrijemDateTime.Value.ToString());
-            p.Cijena = CijenaTxt.Text;
-            p.TrajanjeDani = Convert.ToDecimal(DaniSelect.Value);
-            p.TrajanjeSati = Convert.ToDecimal(SatiSelect.Value);
-
-            HttpResponseMessage response = PonudeService.PostResponse(p);
-
-            if (response.IsSuccessStatusCode)
+            if (this.ValidateChildren())
             {
-                HttpResponseMessage response2 = KompanijeUpitiService.GetResponse(KUID.ToString());
-                if (response2.IsSuccessStatusCode)
+
+                ServisInfo_API.Models.Ponude p = new ServisInfo_API.Models.Ponude();
+
+                p.Prihvacena = false;
+                p.UpitID = UpitID;
+                p.KlijentID = KlijentID;
+                p.DatumKreiranja = DateTime.Now;
+                p.KompanijaID = Global.prijavljenaKompanija.KompanijaID;
+
+                p.Odgovor = OdgovorTxt.Text;
+                p.DatumNajranijegMogucegPrijema = DateTime.Parse(NajranijiPrijemDateTime.Value.ToString());
+                p.Cijena = CijenaTxt.Text;
+                p.TrajanjeDani = Convert.ToDecimal(DaniSelect.Value);
+                p.TrajanjeSati = Convert.ToDecimal(SatiSelect.Value);
+
+                HttpResponseMessage response = PonudeService.PostResponse(p);
+
+                if (response.IsSuccessStatusCode)
                 {
-                    KompanijeUpiti ku = response2.Content.ReadAsAsync<KompanijeUpiti>().Result;
-                    ku.Odgovoreno = true;
+                    HttpResponseMessage response2 = KompanijeUpitiService.GetResponse(KUID.ToString());
+                    if (response2.IsSuccessStatusCode)
+                    {
+                        KompanijeUpiti ku = response2.Content.ReadAsAsync<KompanijeUpiti>().Result;
+                        ku.Odgovoreno = true;
 
-                    HttpResponseMessage response3 = KompanijeUpitiService.PutResponse(ku.KompanijaUpitID, ku);
+                        HttpResponseMessage response3 = KompanijeUpitiService.PutResponse(ku.KompanijaUpitID, ku);
+                    }
+
+
+                    MessageBox.Show("Uspjesno dodana ponuda", "Dodano", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
-
-
-                MessageBox.Show("Uspjesno dodana ponuda", "Dodano", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                string msg = response.ReasonPhrase;
-                MessageBox.Show("Error Code" +
-                response.StatusCode + " : Message - " + msg);
+                else
+                {
+                    string msg = response.ReasonPhrase;
+                    MessageBox.Show("Error Code" +
+                    response.StatusCode + " : Message - " + msg);
+                }
             }
         }
 
         private void OdustaniBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void OdgovorTxt_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(OdgovorTxt.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(OdgovorTxt, "Morate unijeti odgovor");
+            }
+            else
+                errorProvider.SetError(OdgovorTxt, null);
+        }
+
+        private void CijenaTxt_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(CijenaTxt.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(CijenaTxt, "Morate unijeti okvirnu cijenu");
+            }
+            else
+                errorProvider.SetError(CijenaTxt, null);
         }
     }
 }

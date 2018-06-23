@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.NazivTxt = new System.Windows.Forms.TextBox();
             this.DodajBtn = new System.Windows.Forms.Button();
             this.OdustaniBtn = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,6 +54,7 @@
             this.NazivTxt.Name = "NazivTxt";
             this.NazivTxt.Size = new System.Drawing.Size(187, 22);
             this.NazivTxt.TabIndex = 1;
+            this.NazivTxt.Validating += new System.ComponentModel.CancelEventHandler(this.NazivTxt_Validating);
             // 
             // DodajBtn
             // 
@@ -74,6 +78,10 @@
             this.OdustaniBtn.UseVisualStyleBackColor = true;
             this.OdustaniBtn.Click += new System.EventHandler(this.OdustaniBtn_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // DodajKategoriju
             // 
             this.AcceptButton = this.DodajBtn;
@@ -94,6 +102,7 @@
             this.Name = "DodajKategoriju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje nove kategorije";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,5 +114,6 @@
         private System.Windows.Forms.TextBox NazivTxt;
         private System.Windows.Forms.Button DodajBtn;
         private System.Windows.Forms.Button OdustaniBtn;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

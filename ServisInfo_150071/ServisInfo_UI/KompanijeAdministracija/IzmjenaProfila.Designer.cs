@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.telefonInput = new System.Windows.Forms.MaskedTextBox();
             this.lozinkaInput = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.korisnickoImeInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // telefonInput
@@ -49,6 +52,7 @@
             this.telefonInput.Name = "telefonInput";
             this.telefonInput.Size = new System.Drawing.Size(195, 20);
             this.telefonInput.TabIndex = 53;
+            this.telefonInput.Validating += new System.ComponentModel.CancelEventHandler(this.telefonInput_Validating);
             // 
             // lozinkaInput
             // 
@@ -57,6 +61,7 @@
             this.lozinkaInput.PasswordChar = '*';
             this.lozinkaInput.Size = new System.Drawing.Size(195, 20);
             this.lozinkaInput.TabIndex = 56;
+            this.lozinkaInput.Validating += new System.ComponentModel.CancelEventHandler(this.lozinkaInput_Validating);
             // 
             // label6
             // 
@@ -103,6 +108,7 @@
             this.emailInput.Name = "emailInput";
             this.emailInput.Size = new System.Drawing.Size(195, 20);
             this.emailInput.TabIndex = 52;
+            this.emailInput.Validating += new System.ComponentModel.CancelEventHandler(this.emailInput_Validating);
             // 
             // label3
             // 
@@ -119,6 +125,7 @@
             this.nazivInput.Name = "nazivInput";
             this.nazivInput.Size = new System.Drawing.Size(195, 20);
             this.nazivInput.TabIndex = 49;
+            this.nazivInput.Validating += new System.ComponentModel.CancelEventHandler(this.nazivInput_Validating);
             // 
             // label1
             // 
@@ -135,6 +142,7 @@
             this.korisnickoImeInput.Name = "korisnickoImeInput";
             this.korisnickoImeInput.Size = new System.Drawing.Size(195, 20);
             this.korisnickoImeInput.TabIndex = 55;
+            this.korisnickoImeInput.Validating += new System.ComponentModel.CancelEventHandler(this.korisnickoImeInput_Validating);
             // 
             // label2
             // 
@@ -146,6 +154,10 @@
             this.label2.Size = new System.Drawing.Size(178, 24);
             this.label2.TabIndex = 62;
             this.label2.Text = "Uredjivanje profila";
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // IzmjenaProfila
             // 
@@ -170,6 +182,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "IzmjenaProfila";
             this.Load += new System.EventHandler(this.IzmjenaProfila_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +202,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox korisnickoImeInput;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

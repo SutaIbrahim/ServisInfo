@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -160,10 +161,22 @@ namespace ServisInfo_UI.Administracija
             if (String.IsNullOrEmpty(EmailTxt.Text.Trim()))
             {
                 e.Cancel = true;
-                errorProvider.SetError(EmailTxt, "Email je obavezan");
+                errorProvider.SetError(EmailTxt, Messages.email_req);
             }
             else
-                errorProvider.SetError(EmailTxt, null);
+            {
+                try
+                {
+                    MailAddress mail = new MailAddress(EmailTxt.Text);
+                    errorProvider.SetError(EmailTxt, null);
+
+                }
+                catch (FormatException)
+                {
+                    e.Cancel = true;
+                    errorProvider.SetError(EmailTxt, Messages.email_err);
+                }
+            }
         }
     }
 }

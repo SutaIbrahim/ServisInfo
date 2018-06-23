@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,8 +56,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label15 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DaniSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SatiSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,6 +111,7 @@
             this.OdgovorTxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.OdgovorTxt.Size = new System.Drawing.Size(489, 158);
             this.OdgovorTxt.TabIndex = 6;
+            this.OdgovorTxt.Validating += new System.ComponentModel.CancelEventHandler(this.OdgovorTxt_Validating);
             // 
             // DaniSelect
             // 
@@ -221,6 +225,7 @@
             this.CijenaTxt.Name = "CijenaTxt";
             this.CijenaTxt.Size = new System.Drawing.Size(129, 20);
             this.CijenaTxt.TabIndex = 18;
+            this.CijenaTxt.Validating += new System.ComponentModel.CancelEventHandler(this.CijenaTxt_Validating);
             // 
             // label9
             // 
@@ -313,6 +318,10 @@
             this.label15.TabIndex = 28;
             this.label15.Text = "Kreiranje ponude";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // KreirajPonudu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +361,7 @@
             this.Load += new System.EventHandler(this.KreirajPonudu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DaniSelect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SatiSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,5 +396,6 @@
         private System.Windows.Forms.Label label13;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

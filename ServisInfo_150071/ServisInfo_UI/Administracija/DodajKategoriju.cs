@@ -21,26 +21,30 @@ namespace ServisInfo_UI.Administracija
         public DodajKategoriju()
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
         }
 
-    
+
         private void DodajBtn_Click(object sender, EventArgs e)
         {
-            Kategorije k = new Kategorije();
-            k.Naziv = NazivTxt.Text;
-
-            HttpResponseMessage response = KategorijeService.PostResponse(k);
-
-            if (response.IsSuccessStatusCode)
+            if (this.ValidateChildren())
             {
-                MessageBox.Show("Uspjesno dodana kategorija", "Dodano", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                string msg = response.ReasonPhrase;
+                Kategorije k = new Kategorije();
+                k.Naziv = NazivTxt.Text;
 
-                MessageBox.Show("Kategorija vec postoji");
+                HttpResponseMessage response = KategorijeService.PostResponse(k);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Uspjesno dodana kategorija", "Dodano", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    string msg = response.ReasonPhrase;
+
+                    MessageBox.Show("Kategorija vec postoji");
+                }
             }
         }
 
@@ -49,5 +53,15 @@ namespace ServisInfo_UI.Administracija
             this.Close();
         }
 
+        private void NazivTxt_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(NazivTxt.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(NazivTxt, "Morate unijeti naziv kategorije);
+            }
+            else
+                errorProvider.SetError(NazivTxt, null);
+        }
     }
 }
