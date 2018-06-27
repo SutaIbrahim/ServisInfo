@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServisInfoSolution.DetaljiPonude">
+    <ScrollView Margin="20">
+
+        <!--<StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>-->
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label x:Name="ponudaIDLbl" Text="Detalji o ponudi ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="40"></Label>
+            
+
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Label Text="Datum kreiranja ponude:" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="0"   ></Label>
+                <Label x:Name="DatumLbl" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="1" ></Label>
+
+                <Label Text="Trajanje dani:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="TrajanjeDaniLbl"   Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+
+                <Label Text="Trajanje sati:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="TrajanjeSatiLbl" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   Grid.Row="2" Grid.Column="1" ></Label>
+
+                <Label Text="Prihvacena:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="PrihvacenaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="3" Grid.Column="1" ></Label>
+
+                <Label Text="Kompanija:" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="KompanijaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="4" Grid.Column="1" ></Label>
+
+                <Label Text="Kategorija:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="KategorijaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="5" Grid.Column="1" ></Label>
+
+                <Label Text="Odgovor:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="OdgovorLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="6" Grid.Column="1"  WidthRequest="400"></Label>
+
+                <Label Text="Predlozena cijena:" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="CijenaLbl"  Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="7" Grid.Column="1" ></Label>
+
+
+                <Button x:Name="prihvatiBtn"  FontAttributes="Bold" Grid.Row="8"  Grid.Column="1" Text="Prihvati ponudu" HeightRequest="60" BackgroundColor="Green" TextColor="White" Clicked="prihvatiBtn_Clicked" ></Button>
+
+
+            </Grid>
+
+
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

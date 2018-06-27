@@ -37,5 +37,10 @@ namespace ServisInfoSolution
             base.OnAppearing();
         }
 
+        private void ponudeList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            this.Navigation.PushAsync(new DetaljiPonude((e.Item as PonudeKlijent_Result).PonudaID));
+
+        }
     }
 }

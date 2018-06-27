@@ -58,7 +58,7 @@ namespace ServisInfo_UI.Administracija
             if (String.IsNullOrEmpty(NazivTxt.Text.Trim()))
             {
                 e.Cancel = true;
-                errorProvider.SetError(NazivTxt, "Morate unijeti naziv kategorije);
+                errorProvider.SetError(NazivTxt, "Morate unijeti naziv kategorije");
             }
             else
                 errorProvider.SetError(NazivTxt, null);

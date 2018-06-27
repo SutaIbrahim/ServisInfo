@@ -2,15 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.PregledPonuda">
-    <ScrollView>
+    <ScrollView Margin="15">
 
-        <StackLayout>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <Label Text="Pregled ponuda" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
 
             <Label Text="Kliknite na ponudu za vise detalja" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
 
 
-            <Grid >
+            <Grid  HorizontalOptions="Center" VerticalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150"></ColumnDefinition>
                     <ColumnDefinition Width="140"></ColumnDefinition>
@@ -27,7 +27,7 @@
 
             </Grid>
 
-            <ListView x:Name="ponudeList" VerticalOptions="FillAndExpand" RowHeight="70" Margin="6">
+            <ListView x:Name="ponudeList" HorizontalOptions="Center" VerticalOptions="Center" RowHeight="70" Margin="6" ItemTapped="ponudeList_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -56,7 +56,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
 
         </StackLayout>
     </ScrollView>
