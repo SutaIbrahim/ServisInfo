@@ -33,7 +33,7 @@ namespace ServisInfo_PCL.Util
 
         public HttpResponseMessage GetActionResponse(string action, string parameter = "", string parameter2 = "")
         {
-            return client.GetAsync(route + "/" + action + "/" + parameter+ "/" +  parameter2).Result;
+            return client.GetAsync(route + "/" + action + "/" + parameter + "/" + parameter2).Result;
         }
 
         public HttpResponseMessage PostResponse(Object newObject)
@@ -45,9 +45,9 @@ namespace ServisInfo_PCL.Util
 
         public HttpResponseMessage PutResponse(int id, Object existingObject)
         {
-            throw new NotImplementedException();
-
-            // return client.PutAsJsonAsync(route + "/" + id, existingObject).Result;
+            StringContent jsonObject = new StringContent(JsonConvert.SerializeObject(existingObject),
+                   Encoding.UTF8, "application/json");
+            return client.PutAsync(route + "/" + id, jsonObject).Result;
         }
     }
 }

@@ -45,7 +45,7 @@ namespace ServisInfoSolution
                 PonudaDetalji ponuda = JsonConvert.DeserializeObject<PonudaDetalji>(jsonObject.Result);
                 p = ponuda;
 
-                ponudaIDLbl.Text += " " + ponuda.PonudaID.ToString();
+                ponudaIDLbl.Text = "Detalji o ponudi ID: " + ponuda.PonudaID.ToString();
                 DatumLbl.Text = ponuda.DatumKreiranja.ToString();
                 TrajanjeDaniLbl.Text = ponuda.TrajanjeDani.ToString();
                 TrajanjeSatiLbl.Text = ponuda.TrajanjeSati.ToString();
@@ -94,7 +94,7 @@ namespace ServisInfoSolution
                     HttpResponseMessage response3 = servisiService.PostResponse(servis);
                     if (response3.IsSuccessStatusCode)
                     {
-                        DisplayAlert("Uspjesno", "Ponuda je uspjesno prihvacena", "OK");
+                        DisplayAlert("Uspjesno ste prihvatili ponudu", "Uredjaj mozete dostaviti prema dogovoru sa kompanijom", "OK");
                         Fill();
                     }
 
