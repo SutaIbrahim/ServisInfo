@@ -192,6 +192,9 @@
     <Compile Include="Models\Servisi.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ServisiKlijent_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Upiti.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
