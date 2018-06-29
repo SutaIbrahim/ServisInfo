@@ -17,35 +17,35 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Converters\ImageConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DetaljiPonude.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Ponude\DetaljiPonude.xaml.cs">
       <DependentUpon>DetaljiPonude.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)DetaljiUpita.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Upiti\DetaljiUpita.xaml.cs">
       <DependentUpon>DetaljiUpita.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)DetaljServisa.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Servisi\DetaljServisa.xaml.cs">
       <DependentUpon>DetaljServisa.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Global.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)KreirajUpit.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Upiti\KreirajUpit.xaml.cs">
       <DependentUpon>KreirajUpit.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)PregledPonuda.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Ponude\PregledPonuda.xaml.cs">
       <DependentUpon>PregledPonuda.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)PregledServisa.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Servisi\PregledServisa.xaml.cs">
       <DependentUpon>PregledServisa.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)PregledUpita.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Upiti\PregledUpita.xaml.cs">
       <DependentUpon>PregledUpita.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -71,48 +71,50 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)KreirajUpit.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Upiti\KreirajUpit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PregledPonuda.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Ponude\PregledPonuda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DetaljiPonude.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Ponude\DetaljiPonude.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PregledServisa.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Servisi\PregledServisa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DetaljServisa.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Servisi\DetaljServisa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PregledUpita.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Upiti\PregledUpita.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DetaljiUpita.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Upiti\DetaljiUpita.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Ponude\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Servisi\" />
     <Folder Include="$(MSBuildThisFileDirectory)Upiti\" />
   </ItemGroup>
 </Project>
