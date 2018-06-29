@@ -53,7 +53,7 @@ namespace ServisInfoSolution
                 KompanijaLbl.Text = ponuda.Naziv_Kompanije;
 
                 //ocjene layout
-                if (ponuda.DatumPrihvatanja == null)
+                if (ponuda.DatumPocetka == null)
                 {
                     porukaLbl.Text = "Servis jos uvijek nije zapocet !";
 

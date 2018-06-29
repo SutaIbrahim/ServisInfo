@@ -42,6 +42,7 @@ namespace ServisInfoSolution
                 var jsonObject = response.Content.ReadAsStringAsync();
                 DetaljiUpita_Result upit = JsonConvert.DeserializeObject<DetaljiUpita_Result>(jsonObject.Result);
 
+                upitIDLbl.Text = "Detalji o upitu ID: " + upit.UpitID.ToString();
                 DatumLbl.Text = upit.Datum_upita.ToString();
                 zeljeniOdLbl.Text = upit.ZeljeniDatumPrijemaOd.ToString();
                 zeljeniDoLbl.Text = upit.ZeljeniDatumPrijemaDo.ToString();

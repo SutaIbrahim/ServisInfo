@@ -26,14 +26,14 @@
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
-                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <!--<ColumnDefinition Width="5*"></ColumnDefinition>-->
                             <!--<ColumnDefinition Width="5*"></ColumnDefinition>-->
                         </Grid.ColumnDefinitions>
 
                         <Label Text="Datum slanja:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold"></Label>
                         <Label Text="Kategorija:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
                         <Label Text="Marka uredjaja:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
-                        <Label Text="Odgovoreno?" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <!--<Label Text="Model uredjaja:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>-->
                         <!--<Label Text="TrajanjeSati:" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>-->
 
                     </Grid>
@@ -58,7 +58,7 @@
                                 <Label Text="{Binding Datum_upita}" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
                                 <Label Text="{Binding Naziv_kategorije}"  Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
                                 <Label Text="{Binding Marka_uredjaja}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                <Label Text="{Binding OdgovorenoS}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+                                <!--<Label Text="{Binding Model_uredjaja}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />-->
 
                             </Grid>
                         </ViewCell>

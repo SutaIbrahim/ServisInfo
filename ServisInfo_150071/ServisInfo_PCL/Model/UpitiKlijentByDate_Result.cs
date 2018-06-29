@@ -16,10 +16,9 @@ namespace ServisInfo_PCL.Model
         public Nullable<System.DateTime> Zeljeni_datum_prijema_Od { get; set; }
         public Nullable<System.DateTime> Zeljeni_datum_prijema_Do { get; set; }
         public string Naziv_klijenta { get; set; }
-        public bool Odgovoreno { get; set; }
         public string Naziv_kategorije { get; set; }
         public string DatumUpitaS { get; set; }
-        public string OdgovorenoS { get; set; }
+
 
 
 

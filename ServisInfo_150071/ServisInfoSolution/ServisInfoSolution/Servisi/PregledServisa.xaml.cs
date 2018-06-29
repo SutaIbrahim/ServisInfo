@@ -13,17 +13,19 @@ using Xamarin.Forms.Xaml;
 
 namespace ServisInfoSolution
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PregledServisa : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PregledServisa : ContentPage
+    {
         private WebAPIHelper servisiService = new WebAPIHelper("http://localhost:64158/", "api/Servisi");
+        List<ServisiKlijent_Result> servisi;
 
-
-        public PregledServisa ()
-		{
-            InitializeComponent ();
+        public PregledServisa()
+        {
+            InitializeComponent();
             OdDtm.Date = DateTime.Now.AddDays(-30);
             DoDtm.Date = DateTime.Now.AddDays(1);
+            uTokuSw.IsToggled = true;
+            zavrseniSw.IsToggled = true;
 
         }
 
@@ -42,20 +44,53 @@ namespace ServisInfoSolution
             if (response.IsSuccessStatusCode)
             {
                 var jsonObject = response.Content.ReadAsStringAsync();
-                List<ServisiKlijent_Result> servisi = JsonConvert.DeserializeObject<List<ServisiKlijent_Result>>(jsonObject.Result);
-                
-                foreach(var x in servisi) // set datetime to string
-                {
-                    x.DatumPrihvatanjaS = x.DatumPrihvatanja.ToShortDateString().ToString();
-                    x.DatumPocetkaS = x.DatumPocetka.ToString();
-                    x.DatumZavrsetkaS = x.DatumZavršetka.ToString();
-                }
+                List<ServisiKlijent_Result> s = JsonConvert.DeserializeObject<List<ServisiKlijent_Result>>(jsonObject.Result);
 
-                servisiList.ItemsSource = servisi;
+                servisi = s;
+
+                pripremiPodatke();
             }
 
         }
 
+        private void pripremiPodatke()
+        {
+
+            List<ServisiKlijent_Result> filtriraniServisi = new List<ServisiKlijent_Result>();
+
+
+            foreach (var x in servisi)
+            {
+                if (uTokuSw.IsToggled == true && zavrseniSw.IsToggled == true)
+                {
+                    filtriraniServisi.Add(x);
+                }
+                else if (uTokuSw.IsToggled == true && zavrseniSw.IsToggled == false)
+                {
+                    if (x.DatumZavršetka == null)
+                    {
+                        filtriraniServisi.Add(x);
+                    }
+                }
+                else if (uTokuSw.IsToggled == false && zavrseniSw.IsToggled == true)
+                {
+                    if (x.DatumZavršetka != null)
+                    {
+                        filtriraniServisi.Add(x);
+                    }
+                }
+            }
+
+
+            foreach (var x in filtriraniServisi) // set datetime to string
+            {
+                x.DatumPrihvatanjaS = x.DatumPrihvatanja.ToShortDateString().ToString();
+                x.DatumPocetkaS = x.DatumPocetka.ToString();
+                x.DatumZavrsetkaS = x.DatumZavršetka.ToString();
+            }
+
+            servisiList.ItemsSource = filtriraniServisi;
+        }
 
         private void servisiList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -68,6 +103,16 @@ namespace ServisInfoSolution
         }
 
         private void DoDtm_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Search();
+        }
+
+        private void uTokuSw_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Search();
+        }
+
+        private void zavrseniSw_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             Search();
         }

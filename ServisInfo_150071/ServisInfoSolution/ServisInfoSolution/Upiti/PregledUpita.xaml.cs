@@ -45,14 +45,6 @@ namespace ServisInfoSolution
                 foreach (var x in upiti) // set datetime to string
                 {
                     x.DatumUpitaS = x.Datum_upita.ToString();
-                    if (x.Odgovoreno)
-                    {
-                        x.OdgovorenoS = "DA";
-                    }
-                    else
-                    {
-                        x.OdgovorenoS = "NE";
-                    }
                 }
 
                 upitiList.ItemsSource = upiti;

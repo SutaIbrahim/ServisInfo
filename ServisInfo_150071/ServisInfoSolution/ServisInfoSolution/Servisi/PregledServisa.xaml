@@ -17,6 +17,19 @@
             <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged"></DatePicker>
 
 
+
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Prikazi servise u toku" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                    <Switch x:Name="uTokuSw" PropertyChanged="uTokuSw_PropertyChanged"></Switch>
+
+                    <Label Text=" |  Prikazi zavrsene servise" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                    <Switch x:Name="zavrseniSw" PropertyChanged="zavrseniSw_PropertyChanged"></Switch>
+                </StackLayout>
+
+            </StackLayout>
+
             <Label Text="Kliknite na servis za vise detalja" Margin="5" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
 
 
