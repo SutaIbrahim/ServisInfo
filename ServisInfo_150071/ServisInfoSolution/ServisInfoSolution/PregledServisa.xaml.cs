@@ -76,7 +76,7 @@ namespace ServisInfoSolution
 
         private void servisiList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-
+            this.Navigation.PushAsync(new DetaljServisa((e.Item as ServisiKlijent_Result).ServisID));
         }
 
         private void OdDtm_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

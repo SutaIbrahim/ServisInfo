@@ -11,7 +11,7 @@
         </StackLayout>-->
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label x:Name="ponudaIDLbl" Text="Detalji o servisu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="40" FontAttributes="Bold"></Label>
+            <Label x:Name="servisIDLbl" Text="Detalji o servisu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="40" FontAttributes="Bold"></Label>
 
 
             <Grid >
@@ -34,22 +34,22 @@
 
 
                 <Label Text="Datum prihvatanja ponude:" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="0"   ></Label>
-                <Label x:Name="DatumLbl" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="1" ></Label>
+                <Label x:Name="DatumPrihvatanjaLbl" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="1" ></Label>
 
                 <Label Text="Datum pocetka servisa:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="TrajanjeDaniLbl"   Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                <Label x:Name="DatumPocetkaLBl"   Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
 
                 <Label Text="Datum zavrsetka servisa:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="TrajanjeSatiLbl" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   Grid.Row="2" Grid.Column="1" ></Label>
+                <Label x:Name="DatumZavrsetkaLbl" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   Grid.Row="2" Grid.Column="1" ></Label>
 
                 <Label Text="Kompanija:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="PrihvacenaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="3" Grid.Column="1" ></Label>
+                <Label x:Name="KompanijaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="3" Grid.Column="1" ></Label>
 
                 <Label Text="Trajanje dana:" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="KompanijaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="4" Grid.Column="1" ></Label>
+                <Label x:Name="TrajanjeLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="4" Grid.Column="1" ></Label>
 
                 <Label Text="Konacna cijena popravke:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="KategorijaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="5" Grid.Column="1" ></Label>
+                <Label x:Name="CijenaLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="5" Grid.Column="1" ></Label>
 
                 <!--<Label Text="Odgovor:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
                 <Label x:Name="OdgovorLbl" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="6" Grid.Column="1"  WidthRequest="400"></Label>

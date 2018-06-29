@@ -1,4 +1,6 @@
-﻿using ServisInfo_PCL.Util;
+﻿using Newtonsoft.Json;
+using ServisInfo_PCL.Model;
+using ServisInfo_PCL.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,11 +33,23 @@ namespace ServisInfoSolution
 
         private void Fill()
         {
-            HttpResponseMessage response = servisiService.GetActionResponse("GetDetalji", ponudaID.ToString());
+            HttpResponseMessage response = servisiService.GetActionResponse("GetDetalji", servisID.ToString());
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonObject = response.Content.ReadAsStringAsync();
+                ServisDetalji_Result ponuda = JsonConvert.DeserializeObject<ServisDetalji_Result>(jsonObject.Result);
+
+                DatumPrihvatanjaLbl.Text = ponuda.DatumPrihvatanja.ToString();
+                servisIDLbl.Text = "Detalji o servisu ID: " + ponuda.ServisID.ToString();
+                DatumPocetkaLBl.Text = ponuda.DatumPocetka.ToString();
+                DatumZavrsetkaLbl.Text = ponuda.DatumZavršetka.ToString();
+                TrajanjeLbl.Text = ponuda.TrajanjeDani.ToString();
+                CijenaLbl.Text = ponuda.Završna_cijena.ToString();
+                KompanijaLbl.Text = ponuda.Naziv_Kompanije;
+            }
 
 
-
-        }
+            }
 
 
     }

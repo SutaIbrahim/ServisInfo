@@ -46,6 +46,7 @@
     <Compile Include="Model\Ponuda.cs" />
     <Compile Include="Model\PonudaDetalji.cs" />
     <Compile Include="Model\PonudeKlijent_Result.cs" />
+    <Compile Include="Model\ServisDetalji_Result.cs" />
     <Compile Include="Model\Servisi.cs" />
     <Compile Include="Model\ServisiKlijent_Result.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
