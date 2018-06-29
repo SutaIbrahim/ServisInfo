@@ -10,35 +10,41 @@
             <Label Text="Kliknite na ponudu za vise detalja" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
 
 
-            <Grid  HorizontalOptions="Center" VerticalOptions="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"></ColumnDefinition>
-                    <ColumnDefinition Width="140"></ColumnDefinition>
-                    <ColumnDefinition Width="85"></ColumnDefinition>
-                    <ColumnDefinition Width="90"></ColumnDefinition>
-                    <ColumnDefinition Width="90"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Label Text="Kompanija:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label Text="Kategorija:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label Text="Cijena:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label Text="TrajanjeDani:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label Text="TrajanjeSati:" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-
-            </Grid>
 
             <ListView x:Name="ponudeList" HorizontalOptions="Center" VerticalOptions="Center" RowHeight="70" Margin="6" ItemTapped="ponudeList_ItemTapped">
+
+
+                <ListView.Header>
+                    <Grid  Margin="6" BackgroundColor="LightBlue">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Kompanija:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold"></Label>
+                        <Label Text="Kategorija:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="Cijena:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="TrajanjeDani:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="TrajanjeSati:" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                    </Grid>
+
+                </ListView.Header>
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
                                 <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150"></ColumnDefinition>
-                                    <ColumnDefinition Width="140"></ColumnDefinition>
-                                    <ColumnDefinition Width="85"></ColumnDefinition>
-                                    <ColumnDefinition Width="90"></ColumnDefinition>
-                                    <ColumnDefinition Width="90"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
 
                                 </Grid.ColumnDefinitions>
 
@@ -48,7 +54,6 @@
                                 <Label Text="{Binding Cijena}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding TrajanjeDani}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
                                 <Label Text="{Binding TrajanjeSati}" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-
 
 
                             </Grid>

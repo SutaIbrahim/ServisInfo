@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
-
+using System.Threading;
 using Xamarin.Forms;
 
 namespace ServisInfoSolution
@@ -12,12 +13,16 @@ namespace ServisInfoSolution
 		public App ()
 		{
 			InitializeComponent();
-
+            SetCultureToUSEnglish();
 			MainPage = new NavigationPage(new Prijava());
 
 		}
-
-		protected override void OnStart ()
+        private void SetCultureToUSEnglish()
+        {
+            CultureInfo englishUSCulture = new CultureInfo("hr-HR");
+            CultureInfo.DefaultThreadCurrentCulture = englishUSCulture;
+        }
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
@@ -29,7 +34,11 @@ namespace ServisInfoSolution
 
 		protected override void OnResume ()
 		{
-			// Handle when your app resumes
-		}
+
+            var userSelectedCulture = new CultureInfo("hr-HR");
+
+            Thread.CurrentThread.CurrentCulture = userSelectedCulture;
+            // Handle when your app resumes
+        }
 	}
 }

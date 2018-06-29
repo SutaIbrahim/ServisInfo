@@ -21,39 +21,23 @@ namespace ServisInfoSolution
 
         public PregledServisa ()
 		{
-            //OdDtm. = DateTime.Now.AddDays(-30);
-            //DoDtm.SetValue = DateTime.Now.AddDays(1);
             InitializeComponent ();
-		}
+            OdDtm.Date = DateTime.Now.AddDays(-30);
+            DoDtm.Date = DateTime.Now.AddDays(1);
+
+        }
 
         protected override void OnAppearing()
         {
-            //HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), DateTime.Now.AddDays(-30).ToUniversalTime().ToString(), DateTime.Now.AddDays(1).ToUniversalTime().ToString());
-
-            //if (response.IsSuccessStatusCode)
-            //{
-            //    var jsonObject = response.Content.ReadAsStringAsync();
-            //    List<ServisiKlijent_Result> servisi = JsonConvert.DeserializeObject<List<ServisiKlijent_Result>>(jsonObject.Result);
-            //    servisiList.ItemsSource = servisi;
-            //}
-
-            base.OnAppearing();
-        }
-
-
-        private void Search()
-        {
-            //HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), DateTime.Now.AddDays(-30).ToUniversalTime().ToString(), DateTime.Now.AddDays(1).ToUniversalTime().ToString());
-            //HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), "1/1/2018", "6/6/2018");
-            HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), "1.1.2018", "8.8.2018");
-
+            //HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), DateTime.Now.AddDays(-30).ToString("dd.MM.yyyy"), DateTime.Now.AddDays(1).ToString("dd.MM.yyyy"));
+            HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), OdDtm.Date.ToString("dd.MM.yyyy"), DoDtm.Date.ToString("dd.MM.yyyy"));
 
             if (response.IsSuccessStatusCode)
             {
                 var jsonObject = response.Content.ReadAsStringAsync();
                 List<ServisiKlijent_Result> servisi = JsonConvert.DeserializeObject<List<ServisiKlijent_Result>>(jsonObject.Result);
-                
-                foreach(var x in servisi)
+
+                foreach (var x in servisi) // set datetime to string
                 {
                     x.DatumPrihvatanjaS = x.DatumPrihvatanja.ToShortDateString().ToString();
                     x.DatumPocetkaS = x.DatumPocetka.ToString();
@@ -63,6 +47,29 @@ namespace ServisInfoSolution
                 servisiList.ItemsSource = servisi;
             }
 
+
+            base.OnAppearing();
+        }
+
+
+        private void Search()
+        {
+            HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), OdDtm.Date.ToString("dd.MM.yyyy"), DoDtm.Date.ToString("dd.MM.yyyy"));
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonObject = response.Content.ReadAsStringAsync();
+                List<ServisiKlijent_Result> servisi = JsonConvert.DeserializeObject<List<ServisiKlijent_Result>>(jsonObject.Result);
+                
+                foreach(var x in servisi) // set datetime to string
+                {
+                    x.DatumPrihvatanjaS = x.DatumPrihvatanja.ToShortDateString().ToString();
+                    x.DatumPocetkaS = x.DatumPocetka.ToString();
+                    x.DatumZavrsetkaS = x.DatumZavršetka.ToString();
+                }
+
+                servisiList.ItemsSource = servisi;
+            }
 
         }
 

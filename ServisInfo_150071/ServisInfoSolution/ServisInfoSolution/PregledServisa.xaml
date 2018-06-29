@@ -6,45 +6,54 @@
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
+
+
+
+            <Label Text="Pregled servisa" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+
+
+            <Label Text="Izaberite raspon datuma za prikaz servisa (Od-Do):" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
             <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged"></DatePicker>
             <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged"></DatePicker>
 
 
-
-            <Label Text="Pregled servisa" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-
-            <Label Text="Kliknite na servis za vise detalja" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
+            <Label Text="Kliknite na servis za vise detalja" Margin="5" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
 
 
-            <Grid  HorizontalOptions="Center" VerticalOptions="Center" Margin="6">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="130"></ColumnDefinition>
-                    <ColumnDefinition Width="130"></ColumnDefinition>
-                    <!--<ColumnDefinition Width="90"></ColumnDefinition>-->
-                </Grid.ColumnDefinitions>
 
-                <Label Text="Naziv kompanije:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label Text="Datum prihvatanja servisa:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label Text="Datum pocetka servisa:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <Label Text="Datum zavrsetka servisa:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
-                <!--<Label Text="TrajanjeSati:" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>-->
 
-            </Grid>
 
             <ListView x:Name="servisiList" HorizontalOptions="Center" VerticalOptions="Center" RowHeight="70" Margin="6" ItemTapped="servisiList_ItemTapped">
+
+                <ListView.Header>
+
+                    <Grid   Margin="6" BackgroundColor="LightBlue">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Naziv kompanije:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold"></Label>
+                        <Label Text="Datum prihvatanja servisa:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="Datum pocetka servisa:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="Datum zavrsetka servisa:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    </Grid>
+
+                </ListView.Header>
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
                                 <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150"></ColumnDefinition>
-                                    <ColumnDefinition Width="100"></ColumnDefinition>
-                                    <ColumnDefinition Width="130"></ColumnDefinition>
-                                    <ColumnDefinition Width="130"></ColumnDefinition>
-                                    <!--<ColumnDefinition Width="90"></ColumnDefinition>-->
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
 
                                 </Grid.ColumnDefinitions>
 
