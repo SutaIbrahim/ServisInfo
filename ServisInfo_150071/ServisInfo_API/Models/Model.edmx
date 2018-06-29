@@ -369,7 +369,7 @@
           <Parameter Name="PonudaID" Type="int" Mode="In" />
         </Function>
         <Function Name="esp_KlijentPonude_GetByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+          <Parameter Name="KlijentID" Type="int" Mode="In" />
           <Parameter Name="Datum1" Type="datetime" Mode="In" />
           <Parameter Name="Datum2" Type="datetime" Mode="In" />
         </Function>
@@ -1053,7 +1053,7 @@
             <Parameter Name="Status" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="esp_KlijentPonude_GetByDate" ReturnType="Collection(ServisInfoModel.PonudeByDate_Result)">
-            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+            <Parameter Name="KlijentID" Mode="In" Type="Int32" />
             <Parameter Name="Datum1" Mode="In" Type="DateTime" />
             <Parameter Name="Datum2" Mode="In" Type="DateTime" />
           </FunctionImport>
