@@ -26,5 +26,6 @@ namespace ServisInfo_API.Models
         public Nullable<int> TrajanjeDani { get; set; }
         public Nullable<int> KategorijaID { get; set; }
         public string Kategorija { get; set; }
+        public string Naziv_Kompanije { get; set; }
     }
 }
