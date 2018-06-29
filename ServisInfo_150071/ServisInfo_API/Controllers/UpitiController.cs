@@ -48,7 +48,7 @@ namespace ServisInfo_API.App_Start
         //    return db.esp_KompanijeUpiti_GetByDate(null,null).ToList();
         //}
 
-
+            //desktop
         [HttpGet]
         [Route("api/Upiti/GetByDate/{kompanijaID}/{datum}/{datum2}")]
         public List<KompanijaUpiti_Result> GetByDate(string kompanijaID,string datum, string datum2)
@@ -56,11 +56,20 @@ namespace ServisInfo_API.App_Start
             DateTime Datum = Convert.ToDateTime(datum);
             DateTime Datum2 = Convert.ToDateTime(datum2);
 
-
-
             List<KompanijaUpiti_Result> upiti= db.esp_KompanijeUpiti_GetByDate(Convert.ToInt32(kompanijaID),Datum,Datum2).ToList();
 
-            //return upiti;
+            return upiti;
+        }
+
+        //xamarin
+        [HttpGet]
+        [Route("api/Upiti/GetByDateAndKlijent/{klijentID}/{datum}/{datum2}")]
+        public List<UpitiKlijentByDate_Result> GetByDateAndKlijent(string klijentID, string datum, string datum2)
+        {
+            DateTime Datum = Convert.ToDateTime(datum);
+            DateTime Datum2 = Convert.ToDateTime(datum2);
+
+            List<UpitiKlijentByDate_Result> upiti = db.esp_KlijentiUpiti_GetByDate(Convert.ToInt32(klijentID), Datum, Datum2).ToList();
 
             return upiti;
         }

@@ -379,6 +379,11 @@
           <Parameter Name="Datum2" Type="datetime" Mode="In" />
           <Parameter Name="Status" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="esp_KlijentiUpiti_GetByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KlijetID" Type="int" Mode="In" />
+          <Parameter Name="Datum1" Type="datetime" Mode="In" />
+          <Parameter Name="Datum2" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="esp_KompanijeKategorije_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="KategorijaID" Type="int" Mode="In" />
@@ -1057,6 +1062,11 @@
             <Parameter Name="Datum1" Mode="In" Type="DateTime" />
             <Parameter Name="Datum2" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="esp_KlijentiUpiti_GetByDate" ReturnType="Collection(ServisInfoModel.UpitiKlijentByDate_Result)">
+            <Parameter Name="KlijetID" Mode="In" Type="Int32" />
+            <Parameter Name="Datum1" Mode="In" Type="DateTime" />
+            <Parameter Name="Datum2" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1207,6 +1217,18 @@
           <Property Type="String" Name="Naziv_kompanije" Nullable="false" MaxLength="50" />
           <Property Type="Decimal" Name="TrajanjeDani" Nullable="false" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="TrajanjeSati" Nullable="false" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="UpitiKlijentByDate_Result">
+          <Property Type="Int32" Name="UpitID" Nullable="false" />
+          <Property Type="Int32" Name="KategorijaID" Nullable="true" />
+          <Property Type="Int32" Name="KlijentID" Nullable="false" />
+          <Property Type="DateTime" Name="Datum_upita" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Marka_uredjaja" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Zeljeni_datum_prijema_Od" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Zeljeni_datum_prijema_Do" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Naziv_klijenta" Nullable="false" MaxLength="101" />
+          <Property Type="Boolean" Name="Odgovoreno" Nullable="false" />
+          <Property Type="String" Name="Naziv_kategorije" Nullable="true" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1538,6 +1560,22 @@
                 <ScalarProperty Name="Naziv_kompanije" ColumnName="Naziv kompanije" />
                 <ScalarProperty Name="TrajanjeDani" ColumnName="TrajanjeDani" />
                 <ScalarProperty Name="TrajanjeSati" ColumnName="TrajanjeSati" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_KlijentiUpiti_GetByDate" FunctionName="ServisInfoModel.Store.esp_KlijentiUpiti_GetByDate">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.UpitiKlijentByDate_Result">
+                <ScalarProperty Name="UpitID" ColumnName="UpitID" />
+                <ScalarProperty Name="KategorijaID" ColumnName="KategorijaID" />
+                <ScalarProperty Name="KlijentID" ColumnName="KlijentID" />
+                <ScalarProperty Name="Datum_upita" ColumnName="Datum upita" />
+                <ScalarProperty Name="Marka_uredjaja" ColumnName="Marka uredjaja" />
+                <ScalarProperty Name="Zeljeni_datum_prijema_Od" ColumnName="Zeljeni datum prijema Od" />
+                <ScalarProperty Name="Zeljeni_datum_prijema_Do" ColumnName="Zeljeni datum prijema Do" />
+                <ScalarProperty Name="Naziv_klijenta" ColumnName="Naziv klijenta" />
+                <ScalarProperty Name="Odgovoreno" ColumnName="Odgovoreno" />
+                <ScalarProperty Name="Naziv_kategorije" ColumnName="Naziv kategorije" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

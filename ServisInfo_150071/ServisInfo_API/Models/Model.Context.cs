@@ -323,5 +323,22 @@ namespace ServisInfo_API.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PonudeByDate_Result>("esp_KlijentPonude_GetByDate", klijentIDParameter, datum1Parameter, datum2Parameter);
         }
+    
+        public virtual ObjectResult<UpitiKlijentByDate_Result> esp_KlijentiUpiti_GetByDate(Nullable<int> klijetID, Nullable<System.DateTime> datum1, Nullable<System.DateTime> datum2)
+        {
+            var klijetIDParameter = klijetID.HasValue ?
+                new ObjectParameter("KlijetID", klijetID) :
+                new ObjectParameter("KlijetID", typeof(int));
+    
+            var datum1Parameter = datum1.HasValue ?
+                new ObjectParameter("Datum1", datum1) :
+                new ObjectParameter("Datum1", typeof(System.DateTime));
+    
+            var datum2Parameter = datum2.HasValue ?
+                new ObjectParameter("Datum2", datum2) :
+                new ObjectParameter("Datum2", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UpitiKlijentByDate_Result>("esp_KlijentiUpiti_GetByDate", klijetIDParameter, datum1Parameter, datum2Parameter);
+        }
     }
 }

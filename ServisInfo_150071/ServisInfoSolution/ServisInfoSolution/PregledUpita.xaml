@@ -2,11 +2,70 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.PregledUpita">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ScrollView Margin="15">
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Pregled ponuda" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+
+
+            <Label Text="Izaberite raspon datuma za prikaz upita (Od-Do):" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
+            <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged"></DatePicker>
+            <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged"></DatePicker>
+
+
+            <Label Text="Kliknite na upit za vise detalja" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
+
+
+
+            <ListView x:Name="upitiList" HorizontalOptions="Center" VerticalOptions="Center" RowHeight="70" Margin="6" ItemTapped="upitiList_ItemTapped">
+
+
+                <ListView.Header>
+                    <Grid  Margin="6" BackgroundColor="LightBlue">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <!--<ColumnDefinition Width="5*"></ColumnDefinition>-->
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Datum slanja:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold"></Label>
+                        <Label Text="Kategorija:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="Marka uredjaja:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="Odgovoreno?" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <!--<Label Text="TrajanjeSati:" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>-->
+
+                    </Grid>
+
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <!--<ColumnDefinition Width="5*"></ColumnDefinition>-->
+
+                                </Grid.ColumnDefinitions>
+
+
+                                <Label Text="{Binding Datum_upita}" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+                                <Label Text="{Binding Naziv_kategorije}"  Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+                                <Label Text="{Binding Marka_uredjaja}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding OdgovorenoS}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

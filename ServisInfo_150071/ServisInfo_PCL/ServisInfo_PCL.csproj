@@ -50,6 +50,7 @@
     <Compile Include="Model\ServisDetalji_Result.cs" />
     <Compile Include="Model\Servisi.cs" />
     <Compile Include="Model\ServisiKlijent_Result.cs" />
+    <Compile Include="Model\UpitiKlijentByDate_Result.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\UIHelper.cs" />
     <Compile Include="Util\WebAPIHelper.cs" />

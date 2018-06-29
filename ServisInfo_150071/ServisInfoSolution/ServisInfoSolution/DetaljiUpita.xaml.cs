@@ -12,8 +12,12 @@ namespace ServisInfoSolution
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DetaljiUpita : ContentPage
 	{
-		public DetaljiUpita ()
+
+
+        private int upitID;
+		public DetaljiUpita (int upitID)
 		{
+            this.upitID = upitID;
 			InitializeComponent ();
 		}
 	}
