@@ -45,6 +45,7 @@
     <Compile Include="Model\ModeliUredjaja.cs" />
     <Compile Include="Model\Ponuda.cs" />
     <Compile Include="Model\PonudaDetalji.cs" />
+    <Compile Include="Model\PonudeByDate_Result.cs" />
     <Compile Include="Model\PonudeKlijent_Result.cs" />
     <Compile Include="Model\ServisDetalji_Result.cs" />
     <Compile Include="Model\Servisi.cs" />

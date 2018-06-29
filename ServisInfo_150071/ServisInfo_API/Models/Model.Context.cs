@@ -21,6 +21,8 @@ namespace ServisInfo_API.Models
             : base("name=ServisInfoEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
+
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -304,6 +306,23 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("Status", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ServisiKlijent_Result>("esp_KlijentiServisi_GetByDate", klijentIDParameter, datum1Parameter, datum2Parameter, statusParameter);
+        }
+    
+        public virtual ObjectResult<PonudeByDate_Result> esp_KlijentPonude_GetByDate(Nullable<int> kompanijaID, Nullable<System.DateTime> datum1, Nullable<System.DateTime> datum2)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var datum1Parameter = datum1.HasValue ?
+                new ObjectParameter("Datum1", datum1) :
+                new ObjectParameter("Datum1", typeof(System.DateTime));
+    
+            var datum2Parameter = datum2.HasValue ?
+                new ObjectParameter("Datum2", datum2) :
+                new ObjectParameter("Datum2", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PonudeByDate_Result>("esp_KlijentPonude_GetByDate", kompanijaIDParameter, datum1Parameter, datum2Parameter);
         }
     }
 }

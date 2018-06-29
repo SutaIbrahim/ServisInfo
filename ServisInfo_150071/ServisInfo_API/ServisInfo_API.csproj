@@ -183,6 +183,9 @@
     <Compile Include="Models\Ponude.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PonudeByDate_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PonudeKlijent_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

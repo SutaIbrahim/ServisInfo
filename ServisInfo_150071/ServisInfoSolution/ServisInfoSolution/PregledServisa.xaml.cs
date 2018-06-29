@@ -29,24 +29,7 @@ namespace ServisInfoSolution
 
         protected override void OnAppearing()
         {
-            //HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), DateTime.Now.AddDays(-30).ToString("dd.MM.yyyy"), DateTime.Now.AddDays(1).ToString("dd.MM.yyyy"));
-            HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), OdDtm.Date.ToString("dd.MM.yyyy"), DoDtm.Date.ToString("dd.MM.yyyy"));
-
-            if (response.IsSuccessStatusCode)
-            {
-                var jsonObject = response.Content.ReadAsStringAsync();
-                List<ServisiKlijent_Result> servisi = JsonConvert.DeserializeObject<List<ServisiKlijent_Result>>(jsonObject.Result);
-
-                foreach (var x in servisi) // set datetime to string
-                {
-                    x.DatumPrihvatanjaS = x.DatumPrihvatanja.ToShortDateString().ToString();
-                    x.DatumPocetkaS = x.DatumPocetka.ToString();
-                    x.DatumZavrsetkaS = x.DatumZavršetka.ToString();
-                }
-
-                servisiList.ItemsSource = servisi;
-            }
-
+            Search();
 
             base.OnAppearing();
         }

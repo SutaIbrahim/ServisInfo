@@ -35,7 +35,7 @@ namespace ServisInfo_API.Controllers
             return Ok(ponude);
         }
 
-
+        //Desktop
         [HttpGet]
         [Route("api/Ponude/GetByDate/{kompanijaID}/{datum}/{datum2}")]
         public List<KompanijaPonude_Result> GetByDate(string kompanijaID,string datum, string datum2)
@@ -45,6 +45,19 @@ namespace ServisInfo_API.Controllers
 
 
             List<KompanijaPonude_Result> ponude = db.esp_KompanijePonude_GetByDate(Convert.ToInt32(kompanijaID), Datum, Datum2).ToList();
+
+            return ponude;
+        }
+
+        //xamarin
+        [HttpGet]
+        [Route("api/Ponude/GetByDateAndKlijent/{klijentID}/{datum}/{datum2}")]
+        public List<PonudeByDate_Result> GetByDateAndKlijent(string klijentID, string datum, string datum2)
+        {
+            DateTime Datum = Convert.ToDateTime(datum);
+            DateTime Datum2 = Convert.ToDateTime(datum2);
+
+            List<PonudeByDate_Result> ponude = db.esp_KlijentPonude_GetByDate(Convert.ToInt32(klijentID), Datum, Datum2).ToList();
 
             return ponude;
         }
@@ -66,7 +79,6 @@ namespace ServisInfo_API.Controllers
             
             return ponuda;
         }
-
         
 
         // PUT: api/Ponude/5
