@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Model\DetaljiUpita_Result.cs" />
     <Compile Include="Model\Gradovi.cs" />
     <Compile Include="Model\Kategorije.cs" />
     <Compile Include="Model\Klijenti.cs" />

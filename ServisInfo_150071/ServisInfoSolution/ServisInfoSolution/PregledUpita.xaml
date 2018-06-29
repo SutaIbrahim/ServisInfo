@@ -5,7 +5,7 @@
     <ScrollView Margin="15">
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="Pregled ponuda" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Text="Pregled upita" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
 
 
             <Label Text="Izaberite raspon datuma za prikaz upita (Od-Do):" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
