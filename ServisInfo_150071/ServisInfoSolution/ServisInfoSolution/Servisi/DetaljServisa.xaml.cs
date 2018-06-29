@@ -17,8 +17,12 @@ namespace ServisInfoSolution
     public partial class DetaljServisa : ContentPage
     {
         private WebAPIHelper servisiService = new WebAPIHelper("http://localhost:64158/", "api/Servisi");
+        private WebAPIHelper ocjeneService = new WebAPIHelper("http://localhost:64158/", "api/Ocjene");
+
 
         private int servisID;
+
+        private ServisDetalji_Result ponuda;
 
         public DetaljServisa(int servisID)
         {
@@ -38,6 +42,7 @@ namespace ServisInfoSolution
             {
                 var jsonObject = response.Content.ReadAsStringAsync();
                 ServisDetalji_Result ponuda = JsonConvert.DeserializeObject<ServisDetalji_Result>(jsonObject.Result);
+                this.ponuda = ponuda;
 
                 DatumPrihvatanjaLbl.Text = ponuda.DatumPrihvatanja.ToString();
                 servisIDLbl.Text = "Detalji o servisu ID: " + ponuda.ServisID.ToString();
@@ -47,13 +52,52 @@ namespace ServisInfoSolution
                 CijenaLbl.Text = ponuda.Završna_cijena.ToString();
                 KompanijaLbl.Text = ponuda.Naziv_Kompanije;
 
-                if (ponuda.DatumZavršetka == null)
+                //ocjene layout
+                if (ponuda.DatumPrihvatanja == null)
                 {
-                    porukaLbl.Text = "Servis je jos uvijek u toku";
+                    porukaLbl.Text = "Servis jos uvijek nije zapocet !";
+
                     BrzinaSlider.IsVisible = false;
                     KvalitetSlider.IsVisible = false;
                     KomunikacijaSlider.IsVisible = false;
-                    
+
+                    BrzinaLbl.IsVisible = false;
+                    KvalitetLbl.IsVisible = false;
+                    KomunikacijaLbl.IsVisible = false;
+
+                    ocjeniBtn.IsVisible = false;
+
+
+                }
+                else if (ponuda.Ocjenjen == true) // bool ocjenjen
+                {
+                    porukaLbl.Text = "Servis je uspjesno zavrsen i ocjenjen !";
+
+                    BrzinaSlider.IsVisible = false;
+                    KvalitetSlider.IsVisible = false;
+                    KomunikacijaSlider.IsVisible = false;
+
+                    BrzinaLbl.IsVisible = false;
+                    KvalitetLbl.IsVisible = false;
+                    KomunikacijaLbl.IsVisible = false;
+
+                    ocjeniBtn.IsVisible = false;
+
+
+                }
+                else if (ponuda.DatumZavršetka == null)
+                {
+                    porukaLbl.Text = "Servis je u toku !";
+
+                    BrzinaSlider.IsVisible = false;
+                    KvalitetSlider.IsVisible = false;
+                    KomunikacijaSlider.IsVisible = false;
+
+                    BrzinaLbl.IsVisible = false;
+                    KvalitetLbl.IsVisible = false;
+                    KomunikacijaLbl.IsVisible = false;
+                    ocjeniBtn.IsVisible = false;
+
                 }
                 else
                 {
@@ -62,8 +106,14 @@ namespace ServisInfoSolution
                     BrzinaSlider.IsVisible = true;
                     KvalitetSlider.IsVisible = true;
                     KomunikacijaSlider.IsVisible = true;
-                }
 
+                    BrzinaLbl.IsVisible = true;
+                    KvalitetLbl.IsVisible = true;
+                    KomunikacijaLbl.IsVisible = true;
+
+                    ocjeniBtn.IsVisible = true;
+
+                }
             }
 
 
@@ -72,6 +122,35 @@ namespace ServisInfoSolution
         private void ocjeniBtn_Clicked(object sender, EventArgs e)
         {
 
+            Ocjene o = new Ocjene();
+            o.Datum = DateTime.Now;
+            o.KlijentID = ponuda.KlijentID;
+            o.ServisID = servisID;
+
+
+            //3 ocjene
+
+            o.Ocjena = Convert.ToDecimal(BrzinaSlider.Value);
+            o.VrstaOcjeneID = 1;
+            ocjeneService.PostResponse(o);
+
+            o.Ocjena = Convert.ToDecimal(KvalitetSlider.Value);
+            o.VrstaOcjeneID = 2;
+            ocjeneService.PostResponse(o);
+
+            o.Ocjena = Convert.ToDecimal(KomunikacijaSlider.Value);
+            o.VrstaOcjeneID = 3;
+            HttpResponseMessage response = ocjeneService.PostResponse(o);
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                DisplayAlert("Uspjesno ste ocijenili ovaj servis", "", "OK");
+            }
+
+            Fill();
         }
+
+
     }
 }

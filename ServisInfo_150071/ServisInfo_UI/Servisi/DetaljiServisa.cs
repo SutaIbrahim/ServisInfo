@@ -28,6 +28,7 @@ namespace ServisInfo_UI.Servisi
 
             ServisID = servisID;
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
             Bind();
         }
 
@@ -191,20 +192,23 @@ namespace ServisInfo_UI.Servisi
 
         private void ZavrsiBtn_Click(object sender, EventArgs e)
         {
-            HttpResponseMessage response = ServisiService.GetResponse(ServisID.ToString());
-
-            if (response.IsSuccessStatusCode)
+            if (this.ValidateChildren())
             {
-                ServisInfo_API.Models.Servisi servis = response.Content.ReadAsAsync<ServisInfo_API.Models.Servisi>().Result;
-                servis.DatumZavršetka = DateTime.Now;
-                servis.Cijena = Convert.ToDecimal(CijenaTxt.Text);
+                HttpResponseMessage response = ServisiService.GetResponse(ServisID.ToString());
 
-                servis.TrajanjeDani = s.DatumPocetka.Value.DayOfYear - DateTime.Now.DayOfYear; // bug ako su 2 razlicite godine !
+                if (response.IsSuccessStatusCode)
+                {
+                    ServisInfo_API.Models.Servisi servis = response.Content.ReadAsAsync<ServisInfo_API.Models.Servisi>().Result;
+                    servis.DatumZavršetka = DateTime.Now;
+                    servis.Cijena = Convert.ToDecimal(CijenaTxt.Text);
 
-                HttpResponseMessage response2 = ServisiService.PutResponse(ServisID, servis);
-                MessageBox.Show("Servis uspjesno završen");
+                    servis.TrajanjeDani = s.DatumPocetka.Value.DayOfYear - DateTime.Now.DayOfYear; // bug ako su 2 razlicite godine !
 
-                Bind();
+                    HttpResponseMessage response2 = ServisiService.PutResponse(ServisID, servis);
+                    MessageBox.Show("Servis uspjesno završen");
+
+                    Bind();
+                }
             }
         }
 
@@ -213,6 +217,17 @@ namespace ServisInfo_UI.Servisi
             Ponude.DetaljiPonude frm = new Ponude.DetaljiPonude(s.PonudaID);
             frm.ShowDialog();
             Bind();
+        }
+
+        private void CijenaTxt_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(CijenaTxt.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(CijenaTxt, "Morate unijeti konacnu cijenu popravke");
+            }
+            else
+                errorProvider.SetError(CijenaTxt, null);
         }
     }
 }

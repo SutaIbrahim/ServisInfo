@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,6 +57,8 @@
             this.ocjena2Lbl = new System.Windows.Forms.Label();
             this.ocjena3Lbl = new System.Windows.Forms.Label();
             this.OcjeneLbl = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -186,6 +189,7 @@
             this.CijenaTxt.Size = new System.Drawing.Size(73, 20);
             this.CijenaTxt.TabIndex = 30;
             this.CijenaTxt.TextChanged += new System.EventHandler(this.CijenaTxt_TextChanged);
+            this.CijenaTxt.Validating += new System.ComponentModel.CancelEventHandler(this.CijenaTxt_Validating);
             // 
             // label9
             // 
@@ -340,6 +344,10 @@
             this.OcjeneLbl.TabIndex = 46;
             this.OcjeneLbl.Text = "Ocjene od klijenta:";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // DetaljiServisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,6 +386,7 @@
             this.Name = "DetaljiServisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiServisa";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +422,6 @@
         private System.Windows.Forms.Label ocjena2Lbl;
         private System.Windows.Forms.Label ocjena3Lbl;
         private System.Windows.Forms.Label OcjeneLbl;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
