@@ -49,7 +49,6 @@
                                     <ColumnDefinition Width="5*"></ColumnDefinition>
                                     <ColumnDefinition Width="5*"></ColumnDefinition>
                                     <ColumnDefinition Width="5*"></ColumnDefinition>
-                                    <ColumnDefinition Width="5*"></ColumnDefinition>
                                     <!--<ColumnDefinition Width="5*"></ColumnDefinition>-->
 
                                 </Grid.ColumnDefinitions>

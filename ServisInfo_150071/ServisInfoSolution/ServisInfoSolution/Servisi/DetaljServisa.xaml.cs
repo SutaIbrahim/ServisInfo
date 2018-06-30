@@ -66,23 +66,22 @@ namespace ServisInfoSolution
                     KomunikacijaLbl.IsVisible = false;
 
                     ocjeniBtn.IsVisible = false;
-
-
                 }
                 else if (ponuda.Ocjenjen == true) // bool ocjenjen
                 {
                     porukaLbl.Text = "Servis je uspjesno zavrsen i ocjenjen !";
 
-                    BrzinaSlider.IsVisible = false;
-                    KvalitetSlider.IsVisible = false;
-                    KomunikacijaSlider.IsVisible = false;
+                    BrzinaSlider.IsVisible = true;
+                    KvalitetSlider.IsVisible = true;
+                    KomunikacijaSlider.IsVisible = true;
 
-                    BrzinaLbl.IsVisible = false;
-                    KvalitetLbl.IsVisible = false;
-                    KomunikacijaLbl.IsVisible = false;
+                    BrzinaLbl.IsVisible = true;
+                    KvalitetLbl.IsVisible = true;
+                    KomunikacijaLbl.IsVisible = true;
 
                     ocjeniBtn.IsVisible = false;
 
+                    PreuzmiOcjene(); /////////
 
                 }
                 else if (ponuda.DatumZavršetka == null)
@@ -113,9 +112,46 @@ namespace ServisInfoSolution
 
                     ocjeniBtn.IsVisible = true;
 
+                    BrzinaSlider.IsEnabled = true;
+                    KvalitetSlider.IsEnabled = true;
+                    KomunikacijaSlider.IsEnabled = true;
+
                 }
             }
 
+
+        }
+
+        private void PreuzmiOcjene()
+        {
+            HttpResponseMessage response = ocjeneService.GetActionResponse("GetOcjeneList", servisID.ToString());
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonObject = response.Content.ReadAsStringAsync();
+                List<Ocjene> ocjene = JsonConvert.DeserializeObject<List<Ocjene>>(jsonObject.Result);
+
+                foreach (var x in ocjene)
+                {
+                    if (x.VrstaOcjeneID == 1)
+                    {
+                        BrzinaSlider.Value = Convert.ToDouble(x.Ocjena);
+                        BrzinaSlider.IsEnabled = false;
+                    }
+                    else if (x.VrstaOcjeneID == 2)
+                    {
+                        KvalitetSlider.Value = Convert.ToDouble(x.Ocjena);
+                        KvalitetSlider.IsEnabled = false;
+                    }
+                    else if (x.VrstaOcjeneID == 3)
+                    {
+                        KomunikacijaSlider.Value = Convert.ToDouble(x.Ocjena);
+                        KomunikacijaSlider.IsEnabled = false;
+                    }
+
+                }
+            }
 
         }
 
