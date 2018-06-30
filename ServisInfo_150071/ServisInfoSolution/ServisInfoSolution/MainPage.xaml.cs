@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
@@ -97,7 +98,7 @@ namespace ServisInfoSolution
 
                     if (kompanije.Count() > 0)
                     {
-                        GreskaLbl.Text = "Odaberite kompaniju/e";
+                        GreskaLbl.Text = "Kliknite na kompaniju za prikaz detalja";
                     }
                     else
                     {
@@ -147,50 +148,56 @@ namespace ServisInfoSolution
 
         private void kompanijeList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            this.Navigation.PushAsync(new DetaljiKompanije((e.Item as Kompanije).KompanijaID));
+        }
+
+        //private void Button_Pressed(object sender, EventArgs e)
+        //{
+        //}
+
+        public void Dodaj(Object Sender, EventArgs args)
+        {
+            Xamarin.Forms.Button button = (Xamarin.Forms.Button)Sender;
+            string ID = button.CommandParameter.ToString();
 
             errorLbl.Text = "";
 
-            int id = (e.Item as Kompanije).KompanijaID;
+            ////int id = (e.Item as Kompanije).KompanijaID;
 
-            bool postoji = false;
-            foreach (var x in Global.izabraneKompanijeID.ToList())
+            int id = Convert.ToInt32(ID);
+
+            HttpResponseMessage response = kompanijeService.GetResponse(ID);
+            if (response.IsSuccessStatusCode)
             {
-                if (id == x)
+                var jsonObject = response.Content.ReadAsStringAsync();
+                Kompanije temp = JsonConvert.DeserializeObject<Kompanije>(jsonObject.Result);
+
+                bool postoji = false;
+                foreach (var x in Global.izabraneKompanijeID.ToList())
                 {
-                    Global.izabraneKompanijeID.Remove(x);
-                    Global.izabraneKompanije.Remove((e.Item as Kompanije).Naziv);
-
-                    postoji = true;
-
-                    foreach (var k in kompanije)
+                    if (id == x)
                     {
-                        if (x == k.KompanijaID)
-                            k.Izabrana = "";
+                        Global.izabraneKompanijeID.Remove(x);
+                        Global.izabraneKompanije.Remove((temp.Naziv));
+
+                        postoji = true;
+
+                        foreach (var k in kompanije)
+                        {
+                            if (x == k.KompanijaID)
+                                k.Izabrana = "";
+                        }
                     }
                 }
+
+                if (postoji == false)
+                {
+                    Global.izabraneKompanijeID.Add(id);
+                    Global.izabraneKompanije.Add(temp.Naziv);
+                }
+
+                Search();
             }
-
-            if (postoji == false)
-            {
-                Global.izabraneKompanijeID.Add(id);
-                Global.izabraneKompanije.Add((e.Item as Kompanije).Naziv);
-            }
-
-            Search();
         }
-
-        private void Button_Pressed(object sender, EventArgs e)
-        {
-
-            this.Navigation.PushAsync(new DetaljiKompanije(2));
-
-        }
-
-
-        //private void kompanijeList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        //{
-        //    this.Navigation.PushAsync(new DetaljiKompanije((e.SelectedItem as Kompanije).KompanijaID));
-        //}
-
     }
 }

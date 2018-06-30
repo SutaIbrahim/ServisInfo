@@ -16,7 +16,8 @@
             <Button x:Name="kreirajUpitBtn" Text="Kreiraj upit" Clicked="kreirajUpitBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"></Button>
             <Label x:Name="errorLbl" TextColor="Red" FontSize="Micro" HorizontalOptions="End"></Label>
 
-            <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+            <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center" Margin="5"></Label>
+
 
             <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="100" ItemTapped="kompanijeList_ItemTapped" >
                 <ListView.ItemTemplate>
@@ -46,9 +47,10 @@
                                 </StackLayout>
 
                                 <Label x:Name="checkbox" Grid.Column="2" Text="{Binding Izabrana}" TextColor="Green" FontSize="Large" Margin="10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-                                <Button x:Name="Button" Text="heeh" Grid.Column="3" Pressed="Button_Pressed"></Button>
-
-
+                                <!--<Button x:Name="Button" Text="heeh" Grid.Column="3" Pressed="Button_Pressed" Command="{Binding Source={x:Reference mainpage}, Path=BindingContext.AddNotify}"></Button>-->
+                                <!--<Button Grid.Column="3" BindingContext="{Binding Source={x:Reference kompanijeList}, Path=BindingContext}" Command="{Binding DeleteEintragCommand}"  CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
+                                </Button>-->
+                                <Button Grid.Column="3" Text="Dodaj/ukloni" Clicked="Dodaj" CommandParameter="{Binding KompanijaID}" BackgroundColor="Green" TextColor="White" HeightRequest="30" FontSize="Micro"/>
 
                             </Grid>
                         </ViewCell>
