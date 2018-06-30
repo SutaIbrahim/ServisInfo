@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:ServisInfoSolution"
              x:Class="ServisInfoSolution.MainPage"
              Title="Kompanije"
+             x:Name="mainpage"
              >
 
     <ScrollView>
@@ -17,7 +18,7 @@
 
             <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
 
-            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="100" ItemTapped="kompanijeList_ItemTapped">
+            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="100" ItemTapped="kompanijeList_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -27,6 +28,7 @@
 
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
 
 
@@ -43,8 +45,8 @@
                                     <Label Text="{Binding Telefon}"/>
                                 </StackLayout>
 
-
                                 <Label x:Name="checkbox" Grid.Column="2" Text="{Binding Izabrana}" TextColor="Green" FontSize="Large" Margin="10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                <Button x:Name="Button" Text="heeh" Grid.Column="3" Pressed="Button_Pressed"></Button>
 
 
 

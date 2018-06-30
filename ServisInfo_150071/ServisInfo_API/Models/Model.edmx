@@ -417,11 +417,17 @@
         <Function Name="esp_Kompanije_GetByKorisnickoIme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="esp_Kompanije_GetDetalji" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_Kompanije_SearchByNaziv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="esp_NeodgovoreniUpiti" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="esp_Ocjene_GetByKompanijaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="kompanijaID" Type="int" Mode="In" />
         </Function>
         <Function Name="esp_SearchByKategorijaGrad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="kategorijaId" Type="int" Mode="In" />
@@ -1067,6 +1073,12 @@
             <Parameter Name="Datum1" Mode="In" Type="DateTime" />
             <Parameter Name="Datum2" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="esp_Kompanije_GetDetalji" ReturnType="Collection(ServisInfoModel.KompanijeDetalji_Result)">
+          <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Ocjene_GetByKompanijaID" ReturnType="Collection(ServisInfoModel.OcjeneKompanije_Result)">
+            <Parameter Name="kompanijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1230,6 +1242,22 @@
           <Property Type="DateTime" Name="Zeljeni_datum_prijema_Do" Nullable="true" Precision="23" />
           <Property Type="String" Name="Naziv_klijenta" Nullable="false" MaxLength="101" />
           <Property Type="String" Name="Naziv_kategorije" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="KompanijeDetalji_Result">
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Grad" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="OcjeneKompanije_Result">
+          <Property Type="Int32" Name="OcjenaID" Nullable="false" />
+          <Property Type="Decimal" Name="Ocjena" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="VrstaOcjeneID" Nullable="false" />
+          <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="KlijentID" Nullable="false" />
+          <Property Type="Int32" Name="ServisID" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1578,6 +1606,30 @@
                 <ScalarProperty Name="Zeljeni_datum_prijema_Do" ColumnName="Zeljeni datum prijema Do" />
                 <ScalarProperty Name="Naziv_klijenta" ColumnName="Naziv klijenta" />
                 <ScalarProperty Name="Naziv_kategorije" ColumnName="Naziv kategorije" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Kompanije_GetDetalji" FunctionName="ServisInfoModel.Store.esp_Kompanije_GetDetalji">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.KompanijeDetalji_Result">
+                <ScalarProperty Name="KompanijaID" ColumnName="KompanijaID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Grad" ColumnName="Grad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Ocjene_GetByKompanijaID" FunctionName="ServisInfoModel.Store.esp_Ocjene_GetByKompanijaID">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.OcjeneKompanije_Result">
+                <ScalarProperty Name="OcjenaID" ColumnName="OcjenaID" />
+                <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
+                <ScalarProperty Name="VrstaOcjeneID" ColumnName="VrstaOcjeneID" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+                <ScalarProperty Name="KlijentID" ColumnName="KlijentID" />
+                <ScalarProperty Name="ServisID" ColumnName="ServisID" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

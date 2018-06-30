@@ -48,6 +48,14 @@ namespace ServisInfo_API.Controllers
             return Ok(ocjene);
         }
 
+        [Route("api/Ocjene/GetOcjeneKompanije/{kompanijaID}")]
+        public IHttpActionResult GetOcjeneKompanije(int kompanijaID)
+        {
+            List<OcjeneKompanije_Result> ocjene = db.esp_Ocjene_GetByKompanijaID(Convert.ToInt32(kompanijaID)).ToList();
+
+            return Ok(ocjene);
+        }
+
         // PUT: api/Ocjene/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutOcjene(int id, Ocjene ocjene)

@@ -21,7 +21,6 @@ namespace ServisInfo_API.Models
             : base("name=ServisInfoEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -339,6 +338,24 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("Datum2", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UpitiKlijentByDate_Result>("esp_KlijentiUpiti_GetByDate", klijetIDParameter, datum1Parameter, datum2Parameter);
+        }
+    
+        public virtual ObjectResult<KompanijeDetalji_Result> esp_Kompanije_GetDetalji(Nullable<int> kompanijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijeDetalji_Result>("esp_Kompanije_GetDetalji", kompanijaIDParameter);
+        }
+    
+        public virtual ObjectResult<OcjeneKompanije_Result> esp_Ocjene_GetByKompanijaID(Nullable<int> kompanijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("kompanijaID", kompanijaID) :
+                new ObjectParameter("kompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<OcjeneKompanije_Result>("esp_Ocjene_GetByKompanijaID", kompanijaIDParameter);
         }
     }
 }

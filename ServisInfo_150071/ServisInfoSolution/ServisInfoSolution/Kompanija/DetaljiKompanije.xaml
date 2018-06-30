@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServisInfoSolution.Kompanija.DetaljiKompanije">
+    <ScrollView Margin="10">
+
+        <!--<StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>-->
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label x:Name="kompanijaLbl" Text="Detalji o kompaniji:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="40" FontAttributes="Bold"></Label>
+
+
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Label Text="Adresa:" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="0"   ></Label>
+                <Label x:Name="adresaLbl" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="1" ></Label>
+
+                <Label Text="Grad:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="GradLbl"   Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"></Label>
+
+                <Label Text="Email:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="emailLbl" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"   Grid.Row="2" Grid.Column="1" ></Label>
+
+                <Label Text="Telefon:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
+                <Label x:Name="TelefonLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="3" Grid.Column="1" ></Label>
+
+
+            </Grid>
+
+
+            <Label x:Name="porukaLbl" Text="Prosjecne ocjene kompanije:" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
+
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="60"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Label x:Name="BrzinaLbl" Text="Brzina usluge:" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
+                <Slider x:Name="BrzinaSlider" Maximum="5"  Value="5"   Grid.Row="0" Grid.Column="1" IsEnabled="False" VerticalOptions="Center"></Slider>
+
+                <Label x:Name="KvalitetLbl" Text="Kvalitet usluge:" FontAttributes="Bold" Grid.Row="1"  Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
+                <Slider x:Name="KvalitetSlider" Maximum="5" Value="5"   Grid.Row="1" Grid.Column="1" IsEnabled="False" VerticalOptions="Center"></Slider>
+
+                <Label x:Name="KomunikacijaLbl" Text="Komunikacija:" FontAttributes="Bold" Grid.Row="2"  Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
+                <Slider x:Name="KomunikacijaSlider"  Maximum="5" Value="5"  Grid.Row="2" Grid.Column="1" IsEnabled="False" VerticalOptions="Center"></Slider>
+
+            </Grid>
+
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

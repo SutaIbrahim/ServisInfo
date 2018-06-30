@@ -143,6 +143,9 @@
     <Compile Include="Models\Kompanije.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\KompanijeDetalji_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\KompanijeExtension.cs" />
     <Compile Include="Models\KompanijeKategorije.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -175,6 +178,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ocjene.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OcjeneKompanije_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PonudaDetalji_Result.cs">

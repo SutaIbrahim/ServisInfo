@@ -1,13 +1,16 @@
 ﻿using Newtonsoft.Json;
 using ServisInfo_PCL.Model;
 using ServisInfo_PCL.Util;
+using ServisInfoSolution.Kompanija;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 
 namespace ServisInfoSolution
 {
@@ -144,6 +147,7 @@ namespace ServisInfoSolution
 
         private void kompanijeList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+
             errorLbl.Text = "";
 
             int id = (e.Item as Kompanije).KompanijaID;
@@ -174,5 +178,19 @@ namespace ServisInfoSolution
 
             Search();
         }
+
+        private void Button_Pressed(object sender, EventArgs e)
+        {
+
+            this.Navigation.PushAsync(new DetaljiKompanije(2));
+
+        }
+
+
+        //private void kompanijeList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    this.Navigation.PushAsync(new DetaljiKompanije((e.SelectedItem as Kompanije).KompanijaID));
+        //}
+
     }
 }

@@ -60,7 +60,18 @@ namespace ServisInfo_API.Controllers
             return Ok(kompanije);
         }
 
+        [Route("api/Kompanije/GetDetalji/{kompanijaID}")]
+        public IHttpActionResult GetDetalji(string kompanijaID)
+        {
+            KompanijeDetalji_Result kompanija = db.esp_Kompanije_GetDetalji(Convert.ToInt32(kompanijaID)).FirstOrDefault();
 
+            if (kompanija == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(kompanija);
+        }
 
 
 

@@ -17,6 +17,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Converters\ImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Kompanija\DetaljiKompanije.xaml.cs">
+      <DependentUpon>DetaljiKompanije.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Ponude\DetaljiPonude.xaml.cs">
       <DependentUpon>DetaljiPonude.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -116,5 +120,11 @@
     <Folder Include="$(MSBuildThisFileDirectory)Ponude\" />
     <Folder Include="$(MSBuildThisFileDirectory)Servisi\" />
     <Folder Include="$(MSBuildThisFileDirectory)Upiti\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Kompanija\DetaljiKompanije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
