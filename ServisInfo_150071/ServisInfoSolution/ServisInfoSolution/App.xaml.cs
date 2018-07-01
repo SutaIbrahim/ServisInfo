@@ -13,15 +13,20 @@ namespace ServisInfoSolution
 		public App ()
 		{
 			InitializeComponent();
-            SetCultureToUSEnglish();
-			MainPage = new NavigationPage(new Prijava());
+            //SetCultureToUSEnglish();
+            //MainPage = new NavigationPage(new Prijava());
 
-		}
-        private void SetCultureToUSEnglish()
-        {
-            CultureInfo englishUSCulture = new CultureInfo("hr-HR");
-            CultureInfo.DefaultThreadCurrentCulture = englishUSCulture;
+
+            MainPage = new Navigation.MasterDetailPage();
+
+            //MainPage = new NavigationPage(new MasterDetailPage());
+
         }
+        //private void SetCultureToUSEnglish()
+        //{
+        //    CultureInfo englishUSCulture = new CultureInfo("hr-HR");
+        //    CultureInfo.DefaultThreadCurrentCulture = englishUSCulture;
+        //}
         protected override void OnStart ()
 		{
 			// Handle when your app starts

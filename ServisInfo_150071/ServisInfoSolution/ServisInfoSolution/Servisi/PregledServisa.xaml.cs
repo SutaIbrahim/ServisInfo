@@ -26,7 +26,6 @@ namespace ServisInfoSolution
             DoDtm.Date = DateTime.Now.AddDays(1);
             uTokuSw.IsToggled = true;
             zavrseniSw.IsToggled = true;
-
         }
 
         protected override void OnAppearing()

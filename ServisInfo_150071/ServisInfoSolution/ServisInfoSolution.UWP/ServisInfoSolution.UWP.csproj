@@ -106,6 +106,9 @@
   <ItemGroup>
     <Content Include="appIcon.png" />
     <Content Include="logo.jpg" />
+    <Content Include="odjava.png" />
+    <Content Include="ponude.png" />
+    <Content Include="pretraga.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />
@@ -138,6 +141,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="servisi.png" />
+    <Content Include="upiti.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
