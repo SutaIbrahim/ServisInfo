@@ -51,8 +51,8 @@
                 <Editor x:Name="opisKvaraTxt" Grid.Row="3" Grid.Column="1" HeightRequest="150"></Editor>
 
 
-                <Button x:Name="dodajSlikuBtn" Text="Dodaj sliku" Grid.Row="4" Grid.Column="0" HeightRequest="40" Clicked="dodajSlikuBtn_Clicked"></Button>
-                <Image x:Name="slika" Grid.Row="4" Grid.Column="1" HeightRequest="40" Margin="5"></Image>
+                <Button x:Name="dodajSlikuBtn" Text="Dodaj sliku" Grid.Row="4" Grid.Column="0" HeightRequest="28" Clicked="dodajSlikuBtn_Clicked"></Button>
+                <Image x:Name="slika" Grid.Row="4" Grid.Column="1" HeightRequest="240" Margin="5"></Image>
 
                 <Label Text="Zeljeni raspon prijema:" Grid.Row="5" Grid.Column="0"></Label>
 

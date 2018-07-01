@@ -43,6 +43,7 @@
     <Compile Include="Model\Klijenti.cs" />
     <Compile Include="Model\Kompanije.cs" />
     <Compile Include="Model\KompanijeDetalji_Result.cs" />
+    <Compile Include="Model\KompanijeUpiti.cs" />
     <Compile Include="Model\MarkeUredjaja.cs" />
     <Compile Include="Model\ModeliUredjaja.cs" />
     <Compile Include="Model\Ocjene.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Model\ServisDetalji_Result.cs" />
     <Compile Include="Model\Servisi.cs" />
     <Compile Include="Model\ServisiKlijent_Result.cs" />
+    <Compile Include="Model\Upiti.cs" />
     <Compile Include="Model\UpitiKlijentByDate_Result.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\UIHelper.cs" />

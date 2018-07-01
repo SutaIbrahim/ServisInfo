@@ -96,50 +96,51 @@ namespace ServisInfo_UI.Upiti
                 int resizedImgHeight = Convert.ToInt32(ConfigurationManager.AppSettings["resizedImgHeight"]);
                 int croppedImgWidth = Convert.ToInt32(ConfigurationManager.AppSettings["croppedImgWidth"]);
                 int croppedImgHeight = Convert.ToInt32(ConfigurationManager.AppSettings["croppedImgHeight"]);
+                pictureBox.Image = orgImg;
 
-                if (orgImg.Width > resizedImgWidth)
-                {
-                    Image resizedImg = UIHelper.ResizeImage(orgImg, new Size(resizedImgWidth, resizedImgHeight));
+                //if (orgImg.Width > resizedImgWidth)
+                //{
+                //    Image resizedImg = UIHelper.ResizeImage(orgImg, new Size(resizedImgWidth, resizedImgHeight));
 
-                    if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
-                    {
-                        int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
-                        int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
+                //    if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
+                //    {
+                //        int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
+                //        int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
 
-                        Image croppedImg = UIHelper.CropImage(resizedImg, new Rectangle(croppedXPosition, croppedYPosition, croppedImgWidth, croppedImgHeight));
+                //        Image croppedImg = UIHelper.CropImage(resizedImg, new Rectangle(croppedXPosition, croppedYPosition, croppedImgWidth, croppedImgHeight));
 
-                        ////From Image to byte[]
-                        //MemoryStream ms = new MemoryStream();
-                        //croppedImg.Save(ms, orgImg.RawFormat);
+                //        ////From Image to byte[]
+                //        //MemoryStream ms = new MemoryStream();
+                //        //croppedImg.Save(ms, orgImg.RawFormat);
 
-                        pictureBox.Image = croppedImg;
-                    }
-                    else
-                    {
-                        MessageBox.Show(Messages.picture_war + " " + resizedImgWidth + "x" + resizedImgHeight + ".", Messages.warning,
-                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
+                //        pictureBox.Image = orgImg;
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show(Messages.picture_war + " " + resizedImgWidth + "x" + resizedImgHeight + ".", Messages.warning,
+                //                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    }
+                //}
             }
 
         }
-        private static readonly ImageConverter _imageConverter = new ImageConverter();
-        public static Bitmap GetImageFromByteArray(byte[] byteArray)
-        {
-            Bitmap bm = (Bitmap)_imageConverter.ConvertFrom(byteArray);
+        ////private static readonly ImageConverter _imageConverter = new ImageConverter();
+        //public static Bitmap GetImageFromByteArray(byte[] byteArray)
+        //{
+        //    Bitmap bm = (Bitmap)_imageConverter.ConvertFrom(byteArray);
 
-            if (bm != null && (bm.HorizontalResolution != (int)bm.HorizontalResolution ||
-                               bm.VerticalResolution != (int)bm.VerticalResolution))
-            {
-                // Correct a strange glitch that has been observed in the test program when converting 
-                //  from a PNG file image created by CopyImageToByteArray() - the dpi value "drifts" 
-                //  slightly away from the nominal integer value
-                bm.SetResolution((int)(bm.HorizontalResolution + 0.5f),
-                                 (int)(bm.VerticalResolution + 0.5f));
-            }
+        //    if (bm != null && (bm.HorizontalResolution != (int)bm.HorizontalResolution ||
+        //                       bm.VerticalResolution != (int)bm.VerticalResolution))
+        //    {
+        //        // Correct a strange glitch that has been observed in the test program when converting 
+        //        //  from a PNG file image created by CopyImageToByteArray() - the dpi value "drifts" 
+        //        //  slightly away from the nominal integer value
+        //        bm.SetResolution((int)(bm.HorizontalResolution + 0.5f),
+        //                         (int)(bm.VerticalResolution + 0.5f));
+        //    }
 
-            return bm;
-        }
+        //    return bm;
+        //}
 
         private void DetaljiUpita_Load(object sender, EventArgs e)
         {

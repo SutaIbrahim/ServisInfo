@@ -83,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(512, 464);
+            this.label3.Location = new System.Drawing.Point(214, 465);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 15);
             this.label3.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(332, 464);
+            this.label4.Location = new System.Drawing.Point(34, 465);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 15);
             this.label4.TabIndex = 3;
@@ -103,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(332, 434);
+            this.label5.Location = new System.Drawing.Point(34, 435);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(209, 15);
             this.label5.TabIndex = 4;
@@ -113,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(32, 436);
+            this.label6.Location = new System.Drawing.Point(32, 510);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 15);
             this.label6.TabIndex = 5;
@@ -184,7 +184,7 @@
             // 
             this.DoLbl.AutoSize = true;
             this.DoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DoLbl.Location = new System.Drawing.Point(558, 463);
+            this.DoLbl.Location = new System.Drawing.Point(260, 464);
             this.DoLbl.Name = "DoLbl";
             this.DoLbl.Size = new System.Drawing.Size(52, 16);
             this.DoLbl.TabIndex = 14;
@@ -194,7 +194,7 @@
             // 
             this.OdLbl.AutoSize = true;
             this.OdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.OdLbl.Location = new System.Drawing.Point(377, 464);
+            this.OdLbl.Location = new System.Drawing.Point(79, 465);
             this.OdLbl.Name = "OdLbl";
             this.OdLbl.Size = new System.Drawing.Size(52, 16);
             this.OdLbl.TabIndex = 15;
@@ -234,7 +234,7 @@
             // 
             this.KreirajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.KreirajPonuduBtn.ForeColor = System.Drawing.Color.Green;
-            this.KreirajPonuduBtn.Location = new System.Drawing.Point(473, 543);
+            this.KreirajPonuduBtn.Location = new System.Drawing.Point(473, 848);
             this.KreirajPonuduBtn.Name = "KreirajPonuduBtn";
             this.KreirajPonuduBtn.Size = new System.Drawing.Size(180, 37);
             this.KreirajPonuduBtn.TabIndex = 20;
@@ -244,7 +244,7 @@
             // 
             // NazadBtn
             // 
-            this.NazadBtn.Location = new System.Drawing.Point(35, 543);
+            this.NazadBtn.Location = new System.Drawing.Point(35, 848);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(149, 37);
             this.NazadBtn.TabIndex = 21;
@@ -318,7 +318,7 @@
             // PregledajPonuduBtn
             // 
             this.PregledajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PregledajPonuduBtn.Location = new System.Drawing.Point(473, 543);
+            this.PregledajPonuduBtn.Location = new System.Drawing.Point(473, 848);
             this.PregledajPonuduBtn.Name = "PregledajPonuduBtn";
             this.PregledajPonuduBtn.Size = new System.Drawing.Size(180, 37);
             this.PregledajPonuduBtn.TabIndex = 53;
@@ -328,9 +328,9 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(81, 434);
+            this.pictureBox.Location = new System.Drawing.Point(82, 510);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox.Size = new System.Drawing.Size(571, 298);
             this.pictureBox.TabIndex = 54;
             this.pictureBox.TabStop = false;
             // 
@@ -339,7 +339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(685, 609);
+            this.ClientSize = new System.Drawing.Size(685, 909);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.PregledajPonuduBtn);
             this.Controls.Add(this.UpitIDLbl);
@@ -367,8 +367,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(701, 648);
-            this.MinimumSize = new System.Drawing.Size(701, 648);
+            this.MaximumSize = new System.Drawing.Size(701, 948);
+            this.MinimumSize = new System.Drawing.Size(701, 948);
             this.Name = "DetaljiUpita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiUpita";

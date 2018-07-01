@@ -61,6 +61,7 @@ namespace ServisInfo_API.App_Start
             return upiti;
         }
 
+
         //xamarin
         [HttpGet]
         [Route("api/Upiti/GetByDateAndKlijent/{klijentID}/{datum}/{datum2}")]
@@ -80,6 +81,16 @@ namespace ServisInfo_API.App_Start
         {
 
             DetaljiUpita_Result upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(id)).FirstOrDefault();
+
+            return Ok(upit);
+        }
+
+        [HttpGet]
+        [Route("api/Upiti/GetZadnjiUpit")]
+        public IHttpActionResult GetZadnjiUpit()
+        {
+            Upiti upit = db.Upiti.OrderByDescending(p => p.Datum)
+                       .FirstOrDefault();
 
             return Ok(upit);
         }
