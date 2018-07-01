@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Plugin.Media;
 using ServisInfo_PCL.Model;
 using ServisInfo_PCL.Util;
 using System;
@@ -41,21 +42,21 @@ namespace ServisInfoSolution
             kompanije += last;
             kompanijeLbl.Text = kompanije;
 
-            //dodajSlikuBtn.Clicked += async (sender, args) =>
-            //{
-            //    if (!CrossMedia.Current.IsPickPhotoSupported)
-            //    {
-            //        await DisplayAlert("no upload", "picking a photo is not supported", "ok");
-            //        return;
-            //    }
+            dodajSlikuBtn.Clicked += async (sender, args) =>
+            {
+                if (!CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    await DisplayAlert("no upload", "picking a photo is not supported", "ok");
+                    return;
+                }
 
-            //    var file = await CrossMedia.Current.PickPhotoAsync();
-            //    if (file == null)
-            //        return;
+                var file = await CrossMedia.Current.PickPhotoAsync();
+                if (file == null)
+                    return;
 
-            //    slika.Source = ImageSource.FromStream(() => file.GetStream());
+                slika.Source = ImageSource.FromStream(() => file.GetStream());
 
-            //};
+            };
 
         }
 
