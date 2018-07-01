@@ -47,7 +47,6 @@ namespace ServisInfoSolution
             kompanije += last;
             kompanijeLbl.Text = kompanije;
 
-
             //otvaranje galerije -->> xam.plugin.media nuget 
             dodajSlikuBtn.Clicked += async (sender, args) =>
             {
@@ -62,7 +61,9 @@ namespace ServisInfoSolution
                     return;
 
                 slika.Source = ImageSource.FromStream(() => file.GetStream());
+                //
                 s = file.GetStream();
+                slika.HeightRequest = 240;
 
             };
 
@@ -79,6 +80,8 @@ namespace ServisInfoSolution
                 markaUredjajaPicker.ItemsSource = marke;
 
                 markaUredjajaPicker.ItemDisplayBinding = new Binding("Naziv");
+
+                markaUredjajaPicker.SelectedIndex = 1;
             }
 
 
@@ -95,6 +98,8 @@ namespace ServisInfoSolution
                 modelUredjajaPicker.ItemsSource = modeli;
 
                 modelUredjajaPicker.ItemDisplayBinding = new Binding("Naziv");
+
+                modelUredjajaPicker.SelectedIndex = 1;
             }
         }
 
@@ -124,13 +129,13 @@ namespace ServisInfoSolution
                     u.Slika = null;
                 }
 
-
                 HttpResponseMessage response = upitiService.PostResponse(u);
                 if (response.IsSuccessStatusCode)
                 {
                     HttpResponseMessage response2 = response;
 
                     HttpResponseMessage response3 = upitiService.GetActionResponse("GetZadnjiUpit", "");
+
                     if (response3.IsSuccessStatusCode)
                     {
                         var jsonObject = response.Content.ReadAsStringAsync();
@@ -149,6 +154,7 @@ namespace ServisInfoSolution
                         if (response2.IsSuccessStatusCode)
                         {
                             DisplayAlert("", "Upit je uspjesno poslan", "OK");
+                            this.Navigation.PushAsync(new MainPage());
                         }
                         else
                         {
@@ -156,8 +162,11 @@ namespace ServisInfoSolution
                         }
                     }
                 }
-
-
+            }
+            else
+            {
+                porukaLbl.TextColor = Color.Red;
+                porukaLbl.FontAttributes = FontAttributes.Bold;
             }
         }
 
@@ -172,16 +181,15 @@ namespace ServisInfoSolution
 
         private void dodajSlikuBtn_Clicked(object sender, EventArgs e)
         {
-
         }
-
 
         private bool validacija()
         {
-
-
+            if (!(opisKvaraTxt.Text != null))
+            {
+                return false;
+            }
             return true;
-
         }
     }
 }
