@@ -11,7 +11,7 @@ namespace ServisInfoSolution.Navigation
     {
         public MasterDetailPageMenuItem()
         {
-            TargetType = typeof(MainPage);
+            TargetType = typeof(Prijava);
         }
         public string ImageSource { get; set; }
         public string Title { get; set; }

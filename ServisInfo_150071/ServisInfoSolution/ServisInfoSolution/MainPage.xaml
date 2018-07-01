@@ -5,6 +5,7 @@
              x:Class="ServisInfoSolution.MainPage"
              Title="Kompanije"
              x:Name="mainpage"
+             NavigationPage.HasBackButton="False"
              >
 
     <ScrollView>

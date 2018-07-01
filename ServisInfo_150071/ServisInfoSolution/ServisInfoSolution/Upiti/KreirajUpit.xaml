@@ -68,7 +68,7 @@
             <Label x:Name="porukaLbl" Margin="13" Text="* Obavezna polja"></Label>
 
 
-            <Button x:Name="posaljiBtn" Text="Posalji upit" HeightRequest="60" BackgroundColor="#13818d" TextColor="White" Clicked="posaljiBtn_Clicked" FontSize="Small"></Button>
+            <Button x:Name="posaljiBtn" Text="Posalji upit" HeightRequest="40" BackgroundColor="#13818d" TextColor="White" Clicked="posaljiBtn_Clicked" FontSize="Small"></Button>
         </StackLayout>
 
     </ScrollView>

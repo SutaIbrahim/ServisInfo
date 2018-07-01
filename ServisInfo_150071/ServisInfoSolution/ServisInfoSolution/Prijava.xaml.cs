@@ -18,10 +18,26 @@ namespace ServisInfoSolution
     {
 
         private WebAPIHelper klijentiService = new WebAPIHelper("http://localhost:64158/", "api/Klijenti");
-
         public Prijava()
         {
+      
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+
+        protected override void OnAppearing()
+        {
+        
+            Global.prijavljeniKlijent = null;
+
+            if (Global.prvoPokretanje == true) // dodano jer pri prvim pokretanjem pojavi se sidebar
+            {
+                this.Navigation.PushAsync(new MainPage());
+            }
+
+            NavigationPage.SetHasNavigationBar(this, false);
+            base.OnAppearing();
         }
 
         private void Button_Clicked(object sender, EventArgs e)

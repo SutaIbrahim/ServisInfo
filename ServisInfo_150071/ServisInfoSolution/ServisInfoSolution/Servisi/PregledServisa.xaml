@@ -6,9 +6,6 @@
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
-
-
-
             <Label Text="Pregled servisa" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
 
 
@@ -21,10 +18,10 @@
             <StackLayout>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Prikazi servise u toku" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                    <Label Text="Prikazi servise u toku" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
                     <Switch x:Name="uTokuSw" PropertyChanged="uTokuSw_PropertyChanged"></Switch>
 
-                    <Label Text=" |  Prikazi zavrsene servise" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ></Label>
+                    <Label Text=" |  Prikazi zavrsene servise" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
                     <Switch x:Name="zavrseniSw" PropertyChanged="zavrseniSw_PropertyChanged"></Switch>
                 </StackLayout>
 
@@ -40,7 +37,7 @@
 
                 <ListView.Header>
 
-                    <Grid   Margin="6" BackgroundColor="LightBlue">
+                    <Grid   Margin="6" BackgroundColor="#13818d" HeightRequest="55">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>

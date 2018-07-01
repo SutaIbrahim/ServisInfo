@@ -15,6 +15,8 @@ namespace ServisInfoSolution
 
         public static Kategorije izabranaKategorija { get; set; }
 
+        public static bool prvoPokretanje { get; set; }
+
 
 
     }

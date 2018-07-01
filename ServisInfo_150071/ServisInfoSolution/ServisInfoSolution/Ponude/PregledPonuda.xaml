@@ -21,20 +21,18 @@
 
 
                 <ListView.Header>
-                    <Grid  Margin="6" BackgroundColor="LightBlue">
+                    <Grid  Margin="6" BackgroundColor="#13818d" HeightRequest="40">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
-                            <!--<ColumnDefinition Width="5*"></ColumnDefinition>-->
                         </Grid.ColumnDefinitions>
 
                         <Label Text="Kompanija:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold"></Label>
                         <Label Text="Kategorija:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
                         <Label Text="Cijena:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
                         <Label Text="Datum kreiranja:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
-                        <!--<Label Text="TrajanjeSati:" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>-->
 
                     </Grid>
 
@@ -45,15 +43,11 @@
                         <ViewCell>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-
                                     <ColumnDefinition Width="5*"></ColumnDefinition>
                                     <ColumnDefinition Width="5*"></ColumnDefinition>
                                     <ColumnDefinition Width="5*"></ColumnDefinition>
                                     <ColumnDefinition Width="5*"></ColumnDefinition>
-                                    <!--<ColumnDefinition Width="5*"></ColumnDefinition>-->
-
                                 </Grid.ColumnDefinitions>
-
 
                                 <Label Text="{Binding Naziv_kompanije}" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
                                 <Label Text="{Binding Naziv_kategorije}"  Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />

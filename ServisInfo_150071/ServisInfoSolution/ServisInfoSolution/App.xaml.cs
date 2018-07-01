@@ -16,7 +16,7 @@ namespace ServisInfoSolution
             //SetCultureToUSEnglish();
             //MainPage = new NavigationPage(new Prijava());
 
-
+            Global.prvoPokretanje = true;
             MainPage = new Navigation.MasterDetailPage();
 
             //MainPage = new NavigationPage(new MasterDetailPage());

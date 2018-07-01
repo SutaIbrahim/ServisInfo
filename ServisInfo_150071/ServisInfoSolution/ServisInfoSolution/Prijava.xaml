@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ServisInfoSolution.Prijava">
+             x:Class="ServisInfoSolution.Prijava"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.HasBackButton="False"
+             x:Name="prijava"
+            >
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
             <Label Text="Prijava @ Servis Info"
@@ -16,7 +20,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="End">
                 <Button x:Name="registerButton" Text="Registracija" Clicked="registerButton_Clicked" Margin="4" ></Button>
 
-                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4"></Button>
+                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4" BackgroundColor="#13818d"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.Navigation.MasterDetailPageMaster"
-             Title="Master">
+             Title="ServisInfo">
     <StackLayout>
         <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
@@ -21,11 +21,14 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
+                    <Image  Grid.Column="1"
+              Grid.Row="1" Source="appIcon.png" HeightRequest="500" WidthRequest="500"></Image>
                     <Label
               Grid.Column="1"
               Grid.Row="2"
-              Text="sa"
-              Style="{DynamicResource SubtitleStyle}"/>
+              Text="Dobro dosli u ServisInfo"
+              Style="{DynamicResource SubtitleStyle}"
+                        FontSize="22"/>
                 </Grid>
             </ListView.Header>
             <ListView.ItemTemplate>

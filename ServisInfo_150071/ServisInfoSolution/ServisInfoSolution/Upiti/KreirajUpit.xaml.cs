@@ -46,7 +46,7 @@ namespace ServisInfoSolution
             last = Global.izabraneKompanije[Global.izabraneKompanije.Count() - 1];
             kompanije += last;
             kompanijeLbl.Text = kompanije;
-
+            s = null;
             //otvaranje galerije -->> xam.plugin.media nuget 
             dodajSlikuBtn.Clicked += async (sender, args) =>
             {
@@ -120,7 +120,7 @@ namespace ServisInfoSolution
                 u.KlijentID = Global.prijavljeniKlijent.KlijentID;
                 u.ModelUredjajaID = (modelUredjajaPicker.SelectedItem as ModeliUredjaja).ModelUredjajaID;
 
-                if (slika != null)
+                if (s != null)
                 {
                     u.Slika = StreamToBytes(s);
                 }
@@ -154,7 +154,7 @@ namespace ServisInfoSolution
                         if (response2.IsSuccessStatusCode)
                         {
                             DisplayAlert("", "Upit je uspjesno poslan", "OK");
-                            this.Navigation.PushAsync(new MainPage());
+                            this.Navigation.PopAsync();
                         }
                         else
                         {

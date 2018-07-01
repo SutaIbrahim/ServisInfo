@@ -26,6 +26,8 @@ namespace ServisInfoSolution
 
         public MainPage()
         {
+           
+
             Global.izabraneKompanijeID = new List<int>();
             Global.izabraneKompanije = new List<string>();
 
@@ -34,7 +36,11 @@ namespace ServisInfoSolution
 
         protected override void OnAppearing()
         {
-
+            if (Global.prvoPokretanje == true) // dodano jer pri prvim pokretanjem pojavi se sidebar
+            {
+                Global.prvoPokretanje = false;
+                this.Navigation.PushAsync(new Prijava());
+            }
             HttpResponseMessage response = kategorijeService.GetResponse();
 
             if (response.IsSuccessStatusCode)
