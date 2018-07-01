@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ServisInfoSolution.KreirajUpit">
+             x:Class="ServisInfoSolution.KreirajUpit"
+               xmlns:local="clr-namespace:eProdajaSolution.Converters"
+             >
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="imgConv"></local:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
     <ScrollView>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
             

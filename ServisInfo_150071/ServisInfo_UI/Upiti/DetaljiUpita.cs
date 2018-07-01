@@ -16,7 +16,7 @@ using ServisInfo_UI.Util;
 using System.Net.Http;
 using System.Resources;
 using System.Configuration;
-
+using System.IO;
 
 namespace ServisInfo_UI.Upiti
 {
@@ -35,7 +35,7 @@ namespace ServisInfo_UI.Upiti
             UID = upitID;
             InitializeComponent();
 
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetDetalji",upitID.ToString());
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetDetalji", upitID.ToString());
 
             if (response.IsSuccessStatusCode)
             {
@@ -65,6 +65,9 @@ namespace ServisInfo_UI.Upiti
             UpitIDLbl.Text = UID.ToString();
             //naziv kategorije dodati!!! u.Kategorija ..!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+            UcitajSliku();
+
+
             if (u.Odgovoreno == true)
             {
                 KreirajPonuduBtn.Hide();
@@ -80,7 +83,65 @@ namespace ServisInfo_UI.Upiti
 
         }
 
-            private void DetaljiUpita_Load(object sender, EventArgs e)
+        private void UcitajSliku()
+        {
+
+            if (u.Slika != null)
+            {
+                Image orgImg = (Bitmap)((new ImageConverter()).ConvertFrom(u.Slika));
+
+                //Bitmap orgImg = GetImageFromByteArray(u.Slika);
+
+                int resizedImgWidth = Convert.ToInt32(ConfigurationManager.AppSettings["resizedImgWidth"]);
+                int resizedImgHeight = Convert.ToInt32(ConfigurationManager.AppSettings["resizedImgHeight"]);
+                int croppedImgWidth = Convert.ToInt32(ConfigurationManager.AppSettings["croppedImgWidth"]);
+                int croppedImgHeight = Convert.ToInt32(ConfigurationManager.AppSettings["croppedImgHeight"]);
+
+                if (orgImg.Width > resizedImgWidth)
+                {
+                    Image resizedImg = UIHelper.ResizeImage(orgImg, new Size(resizedImgWidth, resizedImgHeight));
+
+                    if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
+                    {
+                        int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
+                        int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
+
+                        Image croppedImg = UIHelper.CropImage(resizedImg, new Rectangle(croppedXPosition, croppedYPosition, croppedImgWidth, croppedImgHeight));
+
+                        ////From Image to byte[]
+                        //MemoryStream ms = new MemoryStream();
+                        //croppedImg.Save(ms, orgImg.RawFormat);
+
+                        pictureBox.Image = croppedImg;
+                    }
+                    else
+                    {
+                        MessageBox.Show(Messages.picture_war + " " + resizedImgWidth + "x" + resizedImgHeight + ".", Messages.warning,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+
+        }
+        private static readonly ImageConverter _imageConverter = new ImageConverter();
+        public static Bitmap GetImageFromByteArray(byte[] byteArray)
+        {
+            Bitmap bm = (Bitmap)_imageConverter.ConvertFrom(byteArray);
+
+            if (bm != null && (bm.HorizontalResolution != (int)bm.HorizontalResolution ||
+                               bm.VerticalResolution != (int)bm.VerticalResolution))
+            {
+                // Correct a strange glitch that has been observed in the test program when converting 
+                //  from a PNG file image created by CopyImageToByteArray() - the dpi value "drifts" 
+                //  slightly away from the nominal integer value
+                bm.SetResolution((int)(bm.HorizontalResolution + 0.5f),
+                                 (int)(bm.VerticalResolution + 0.5f));
+            }
+
+            return bm;
+        }
+
+        private void DetaljiUpita_Load(object sender, EventArgs e)
         {
 
         }
@@ -97,7 +158,7 @@ namespace ServisInfo_UI.Upiti
 
         private void KreirajPonuduBtn_Click(object sender, EventArgs e)
         {
-            Ponude.KreirajPonudu frm= new Ponude.KreirajPonudu(UID, u.KlijentID,u.KompanijaUpitID, OdLbl.Text,DoLbl.Text,u.Opis_kvara,"Naziv kategorije !!! DODATI");
+            Ponude.KreirajPonudu frm = new Ponude.KreirajPonudu(UID, u.KlijentID, u.KompanijaUpitID, OdLbl.Text, DoLbl.Text, u.Opis_kvara, "Naziv kategorije !!! DODATI");
             frm.ShowDialog();
             this.Close();
         }

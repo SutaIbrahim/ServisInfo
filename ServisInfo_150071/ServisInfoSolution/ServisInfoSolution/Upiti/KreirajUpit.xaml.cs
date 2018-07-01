@@ -3,6 +3,7 @@ using ServisInfo_PCL.Model;
 using ServisInfo_PCL.Util;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -39,6 +40,22 @@ namespace ServisInfoSolution
             last = Global.izabraneKompanije[Global.izabraneKompanije.Count() - 1];
             kompanije += last;
             kompanijeLbl.Text = kompanije;
+
+            //dodajSlikuBtn.Clicked += async (sender, args) =>
+            //{
+            //    if (!CrossMedia.Current.IsPickPhotoSupported)
+            //    {
+            //        await DisplayAlert("no upload", "picking a photo is not supported", "ok");
+            //        return;
+            //    }
+
+            //    var file = await CrossMedia.Current.PickPhotoAsync();
+            //    if (file == null)
+            //        return;
+
+            //    slika.Source = ImageSource.FromStream(() => file.GetStream());
+
+            //};
 
         }
 
@@ -81,8 +98,8 @@ namespace ServisInfoSolution
 
         private void dodajSlikuBtn_Clicked(object sender, EventArgs e)
         {
-
-        }
+            
+            }
 
 
         private void validacija()

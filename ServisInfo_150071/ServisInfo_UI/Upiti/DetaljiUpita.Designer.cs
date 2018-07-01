@@ -54,6 +54,8 @@
             this.UpitIDLbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.PregledajPonuduBtn = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -324,12 +326,21 @@
             this.PregledajPonuduBtn.UseVisualStyleBackColor = true;
             this.PregledajPonuduBtn.Click += new System.EventHandler(this.PregledajPonuduBtn_Click);
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(81, 434);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox.TabIndex = 54;
+            this.pictureBox.TabStop = false;
+            // 
             // DetaljiUpita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(685, 609);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.PregledajPonuduBtn);
             this.Controls.Add(this.UpitIDLbl);
             this.Controls.Add(this.label12);
@@ -362,6 +373,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiUpita";
             this.Load += new System.EventHandler(this.DetaljiUpita_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,5 +407,6 @@
         private System.Windows.Forms.Label UpitIDLbl;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button PregledajPonuduBtn;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
