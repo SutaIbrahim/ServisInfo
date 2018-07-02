@@ -16,8 +16,8 @@ namespace ServisInfoSolution
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetaljServisa : ContentPage
     {
-        private WebAPIHelper servisiService = new WebAPIHelper("http://localhost:64158/", "api/Servisi");
-        private WebAPIHelper ocjeneService = new WebAPIHelper("http://localhost:64158/", "api/Ocjene");
+        private WebAPIHelper servisiService = new WebAPIHelper(Global.APIAdress, "api/Servisi");
+        private WebAPIHelper ocjeneService = new WebAPIHelper(Global.APIAdress, "api/Ocjene");
 
 
         private int servisID;

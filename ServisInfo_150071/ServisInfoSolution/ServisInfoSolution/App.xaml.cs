@@ -17,6 +17,8 @@ namespace ServisInfoSolution
             //MainPage = new NavigationPage(new Prijava());
 
             Global.prvoPokretanje = true;
+            Global.APIAdress = "http://localhost:64158/";
+
             MainPage = new Navigation.MasterDetailPage();
 
             //MainPage = new NavigationPage(new MasterDetailPage());

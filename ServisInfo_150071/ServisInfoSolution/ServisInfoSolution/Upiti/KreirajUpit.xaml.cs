@@ -19,10 +19,10 @@ namespace ServisInfoSolution
     public partial class KreirajUpit : ContentPage
     {
 
-        private WebAPIHelper markeUredjajaService = new WebAPIHelper("http://localhost:64158/", "api/MarkeUredjaja");
-        private WebAPIHelper modeliUredjajaService = new WebAPIHelper("http://localhost:64158/", "api/ModeliUredjaja");
-        private WebAPIHelper upitiService = new WebAPIHelper("http://localhost:64158/", "api/Upiti");
-        private WebAPIHelper kompanijeUpitiService = new WebAPIHelper("http://localhost:64158/", "api/Kompanijeupiti");
+        private WebAPIHelper markeUredjajaService = new WebAPIHelper(Global.APIAdress, "api/MarkeUredjaja");
+        private WebAPIHelper modeliUredjajaService = new WebAPIHelper(Global.APIAdress, "api/ModeliUredjaja");
+        private WebAPIHelper upitiService = new WebAPIHelper(Global.APIAdress, "api/Upiti");
+        private WebAPIHelper kompanijeUpitiService = new WebAPIHelper(Global.APIAdress, "api/Kompanijeupiti");
 
 
 

@@ -21,7 +21,7 @@
 
 
                 <ListView.Header>
-                    <Grid  Margin="6" BackgroundColor="#13818d" HeightRequest="40">
+                    <Grid  Margin="6" BackgroundColor="#13818d" HeightRequest="50">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>

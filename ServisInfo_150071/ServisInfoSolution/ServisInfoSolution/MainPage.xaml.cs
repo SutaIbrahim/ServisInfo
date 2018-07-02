@@ -17,9 +17,9 @@ namespace ServisInfoSolution
 {
     public partial class MainPage : ContentPage
     {
-        private WebAPIHelper kategorijeService = new WebAPIHelper("http://localhost:64158/", "api/Kategorije");
-        private WebAPIHelper kompanijeService = new WebAPIHelper("http://localhost:64158/", "api/Kompanije");
-        private WebAPIHelper gradoviService = new WebAPIHelper("http://localhost:64158/", "api/Gradovi");
+        private WebAPIHelper kategorijeService = new WebAPIHelper(Global.APIAdress, "api/Kategorije");
+        private WebAPIHelper kompanijeService = new WebAPIHelper(Global.APIAdress, "api/Kompanije");
+        private WebAPIHelper gradoviService = new WebAPIHelper(Global.APIAdress, "api/Gradovi");
 
         List<Kompanije> kompanije = new List<Kompanije>();
 

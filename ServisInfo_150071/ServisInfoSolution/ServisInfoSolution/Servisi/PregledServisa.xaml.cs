@@ -16,7 +16,7 @@ namespace ServisInfoSolution
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PregledServisa : ContentPage
     {
-        private WebAPIHelper servisiService = new WebAPIHelper("http://localhost:64158/", "api/Servisi");
+        private WebAPIHelper servisiService = new WebAPIHelper(Global.APIAdress, "api/Servisi");
         List<ServisiKlijent_Result> servisi;
 
         public PregledServisa()

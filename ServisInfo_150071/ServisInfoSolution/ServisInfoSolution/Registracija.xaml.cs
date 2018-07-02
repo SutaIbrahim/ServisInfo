@@ -17,8 +17,8 @@ namespace ServisInfoSolution
     public partial class Registracija : ContentPage
     {
 
-        private WebAPIHelper klijentiService = new WebAPIHelper("http://localhost:64158/", "api/Klijenti");
-        private WebAPIHelper gradoviService = new WebAPIHelper("http://localhost:64158/", "api/Gradovi");
+        private WebAPIHelper klijentiService = new WebAPIHelper(Global.APIAdress, "api/Klijenti");
+        private WebAPIHelper gradoviService = new WebAPIHelper(Global.APIAdress, "api/Gradovi");
 
 
         public Registracija()

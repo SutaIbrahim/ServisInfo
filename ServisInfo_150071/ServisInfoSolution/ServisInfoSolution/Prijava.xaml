@@ -10,10 +10,10 @@
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
             <Label Text="Prijava @ Servis Info"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,0,0,20" FontAttributes="Bold"/>
+                HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,0,0,5" FontAttributes="Bold"/>
 
-            <Image x:Name="logoImg" Grid.Column="0" Source="appIcon.png" Margin="50" HeightRequest="180" WidthRequest="180"></Image>
-
+            <Image x:Name="logoImg" Grid.Column="0" Source="appIcon.png"  HeightRequest="150" WidthRequest="150" Margin="10"></Image>
+            
             <Entry x:Name="korisnickoImeInput" Placeholder="Korisničko ime"></Entry>
             <Entry x:Name="lozinkaInput" Placeholder="Lozinka" IsPassword="True"></Entry>
 

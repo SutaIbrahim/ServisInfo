@@ -17,7 +17,7 @@ namespace ServisInfoSolution
 	public partial class DetaljiUpita : ContentPage
 	{
 
-        private WebAPIHelper upitiService = new WebAPIHelper("http://localhost:64158/", "api/Upiti");
+        private WebAPIHelper upitiService = new WebAPIHelper(Global.APIAdress, "api/Upiti");
 
         private int upitID;
 		public DetaljiUpita (int upitID)

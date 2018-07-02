@@ -16,8 +16,8 @@ namespace ServisInfoSolution.Kompanija
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetaljiKompanije : ContentPage
     {
-        private WebAPIHelper kompanijeService = new WebAPIHelper("http://localhost:64158/", "api/Kompanije");
-        private WebAPIHelper ocjeneService = new WebAPIHelper("http://localhost:64158/", "api/Ocjene");
+        private WebAPIHelper kompanijeService = new WebAPIHelper(Global.APIAdress, "api/Kompanije");
+        private WebAPIHelper ocjeneService = new WebAPIHelper(Global.APIAdress, "api/Ocjene");
 
         private int kompanijaID;
         private KompanijeDetalji_Result k;

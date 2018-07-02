@@ -16,7 +16,7 @@ namespace ServisInfoSolution
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PregledPonuda : ContentPage
     {
-        private WebAPIHelper ponudeService = new WebAPIHelper("http://localhost:64158/", "api/Ponude");
+        private WebAPIHelper ponudeService = new WebAPIHelper(Global.APIAdress, "api/Ponude");
 
         public PregledPonuda()
         {

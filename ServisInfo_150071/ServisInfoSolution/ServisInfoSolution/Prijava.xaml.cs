@@ -17,10 +17,9 @@ namespace ServisInfoSolution
     public partial class Prijava : ContentPage
     {
 
-        private WebAPIHelper klijentiService = new WebAPIHelper("http://localhost:64158/", "api/Klijenti");
+        private WebAPIHelper klijentiService = new WebAPIHelper(Global.APIAdress, "api/Klijenti");
         public Prijava()
         {
-      
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }

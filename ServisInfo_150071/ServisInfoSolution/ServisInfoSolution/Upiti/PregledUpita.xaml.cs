@@ -17,7 +17,7 @@ namespace ServisInfoSolution
 	public partial class PregledUpita : ContentPage
 	{
 
-        private WebAPIHelper upitiService = new WebAPIHelper("http://localhost:64158/", "api/Upiti");
+        private WebAPIHelper upitiService = new WebAPIHelper(Global.APIAdress, "api/Upiti");
 
         public PregledUpita ()
 		{
