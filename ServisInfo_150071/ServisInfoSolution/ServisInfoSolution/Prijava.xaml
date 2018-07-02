@@ -10,7 +10,7 @@
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
             <Label Text="Prijava @ Servis Info"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,0,0,5" FontAttributes="Bold"/>
+                HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="0,0,0,5" FontAttributes="Bold"/>
 
             <Image x:Name="logoImg" Grid.Column="0" Source="appIcon.png"  HeightRequest="150" WidthRequest="150" Margin="10"></Image>
             
@@ -20,7 +20,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="End">
                 <Button x:Name="registerButton" Text="Registracija" Clicked="registerButton_Clicked" Margin="4" ></Button>
 
-                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4" BackgroundColor="#13818d"></Button>
+                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4" BackgroundColor="#13818d" TextColor="White"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -3,6 +3,7 @@ using ServisInfo_PCL.Model;
 using ServisInfo_PCL.Util;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -50,6 +51,14 @@ namespace ServisInfoSolution
                 modelLbl.Text = upit.Model_uredjaja;
                 KategorijaLbl.Text = upit.Naziv_kategorije;
                 OpisLbl.Text = upit.Opis_kvara;
+
+                if (upit.Slika != null)
+                {
+                    Stream stream = new MemoryStream(upit.Slika);
+
+                    slika.Source = ImageSource.FromStream(() => stream);
+                }
+
             }
 
 

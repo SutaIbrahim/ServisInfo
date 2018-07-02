@@ -154,6 +154,15 @@ namespace ServisInfoSolution
                         if (response2.IsSuccessStatusCode)
                         {
                             DisplayAlert("", "Upit je uspjesno poslan", "OK");
+                            
+                            
+                            //reset izbora
+                            Global.izabraneKompanijeID = new List<int>();
+                            Global.izabraneKompanije = new List<string>();
+                            Global.izabranaKategorija = null;
+                            Global.izabraniGradIndex = -1;
+                            Global.izabranaKategorijaIndex = -1;
+
                             this.Navigation.PopAsync();
                         }
                         else

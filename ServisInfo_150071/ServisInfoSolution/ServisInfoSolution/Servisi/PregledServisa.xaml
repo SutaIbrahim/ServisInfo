@@ -33,11 +33,11 @@
 
 
 
-            <ListView x:Name="servisiList" HorizontalOptions="Center" VerticalOptions="Center" RowHeight="70" Margin="6" ItemTapped="servisiList_ItemTapped">
+            <ListView x:Name="servisiList" HorizontalOptions="Center" VerticalOptions="Center" RowHeight="70" Margin="6" ItemTapped="servisiList_ItemTapped" BackgroundColor="LightGray">
 
                 <ListView.Header>
 
-                    <Grid   Margin="6" BackgroundColor="#13818d" HeightRequest="55">
+                    <Grid   Margin="6" BackgroundColor="#13818d" HeightRequest="66" Padding="5">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
@@ -46,10 +46,10 @@
 
                         </Grid.ColumnDefinitions>
 
-                        <Label Text="Naziv kompanije:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold"></Label>
-                        <Label Text="Datum prihvatanja servisa:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
-                        <Label Text="Datum pocetka servisa:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
-                        <Label Text="Datum zavrsetka servisa:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="Naziv kompanije:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold" TextColor="White"></Label>
+                        <Label Text="Datum prihvatanja servisa:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
+                        <Label Text="Datum pocetka servisa:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
+                        <Label Text="Datum zavrsetka servisa:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
                     </Grid>
 
                 </ListView.Header>

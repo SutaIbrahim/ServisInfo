@@ -20,7 +20,7 @@
             <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center" Margin="5"></Label>
 
 
-            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="100" ItemTapped="kompanijeList_ItemTapped" >
+            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="85" ItemTapped="kompanijeList_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -38,20 +38,20 @@
                                 </Grid.ColumnDefinitions>
 
 
-                                <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg"></Image>
+                                <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg" HeightRequest="80" WidthRequest="80" Margin="10,0,0,0"   HorizontalOptions="Center" VerticalOptions="Center"></Image>
 
-                                <StackLayout Grid.Column="1" Padding="15">
+                                <StackLayout Grid.Column="1" Padding="10"  VerticalOptions="Center" Margin="10,0,0,0">
 
-                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" />
-                                    <Label Text="{Binding Adresa}" />
-                                    <Label Text="{Binding Telefon}"/>
+                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="14"/>
+                                    <Label Text="{Binding Adresa}" FontSize="14"/>
+                                    <Label Text="{Binding Telefon}" FontSize="12"/>
                                 </StackLayout>
 
                                 <Label x:Name="checkbox" Grid.Column="2" Text="{Binding Izabrana}" TextColor="Green" FontSize="Large" Margin="10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
                                 <!--<Button x:Name="Button" Text="heeh" Grid.Column="3" Pressed="Button_Pressed" Command="{Binding Source={x:Reference mainpage}, Path=BindingContext.AddNotify}"></Button>-->
                                 <!--<Button Grid.Column="3" BindingContext="{Binding Source={x:Reference kompanijeList}, Path=BindingContext}" Command="{Binding DeleteEintragCommand}"  CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
                                 </Button>-->
-                                <Button Grid.Column="3" Text="Dodaj/ukloni" Clicked="Dodaj" CommandParameter="{Binding KompanijaID}" BackgroundColor="Green" TextColor="White" HeightRequest="30" FontSize="Micro"/>
+                                <Button Grid.Column="3" Text="Dodaj/ukloni" Clicked="Dodaj" CommandParameter="{Binding KompanijaID}" BackgroundColor="Green" TextColor="White" HeightRequest="35" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" Margin="5"/>
 
                             </Grid>
                         </ViewCell>

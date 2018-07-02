@@ -1077,7 +1077,7 @@
           <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_Ocjene_GetByKompanijaID" ReturnType="Collection(ServisInfoModel.OcjeneKompanije_Result)">
-            <Parameter Name="kompanijaID" Mode="In" Type="Int32" />
+          <Parameter Name="kompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">

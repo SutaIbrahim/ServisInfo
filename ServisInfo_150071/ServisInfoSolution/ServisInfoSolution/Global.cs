@@ -17,6 +17,10 @@ namespace ServisInfoSolution
 
         public static bool prvoPokretanje { get; set; }
         public static string APIAdress { get; set; }
+        public static int izabraniGradIndex { get; set; }
+        public static int izabranaKategorijaIndex { get; set; }
+
+
 
 
 

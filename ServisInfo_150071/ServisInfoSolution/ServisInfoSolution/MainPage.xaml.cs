@@ -7,11 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 
 namespace ServisInfoSolution
 {
@@ -26,21 +22,25 @@ namespace ServisInfoSolution
 
         public MainPage()
         {
-           
-
-            Global.izabraneKompanijeID = new List<int>();
-            Global.izabraneKompanije = new List<string>();
-
             InitializeComponent();
         }
 
         protected override void OnAppearing()
         {
-            if (Global.prvoPokretanje == true) // dodano jer pri prvim pokretanjem pojavi se sidebar
+            if (Global.prvoPokretanje == true) // dodano jer pri prvim pokretanjem pojavi se sidebar na prijavi
             {
                 Global.prvoPokretanje = false;
+                Global.izabraneKompanijeID = new List<int>();
+                Global.izabraneKompanije = new List<string>();
+                Global.izabranaKategorija = null;
+                Global.izabraniGradIndex = -1;
+                Global.izabranaKategorijaIndex = -1;
                 this.Navigation.PushAsync(new Prijava());
             }
+
+
+
+
             HttpResponseMessage response = kategorijeService.GetResponse();
 
             if (response.IsSuccessStatusCode)
@@ -50,6 +50,12 @@ namespace ServisInfoSolution
                 kategorijePicker.ItemsSource = kategorije;
 
                 kategorijePicker.ItemDisplayBinding = new Binding("Naziv");
+
+                if (Global.izabranaKategorijaIndex != -1)
+                {
+                    kategorijePicker.SelectedIndex = Global.izabranaKategorijaIndex;
+                }
+
             }
 
             HttpResponseMessage response2 = gradoviService.GetResponse();
@@ -61,24 +67,39 @@ namespace ServisInfoSolution
                 gradoviPicker.ItemsSource = gradovi;
 
                 gradoviPicker.ItemDisplayBinding = new Binding("Naziv");
-            }
 
+                if (Global.izabraniGradIndex != -1)
+                {
+                    gradoviPicker.SelectedIndex = Global.izabraniGradIndex;
+                }
+
+            }
 
             base.OnAppearing();
         }
 
         private void kategorijePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // ponistavanje odabira kompanija jer jedna kompanija nema sve kategorije 
             Global.izabraneKompanijeID = new List<int>();
             Global.izabraneKompanije = new List<string>();
 
-            Global.izabranaKategorija = (kategorijePicker.SelectedItem as Kategorije);
+            if ((kategorijePicker.SelectedItem as Kategorije) != null)
+            {
+                Global.izabranaKategorijaIndex = kategorijePicker.SelectedIndex;
+                Global.izabranaKategorija = (kategorijePicker.SelectedItem as Kategorije);
+            }
 
             Search();
         }
 
         private void gradoviPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if ((gradoviPicker.SelectedItem as Gradovi) != null)
+            {
+                Global.izabraniGradIndex = gradoviPicker.SelectedIndex;
+            }
+
             Search();
         }
 

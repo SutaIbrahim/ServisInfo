@@ -55,7 +55,7 @@
                 <Label x:Name="OpisLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="6" Grid.Column="1"  WidthRequest="400"></Label>
 
                 <Label Text="Slika:" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <!--<Label x:Name="slika"  Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="7" Grid.Column="1" ></Label>-->
+                <Image x:Name="slika" Grid.Row="8" Grid.Column="1" Margin="5"></Image>
 
 
 
