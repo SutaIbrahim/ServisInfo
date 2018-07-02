@@ -336,13 +336,31 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijeDetalji_Result>("esp_Kompanije_GetDetalji", kompanijaIDParameter);
         }
     
-        public virtual ObjectResult<OcjeneKompanije_Result> esp_Ocjene_GetByKompanijaID(Nullable<int> kompanijaID)
+        public virtual ObjectResult<Ocjene> esp_Ocjene_GetByKompanijaID(Nullable<int> kompanijaID)
         {
             var kompanijaIDParameter = kompanijaID.HasValue ?
                 new ObjectParameter("kompanijaID", kompanijaID) :
                 new ObjectParameter("kompanijaID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<OcjeneKompanije_Result>("esp_Ocjene_GetByKompanijaID", kompanijaIDParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Ocjene>("esp_Ocjene_GetByKompanijaID", kompanijaIDParameter);
+        }
+    
+        public virtual ObjectResult<Ocjene> esp_Ocjene_GetByKompanijaID(Nullable<int> kompanijaID, MergeOption mergeOption)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("kompanijaID", kompanijaID) :
+                new ObjectParameter("kompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Ocjene>("esp_Ocjene_GetByKompanijaID", mergeOption, kompanijaIDParameter);
+        }
+    
+        public virtual int esp_getOcjeneKompanija(Nullable<int> kompanijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("kompanijaID", kompanijaID) :
+                new ObjectParameter("kompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("esp_getOcjeneKompanija", kompanijaIDParameter);
         }
     }
 }

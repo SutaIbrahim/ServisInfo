@@ -53,7 +53,7 @@ namespace ServisInfoSolution.Kompanija
             if (response.IsSuccessStatusCode)
             {
                 var jsonObject = response.Content.ReadAsStringAsync();
-                List<OcjeneKompanije_Result> ocjene = JsonConvert.DeserializeObject<List<OcjeneKompanije_Result>>(jsonObject.Result);
+                List<Ocjene> ocjene = JsonConvert.DeserializeObject<List<Ocjene>>(jsonObject.Result);
 
 
                 if (ocjene.Count != 0)

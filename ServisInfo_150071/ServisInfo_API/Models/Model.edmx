@@ -1076,8 +1076,11 @@
           <FunctionImport Name="esp_Kompanije_GetDetalji" ReturnType="Collection(ServisInfoModel.KompanijeDetalji_Result)">
           <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="esp_Ocjene_GetByKompanijaID" ReturnType="Collection(ServisInfoModel.OcjeneKompanije_Result)">
+          <FunctionImport Name="esp_Ocjene_GetByKompanijaID" EntitySet="Ocjene" ReturnType="Collection(ServisInfoModel.Ocjene)">
           <Parameter Name="kompanijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_getOcjeneKompanija">
+            <Parameter Name="kompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -1648,16 +1651,6 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_Ocjene_GetByKompanijaID" FunctionName="ServisInfoModel.Store.esp_Ocjene_GetByKompanijaID">
-          <ResultMapping>
-              <ComplexTypeMapping TypeName="ServisInfoModel.OcjeneKompanije_Result">
-                <ScalarProperty Name="OcjenaID" ColumnName="OcjenaID" />
-                <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
-                <ScalarProperty Name="VrstaOcjeneID" ColumnName="VrstaOcjeneID" />
-                <ScalarProperty Name="Datum" ColumnName="Datum" />
-                <ScalarProperty Name="KlijentID" ColumnName="KlijentID" />
-                <ScalarProperty Name="ServisID" ColumnName="ServisID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

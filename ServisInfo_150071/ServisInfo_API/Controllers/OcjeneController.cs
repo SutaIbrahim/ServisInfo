@@ -51,7 +51,7 @@ namespace ServisInfo_API.Controllers
         [Route("api/Ocjene/GetOcjeneKompanije/{kompanijaID}")]
         public IHttpActionResult GetOcjeneKompanije(int kompanijaID)
         {
-            List<OcjeneKompanije_Result> ocjene = db.esp_Ocjene_GetByKompanijaID(Convert.ToInt32(kompanijaID)).ToList();
+            List<Ocjene> ocjene = db.esp_Ocjene_GetByKompanijaID(Convert.ToInt32(kompanijaID)).ToList();
 
             return Ok(ocjene);
         }
