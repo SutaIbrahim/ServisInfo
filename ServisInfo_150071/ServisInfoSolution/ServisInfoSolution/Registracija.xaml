@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.Registracija"
              Title=""
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.HasBackButton="False"
              >
-    <ContentPage.Content>
+    <ScrollView>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
             <Label Text="Registracija @ Servis Info"
                 VerticalOptions="CenterAndExpand" 
@@ -54,9 +56,9 @@
                 
                 <Button x:Name="registrujSeButton" Text="Registruj se"
                         Grid.Row="9" Grid.Column="1"
-                        Clicked="registrujSeButton_Clicked" Margin="5" BackgroundColor="Gray"></Button>
+                        Clicked="registrujSeButton_Clicked" Margin="5"  BackgroundColor="#13818d" TextColor="White"></Button>
 
             </Grid>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

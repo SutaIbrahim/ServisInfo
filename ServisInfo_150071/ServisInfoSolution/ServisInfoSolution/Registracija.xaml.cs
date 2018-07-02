@@ -40,6 +40,7 @@ namespace ServisInfoSolution
 
                 gradList.SelectedIndex = 1;
             }
+           
 
             base.OnAppearing();
         }
@@ -67,6 +68,10 @@ namespace ServisInfoSolution
                 {
                     DisplayAlert("Uspjesna registracija", "Uspjesno ste se registrovali", "OK");
                     this.Navigation.PopAsync();
+                }
+                else
+                {
+                    DisplayAlert("Greska", "Korisnicko ime vec postoji", "Ok");
                 }
             }
             else

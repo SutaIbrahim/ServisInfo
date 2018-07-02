@@ -250,7 +250,7 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("esp_GetServisIDbyPonudaID", ponudaIDParameter);
         }
     
-        public virtual ObjectResult<Kompanije> esp_SearchByKategorijaGrad(Nullable<int> kategorijaId, Nullable<int> gradId)
+        public virtual ObjectResult<KompanijeDetalji_X_Result> esp_SearchByKategorijaGrad(Nullable<int> kategorijaId, Nullable<int> gradId)
         {
             var kategorijaIdParameter = kategorijaId.HasValue ?
                 new ObjectParameter("kategorijaId", kategorijaId) :
@@ -260,20 +260,7 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("gradId", gradId) :
                 new ObjectParameter("gradId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_SearchByKategorijaGrad", kategorijaIdParameter, gradIdParameter);
-        }
-    
-        public virtual ObjectResult<Kompanije> esp_SearchByKategorijaGrad(Nullable<int> kategorijaId, Nullable<int> gradId, MergeOption mergeOption)
-        {
-            var kategorijaIdParameter = kategorijaId.HasValue ?
-                new ObjectParameter("kategorijaId", kategorijaId) :
-                new ObjectParameter("kategorijaId", typeof(int));
-    
-            var gradIdParameter = gradId.HasValue ?
-                new ObjectParameter("gradId", gradId) :
-                new ObjectParameter("gradId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_SearchByKategorijaGrad", mergeOption, kategorijaIdParameter, gradIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijeDetalji_X_Result>("esp_SearchByKategorijaGrad", kategorijaIdParameter, gradIdParameter);
         }
     
         public virtual ObjectResult<PonudeKlijent_Result> esp_GetPonudeByKlijentID(Nullable<int> klijentID)

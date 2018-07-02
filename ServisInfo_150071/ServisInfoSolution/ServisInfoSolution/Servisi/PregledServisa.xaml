@@ -5,7 +5,7 @@
     <ContentPage.Content Margin="22">
 
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout >
 
             <Label Text="Pregled servisa" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
 
@@ -34,7 +34,7 @@
 
 
 
-            <ListView x:Name="servisiList" HorizontalOptions="Center" VerticalOptions="Center" RowHeight="70" Margin="6" ItemTapped="servisiList_ItemTapped" BackgroundColor="LightGray">
+            <ListView x:Name="servisiList" RowHeight="70" Margin="6" ItemTapped="servisiList_ItemTapped" BackgroundColor="LightGray">
 
                 <ListView.Header>
 

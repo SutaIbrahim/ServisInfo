@@ -1050,7 +1050,7 @@
           <FunctionImport Name="esp_GetServisIDbyPonudaID" ReturnType="Collection(Int32)">
           <Parameter Name="PonudaID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="esp_SearchByKategorijaGrad" EntitySet="Kompanije" ReturnType="Collection(ServisInfoModel.Kompanije)">
+          <FunctionImport Name="esp_SearchByKategorijaGrad" ReturnType="Collection(ServisInfoModel.KompanijeDetalji_X_Result)">
             <Parameter Name="kategorijaId" Mode="In" Type="Int32" />
             <Parameter Name="gradId" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -1258,6 +1258,18 @@
           <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
           <Property Type="Int32" Name="KlijentID" Nullable="false" />
           <Property Type="Int32" Name="ServisID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="KompanijeDetalji_X_Result">
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="KorisickoIme" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LozinkaSalt" Nullable="true" />
+          <Property Type="String" Name="LozinkaHash" Nullable="true" />
+          <Property Type="Int32" Name="GradID" Nullable="false" />
+          <Property Type="Decimal" Name="ProsjecnaOcjena" Nullable="true" Precision="38" Scale="6" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1545,6 +1557,20 @@
           <FunctionImportMapping FunctionImportName="esp_KompanijeKategorije_Insert" FunctionName="ServisInfoModel.Store.esp_KompanijeKategorije_Insert" />
           <FunctionImportMapping FunctionImportName="esp_GetServisIDbyPonudaID" FunctionName="ServisInfoModel.Store.esp_GetServisIDbyPonudaID" />
           <FunctionImportMapping FunctionImportName="esp_SearchByKategorijaGrad" FunctionName="ServisInfoModel.Store.esp_SearchByKategorijaGrad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.KompanijeDetalji_X_Result">
+                <ScalarProperty Name="KompanijaID" ColumnName="KompanijaID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="KorisickoIme" ColumnName="KorisickoIme" />
+                <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+                <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+                <ScalarProperty Name="GradID" ColumnName="GradID" />
+                <ScalarProperty Name="ProsjecnaOcjena" ColumnName="ProsjecnaOcjena" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_GetPonudeByKlijentID" FunctionName="ServisInfoModel.Store.esp_GetPonudeByKlijentID">
           <ResultMapping>

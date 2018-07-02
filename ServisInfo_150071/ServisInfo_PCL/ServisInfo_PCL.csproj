@@ -43,6 +43,7 @@
     <Compile Include="Model\Klijenti.cs" />
     <Compile Include="Model\Kompanije.cs" />
     <Compile Include="Model\KompanijeDetalji_Result.cs" />
+    <Compile Include="Model\KompanijeDetalji_X_Result.cs" />
     <Compile Include="Model\KompanijeUpiti.cs" />
     <Compile Include="Model\MarkeUredjaja.cs" />
     <Compile Include="Model\ModeliUredjaja.cs" />

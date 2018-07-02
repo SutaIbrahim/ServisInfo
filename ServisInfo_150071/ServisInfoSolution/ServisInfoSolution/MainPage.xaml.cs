@@ -17,12 +17,12 @@ namespace ServisInfoSolution
         private WebAPIHelper kompanijeService = new WebAPIHelper(Global.APIAdress, "api/Kompanije");
         private WebAPIHelper gradoviService = new WebAPIHelper(Global.APIAdress, "api/Gradovi");
 
-        List<Kompanije> kompanije = new List<Kompanije>();
+        List<KompanijeDetalji_X_Result> kompanije = new List<KompanijeDetalji_X_Result>();
 
 
         public MainPage()
         {
-           
+
 
             InitializeComponent();
             Fill();
@@ -130,7 +130,7 @@ namespace ServisInfoSolution
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonObject = response.Content.ReadAsStringAsync();
-                    kompanije = JsonConvert.DeserializeObject<List<Kompanije>>(jsonObject.Result);
+                    kompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_X_Result>>(jsonObject.Result);
 
                     PostaviCheckBox();
 
@@ -149,7 +149,7 @@ namespace ServisInfoSolution
             else
             {
                 GreskaLbl.Text = "Nema rezultata";
-                kompanijeList.ItemsSource = new List<Kompanije>();
+                kompanijeList.ItemsSource = new List<KompanijeDetalji_X_Result>();
             }
 
 
@@ -163,6 +163,13 @@ namespace ServisInfoSolution
                 {
                     foreach (var k in kompanije)
                     {
+
+                        if (k.ProsjecnaOcjena != null)
+                        {
+                            decimal temp = Convert.ToDecimal(k.ProsjecnaOcjena);
+                            k.ProsjecnaOcjena = Math.Round(temp, 2);
+                        }
+
                         if (k.KompanijaID == x)
                         {
                             k.Izabrana = "✓";
@@ -189,7 +196,7 @@ namespace ServisInfoSolution
 
         private void kompanijeList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            this.Navigation.PushAsync(new DetaljiKompanije((e.Item as Kompanije).KompanijaID));
+            this.Navigation.PushAsync(new DetaljiKompanije((e.Item as KompanijeDetalji_X_Result).KompanijaID));
         }
 
         //private void Button_Pressed(object sender, EventArgs e)

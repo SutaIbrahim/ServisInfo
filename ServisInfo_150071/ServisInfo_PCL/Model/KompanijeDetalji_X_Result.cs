@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServisInfo_PCL.Model
 {
-    public class Kompanije
+    public class KompanijeDetalji_X_Result
     {
         public int KompanijaID { get; set; }
         public string Naziv { get; set; }
@@ -17,7 +17,8 @@ namespace ServisInfo_PCL.Model
         public string LozinkaSalt { get; set; }
         public string LozinkaHash { get; set; }
         public int GradID { get; set; }
+        public Nullable<decimal> ProsjecnaOcjena { get; set; }
 
-
+        public string Izabrana { get; set; }
     }
 }

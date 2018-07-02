@@ -146,6 +146,9 @@
     <Compile Include="Models\KompanijeDetalji_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\KompanijeDetalji_X_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\KompanijeExtension.cs" />
     <Compile Include="Models\KompanijeKategorije.cs">
       <DependentUpon>Model.tt</DependentUpon>

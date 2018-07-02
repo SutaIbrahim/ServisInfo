@@ -38,7 +38,7 @@ namespace ServisInfoSolution
 
         private void Search()
         {
-            HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), OdDtm.Date.ToString("dd.MM.yyyy"), DoDtm.Date.ToString("dd.MM.yyyy"));
+            HttpResponseMessage response = servisiService.GetActionResponse("GetByDateAndKlijent", Global.prijavljeniKlijent.KlijentID.ToString(), OdDtm.Date.ToString("dd-MM-yyyy"), DoDtm.Date.ToString("dd-MM-yyyy"));
 
             if (response.IsSuccessStatusCode)
             {
