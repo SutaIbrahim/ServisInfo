@@ -22,7 +22,10 @@ namespace ServisInfoSolution
 
         public MainPage()
         {
+           
+
             InitializeComponent();
+            Fill();
         }
 
         protected override void OnAppearing()
@@ -37,10 +40,10 @@ namespace ServisInfoSolution
                 Global.izabranaKategorijaIndex = -1;
                 this.Navigation.PushAsync(new Prijava());
             }
-
-
-
-
+            base.OnAppearing();
+        }
+        private void Fill()
+        {
             HttpResponseMessage response = kategorijeService.GetResponse();
 
             if (response.IsSuccessStatusCode)
@@ -54,6 +57,12 @@ namespace ServisInfoSolution
                 if (Global.izabranaKategorijaIndex != -1)
                 {
                     kategorijePicker.SelectedIndex = Global.izabranaKategorijaIndex;
+                }
+                else
+                {
+                    // ponistavanje odabira kompanija jer jedna kompanija nema sve kategorije 
+                    Global.izabraneKompanijeID = new List<int>();
+                    Global.izabraneKompanije = new List<string>();
                 }
 
             }
@@ -75,17 +84,16 @@ namespace ServisInfoSolution
 
             }
 
-            base.OnAppearing();
         }
 
         private void kategorijePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // ponistavanje odabira kompanija jer jedna kompanija nema sve kategorije 
-            Global.izabraneKompanijeID = new List<int>();
-            Global.izabraneKompanije = new List<string>();
-
             if ((kategorijePicker.SelectedItem as Kategorije) != null)
             {
+                // ponistavanje odabira kompanija jer jedna kompanija nema sve kategorije 
+                Global.izabraneKompanijeID = new List<int>();
+                Global.izabraneKompanije = new List<string>();
+
                 Global.izabranaKategorijaIndex = kategorijePicker.SelectedIndex;
                 Global.izabranaKategorija = (kategorijePicker.SelectedItem as Kategorije);
             }
@@ -97,6 +105,11 @@ namespace ServisInfoSolution
         {
             if ((gradoviPicker.SelectedItem as Gradovi) != null)
             {
+
+                // ponistavanje odabira kompanija jer jedna kompanija je iz jednog grada
+                Global.izabraneKompanijeID = new List<int>();
+                Global.izabraneKompanije = new List<string>();
+
                 Global.izabraniGradIndex = gradoviPicker.SelectedIndex;
             }
 
@@ -169,6 +182,7 @@ namespace ServisInfoSolution
             else
             {
                 this.Navigation.PushAsync(new KreirajUpit());
+                Fill();
             }
 
         }

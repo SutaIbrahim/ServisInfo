@@ -21,46 +21,44 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
-                <Label Text="Datum kreiranja upita:" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="0"   ></Label>
-                <Label x:Name="DatumLbl" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="1" ></Label>
+                <Label Text="Datum kreiranja upita:" FontAttributes="Bold"    Grid.Row="0" Grid.Column="0"   ></Label>
+                <Label x:Name="DatumLbl"    Grid.Row="0" Grid.Column="1" ></Label>
 
-                <Label Text="Zeljeni datzeljeniOdum prijema OD:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="zeljeniOdLbl"   Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"></Label>
+                <Label Text="Zeljeni datzeljeniOdum prijema OD:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"   ></Label>
+                <Label x:Name="zeljeniOdLbl"   Grid.Row="1" Grid.Column="1"  ></Label>
 
-                <Label Text="Zeljeni datum prijema DO:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="zeljeniDoLbl" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"   Grid.Row="2" Grid.Column="1" ></Label>
+                <Label Text="Zeljeni datum prijema DO:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0"   ></Label>
+                <Label x:Name="zeljeniDoLbl"     Grid.Row="2" Grid.Column="1" ></Label>
 
-                <Label Text="Marka uredjaja:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="markaLBl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="3" Grid.Column="1" ></Label>
+                <Label Text="Marka uredjaja:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0"   ></Label>
+                <Label x:Name="markaLBl" Text=""    Grid.Row="3" Grid.Column="1" ></Label>
 
-                <Label Text="Model uredjaja::" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="modelLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="4" Grid.Column="1" ></Label>
+                <Label Text="Model uredjaja::" FontAttributes="Bold" Grid.Row="4" Grid.Column="0"   ></Label>
+                <Label x:Name="modelLbl" Text=""    Grid.Row="4" Grid.Column="1" ></Label>
 
-                <Label Text="Kategorija:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="KategorijaLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="5" Grid.Column="1" HeightRequest="70"></Label>
+                <Label Text="Kategorija:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0"   ></Label>
+                <Label x:Name="KategorijaLbl" Text=""    Grid.Row="5" Grid.Column="1" ></Label>
 
-                <Label Text="Opis:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <Label x:Name="OpisLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="6" Grid.Column="1"  WidthRequest="400"></Label>
+                <Label Text="Opis:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"   ></Label>
+                <Label x:Name="OpisLbl" Text=""    Grid.Row="6" Grid.Column="1"  HeightRequest="150"></Label>
 
-                <Label Text="Slika:" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
-                <Image x:Name="slika" Grid.Row="8" Grid.Column="1" Margin="5"></Image>
-
+                <Label Text="Slika:" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0"   ></Label>
 
 
 
             </Grid>
+            <Image x:Name="slika"  Margin="5"></Image>
 
 
 

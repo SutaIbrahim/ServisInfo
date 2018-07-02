@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.PregledServisa">
-    <ScrollView Margin="15">
+    <ContentPage.Content Margin="22">
+
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
@@ -89,5 +90,5 @@
             </ListView>
 
         </StackLayout>
-    </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
