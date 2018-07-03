@@ -44,6 +44,21 @@ namespace ServisInfoSolution.Kompanija
 
                 IzracunajProsjecneOcjene();
             }
+
+
+            //recommender
+
+            //HttpResponseMessage response2 = kompanijeService.GetActionResponse("PreporuceneKompanije", kompanijaID.ToString(), Global.izabranaKategorija.KategorijaID.ToString());
+
+            //if (response2.IsSuccessStatusCode)
+            //{
+            //    var jsonObject = response.Content.ReadAsStringAsync();
+            //    List<KompanijeDetalji_Result> preporuceneKompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_Result>>(jsonObject.Result);
+
+            //    preporuceneKompanije.Count();
+            //}
+
+
         }
 
         private void IzracunajProsjecneOcjene()
@@ -56,7 +71,7 @@ namespace ServisInfoSolution.Kompanija
                 List<Ocjene> ocjene = JsonConvert.DeserializeObject<List<Ocjene>>(jsonObject.Result);
 
 
-                if (ocjene.Count != 0)
+                if (ocjene.Count() != 0)
                 {
                     BrzinaSlider.IsVisible = true;
                     KvalitetSlider.IsVisible = true;

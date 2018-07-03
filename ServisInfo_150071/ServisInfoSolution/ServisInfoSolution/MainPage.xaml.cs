@@ -40,6 +40,7 @@ namespace ServisInfoSolution
                 Global.izabranaKategorijaIndex = -1;
                 this.Navigation.PushAsync(new Prijava());
             }
+
             base.OnAppearing();
         }
         private void Fill()
@@ -105,10 +106,9 @@ namespace ServisInfoSolution
         {
             if ((gradoviPicker.SelectedItem as Gradovi) != null)
             {
-
-                // ponistavanje odabira kompanija jer jedna kompanija je iz jednog grada
-                Global.izabraneKompanijeID = new List<int>();
-                Global.izabraneKompanije = new List<string>();
+                //Klijent moze izabrati kompanije izmedju vise gradova tako da ne treba ponistavati odabir nakon izmjene grada
+                //Global.izabraneKompanijeID = new List<int>();
+                //Global.izabraneKompanije = new List<string>();
 
                 Global.izabraniGradIndex = gradoviPicker.SelectedIndex;
             }
@@ -163,13 +163,14 @@ namespace ServisInfoSolution
                 {
                     foreach (var k in kompanije)
                     {
-
+                        //incijalizacija
                         if (k.ProsjecnaOcjena != null)
                         {
                             decimal temp = Convert.ToDecimal(k.ProsjecnaOcjena);
                             k.ProsjecnaOcjena = Math.Round(temp, 2);
                         }
 
+                        //checkbox
                         if (k.KompanijaID == x)
                         {
                             k.Izabrana = "✓";
@@ -189,7 +190,7 @@ namespace ServisInfoSolution
             else
             {
                 this.Navigation.PushAsync(new KreirajUpit());
-                Fill();
+               // Fill(); - izbrisu se kompanijeID
             }
 
         }

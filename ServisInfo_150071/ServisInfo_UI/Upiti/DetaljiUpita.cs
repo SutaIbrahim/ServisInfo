@@ -35,7 +35,7 @@ namespace ServisInfo_UI.Upiti
             UID = upitID;
             InitializeComponent();
 
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetDetalji", upitID.ToString());
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetDetalji", upitID.ToString(),Global.prijavljenaKompanija.KompanijaID.ToString());
 
             if (response.IsSuccessStatusCode)
             {
@@ -159,7 +159,7 @@ namespace ServisInfo_UI.Upiti
 
         private void KreirajPonuduBtn_Click(object sender, EventArgs e)
         {
-            Ponude.KreirajPonudu frm = new Ponude.KreirajPonudu(UID, u.KlijentID, u.KompanijaUpitID, OdLbl.Text, DoLbl.Text, u.Opis_kvara, "Naziv kategorije !!! DODATI");
+            Ponude.KreirajPonudu frm = new Ponude.KreirajPonudu(UID, u.KlijentID, Convert.ToInt32(u.KompanijaUpitID), OdLbl.Text, DoLbl.Text, u.Opis_kvara, ".");
             frm.ShowDialog();
             this.Close();
         }

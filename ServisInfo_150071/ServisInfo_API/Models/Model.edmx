@@ -441,6 +441,7 @@
         </Function>
         <Function Name="esp_Upiti_GetDetalji" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UpitID" Type="int" Mode="In" />
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
         </Function>
         <Function Name="esp_Upiti_GetPonudaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
@@ -995,6 +996,7 @@
           </FunctionImport>
           <FunctionImport Name="esp_Upiti_GetDetalji" ReturnType="Collection(ServisInfoModel.DetaljiUpita_Result)">
           <Parameter Name="UpitID" Mode="In" Type="Int32" />
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_Kompanije_SearchByNaziv" ReturnType="Collection(ServisInfoModel.Kompanije_Result)">
           <Parameter Name="Naziv" Mode="In" Type="String" />
@@ -1107,7 +1109,6 @@
         <ComplexType Name="DetaljiUpita_Result">
           <Property Type="Int32" Name="UpitID" Nullable="false" />
           <Property Type="Int32" Name="KlijentID" Nullable="false" />
-          <Property Type="Int32" Name="KompanijaUpitID" Nullable="false" />
           <Property Type="DateTime" Name="Datum_upita" Nullable="true" Precision="23" />
           <Property Type="String" Name="Marka_uredjaja" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Model_uredjaja" Nullable="true" MaxLength="50" />
@@ -1116,8 +1117,9 @@
           <Property Type="DateTime" Name="ZeljeniDatumPrijemaOd" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="ZeljeniDatumPrijemaDo" Nullable="true" Precision="23" />
           <Property Type="String" Name="NazivKlijenta" Nullable="false" MaxLength="101" />
-          <Property Type="Boolean" Name="Odgovoreno" Nullable="false" />
+          <Property Type="Boolean" Name="Odgovoreno" Nullable="true" />
           <Property Type="String" Name="Naziv_kategorije" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="KompanijaUpitID" Nullable="true" />
         </ComplexType>
         <Association Name="FK__Upiti__Kategorij__2739D489">
           <End Type="ServisInfoModel.Kategorije" Role="Kategorije" Multiplicity="0..1" />
@@ -1451,7 +1453,6 @@
               <ComplexTypeMapping TypeName="ServisInfoModel.DetaljiUpita_Result">
                 <ScalarProperty Name="UpitID" ColumnName="UpitID" />
                 <ScalarProperty Name="KlijentID" ColumnName="KlijentID" />
-                <ScalarProperty Name="KompanijaUpitID" ColumnName="KompanijaUpitID" />
                 <ScalarProperty Name="Datum_upita" ColumnName="Datum upita" />
                 <ScalarProperty Name="Marka_uredjaja" ColumnName="Marka uredjaja" />
                 <ScalarProperty Name="Model_uredjaja" ColumnName="Model uredjaja" />
@@ -1462,6 +1463,7 @@
                 <ScalarProperty Name="NazivKlijenta" ColumnName="NazivKlijenta" />
                 <ScalarProperty Name="Odgovoreno" ColumnName="Odgovoreno" />
                 <ScalarProperty Name="Naziv_kategorije" ColumnName="Naziv kategorije" />
+                <ScalarProperty Name="KompanijaUpitID" ColumnName="KompanijaUpitID" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

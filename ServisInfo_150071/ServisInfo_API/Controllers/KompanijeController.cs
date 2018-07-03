@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ServisInfo_API.Models;
+using ServisInfo_API.Util;
 
 namespace ServisInfo_API.Controllers
 {
@@ -73,6 +74,17 @@ namespace ServisInfo_API.Controllers
             return Ok(kompanija);
         }
 
+        [Route("api/Kompanije/PreporuceneKompanije/{kompanijaID}/{kategorijaID}")]
+        [HttpGet]
+        public List<KompanijeDetalji_Result> PreporuceneKompanije(string kompanijaID,string kategorijaID)
+        {
+            Recommender r = new Recommender();
+
+            return r.GetSlicneKompanije(Convert.ToInt32(kompanijaID), Convert.ToInt32(kategorijaID)).ToList();
+           
+        }
+
+
 
         [Route("api/Kompanije/SearchByKategorijaGradovi/{kategorijaId?}/{gradId?}")]
         [HttpGet]
@@ -129,11 +141,11 @@ namespace ServisInfo_API.Controllers
                         }
                     }
                 }
-
                 foreach (var u in k.kategorije)
                 {
                     if (isteKategorije.Contains(u.KategorijaID))
                     {
+                        //
                     }
                     else
                     {
@@ -141,12 +153,12 @@ namespace ServisInfo_API.Controllers
                         isteKategorije.Add(u.KategorijaID); // dodavanje ID -a kako bi kasnije provjerili koje uloge treba brisati
                     }
                 }
-
                 //brisanje neoznacenih uloga
                 foreach (var x in trenutneKategorije)
                 {
                     if (isteKategorije.Contains(x))
                     {
+                        //
                     }
                     else
                     {
@@ -155,6 +167,7 @@ namespace ServisInfo_API.Controllers
                         db.SaveChanges();
                     }
                 }
+
             }
 
 

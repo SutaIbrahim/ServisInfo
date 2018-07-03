@@ -76,11 +76,18 @@ namespace ServisInfo_API.App_Start
         }
 
         [HttpGet]
-        [Route("api/Upiti/GetDetalji/{id}")]
-        public IHttpActionResult GetDetalji(string id)
+        [Route("api/Upiti/GetDetalji/{upitId}/{kompanijaId?}")]
+        public IHttpActionResult GetDetalji(string upitId,string kompanijaId="")
         {
-
-            DetaljiUpita_Result upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(id)).FirstOrDefault();
+            DetaljiUpita_Result upit;
+            if (kompanijaId == "")
+            {
+                 upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(upitId),null).FirstOrDefault();
+            }
+            else
+            {
+                 upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(upitId), Convert.ToInt32(kompanijaId)).FirstOrDefault();
+            }
 
             return Ok(upit);
         }

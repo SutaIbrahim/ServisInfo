@@ -77,13 +77,17 @@ namespace ServisInfo_API.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaUpiti_Result>("esp_KompanijeUpiti_GetByDate", kompanijaIDParameter, datum1Parameter, datum2Parameter);
         }
     
-        public virtual ObjectResult<DetaljiUpita_Result> esp_Upiti_GetDetalji(Nullable<int> upitID)
+        public virtual ObjectResult<DetaljiUpita_Result> esp_Upiti_GetDetalji(Nullable<int> upitID, Nullable<int> kompanijaID)
         {
             var upitIDParameter = upitID.HasValue ?
                 new ObjectParameter("UpitID", upitID) :
                 new ObjectParameter("UpitID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DetaljiUpita_Result>("esp_Upiti_GetDetalji", upitIDParameter);
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DetaljiUpita_Result>("esp_Upiti_GetDetalji", upitIDParameter, kompanijaIDParameter);
         }
     
         public virtual ObjectResult<Kompanije_Result> esp_Kompanije_SearchByNaziv(string naziv)

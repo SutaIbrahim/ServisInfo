@@ -11,14 +11,14 @@ namespace ServisInfo_API.Util
         private ServisInfoEntities db = new ServisInfoEntities();
         private Dictionary<int, List<Ocjene>> kompanijeDict = new Dictionary<int, List<Ocjene>>();
 
-        public List<Kompanije_Result> GetSlicneKompanije(int kompanijaID)
+        public List<KompanijeDetalji_Result> GetSlicneKompanije(int kompanijaID, int kategorijaID)
         {
             UcitajKompanije(kompanijaID);
             List<Ocjene>  ocjenePosmatraneKompanije= db.esp_Ocjene_GetByKompanijaID(kompanijaID).ToList();
 
             List<Ocjene> zajedniceOcjene1 = new List<Ocjene>();
             List<Ocjene> zajedniceOcjene2 = new List<Ocjene>();
-            List<Kompanije_Result> preporuceneKompanije = new List<Kompanije_Result>();
+            List<KompanijeDetalji_Result> preporuceneKompanije = new List<KompanijeDetalji_Result>();
 
             foreach(var x in kompanijeDict)
             {
@@ -31,14 +31,46 @@ namespace ServisInfo_API.Util
                     }
                     //41:30 yt
                 }
+                double slicnost = GetSlicnost(zajedniceOcjene1, zajedniceOcjene2);
+                if (slicnost > 0.5)
+                {
+                    preporuceneKompanije.Add(db.esp_Kompanije_GetDetalji(x.Key).First());
+                }
+                zajedniceOcjene1.Clear();
+                zajedniceOcjene2.Clear();
             }
 
-
-
-
-
+            return preporuceneKompanije;
         }
 
+        private double GetSlicnost(List<Ocjene> zajedniceOcjene1, List<Ocjene> zajedniceOcjene2)
+        {
+            if (zajedniceOcjene1.Count != zajedniceOcjene2.Count)
+            {
+                return 0;
+            }
+
+            double brojnik = 0, nazivnik1 = 0, nazivnik2 = 0;
+
+            for(int i = 0; i < zajedniceOcjene1.Count; i++)
+            {
+                brojnik += Convert.ToDouble(zajedniceOcjene1[i].Ocjena * zajedniceOcjene2[i].Ocjena);
+                nazivnik1 += Convert.ToDouble(zajedniceOcjene1[i].Ocjena * zajedniceOcjene1[i].Ocjena);
+                nazivnik2 += Convert.ToDouble(zajedniceOcjene2[i].Ocjena * zajedniceOcjene2[i].Ocjena);
+            }
+
+            nazivnik1 = Math.Sqrt(nazivnik1);
+            nazivnik2 = Math.Sqrt(nazivnik2);
+
+            double nazivnik = nazivnik1 * nazivnik2;
+
+            if (nazivnik == 0)
+            {
+                return 0;
+            }
+
+            return brojnik / nazivnik;
+        }
 
         private void UcitajKompanije(int kompanijaID)
         {

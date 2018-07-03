@@ -24,8 +24,6 @@ namespace ServisInfoSolution
         private WebAPIHelper upitiService = new WebAPIHelper(Global.APIAdress, "api/Upiti");
         private WebAPIHelper kompanijeUpitiService = new WebAPIHelper(Global.APIAdress, "api/Kompanijeupiti");
 
-
-
         private Stream s;
 
         public KreirajUpit()
@@ -43,10 +41,13 @@ namespace ServisInfoSolution
                 kompanije += Global.izabraneKompanije[x] + ", ";
             }
 
+           List<int> a= Global.izabraneKompanijeID;
+
             last = Global.izabraneKompanije[Global.izabraneKompanije.Count() - 1];
             kompanije += last;
             kompanijeLbl.Text = kompanije;
             s = null;
+
             //otvaranje galerije -->> xam.plugin.media nuget 
             dodajSlikuBtn.Clicked += async (sender, args) =>
             {
@@ -132,7 +133,7 @@ namespace ServisInfoSolution
                 HttpResponseMessage response = upitiService.PostResponse(u);
                 if (response.IsSuccessStatusCode)
                 {
-                    HttpResponseMessage response2 = response;
+                    HttpResponseMessage response2 = null;
 
                     HttpResponseMessage response3 = upitiService.GetActionResponse("GetZadnjiUpit", "");
 
@@ -141,29 +142,34 @@ namespace ServisInfoSolution
                         var jsonObject = response.Content.ReadAsStringAsync();
                         Upiti upit = JsonConvert.DeserializeObject<Upiti>(jsonObject.Result);
 
-                        KompanijeUpiti ku = new KompanijeUpiti();
-                        ku.UpitID = upit.UpitID;
-                        ku.Odgovoreno = false;
-
                         foreach (var x in Global.izabraneKompanijeID)
                         {
+                            KompanijeUpiti ku = new KompanijeUpiti();
+                            ku.UpitID = upit.UpitID;
+                            ku.Odgovoreno = false;
                             ku.KompanijaID = x;
                             response2 = kompanijeUpitiService.PostResponse(ku);
                         }
 
-                        if (response2.IsSuccessStatusCode)
+                        if (response2 != null)
                         {
-                            DisplayAlert("", "Upit je uspjesno poslan", "OK");
-                            
-                            
-                            //reset izbora
-                            Global.izabraneKompanijeID = new List<int>();
-                            Global.izabraneKompanije = new List<string>();
-                            Global.izabranaKategorija = null;
-                            Global.izabraniGradIndex = -1;
-                            Global.izabranaKategorijaIndex = -1;
+                            if (response2.IsSuccessStatusCode)
+                            {
+                                DisplayAlert("", "Upit je uspjesno poslan", "OK");
 
-                            this.Navigation.PopAsync();
+
+                                //reset izbora
+                                Global.izabraneKompanijeID = new List<int>();
+                                Global.izabraneKompanije = new List<string>();
+                                Global.izabraniGradIndex = -1;
+                                Global.izabranaKategorijaIndex = -1;
+
+                                this.Navigation.PopAsync();
+                            }
+                            else
+                            {
+                                DisplayAlert("Greska!", "Doslo je do greske u komunikaciji", "OK");
+                            }
                         }
                         else
                         {
