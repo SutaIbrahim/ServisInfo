@@ -42,21 +42,24 @@ namespace ServisInfoSolution.Kompanija
                 emailLbl.Text = kompanija.Email;
                 TelefonLbl.Text = kompanija.Telefon;
 
+                setButton();
                 IzracunajProsjecneOcjene();
+
             }
 
 
             //recommender
 
-            //HttpResponseMessage response2 = kompanijeService.GetActionResponse("PreporuceneKompanije", kompanijaID.ToString(), Global.izabranaKategorija.KategorijaID.ToString());
+            HttpResponseMessage response2 = kompanijeService.GetActionResponse("PreporuceneKompanije", kompanijaID.ToString(), Global.izabranaKategorija.KategorijaID.ToString());
 
-            //if (response2.IsSuccessStatusCode)
-            //{
-            //    var jsonObject = response.Content.ReadAsStringAsync();
-            //    List<KompanijeDetalji_Result> preporuceneKompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_Result>>(jsonObject.Result);
+            if (response2.IsSuccessStatusCode)
+            {
+                var jsonObject = response2.Content.ReadAsStringAsync();
+                List<KompanijeDetalji_Result> preporuceneKompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_Result>>(jsonObject.Result);
 
-            //    preporuceneKompanije.Count();
-            //}
+                kompanijeList.ItemsSource = preporuceneKompanije;
+
+            }
 
 
         }
@@ -136,5 +139,61 @@ namespace ServisInfoSolution.Kompanija
             }
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            bool postoji = false;
+
+            foreach (var x in Global.izabraneKompanijeID)
+            {
+                if (x == kompanijaID)
+                {
+                    postoji = true;
+                }
+            }
+
+            if (postoji)
+            {
+                Global.izabraneKompanijeID.Remove(kompanijaID);
+                Global.izabraneKompanije.Remove(k.Naziv);
+                setButton();
+
+            }
+            else
+            {
+                Global.izabraneKompanijeID.Add(kompanijaID);
+                Global.izabraneKompanije.Add(k.Naziv);
+                setButton();
+            }
+        }
+
+
+        private void setButton()
+        {
+            bool postoji = false;
+
+            foreach (var x in Global.izabraneKompanijeID)
+            {
+                if (x == kompanijaID)
+                {
+                    postoji = true;
+                }
+            }
+
+            if (postoji)
+            {
+                Button.BackgroundColor = Color.Red;
+                Button.Text = "Ukloni";
+            }
+            else
+            {
+                Button.BackgroundColor = Color.Green;
+                Button.Text = "Dodaj";
+            }
+        }
+
+        private void kompanijeList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            this.Navigation.PushAsync(new DetaljiKompanije((e.Item as KompanijeDetalji_Result).KompanijaID));
+        }
     }
 }

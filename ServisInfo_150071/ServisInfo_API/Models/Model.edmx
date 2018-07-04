@@ -429,6 +429,10 @@
         <Function Name="esp_Ocjene_GetByKompanijaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="kompanijaID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_Recommender_GetKompanijeByKategorijaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+          <Parameter Name="KategorijaID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_SearchByKategorijaGrad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="kategorijaId" Type="int" Mode="In" />
           <Parameter Name="gradId" Type="int" Mode="In" />
@@ -995,7 +999,7 @@
             <Parameter Name="Datum2" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="esp_Upiti_GetDetalji" ReturnType="Collection(ServisInfoModel.DetaljiUpita_Result)">
-          <Parameter Name="UpitID" Mode="In" Type="Int32" />
+            <Parameter Name="UpitID" Mode="In" Type="Int32" />
             <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_Kompanije_SearchByNaziv" ReturnType="Collection(ServisInfoModel.Kompanije_Result)">
@@ -1083,6 +1087,10 @@
           </FunctionImport>
           <FunctionImport Name="esp_getOcjeneKompanija">
             <Parameter Name="kompanijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Recommender_GetKompanijeByKategorijaID" EntitySet="Kompanije" ReturnType="Collection(ServisInfoModel.Kompanije)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+            <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -1653,6 +1661,8 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_Ocjene_GetByKompanijaID" FunctionName="ServisInfoModel.Store.esp_Ocjene_GetByKompanijaID">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Recommender_GetKompanijeByKategorijaID" FunctionName="ServisInfoModel.Store.esp_Recommender_GetKompanijeByKategorijaID">
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

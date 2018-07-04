@@ -80,8 +80,16 @@ namespace ServisInfo_API.Controllers
         {
             Recommender r = new Recommender();
 
-            return r.GetSlicneKompanije(Convert.ToInt32(kompanijaID), Convert.ToInt32(kategorijaID)).ToList();
-           
+            List<KompanijeDetalji_Result> k= r.GetSlicneKompanije(Convert.ToInt32(kompanijaID), Convert.ToInt32(kategorijaID));
+
+
+            foreach(var x in k)
+            {
+                string a= x.Naziv;
+            }
+
+            return k;
+
         }
 
 

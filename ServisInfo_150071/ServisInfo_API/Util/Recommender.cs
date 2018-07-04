@@ -13,7 +13,7 @@ namespace ServisInfo_API.Util
 
         public List<KompanijeDetalji_Result> GetSlicneKompanije(int kompanijaID, int kategorijaID)
         {
-            UcitajKompanije(kompanijaID);
+            UcitajKompanije(kompanijaID, kategorijaID);
             List<Ocjene>  ocjenePosmatraneKompanije= db.esp_Ocjene_GetByKompanijaID(kompanijaID).ToList();
 
             List<Ocjene> zajedniceOcjene1 = new List<Ocjene>();
@@ -72,9 +72,9 @@ namespace ServisInfo_API.Util
             return brojnik / nazivnik;
         }
 
-        private void UcitajKompanije(int kompanijaID)
+        private void UcitajKompanije(int kompanijaID, int kategorijaID)
         {
-            List<Kompanije> kompanije = db.Kompanije.Where(x => x.KompanijaID != kompanijaID).ToList();
+            List<Kompanije> kompanije = db.esp_Recommender_GetKompanijeByKategorijaID(kompanijaID,kategorijaID).ToList();
             List<Ocjene> ocjene = new List<Ocjene>();
 
             foreach(var x in kompanije) {
