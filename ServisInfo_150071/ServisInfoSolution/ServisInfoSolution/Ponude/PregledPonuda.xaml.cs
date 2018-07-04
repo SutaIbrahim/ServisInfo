@@ -44,6 +44,14 @@ namespace ServisInfoSolution
                 foreach (var x in ponude) // set datetime to string
                 {
                     x.DatumKreiranjaS = x.DatumKreiranja.ToShortDateString();
+                    if (x.Prihvacena)
+                    {
+                        x.PrihvacenaS = "DA";
+                    }
+                    else
+                    {
+                        x.PrihvacenaS = "NE";
+                    }
                 }
 
                 ponudeList.ItemsSource = ponude;

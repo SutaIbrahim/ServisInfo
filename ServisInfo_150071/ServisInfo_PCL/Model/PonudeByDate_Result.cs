@@ -22,6 +22,8 @@ namespace ServisInfo_PCL.Model
         public decimal TrajanjeSati { get; set; }
 
         public string DatumKreiranjaS { get; set; }
+        public string PrihvacenaS { get; set; }
+
 
     }
 }
