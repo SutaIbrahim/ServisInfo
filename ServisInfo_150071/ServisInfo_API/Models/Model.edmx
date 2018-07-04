@@ -384,6 +384,9 @@
           <Parameter Name="Datum1" Type="datetime" Mode="In" />
           <Parameter Name="Datum2" Type="datetime" Mode="In" />
         </Function>
+        <Function Name="esp_Kompanija_GetProsjecnaOcjena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_KompanijeKategorije_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="KategorijaID" Type="int" Mode="In" />
@@ -428,6 +431,10 @@
         </Function>
         <Function Name="esp_Ocjene_GetByKompanijaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="kompanijaID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="esp_Recommender_ColdStart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+          <Parameter Name="KategorijaID" Type="int" Mode="In" />
         </Function>
         <Function Name="esp_Recommender_GetKompanijeByKategorijaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
@@ -1092,6 +1099,13 @@
             <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
             <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="esp_Recommender_ColdStart" EntitySet="Kompanije" ReturnType="Collection(ServisInfoModel.Kompanije)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+            <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Kompanija_GetProsjecnaOcjena" ReturnType="Collection(Decimal)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1664,6 +1678,9 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_Recommender_GetKompanijeByKategorijaID" FunctionName="ServisInfoModel.Store.esp_Recommender_GetKompanijeByKategorijaID">
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Recommender_ColdStart" FunctionName="ServisInfoModel.Store.esp_Recommender_ColdStart">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Kompanija_GetProsjecnaOcjena" FunctionName="ServisInfoModel.Store.esp_Kompanija_GetProsjecnaOcjena" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -57,10 +57,22 @@ namespace ServisInfoSolution.Kompanija
                 var jsonObject = response2.Content.ReadAsStringAsync();
                 List<KompanijeDetalji_Result> preporuceneKompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_Result>>(jsonObject.Result);
 
-                kompanijeList.ItemsSource = preporuceneKompanije;
+                //  preporuceneKompanije.OrderBy(p=>p.)
 
+                List<KompanijeDetalji_Result> filter = new List<KompanijeDetalji_Result>();
+
+                int brojac = 0;
+                foreach (var x in preporuceneKompanije)
+                {
+                    filter.Add(x);
+
+                    brojac++;
+                    if (brojac > 5) // select top 5
+                        break;
+                }
+
+                kompanijeList.ItemsSource = filter;
             }
-
 
         }
 
@@ -92,6 +104,8 @@ namespace ServisInfoSolution.Kompanija
                             suma += x.Ocjena;
                         }
                     }
+                    if (suma == 0)
+                        suma = 0.1M;
                     decimal prosjek = Math.Round(suma / brojac, 2);
                     BrzinaSlider.Value = Convert.ToInt32(prosjek);
                     BrzinaLbl.Text = "Brzina usluge (" + prosjek.ToString() + ")";
@@ -107,6 +121,8 @@ namespace ServisInfoSolution.Kompanija
                             suma += x.Ocjena;
                         }
                     }
+                    if (suma == 0)
+                        suma = 0.1M;
                     prosjek = Math.Round(suma / brojac, 2);
                     KvalitetSlider.Value = Convert.ToInt32(prosjek);
                     KvalitetLbl.Text = "Kvalitet usluge (" + prosjek.ToString() + ")";
@@ -122,6 +138,8 @@ namespace ServisInfoSolution.Kompanija
                             suma += x.Ocjena;
                         }
                     }
+                    if (suma == 0)
+                        suma = 0.1M;
                     prosjek = Math.Round(suma / brojac, 2);
                     KomunikacijaSlider.Value = Convert.ToInt32(prosjek);
                     KomunikacijaLbl.Text = "Komunikacija (" + prosjek.ToString() + ")";

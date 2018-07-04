@@ -55,6 +55,8 @@
             this.OdjavaBtn = new System.Windows.Forms.Button();
             this.KategorijeBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.prosjekLbl = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -154,7 +156,7 @@
             // 
             this.ServisLbl.AutoSize = true;
             this.ServisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ServisLbl.Location = new System.Drawing.Point(234, 172);
+            this.ServisLbl.Location = new System.Drawing.Point(15, 204);
             this.ServisLbl.Name = "ServisLbl";
             this.ServisLbl.Size = new System.Drawing.Size(40, 24);
             this.ServisLbl.TabIndex = 3;
@@ -317,12 +319,34 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(276, 172);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(178, 24);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Prosjecna ocjena:";
+            // 
+            // prosjekLbl
+            // 
+            this.prosjekLbl.AutoSize = true;
+            this.prosjekLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prosjekLbl.Location = new System.Drawing.Point(460, 172);
+            this.prosjekLbl.Name = "prosjekLbl";
+            this.prosjekLbl.Size = new System.Drawing.Size(40, 24);
+            this.prosjekLbl.TabIndex = 41;
+            this.prosjekLbl.Text = "asd";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(794, 653);
+            this.Controls.Add(this.prosjekLbl);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.KategorijeBtn);
             this.Controls.Add(this.OdjavaBtn);
             this.Controls.Add(this.label5);
@@ -385,5 +409,7 @@
         private System.Windows.Forms.Button OdjavaBtn;
         private System.Windows.Forms.Button KategorijeBtn;
         private System.Windows.Forms.ToolStripMenuItem uredjivanjeProfilaToolStripMenuItem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label prosjekLbl;
     }
 }

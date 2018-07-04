@@ -32,7 +32,7 @@ namespace ServisInfo_API.Util
                     //41:30 yt
                 }
                 double slicnost = GetSlicnost(zajedniceOcjene1, zajedniceOcjene2);
-                if (slicnost > 0.5)
+                if (slicnost > 0.83)
                 {
                     preporuceneKompanije.Add(db.esp_Kompanije_GetDetalji(x.Key).First());
                 }
@@ -40,7 +40,26 @@ namespace ServisInfo_API.Util
                 zajedniceOcjene2.Clear();
             }
 
-            return preporuceneKompanije;
+
+
+            if (preporuceneKompanije.Count() != 0)
+            {
+                return preporuceneKompanije;
+            }
+
+            //cold start
+            else
+            {
+                List<Kompanije> CS = new List<Kompanije>();
+
+                CS = db.esp_Recommender_ColdStart(kompanijaID, kategorijaID).ToList();
+                foreach (var x in CS) {
+                    preporuceneKompanije.Add(db.esp_Kompanije_GetDetalji(x.KompanijaID).First());
+                }
+
+                return preporuceneKompanije;
+            }
+
         }
 
         private double GetSlicnost(List<Ocjene> zajedniceOcjene1, List<Ocjene> zajedniceOcjene2)

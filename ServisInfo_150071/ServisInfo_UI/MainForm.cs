@@ -22,7 +22,6 @@ namespace ServisInfo_UI
 
 
 
-
         public MainForm()
         {
             InitializeComponent();
@@ -66,6 +65,22 @@ namespace ServisInfo_UI
 
             DatumLbl.Text = DateTime.Now.ToShortDateString();
 
+            HttpResponseMessage response4 = KompanijeService.GetActionResponse("GetProsjecnaOcjena", Global.prijavljenaKompanija.KompanijaID.ToString());
+            if (response4.IsSuccessStatusCode)
+            {
+                decimal p = response4.Content.ReadAsAsync<decimal>().Result;
+
+                p = Math.Round(p, 2);
+                prosjekLbl.Text = p.ToString();
+            }
+            else
+            {
+                prosjekLbl.Text = "";
+            }
+
+            //
+
+            DatumLbl.Text = DateTime.Now.ToShortDateString();
 
         }
 

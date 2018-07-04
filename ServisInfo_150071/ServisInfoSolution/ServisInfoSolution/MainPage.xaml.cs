@@ -245,7 +245,10 @@ namespace ServisInfoSolution
                     Global.izabraneKompanije.Add(temp.Naziv);
                 }
 
-                Search();
+                Search(); // refresh se uradi cijele stranice
+
+                //PostaviCheckBox();
+                //kompanijeList.ItemsSource = kompanije;
             }
         }
     }

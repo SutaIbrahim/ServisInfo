@@ -392,5 +392,40 @@ namespace ServisInfo_API.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Recommender_GetKompanijeByKategorijaID", mergeOption, kompanijaIDParameter, kategorijaIDParameter);
         }
+    
+        public virtual ObjectResult<Kompanije> esp_Recommender_ColdStart(Nullable<int> kompanijaID, Nullable<int> kategorijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var kategorijaIDParameter = kategorijaID.HasValue ?
+                new ObjectParameter("KategorijaID", kategorijaID) :
+                new ObjectParameter("KategorijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Recommender_ColdStart", kompanijaIDParameter, kategorijaIDParameter);
+        }
+    
+        public virtual ObjectResult<Kompanije> esp_Recommender_ColdStart(Nullable<int> kompanijaID, Nullable<int> kategorijaID, MergeOption mergeOption)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            var kategorijaIDParameter = kategorijaID.HasValue ?
+                new ObjectParameter("KategorijaID", kategorijaID) :
+                new ObjectParameter("KategorijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Recommender_ColdStart", mergeOption, kompanijaIDParameter, kategorijaIDParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<decimal>> esp_Kompanija_GetProsjecnaOcjena(Nullable<int> kompanijaID)
+        {
+            var kompanijaIDParameter = kompanijaID.HasValue ?
+                new ObjectParameter("KompanijaID", kompanijaID) :
+                new ObjectParameter("KompanijaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("esp_Kompanija_GetProsjecnaOcjena", kompanijaIDParameter);
+        }
     }
 }

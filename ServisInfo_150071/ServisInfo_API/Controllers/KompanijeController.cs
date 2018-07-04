@@ -61,6 +61,24 @@ namespace ServisInfo_API.Controllers
             return Ok(kompanije);
         }
 
+
+        [Route("api/Kompanije/GetProsjecnaOcjena/{kompanijaID}")]
+        [HttpGet]
+        public IHttpActionResult GetProsjecnaOcjena(string kompanijaID)
+        {
+
+            decimal? prosjek = db.esp_Kompanija_GetProsjecnaOcjena(Convert.ToInt32(kompanijaID)).FirstOrDefault();
+
+            decimal p;
+            if(prosjek == null)
+            {
+                prosjek = 0;
+            }
+
+            p = Convert.ToDecimal(prosjek);
+            return Ok(p);
+        }
+
         [Route("api/Kompanije/GetDetalji/{kompanijaID}")]
         public IHttpActionResult GetDetalji(string kompanijaID)
         {
