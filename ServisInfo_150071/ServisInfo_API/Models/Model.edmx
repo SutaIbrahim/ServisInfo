@@ -1277,6 +1277,7 @@
           <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Grad" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="ProsjecnaOcjena" Nullable="false" Precision="38" Scale="6" />
         </ComplexType>
         <ComplexType Name="OcjeneKompanije_Result">
           <Property Type="Int32" Name="OcjenaID" Nullable="false" />
@@ -1671,6 +1672,7 @@
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Grad" ColumnName="Grad" />
+                <ScalarProperty Name="ProsjecnaOcjena" ColumnName="ProsjecnaOcjena" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

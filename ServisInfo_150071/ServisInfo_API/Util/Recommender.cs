@@ -14,17 +14,17 @@ namespace ServisInfo_API.Util
         public List<KompanijeDetalji_Result> GetSlicneKompanije(int kompanijaID, int kategorijaID)
         {
             UcitajKompanije(kompanijaID, kategorijaID);
-            List<Ocjene>  ocjenePosmatraneKompanije= db.esp_Ocjene_GetByKompanijaID(kompanijaID).ToList();
+            List<Ocjene> ocjenePosmatraneKompanije = db.esp_Ocjene_GetByKompanijaID(kompanijaID).ToList();
 
             List<Ocjene> zajedniceOcjene1 = new List<Ocjene>();
             List<Ocjene> zajedniceOcjene2 = new List<Ocjene>();
             List<KompanijeDetalji_Result> preporuceneKompanije = new List<KompanijeDetalji_Result>();
 
-            foreach(var x in kompanijeDict)
+            foreach (var x in kompanijeDict)
             {
-                foreach(var o in ocjenePosmatraneKompanije)
+                foreach (var o in ocjenePosmatraneKompanije)
                 {
-                    if(x.Value.Where(i=>i.KlijentID == o.KlijentID).Count() > 0)
+                    if (x.Value.Where(i => i.KlijentID == o.KlijentID).Count() > 0)
                     {
                         zajedniceOcjene1.Add(o);
                         zajedniceOcjene2.Add(x.Value.Where(i => i.KlijentID == o.KlijentID).First());
@@ -32,7 +32,7 @@ namespace ServisInfo_API.Util
                     //41:30 yt
                 }
                 double slicnost = GetSlicnost(zajedniceOcjene1, zajedniceOcjene2);
-                if (slicnost > 0.83)
+                if (slicnost > 0.85)
                 {
                     preporuceneKompanije.Add(db.esp_Kompanije_GetDetalji(x.Key).First());
                 }
@@ -44,6 +44,9 @@ namespace ServisInfo_API.Util
 
             if (preporuceneKompanije.Count() != 0)
             {
+                //sortiranje
+                preporuceneKompanije = preporuceneKompanije.OrderByDescending(p => p.ProsjecnaOcjena).ToList();
+
                 return preporuceneKompanije;
             }
 
@@ -53,9 +56,13 @@ namespace ServisInfo_API.Util
                 List<Kompanije> CS = new List<Kompanije>();
 
                 CS = db.esp_Recommender_ColdStart(kompanijaID, kategorijaID).ToList();
-                foreach (var x in CS) {
+                foreach (var x in CS)
+                {
                     preporuceneKompanije.Add(db.esp_Kompanije_GetDetalji(x.KompanijaID).First());
                 }
+
+                //sortiranje
+                preporuceneKompanije = preporuceneKompanije.OrderByDescending(p => p.ProsjecnaOcjena).ToList();
 
                 return preporuceneKompanije;
             }
@@ -71,7 +78,7 @@ namespace ServisInfo_API.Util
 
             double brojnik = 0, nazivnik1 = 0, nazivnik2 = 0;
 
-            for(int i = 0; i < zajedniceOcjene1.Count; i++)
+            for (int i = 0; i < zajedniceOcjene1.Count; i++)
             {
                 brojnik += Convert.ToDouble(zajedniceOcjene1[i].Ocjena * zajedniceOcjene2[i].Ocjena);
                 nazivnik1 += Convert.ToDouble(zajedniceOcjene1[i].Ocjena * zajedniceOcjene1[i].Ocjena);
@@ -93,10 +100,11 @@ namespace ServisInfo_API.Util
 
         private void UcitajKompanije(int kompanijaID, int kategorijaID)
         {
-            List<Kompanije> kompanije = db.esp_Recommender_GetKompanijeByKategorijaID(kompanijaID,kategorijaID).ToList();
+            List<Kompanije> kompanije = db.esp_Recommender_GetKompanijeByKategorijaID(kompanijaID, kategorijaID).ToList();
             List<Ocjene> ocjene = new List<Ocjene>();
 
-            foreach(var x in kompanije) {
+            foreach (var x in kompanije)
+            {
 
                 ocjene = db.esp_Ocjene_GetByKompanijaID(x.KompanijaID).ToList();
                 if (ocjene.Count > 0)

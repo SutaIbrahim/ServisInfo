@@ -31,6 +31,9 @@ namespace ServisInfoSolution.Navigation
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;
+
+            MasterDetailPageMaster m = new MasterDetailPageMaster();
+            m.Refresh();
         }
     }
 }

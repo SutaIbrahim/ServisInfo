@@ -73,7 +73,7 @@
             </Grid>
 
 
-            <!--vertical line-->
+            <!--horizontal line-->
             <StackLayout>
                 <Label />
                 <BoxView 
@@ -99,7 +99,7 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
 
-                                <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg" HeightRequest="40" WidthRequest="40"   HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                                <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg" HeightRequest="40" WidthRequest="40"   HorizontalOptions="Center" VerticalOptions="Center" Margin="2"></Image>
 
                                 <StackLayout Grid.Column="1" Padding="2"  VerticalOptions="Center" >
 

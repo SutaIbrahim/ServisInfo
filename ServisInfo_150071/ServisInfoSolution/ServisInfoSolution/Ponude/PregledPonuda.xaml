@@ -13,6 +13,19 @@
             <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged"></DatePicker>
             <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged"></DatePicker>
 
+            <StackLayout Margin="5">
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Prikazi neprihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    <Switch x:Name="neSW" PropertyChanged="neSW_PropertyChanged"></Switch>
+
+                    <Label Text="| Prikazi prihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    <Switch x:Name="daSW" PropertyChanged="daSW_PropertyChanged"></Switch>
+                </StackLayout>
+
+            </StackLayout >
+
+
 
             <Label Text="Kliknite na ponudu za vise detalja" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
 

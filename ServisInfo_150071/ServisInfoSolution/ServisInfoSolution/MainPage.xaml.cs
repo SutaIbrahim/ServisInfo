@@ -2,6 +2,7 @@
 using ServisInfo_PCL.Model;
 using ServisInfo_PCL.Util;
 using ServisInfoSolution.Kompanija;
+using ServisInfoSolution.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,10 +23,10 @@ namespace ServisInfoSolution
 
         public MainPage()
         {
-
-
             InitializeComponent();
             Fill();
+
+   
         }
 
         protected override void OnAppearing()
@@ -45,6 +46,11 @@ namespace ServisInfoSolution
         }
         private void Fill()
         {
+            //setovanje imena u sidebaru
+            MasterDetailPageMaster m = new MasterDetailPageMaster();
+            m.Refresh();
+            
+
             HttpResponseMessage response = kategorijeService.GetResponse();
 
             if (response.IsSuccessStatusCode)
@@ -250,6 +256,15 @@ namespace ServisInfoSolution
                 //PostaviCheckBox();
                 //kompanijeList.ItemsSource = kompanije;
             }
+        }
+
+        private void resetBtn_Clicked(object sender, EventArgs e)
+        {
+            //reset izbora
+            Global.izabraneKompanijeID.Clear();
+            Global.izabraneKompanije.Clear();
+
+            Search();
         }
     }
 }

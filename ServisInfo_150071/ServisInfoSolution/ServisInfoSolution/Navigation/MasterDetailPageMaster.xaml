@@ -23,11 +23,10 @@
                     </Grid.RowDefinitions>
                     <Image  Grid.Column="1"
               Grid.Row="1" Source="appIcon.png" HeightRequest="500" WidthRequest="500"></Image>
-                    <Label
+                    <Label x:Name="klijentLbl"
+                           Text="Dobro dosli u ServisInfo"
               Grid.Column="1"
               Grid.Row="2"
-              Text="Dobro dosli u ServisInfo"
-              Style="{DynamicResource SubtitleStyle}"
                         FontSize="22"/>
                 </Grid>
             </ListView.Header>

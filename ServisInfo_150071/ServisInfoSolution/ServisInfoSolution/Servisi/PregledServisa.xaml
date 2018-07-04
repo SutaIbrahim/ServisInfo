@@ -16,7 +16,7 @@
 
 
 
-            <StackLayout>
+            <StackLayout Margin="5">
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                     <Label Text="Prikazi servise u toku" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>

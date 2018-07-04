@@ -19,5 +19,6 @@ namespace ServisInfo_API.Models
         public string Telefon { get; set; }
         public string Email { get; set; }
         public string Grad { get; set; }
+        public decimal ProsjecnaOcjena { get; set; }
     }
 }

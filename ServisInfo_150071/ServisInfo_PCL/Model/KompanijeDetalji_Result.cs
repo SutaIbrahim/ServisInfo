@@ -14,5 +14,7 @@ namespace ServisInfo_PCL.Model
         public string Telefon { get; set; }
         public string Email { get; set; }
         public string Grad { get; set; }
+        public decimal ProsjecnaOcjena { get; set; }
+
     }
 }

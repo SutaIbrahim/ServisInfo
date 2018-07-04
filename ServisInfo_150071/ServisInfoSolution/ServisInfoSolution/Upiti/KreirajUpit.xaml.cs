@@ -157,7 +157,6 @@ namespace ServisInfoSolution
                             {
                                 DisplayAlert("", "Upit je uspjesno poslan", "OK");
 
-
                                 //reset izbora
                                 Global.izabraneKompanijeID = new List<int>();
                                 Global.izabraneKompanije = new List<string>();

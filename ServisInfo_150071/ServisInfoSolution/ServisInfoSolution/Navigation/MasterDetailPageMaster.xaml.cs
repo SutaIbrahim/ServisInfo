@@ -21,9 +21,12 @@ namespace ServisInfoSolution.Navigation
         {
             InitializeComponent();
 
+            Refresh();
+
             BindingContext = new MasterDetailPageMasterViewModel();
             ListView = MenuItemsListView;
         }
+
 
         class MasterDetailPageMasterViewModel : INotifyPropertyChanged
         {
@@ -34,6 +37,7 @@ namespace ServisInfoSolution.Navigation
 
                 MenuItems = new ObservableCollection<MasterDetailPageMenuItem>(new[]
                 {
+
                     new MasterDetailPageMenuItem { Title = " Pretraga kompanija", ImageSource="pretraga.png", TargetType=typeof(MainPage)},
                     new MasterDetailPageMenuItem { Title = " Upiti", ImageSource="upiti.png", TargetType=typeof(PregledUpita)},
                     new MasterDetailPageMenuItem { Title = " Ponude", ImageSource="ponude.png", TargetType=typeof(PregledPonuda)},
@@ -50,8 +54,18 @@ namespace ServisInfoSolution.Navigation
                     return;
 
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
             }
             #endregion
+        }
+
+        public void Refresh()
+        {
+            if (Global.prijavljeniKlijent != null)
+            {
+                klijentLbl.Text = "Dobro dosli " + Global.prijavljeniKlijent.Ime + " " + Global.prijavljeniKlijent.Prezime;
+            }
+
         }
     }
 }

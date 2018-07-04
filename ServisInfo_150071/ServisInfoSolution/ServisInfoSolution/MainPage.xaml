@@ -14,7 +14,13 @@
             <Picker x:Name="kategorijePicker" Title="Odaberite kategoriju" SelectedIndexChanged="kategorijePicker_SelectedIndexChanged"></Picker>
             <Picker x:Name="gradoviPicker" Title="Izaberite grad" SelectedIndexChanged="gradoviPicker_SelectedIndexChanged"></Picker>
 
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+            <Button x:Name="resetBtn" Text="Ponisti odabire" Clicked="resetBtn_Clicked" BackgroundColor="Gray" TextColor="White" HorizontalOptions="End"></Button>
+
             <Button x:Name="kreirajUpitBtn" Text="Kreiraj upit" Clicked="kreirajUpitBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"></Button>
+            </StackLayout>
+            
             <Label x:Name="errorLbl" TextColor="Red" FontSize="Micro" HorizontalOptions="End"></Label>
 
             <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center" Margin="5"></Label>
