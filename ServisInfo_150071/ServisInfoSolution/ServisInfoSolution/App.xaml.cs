@@ -13,22 +13,16 @@ namespace ServisInfoSolution
 		public App ()
 		{
 			InitializeComponent();
-            //SetCultureToUSEnglish();
-            //MainPage = new NavigationPage(new Prijava());
-
             Global.prvoPokretanje = true;
-            Global.APIAdress = "http://localhost:64158/";
+
+
+            Global.APIAdress = "http://localhost:64158/"; // API ADRESS
 
             MainPage = new Navigation.MasterDetailPage();
 
-            //MainPage = new NavigationPage(new MasterDetailPage());
 
         }
-        //private void SetCultureToUSEnglish()
-        //{
-        //    CultureInfo englishUSCulture = new CultureInfo("hr-HR");
-        //    CultureInfo.DefaultThreadCurrentCulture = englishUSCulture;
-        //}
+       
         protected override void OnStart ()
 		{
 			// Handle when your app starts
