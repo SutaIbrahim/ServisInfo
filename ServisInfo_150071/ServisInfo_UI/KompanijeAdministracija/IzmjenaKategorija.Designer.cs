@@ -64,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(377, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Odaberite kategorije koje nudi vasa kompanija";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // KategorijeList
             // 

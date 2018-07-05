@@ -32,7 +32,6 @@ namespace ServisInfoSolution
             Fill();
         }
 
-
         private void Fill()
         {
             HttpResponseMessage response = upitiService.GetActionResponse("GetDetalji", upitID.ToString());

@@ -1,8 +1,6 @@
 ﻿using ServisInfo_UI.Util;
 using System;
 using System.Collections.Generic;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using ServisInfo_API.Models;
-using ServisInfo_UI.Util;
 using System.Net.Http;
 using System.Resources;
 using System.Configuration;
@@ -31,7 +28,6 @@ namespace ServisInfo_UI.Upiti
 
         public DetaljiUpita(int upitID)
         {
-
             UID = upitID;
             InitializeComponent();
 
@@ -39,8 +35,6 @@ namespace ServisInfo_UI.Upiti
 
             if (response.IsSuccessStatusCode)
             {
-
-
                 if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
                     u = null;
                 else if (response.IsSuccessStatusCode)
@@ -50,7 +44,6 @@ namespace ServisInfo_UI.Upiti
                 }
             }
         }
-
 
 
         private void FillForm()
@@ -63,7 +56,7 @@ namespace ServisInfo_UI.Upiti
             KlijentLbl.Text = u.NazivKlijenta;
             OpisTxt.Text = u.Opis_kvara;
             UpitIDLbl.Text = UID.ToString();
-            //naziv kategorije dodati!!! u.Kategorija ..!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            KategorijaLbl.Text = u.Naziv_kategorije;
 
             UcitajSliku();
 
@@ -96,31 +89,33 @@ namespace ServisInfo_UI.Upiti
                 int resizedImgHeight = Convert.ToInt32(ConfigurationManager.AppSettings["resizedImgHeight"]);
                 int croppedImgWidth = Convert.ToInt32(ConfigurationManager.AppSettings["croppedImgWidth"]);
                 int croppedImgHeight = Convert.ToInt32(ConfigurationManager.AppSettings["croppedImgHeight"]);
+
                 pictureBox.Image = orgImg;
 
-                //if (orgImg.Width > resizedImgWidth)
-                //{
-                //    Image resizedImg = UIHelper.ResizeImage(orgImg, new Size(resizedImgWidth, resizedImgHeight));
+                if (orgImg.Width > resizedImgWidth)
+                {
+                    Image resizedImg = UIHelper.ResizeImage(orgImg, new Size(resizedImgWidth, resizedImgHeight));
 
-                //    if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
-                //    {
-                //        int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
-                //        int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
+                    if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
+                    {
+                        int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
+                        int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
 
-                //        Image croppedImg = UIHelper.CropImage(resizedImg, new Rectangle(croppedXPosition, croppedYPosition, croppedImgWidth, croppedImgHeight));
+                        Image croppedImg = UIHelper.CropImage(resizedImg, new Rectangle(croppedXPosition, croppedYPosition, croppedImgWidth, croppedImgHeight));
 
-                //        ////From Image to byte[]
-                //        //MemoryStream ms = new MemoryStream();
-                //        //croppedImg.Save(ms, orgImg.RawFormat);
+                        ////From Image to byte[]
+                        //MemoryStream ms = new MemoryStream();
+                        //croppedImg.Save(ms, orgImg.RawFormat);
 
-                //        pictureBox.Image = orgImg;
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show(Messages.picture_war + " " + resizedImgWidth + "x" + resizedImgHeight + ".", Messages.warning,
-                //                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    }
-                //}
+                        pictureBox.Image = resizedImg;
+                    }
+                    else
+                    {
+                        MessageBox.Show(Messages.picture_war + " " + resizedImgWidth + "x" + resizedImgHeight + ".", Messages.warning,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+
             }
 
         }
@@ -142,20 +137,7 @@ namespace ServisInfo_UI.Upiti
         //    return bm;
         //}
 
-        private void DetaljiUpita_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void KreirajPonuduBtn_Click(object sender, EventArgs e)
         {

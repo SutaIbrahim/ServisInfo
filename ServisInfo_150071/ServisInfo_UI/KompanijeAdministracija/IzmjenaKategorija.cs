@@ -28,10 +28,6 @@ namespace ServisInfo_UI.KompanijeAdministracija
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void IzmjenaKategorija_Load(object sender, EventArgs e)
         {
             k = Global.prijavljenaKompanija;
@@ -89,8 +85,6 @@ namespace ServisInfo_UI.KompanijeAdministracija
 
         private void SacuvajBtn_Click(object sender, EventArgs e)
         {
-
-
 
             k.kategorije = KategorijeList.CheckedItems.Cast<Kategorije>().ToList();
 

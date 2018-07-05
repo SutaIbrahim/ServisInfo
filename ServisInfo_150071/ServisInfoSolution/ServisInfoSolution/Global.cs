@@ -11,8 +11,6 @@ namespace ServisInfoSolution
         public static string APIAdress { get; set; } // setovanje unutar App.xaml.cs
 
 
-
-
         //
 
         public static Klijenti prijavljeniKlijent { get; set; }

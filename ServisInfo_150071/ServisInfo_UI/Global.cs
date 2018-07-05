@@ -9,7 +9,7 @@ namespace ServisInfo_UI
 {
     public static class Global
     {
-        public static Kompanije prijavljenaKompanija { get; set; }
+        public static Kompanije prijavljenaKompanija { get; set; } 
 
         #region API Routes 
 
@@ -22,7 +22,6 @@ namespace ServisInfo_UI
         public const string ServisiRoute = "api/Servisi";
         public const string KategorijeRoute = "api/Kategorije";
         public const string OcjeneRoute = "api/Ocjene";
-
 
         #endregion
     }

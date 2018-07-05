@@ -212,7 +212,6 @@
             this.DatumLbl.Size = new System.Drawing.Size(62, 24);
             this.DatumLbl.TabIndex = 9;
             this.DatumLbl.Text = "datum";
-            this.DatumLbl.Click += new System.EventHandler(this.DatumLbl_Click);
             // 
             // UpitiBtn
             // 
@@ -256,7 +255,6 @@
             this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 13;
             this.label6.Text = "Datum:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // BrojServisaLbl
             // 

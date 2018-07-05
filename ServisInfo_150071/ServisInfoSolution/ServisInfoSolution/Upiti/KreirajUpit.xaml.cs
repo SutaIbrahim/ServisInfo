@@ -85,7 +85,6 @@ namespace ServisInfoSolution
                 markaUredjajaPicker.SelectedIndex = 1;
             }
 
-
         }
 
         private void markaUredjajaPicker_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,7 +107,6 @@ namespace ServisInfoSolution
         {
             if (validacija())
             {
-
                 Upiti u = new Upiti();
 
                 u.OpisKvara = opisKvaraTxt.Text;

@@ -50,7 +50,6 @@
             this.label1.Size = new System.Drawing.Size(203, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Izabrani raspon za prikaz:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // OdDtm
             // 
@@ -80,7 +79,6 @@
             this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "DO:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // DoDtm
             // 

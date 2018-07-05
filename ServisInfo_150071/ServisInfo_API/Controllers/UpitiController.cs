@@ -36,27 +36,15 @@ namespace ServisInfo_API.App_Start
             return Ok(upiti);
         }
 
-        //[HttpGet]
-        //[Route("api/Upiti/GetByDate/{datum1}/{datum2}")]
-        //public List<KompanijeUpiti_Result> GetByDate(string datum1,string datum2)
-        //{
-        //    //DateTime Datum1 = DateTime.Parse(datum1);
-        //   // DateTime Datum2 = DateTime.Parse(datum2);
-
-
-
-        //    return db.esp_KompanijeUpiti_GetByDate(null,null).ToList();
-        //}
-
-            //desktop
+        //desktop
         [HttpGet]
         [Route("api/Upiti/GetByDate/{kompanijaID}/{datum}/{datum2}")]
-        public List<KompanijaUpiti_Result> GetByDate(string kompanijaID,string datum, string datum2)
+        public List<KompanijaUpiti_Result> GetByDate(string kompanijaID, string datum, string datum2)
         {
             DateTime Datum = Convert.ToDateTime(datum);
             DateTime Datum2 = Convert.ToDateTime(datum2);
 
-            List<KompanijaUpiti_Result> upiti= db.esp_KompanijeUpiti_GetByDate(Convert.ToInt32(kompanijaID),Datum,Datum2).ToList();
+            List<KompanijaUpiti_Result> upiti = db.esp_KompanijeUpiti_GetByDate(Convert.ToInt32(kompanijaID), Datum, Datum2).ToList();
 
             return upiti;
         }
@@ -77,16 +65,16 @@ namespace ServisInfo_API.App_Start
 
         [HttpGet]
         [Route("api/Upiti/GetDetalji/{upitId}/{kompanijaId?}")]
-        public IHttpActionResult GetDetalji(string upitId,string kompanijaId="")
+        public IHttpActionResult GetDetalji(string upitId, string kompanijaId = "")
         {
             DetaljiUpita_Result upit;
             if (kompanijaId == "")
             {
-                 upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(upitId),null).FirstOrDefault();
+                upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(upitId), null).FirstOrDefault();
             }
             else
             {
-                 upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(upitId), Convert.ToInt32(kompanijaId)).FirstOrDefault();
+                upit = db.esp_Upiti_GetDetalji(Convert.ToInt32(upitId), Convert.ToInt32(kompanijaId)).FirstOrDefault();
             }
 
             return Ok(upit);

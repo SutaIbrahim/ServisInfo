@@ -37,16 +37,12 @@ namespace ServisInfo_UI.Ponude
 
             HttpResponseMessage response = PonudeService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
 
-
             if (response.IsSuccessStatusCode)
             {
                 List<KompanijaPonude_Result> ponude = response.Content.ReadAsAsync<List<KompanijaPonude_Result>>().Result;
                 PonudeGrid.DataSource = ponude;
                 PonudeGrid.ClearSelection();
                 LayoutSet();
-
-
-
             }
             else
             {

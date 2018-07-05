@@ -181,16 +181,6 @@ namespace ServisInfo_UI.Servisi
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CijenaTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ZavrsiBtn_Click(object sender, EventArgs e)
         {
             if (this.ValidateChildren())

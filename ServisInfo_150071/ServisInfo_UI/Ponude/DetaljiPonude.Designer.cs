@@ -85,7 +85,6 @@
             this.DaLbl.Size = new System.Drawing.Size(52, 16);
             this.DaLbl.TabIndex = 46;
             this.DaLbl.Text = "label12";
-            this.DaLbl.Click += new System.EventHandler(this.DaLbl_Click);
             // 
             // NeLbl
             // 
@@ -147,7 +146,6 @@
             this.DaniLbl.Size = new System.Drawing.Size(52, 16);
             this.DaniLbl.TabIndex = 37;
             this.DaniLbl.Text = "label12";
-            this.DaniLbl.Click += new System.EventHandler(this.DaniLbl_Click);
             // 
             // DatumLbl
             // 
@@ -168,7 +166,6 @@
             this.label10.Size = new System.Drawing.Size(82, 15);
             this.label10.TabIndex = 35;
             this.label10.Text = "Prihvaćena:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -179,7 +176,6 @@
             this.label9.Size = new System.Drawing.Size(161, 15);
             this.label9.TabIndex = 34;
             this.label9.Text = "Okvirno trajanje servisa:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label7
             // 
@@ -260,7 +256,6 @@
             this.UpitIDLbl.Size = new System.Drawing.Size(236, 24);
             this.UpitIDLbl.TabIndex = 52;
             this.UpitIDLbl.Text = "Ponuda kreirana za UpitID: ";
-            this.UpitIDLbl.Click += new System.EventHandler(this.UpitIDLbl_Click);
             // 
             // label3
             // 
@@ -271,7 +266,6 @@
             this.label3.Size = new System.Drawing.Size(17, 16);
             this.label3.TabIndex = 53;
             this.label3.Text = "d";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -282,7 +276,6 @@
             this.label4.Size = new System.Drawing.Size(16, 16);
             this.label4.TabIndex = 54;
             this.label4.Text = "h";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // CijenaLbl
             // 
@@ -303,7 +296,6 @@
             this.label5.Size = new System.Drawing.Size(29, 16);
             this.label5.TabIndex = 56;
             this.label5.Text = "KM";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // servisBtn
             // 

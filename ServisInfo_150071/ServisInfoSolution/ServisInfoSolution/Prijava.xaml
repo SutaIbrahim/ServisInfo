@@ -6,6 +6,7 @@
              NavigationPage.HasBackButton="False"
              x:Name="prijava"
             >
+    
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
             <Label Text="Prijava @ Servis Info"

@@ -21,7 +21,6 @@ namespace ServisInfo_UI
         private WebAPIHelper ServisiService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.ServisiRoute);
 
 
-
         public MainForm()
         {
             InitializeComponent();
@@ -79,9 +78,7 @@ namespace ServisInfo_UI
             }
 
             //
-
             DatumLbl.Text = DateTime.Now.ToShortDateString();
-
         }
 
         private void pregledUpitaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,16 +148,6 @@ namespace ServisInfo_UI
             frm.ShowDialog();
 
             BindGrid();
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DatumLbl_Click(object sender, EventArgs e)
-        {
 
         }
 

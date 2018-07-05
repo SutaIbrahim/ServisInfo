@@ -208,8 +208,6 @@
             this.GradoviCmb.Name = "GradoviCmb";
             this.GradoviCmb.Size = new System.Drawing.Size(157, 21);
             this.GradoviCmb.TabIndex = 18;
-            this.GradoviCmb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.GradoviCmb.Validating += new System.ComponentModel.CancelEventHandler(this.GradoviCmb_Validating);
             // 
             // groupBox2
             // 
@@ -243,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 466);
+            this.ClientSize = new System.Drawing.Size(699, 429);
             this.Controls.Add(this.NazadBtn);
             this.Controls.Add(this.EmailTxt);
             this.Controls.Add(this.AdresaTxt);
@@ -256,8 +254,8 @@
             this.Controls.Add(this.DodajBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.MaximumSize = new System.Drawing.Size(715, 505);
-            this.MinimumSize = new System.Drawing.Size(715, 505);
+            this.MaximumSize = new System.Drawing.Size(715, 468);
+            this.MinimumSize = new System.Drawing.Size(715, 468);
             this.Name = "DodajKompaniju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DodajKompaniju";

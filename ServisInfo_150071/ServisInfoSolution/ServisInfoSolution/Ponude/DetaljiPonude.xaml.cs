@@ -68,7 +68,6 @@ namespace ServisInfoSolution
 
             }
 
-
         }
 
         private void prihvatiBtn_Clicked(object sender, EventArgs e)

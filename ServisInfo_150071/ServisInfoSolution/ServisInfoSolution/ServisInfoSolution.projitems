@@ -16,7 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Converters\ImageConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Kompanija\DetaljiKompanije.xaml.cs">
       <DependentUpon>DetaljiKompanije.xaml</DependentUpon>
       <SubType>Code</SubType>

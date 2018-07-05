@@ -59,7 +59,5 @@ namespace ServisInfo_UI.Util
             return client.DeleteAsync(route + "/" + id).Result;
         }
 
-        //...
-
     }
 }

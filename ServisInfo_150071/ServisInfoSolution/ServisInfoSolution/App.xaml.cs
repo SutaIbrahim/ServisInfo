@@ -15,11 +15,9 @@ namespace ServisInfoSolution
 			InitializeComponent();
             Global.prvoPokretanje = true;
 
-
-            Global.APIAdress = "http://localhost:64158/"; // API ADRESS
+            Global.APIAdress = "http://localhost:64158/"; // setovanje API ADRESS
 
             MainPage = new Navigation.MasterDetailPage();
-
 
         }
        
@@ -36,9 +34,10 @@ namespace ServisInfoSolution
 		protected override void OnResume ()
 		{
 
-            var userSelectedCulture = new CultureInfo("hr-HR");
+            //var userSelectedCulture = new CultureInfo("hr-HR");
 
-            Thread.CurrentThread.CurrentCulture = userSelectedCulture;
+            //Thread.CurrentThread.CurrentCulture = userSelectedCulture;
+
             // Handle when your app resumes
         }
 	}

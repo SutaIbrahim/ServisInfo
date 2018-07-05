@@ -20,20 +20,13 @@ namespace ServisInfo_UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
             #region Culture set
-            // koristeno za potrebe promjene formata datuma (pogledati app.config(UI) i web.config(API)
+            // koristeno za potrebe promjene formata datuma ( >> app.config(UI) i web.config(API)
             CultureInfo culture = new CultureInfo(ConfigurationManager.AppSettings["DefaultCulture"]);
             Thread.CurrentThread.CurrentCulture = culture;
             Thread.CurrentThread.CurrentUICulture = culture;
             //
             # endregion
-
-
-
-            //Application.Run(new LoginForm());
-
-            //Application.Run(new Ponude.PregledPonuda());
 
             LoginForm frm = new LoginForm();
             frm.ShowDialog();
@@ -45,6 +38,7 @@ namespace ServisInfo_UI
                 else
                     Application.Run(new MainForm());
             }
+
         }
     }
 }

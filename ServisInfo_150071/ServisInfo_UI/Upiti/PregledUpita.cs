@@ -34,8 +34,6 @@ namespace ServisInfo_UI.Upiti
 
         private void BindGrid()
         {
-
-
             HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
 
             if (response.IsSuccessStatusCode)
@@ -67,16 +65,6 @@ namespace ServisInfo_UI.Upiti
             UpitiGrid.Columns["Odgovoreno"].DisplayIndex = 9;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PrikaziBtn_Click(object sender, EventArgs e)
         {
             BindGrid();
@@ -95,7 +83,7 @@ namespace ServisInfo_UI.Upiti
                 BindGrid();
             }
 
-
         }
+
     }
 }

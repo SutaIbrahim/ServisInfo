@@ -48,16 +48,14 @@
 
                                 <StackLayout Grid.Column="1" Padding="1"  VerticalOptions="Center" Margin="2,0,0,0">
 
-                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="13"/>
-                                    <Label Text="{Binding Adresa}" FontSize="12"/>
-                                    <Label Text="{Binding ProsjecnaOcjena}" FontSize="12"/>
+                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="12"/>
+                                    <!--<Label Text="{Binding Adresa}" FontSize="12"/>-->
+                                    <Label Text="{Binding ProsjecnaOcjena}" FontSize="11"/>
                                 </StackLayout>
 
                                 <Label x:Name="checkbox" Grid.Column="2" Text="{Binding Izabrana}" TextColor="Green" FontSize="Medium" Margin="10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-                                <!--<Button x:Name="Button" Text="heeh" Grid.Column="3" Pressed="Button_Pressed" Command="{Binding Source={x:Reference mainpage}, Path=BindingContext.AddNotify}"></Button>-->
-                                <!--<Button Grid.Column="3" BindingContext="{Binding Source={x:Reference kompanijeList}, Path=BindingContext}" Command="{Binding DeleteEintragCommand}"  CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
-                                </Button>-->
-                                <Button Grid.Column="3" Text="Dodaj/ukloni" Clicked="Dodaj" CommandParameter="{Binding KompanijaID}" BackgroundColor="Green" TextColor="White" HeightRequest="30" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" Margin="5"/>
+                              
+                                <Button Grid.Column="3" Text="Dodaj/ukloni" Clicked="Dodaj" CommandParameter="{Binding KompanijaID}" BackgroundColor="Green" TextColor="White" HeightRequest="30" FontSize="11" HorizontalOptions="Center" VerticalOptions="Center" Margin="5"/>
 
                             </Grid>
                         </ViewCell>

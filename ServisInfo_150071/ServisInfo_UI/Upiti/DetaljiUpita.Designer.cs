@@ -77,7 +77,6 @@
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Klijent:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -158,7 +157,6 @@
             this.label10.Size = new System.Drawing.Size(88, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "Odgovoreno:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // DatumLbl
             // 
@@ -293,7 +291,6 @@
             this.KategorijaLbl.Size = new System.Drawing.Size(52, 16);
             this.KategorijaLbl.TabIndex = 25;
             this.KategorijaLbl.Text = "label12";
-            this.KategorijaLbl.Click += new System.EventHandler(this.KategorijaLbl_Click);
             // 
             // UpitIDLbl
             // 
@@ -372,7 +369,6 @@
             this.Name = "DetaljiUpita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiUpita";
-            this.Load += new System.EventHandler(this.DetaljiUpita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

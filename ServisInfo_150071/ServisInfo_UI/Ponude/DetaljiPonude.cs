@@ -77,47 +77,8 @@ namespace ServisInfo_UI.Ponude
         {
             this.Close();
         }
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DaniLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
    
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DaLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UpitIDLbl_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void servisBtn_Click(object sender, EventArgs e)
         {

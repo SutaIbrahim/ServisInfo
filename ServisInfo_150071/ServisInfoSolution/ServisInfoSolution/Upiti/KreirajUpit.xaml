@@ -2,14 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.KreirajUpit"
-               xmlns:local="clr-namespace:eProdajaSolution.Converters"
              Title="Novi upit"
              >
-    <!--<ContentPage.Resources>
-        <ResourceDictionary>
-            <local:ImageConverter x:Key="imgConv"></local:ImageConverter>
-        </ResourceDictionary>
-    </ContentPage.Resources>-->
+  
     <ScrollView>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
 
@@ -40,7 +35,6 @@
                 </Grid.ColumnDefinitions>
 
 
-
                 <Label Text="*Marka uredjaja" Grid.Row="1" Grid.Column="0"></Label>
                 <Picker x:Name="markaUredjajaPicker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="markaUredjajaPicker_SelectedIndexChanged"></Picker>
 
@@ -62,11 +56,9 @@
                 <Label Text="Do:" Grid.Row="8" Grid.Column="0"></Label>
                 <DatePicker x:Name="datumDo"  Grid.Row="8" Grid.Column="1" WidthRequest="140"></DatePicker>
                 
-                
             </Grid>
             
             <Label x:Name="porukaLbl" Margin="13" Text="* Obavezna polja"></Label>
-
 
             <Button x:Name="posaljiBtn" Text="Posalji upit" HeightRequest="40" BackgroundColor="#13818d" TextColor="White" Clicked="posaljiBtn_Clicked" FontSize="Small"></Button>
         </StackLayout>

@@ -91,7 +91,6 @@
             this.label4.Size = new System.Drawing.Size(183, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Konačna cijena popavke:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -189,7 +188,6 @@
             this.CijenaTxt.Name = "CijenaTxt";
             this.CijenaTxt.Size = new System.Drawing.Size(73, 20);
             this.CijenaTxt.TabIndex = 30;
-            this.CijenaTxt.TextChanged += new System.EventHandler(this.CijenaTxt_TextChanged);
             this.CijenaTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CijenaTxt_KeyPress);
             this.CijenaTxt.Validating += new System.ComponentModel.CancelEventHandler(this.CijenaTxt_Validating);
             // 

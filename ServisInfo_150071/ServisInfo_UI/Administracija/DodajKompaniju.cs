@@ -78,14 +78,7 @@ namespace ServisInfo_UI.Administracija
 
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void NazadBtn_Click(object sender, EventArgs e)
         {
@@ -123,10 +116,6 @@ namespace ServisInfo_UI.Administracija
             }
             else
                 errorProvider.SetError(AdresaTxt, null);
-        }
-
-        private void GradoviCmb_Validating(object sender, CancelEventArgs e)
-        {
         }
 
         private void KorisickoImeTxt_Validating(object sender, CancelEventArgs e)
