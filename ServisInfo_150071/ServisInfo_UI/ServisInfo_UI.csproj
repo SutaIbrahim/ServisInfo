@@ -157,6 +157,12 @@
     <Compile Include="Reports\KompanijaIzvjestajForm.Designer.cs">
       <DependentUpon>KompanijaIzvjestajForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\KompanijaIzvjestajViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\KompanijaIzvjestajViewForm.Designer.cs">
+      <DependentUpon>KompanijaIzvjestajViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ReportViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,10 @@
     <EmbeddedResource Include="Reports\KompanijaIzvjestajForm.resx">
       <DependentUpon>KompanijaIzvjestajForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\KompanijaIzvjestajViewForm.resx">
+      <DependentUpon>KompanijaIzvjestajViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\KompanijeIzvjestajReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportViewForm.resx">
       <DependentUpon>ReportViewForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +271,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ServisInfo_API.Models.DetaljiServisa_Report.datasource" />
+    <None Include="Properties\DataSources\ServisInfo_API.Models.KompanijaPrometByDate_Report.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

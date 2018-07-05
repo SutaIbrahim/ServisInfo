@@ -30,18 +30,34 @@ namespace ServisInfo_UI.Reports
 
         private void KreirajBtn_Click(object sender, EventArgs e)
         {
-            HttpResponseMessage response = KompanijeService.GetActionResponse("GetPodaci",Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
+            HttpResponseMessage response = KompanijeService.GetActionResponse("GetPodaci", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
             if (response.IsSuccessStatusCode)
             {
                 List<KompanijaPrometByDate_Report> podaci = response.Content.ReadAsAsync<List<KompanijaPrometByDate_Report>>().Result;
-                //report
 
+                if (podaci.Count() > 0)
+                {
 
-                this.Close();
+                    foreach (var x in podaci)
+                    {
+                        x.Cijena2 = Convert.ToDouble(x.Cijena);
+                    }
+
+                    //report
+                    Reports.KompanijaIzvjestajViewForm frm = new Reports.KompanijaIzvjestajViewForm();
+                    frm.podaci = podaci;
+                    frm.Show();
+                    //
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Nisu pronadjeni podaci za trazeni raspon datuma");
+                }
 
             }
         }
 
-       
+
     }
 }

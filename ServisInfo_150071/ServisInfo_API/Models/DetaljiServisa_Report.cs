@@ -29,5 +29,9 @@ namespace ServisInfo_API.Models
         public string Model_uredjaja { get; set; }
         public string Ime_i_prezime_klijenta { get; set; }
         public string Naziv_kompanije { get; set; }
+        public string Adresa { get; set; }
+        public string Naziv_Grada { get; set; }
+        public string Telefon { get; set; }
+        public string Email { get; set; }
     }
 }

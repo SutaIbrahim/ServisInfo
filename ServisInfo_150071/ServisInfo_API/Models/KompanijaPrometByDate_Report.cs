@@ -18,5 +18,9 @@ namespace ServisInfo_API.Models
         public string Naziv_kompanije { get; set; }
         public Nullable<decimal> Cijena { get; set; }
         public string Ime_i_prezime_klijenta { get; set; }
+        public Nullable<System.DateTime> Od { get; set; }
+        public Nullable<System.DateTime> Do { get; set; }
+
+        public double Cijena2 { get; set; }
     }
 }

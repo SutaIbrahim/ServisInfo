@@ -24,7 +24,6 @@ namespace ServisInfoSolution
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-
         protected override void OnAppearing()
         {
         
@@ -54,10 +53,16 @@ namespace ServisInfoSolution
                     Global.prijavljeniKlijent = klijent;
                     this.Navigation.PushAsync(new MainPage());
                 }
+                else
+                {
+                    DisplayAlert("Greska!", "Pogresni korisnicki podaci", "OK");
+                    lozinkaInput.Text = "";
+                    korisnickoImeInput.Text = "";
+                }
             }
             else
             {
-                DisplayAlert("Greska!", "Pogresni korisnicki podaci", "OK");
+                DisplayAlert("Greska!", "Korisnicko ime ne postoji", "OK");
                 lozinkaInput.Text = "";
                 korisnickoImeInput.Text = "";
             }

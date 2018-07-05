@@ -17,6 +17,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="Adresa">
+          <DataField>Adresa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Datum_Pocetka_Servisa">
           <DataField>Datum_Pocetka_Servisa</DataField>
           <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
@@ -32,6 +36,10 @@
         <Field Name="DatumK_reiranja_Ponude">
           <DataField>DatumK_reiranja_Ponude</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Ime_i_prezime_klijenta">
           <DataField>Ime_i_prezime_klijenta</DataField>
@@ -57,6 +65,10 @@
           <DataField>Model_uredjaja</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Naziv_Grada">
+          <DataField>Naziv_Grada</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Naziv_kompanije">
           <DataField>Naziv_kompanije</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -76,6 +88,10 @@
         <Field Name="ServisID">
           <DataField>ServisID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Telefon">
+          <DataField>Telefon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="UpitID">
           <DataField>UpitID</DataField>
@@ -111,7 +127,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
             <Top>4.7438cm</Top>
-            <Left>2.75012cm</Left>
+            <Left>0.75738cm</Left>
             <Height>0.6cm</Height>
             <Width>2.18668cm</Width>
             <Style>
@@ -140,7 +156,7 @@
             </Paragraphs>
             <rd:DefaultName>Naziv_kompanije1</rd:DefaultName>
             <Top>4.7438cm</Top>
-            <Left>5.39123cm</Left>
+            <Left>3.04989cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>1</ZIndex>
@@ -169,8 +185,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Datum_Zavrsetka_Servisa</rd:DefaultName>
-            <Top>8.25997cm</Top>
-            <Left>14.11134cm</Left>
+            <Top>9.98732cm</Top>
+            <Left>14.1378cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>2</ZIndex>
@@ -201,8 +217,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>8.25997cm</Top>
-            <Left>9.45104cm</Left>
+            <Top>9.98732cm</Top>
+            <Left>9.4775cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>3</ZIndex>
@@ -233,8 +249,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>6.83261cm</Top>
-            <Left>9.45104cm</Left>
+            <Top>8.55996cm</Top>
+            <Left>9.4775cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>4</ZIndex>
@@ -263,8 +279,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Datum_Pocetka_Servisa</rd:DefaultName>
-            <Top>6.83261cm</Top>
-            <Left>14.11134cm</Left>
+            <Top>8.55996cm</Top>
+            <Left>14.1378cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>5</ZIndex>
@@ -293,8 +309,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Datum_Upita</rd:DefaultName>
-            <Top>6.83261cm</Top>
-            <Left>5.39123cm</Left>
+            <Top>8.55996cm</Top>
+            <Left>5.41769cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>6</ZIndex>
@@ -323,8 +339,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>DatumK_reiranja_Ponude</rd:DefaultName>
-            <Top>8.25997cm</Top>
-            <Left>5.39123cm</Left>
+            <Top>9.98732cm</Top>
+            <Left>5.41769cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>7</ZIndex>
@@ -366,8 +382,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>6.83261cm</Top>
-            <Left>0.75739cm</Left>
+            <Top>8.55996cm</Top>
+            <Left>0.78385cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>8</ZIndex>
@@ -398,8 +414,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>8.25997cm</Top>
-            <Left>0.75739cm</Left>
+            <Top>9.98732cm</Top>
+            <Left>0.78385cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>9</ZIndex>
@@ -523,8 +539,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Marka_uredjaja</rd:DefaultName>
-            <Top>9.6177cm</Top>
-            <Left>5.39123cm</Left>
+            <Top>11.34505cm</Top>
+            <Left>5.41769cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>12</ZIndex>
@@ -553,8 +569,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Model_uredjaja</rd:DefaultName>
-            <Top>11.04506cm</Top>
-            <Left>5.41769cm</Left>
+            <Top>12.77241cm</Top>
+            <Left>5.44415cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>13</ZIndex>
@@ -585,8 +601,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>9.6177cm</Top>
-            <Left>0.75738cm</Left>
+            <Top>11.34505cm</Top>
+            <Left>0.78384cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>14</ZIndex>
@@ -628,8 +644,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>11.04506cm</Top>
-            <Left>0.75738cm</Left>
+            <Top>12.77241cm</Top>
+            <Left>0.78384cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>15</ZIndex>
@@ -658,8 +674,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Opis_Kvara</rd:DefaultName>
-            <Top>12.40279cm</Top>
-            <Left>5.39123cm</Left>
+            <Top>14.13014cm</Top>
+            <Left>5.41769cm</Left>
             <Height>1.74885cm</Height>
             <Width>11.22011cm</Width>
             <ZIndex>16</ZIndex>
@@ -701,8 +717,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>12.40279cm</Top>
-            <Left>0.75739cm</Left>
+            <Top>14.13014cm</Top>
+            <Left>0.78385cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>17</ZIndex>
@@ -744,8 +760,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>14.67899cm</Top>
-            <Left>0.75738cm</Left>
+            <Top>16.40634cm</Top>
+            <Left>0.78384cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
             <ZIndex>18</ZIndex>
@@ -774,8 +790,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Odgovor</rd:DefaultName>
-            <Top>14.67899cm</Top>
-            <Left>5.39123cm</Left>
+            <Top>16.40634cm</Top>
+            <Left>5.41769cm</Left>
             <Height>1.7767cm</Height>
             <Width>11.22011cm</Width>
             <ZIndex>19</ZIndex>
@@ -815,8 +831,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>17.52257cm</Top>
-            <Left>10.40354cm</Left>
+            <Top>19.24992cm</Top>
+            <Left>10.43cm</Left>
             <Height>0.6cm</Height>
             <Width>3.25337cm</Width>
             <ZIndex>20</ZIndex>
@@ -845,8 +861,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Konacna_Cijena</rd:DefaultName>
-            <Top>17.52257cm</Top>
-            <Left>14.11134cm</Left>
+            <Top>19.24992cm</Top>
+            <Left>14.1378cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>21</ZIndex>
@@ -944,11 +960,101 @@
               </Border>
             </Style>
           </Image>
+          <Textbox Name="Adresa">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Adresa.Value, "DataSet1")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Adresa</rd:DefaultName>
+            <Top>5.52019cm</Top>
+            <Left>3.05871cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>25</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Naziv_Grada">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Naziv_Grada.Value, "DataSet1")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Naziv_Grada</rd:DefaultName>
+            <Top>6.2613cm</Top>
+            <Left>3.05871cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>26</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Email">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Email.Value, "DataSet1")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Email</rd:DefaultName>
+            <Top>7.00241cm</Top>
+            <Left>3.04989cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>7.3432in</Height>
+        <Height>8.0441in</Height>
         <Style />
       </Body>
-      <Width>7.95543in</Width>
+      <Width>6.98668in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

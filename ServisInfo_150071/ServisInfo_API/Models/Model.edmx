@@ -1330,8 +1330,12 @@
           <Property Type="String" Name="Odgovor" Nullable="false" />
           <Property Type="String" Name="Marka_uredjaja" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Model_uredjaja" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ime_i_prezime_klijenta" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Ime_i_prezime_klijenta" Nullable="false" MaxLength="101" />
           <Property Type="String" Name="Naziv_kompanije" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Adresa" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Naziv_Grada" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telefon" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
         </ComplexType>
         <ComplexType Name="KompanijaPrometByDate_Report">
           <Property Type="Int32" Name="ServisID" Nullable="false" />
@@ -1339,6 +1343,8 @@
           <Property Type="String" Name="Naziv_kompanije" Nullable="false" MaxLength="50" />
           <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="0" />
           <Property Type="String" Name="Ime_i_prezime_klijenta" Nullable="false" MaxLength="101" />
+          <Property Type="DateTime" Name="Od" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Do" Nullable="true" Precision="23" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1743,6 +1749,10 @@
                 <ScalarProperty Name="Model_uredjaja" ColumnName="Model uredjaja" />
                 <ScalarProperty Name="Ime_i_prezime_klijenta" ColumnName="Ime i prezime klijenta" />
                 <ScalarProperty Name="Naziv_kompanije" ColumnName="Naziv kompanije" />
+                <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+                <ScalarProperty Name="Naziv_Grada" ColumnName="Naziv Grada" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1754,6 +1764,8 @@
                 <ScalarProperty Name="Naziv_kompanije" ColumnName="Naziv kompanije" />
                 <ScalarProperty Name="Cijena" ColumnName="Cijena" />
                 <ScalarProperty Name="Ime_i_prezime_klijenta" ColumnName="Ime i prezime klijenta" />
+                <ScalarProperty Name="Od" ColumnName="Od" />
+                <ScalarProperty Name="Do" ColumnName="Do" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

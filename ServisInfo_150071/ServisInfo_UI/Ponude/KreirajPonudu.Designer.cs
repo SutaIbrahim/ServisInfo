@@ -225,6 +225,7 @@
             this.CijenaTxt.Name = "CijenaTxt";
             this.CijenaTxt.Size = new System.Drawing.Size(129, 20);
             this.CijenaTxt.TabIndex = 18;
+            this.CijenaTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CijenaTxt_KeyPress);
             this.CijenaTxt.Validating += new System.ComponentModel.CancelEventHandler(this.CijenaTxt_Validating);
             // 
             // label9

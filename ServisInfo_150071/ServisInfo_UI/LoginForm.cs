@@ -30,7 +30,7 @@ namespace ServisInfo_UI
             HttpResponseMessage response = KompanijeService.GetActionResponse("GetByKorisnickoIme", korisnickoImeInput.Text);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                MessageBox.Show("Greska1", "Greska1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Korisnicko ime nije pronadjeno", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             else if (response.IsSuccessStatusCode)
             {
@@ -45,7 +45,7 @@ namespace ServisInfo_UI
                 }
                 else
                 {
-                    MessageBox.Show("Greska2", "Greska2", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Pogresni korisnicki podaci", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     lozinkaInput.Text = String.Empty;
                 }
             }

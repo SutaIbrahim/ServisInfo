@@ -143,5 +143,21 @@ namespace ServisInfo_UI.Ponude
             else
                 errorProvider.SetError(CijenaTxt, null);
         }
+
+        private void CijenaTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //samo brojevi
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

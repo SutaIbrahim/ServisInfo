@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 228);
+            this.ClientSize = new System.Drawing.Size(338, 217);
             this.Controls.Add(this.KreirajBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -105,6 +105,7 @@
             this.Controls.Add(this.DoDtm);
             this.Controls.Add(this.OdDtm);
             this.Name = "KompanijaIzvjestajForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KompanijaIzvjestajForm";
             this.Load += new System.EventHandler(this.KompanijaIzvjestajForm_Load);
             this.ResumeLayout(false);
