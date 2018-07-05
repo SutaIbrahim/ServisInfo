@@ -57,6 +57,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.prosjekLbl = new System.Windows.Forms.Label();
+            this.IzvjestajBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -339,12 +340,25 @@
             this.prosjekLbl.TabIndex = 41;
             this.prosjekLbl.Text = "asd";
             // 
+            // IzvjestajBtn
+            // 
+            this.IzvjestajBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.IzvjestajBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.IzvjestajBtn.Location = new System.Drawing.Point(296, 445);
+            this.IzvjestajBtn.Name = "IzvjestajBtn";
+            this.IzvjestajBtn.Size = new System.Drawing.Size(224, 36);
+            this.IzvjestajBtn.TabIndex = 42;
+            this.IzvjestajBtn.Text = "Izvjestaj o prometu";
+            this.IzvjestajBtn.UseVisualStyleBackColor = false;
+            this.IzvjestajBtn.Click += new System.EventHandler(this.IzvjestajBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(794, 653);
+            this.Controls.Add(this.IzvjestajBtn);
             this.Controls.Add(this.prosjekLbl);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.KategorijeBtn);
@@ -411,5 +425,6 @@
         private System.Windows.Forms.ToolStripMenuItem uredjivanjeProfilaToolStripMenuItem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label prosjekLbl;
+        private System.Windows.Forms.Button IzvjestajBtn;
     }
 }

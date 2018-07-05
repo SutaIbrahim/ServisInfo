@@ -163,5 +163,11 @@ namespace ServisInfo_UI
         {
 
         }
+
+        private void IzvjestajBtn_Click(object sender, EventArgs e)
+        {
+            Reports.KompanijaIzvjestajForm frm = new Reports.KompanijaIzvjestajForm();
+            frm.ShowDialog();
+        }
     }
 }

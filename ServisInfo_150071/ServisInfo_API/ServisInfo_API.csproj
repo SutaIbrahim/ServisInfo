@@ -137,6 +137,9 @@
     <Compile Include="Models\KompanijaPonude_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\KompanijaPrometByDate_Report.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\KompanijaServisi_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

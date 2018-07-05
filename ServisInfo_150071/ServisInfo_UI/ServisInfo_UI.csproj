@@ -151,6 +151,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\KompanijaIzvjestajForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\KompanijaIzvjestajForm.Designer.cs">
+      <DependentUpon>KompanijaIzvjestajForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ReportViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\DetaljiSerivsaReport.rdlc" />
+    <EmbeddedResource Include="Reports\KompanijaIzvjestajForm.resx">
+      <DependentUpon>KompanijaIzvjestajForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportViewForm.resx">
       <DependentUpon>ReportViewForm.cs</DependentUpon>
     </EmbeddedResource>

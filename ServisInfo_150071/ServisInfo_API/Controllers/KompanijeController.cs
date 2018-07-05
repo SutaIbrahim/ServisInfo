@@ -109,6 +109,18 @@ namespace ServisInfo_API.Controllers
             return k;
 
         }
+        [HttpGet]
+        [Route("api/Kompanije/GetPodaci/{kompanijaID}/{datum}/{datum2}")]
+        public List<KompanijaPrometByDate_Report> GetPodaci(string kompanijaID, string datum, string datum2)
+        {
+            DateTime Datum = Convert.ToDateTime(datum);
+            DateTime Datum2 = Convert.ToDateTime(datum2);
+
+
+            List<KompanijaPrometByDate_Report> podaci = db.esp_Report_UkupniPrometByDate(Convert.ToInt32(kompanijaID), Datum, Datum2).ToList();
+
+            return podaci;
+        }
 
 
 

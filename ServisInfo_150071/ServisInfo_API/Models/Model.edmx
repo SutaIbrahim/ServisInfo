@@ -443,6 +443,11 @@
         <Function Name="esp_Report_DetaljiServisa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ServisID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_Report_UkupniPrometByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+          <Parameter Name="datumOD" Type="datetime" Mode="In" />
+          <Parameter Name="datumDO" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="esp_SearchByKategorijaGrad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="kategorijaId" Type="int" Mode="In" />
           <Parameter Name="gradId" Type="int" Mode="In" />
@@ -1110,7 +1115,12 @@
           <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_Report_DetaljiServisa" ReturnType="Collection(ServisInfoModel.DetaljiServisa_Report)">
-            <Parameter Name="ServisID" Mode="In" Type="Int32" />
+          <Parameter Name="ServisID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Report_UkupniPrometByDate" ReturnType="Collection(ServisInfoModel.KompanijaPrometByDate_Report)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+            <Parameter Name="datumOD" Mode="In" Type="DateTime" />
+            <Parameter Name="datumDO" Mode="In" Type="DateTime" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -1322,6 +1332,13 @@
           <Property Type="String" Name="Model_uredjaja" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Ime_i_prezime_klijenta" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Naziv_kompanije" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="KompanijaPrometByDate_Report">
+          <Property Type="Int32" Name="ServisID" Nullable="false" />
+          <Property Type="DateTime" Name="DatumZavršetka" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Naziv_kompanije" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Ime_i_prezime_klijenta" Nullable="false" MaxLength="101" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1726,6 +1743,17 @@
                 <ScalarProperty Name="Model_uredjaja" ColumnName="Model uredjaja" />
                 <ScalarProperty Name="Ime_i_prezime_klijenta" ColumnName="Ime i prezime klijenta" />
                 <ScalarProperty Name="Naziv_kompanije" ColumnName="Naziv kompanije" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Report_UkupniPrometByDate" FunctionName="ServisInfoModel.Store.esp_Report_UkupniPrometByDate">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.KompanijaPrometByDate_Report">
+                <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+                <ScalarProperty Name="DatumZavršetka" ColumnName="DatumZavršetka" />
+                <ScalarProperty Name="Naziv_kompanije" ColumnName="Naziv kompanije" />
+                <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+                <ScalarProperty Name="Ime_i_prezime_klijenta" ColumnName="Ime i prezime klijenta" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

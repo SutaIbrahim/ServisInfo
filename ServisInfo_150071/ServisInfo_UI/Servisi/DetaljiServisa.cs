@@ -55,6 +55,7 @@ namespace ServisInfo_UI.Servisi
             DatumPrihvatanjaLbl.Text = s.DatumPrihvatanja.ToShortDateString();
             KlijentLbl.Text = s.Ime_klijenta;
             ServisIDLbl.Text = ServisID.ToString();
+            IzvjestajBtn.Hide();
 
             ocjena1Lbl.Text = "";
             ocjena2Lbl.Text = "";
@@ -121,7 +122,7 @@ namespace ServisInfo_UI.Servisi
                     label5.Show();
                     TrajanjeLbl.Show();
                     TrajanjeLbl.Text = s.TrajanjeDani.ToString();
-
+                    IzvjestajBtn.Show();
                     //
                     PostaviOcjene();
                 }
@@ -254,7 +255,6 @@ namespace ServisInfo_UI.Servisi
 
                 Reports.ReportViewForm frm = new Reports.ReportViewForm();
                 frm.detalji = detalji;
-
 
                 frm.Show();
             }

@@ -494,7 +494,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
             <Top>4.7438cm</Top>
-            <Left>9.45104cm</Left>
+            <Left>10.91321cm</Left>
             <Height>0.6cm</Height>
             <Width>2.7437cm</Width>
             <ZIndex>11</ZIndex>
@@ -878,8 +878,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>1.61057cm</Top>
-            <Left>4.31231cm</Left>
+            <Top>1.98099cm</Top>
+            <Left>5.41769cm</Left>
             <Height>1.01776cm</Height>
             <Width>3.30072cm</Width>
             <ZIndex>22</ZIndex>
@@ -914,8 +914,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ServisID</rd:DefaultName>
-            <Top>1.61057cm</Top>
-            <Left>7.09555cm</Left>
+            <Top>1.98099cm</Top>
+            <Left>8.20093cm</Left>
             <Height>1.01776cm</Height>
             <Width>3.71848cm</Width>
             <ZIndex>23</ZIndex>
@@ -933,10 +933,10 @@
             <Source>Embedded</Source>
             <Value>appIcon</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.81682cm</Top>
-            <Left>1.02196cm</Left>
-            <Height>2.53188cm</Height>
-            <Width>3.21979cm</Width>
+            <Top>0.73744cm</Top>
+            <Left>1.03543cm</Left>
+            <Height>3.29917cm</Height>
+            <Width>4.20587cm</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
