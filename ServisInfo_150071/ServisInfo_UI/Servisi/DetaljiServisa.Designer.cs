@@ -58,6 +58,7 @@
             this.ocjena3Lbl = new System.Windows.Forms.Label();
             this.OcjeneLbl = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.IzvjestajBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.Location = new System.Drawing.Point(42, 134);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 16);
+            this.label6.Size = new System.Drawing.Size(210, 16);
             this.label6.TabIndex = 12;
             this.label6.Text = "Servis kreiran za ponudu ID:";
             // 
@@ -77,7 +78,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.Location = new System.Drawing.Point(505, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 16);
+            this.label5.Size = new System.Drawing.Size(111, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Trajanje dana:";
             // 
@@ -87,7 +88,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.Location = new System.Drawing.Point(439, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 16);
+            this.label4.Size = new System.Drawing.Size(188, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Konačna cijena popavke:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -98,7 +99,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(42, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 16);
+            this.label3.Size = new System.Drawing.Size(175, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "Datum početka servisa:";
             // 
@@ -108,7 +109,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(42, 220);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 16);
+            this.label1.Size = new System.Drawing.Size(186, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Datum završetka servisa:";
             // 
@@ -118,7 +119,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(422, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 16);
+            this.label2.Size = new System.Drawing.Size(197, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Datum prihvatanja ponude:";
             // 
@@ -217,7 +218,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.Location = new System.Drawing.Point(560, 180);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 16);
+            this.label10.Size = new System.Drawing.Size(57, 16);
             this.label10.TabIndex = 33;
             this.label10.Text = "Klijent:";
             // 
@@ -348,11 +349,22 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // IzvjestajBtn
+            // 
+            this.IzvjestajBtn.Location = new System.Drawing.Point(45, 277);
+            this.IzvjestajBtn.Name = "IzvjestajBtn";
+            this.IzvjestajBtn.Size = new System.Drawing.Size(141, 30);
+            this.IzvjestajBtn.TabIndex = 47;
+            this.IzvjestajBtn.Text = "Prikazi izvjestaj";
+            this.IzvjestajBtn.UseVisualStyleBackColor = true;
+            this.IzvjestajBtn.Click += new System.EventHandler(this.IzvjestajBtn_Click);
+            // 
             // DetaljiServisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 461);
+            this.Controls.Add(this.IzvjestajBtn);
             this.Controls.Add(this.OcjeneLbl);
             this.Controls.Add(this.ocjena3Lbl);
             this.Controls.Add(this.ocjena2Lbl);
@@ -423,5 +435,6 @@
         private System.Windows.Forms.Label ocjena3Lbl;
         private System.Windows.Forms.Label OcjeneLbl;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button IzvjestajBtn;
     }
 }

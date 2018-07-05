@@ -440,6 +440,9 @@
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="KategorijaID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_Report_DetaljiServisa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ServisID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_SearchByKategorijaGrad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="kategorijaId" Type="int" Mode="In" />
           <Parameter Name="gradId" Type="int" Mode="In" />
@@ -1104,7 +1107,10 @@
             <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_Kompanija_GetProsjecnaOcjena" ReturnType="Collection(Decimal)">
-            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+          <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Report_DetaljiServisa" ReturnType="Collection(ServisInfoModel.DetaljiServisa_Report)">
+            <Parameter Name="ServisID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -1298,6 +1304,24 @@
           <Property Type="String" Name="LozinkaHash" Nullable="true" />
           <Property Type="Int32" Name="GradID" Nullable="false" />
           <Property Type="Decimal" Name="ProsjecnaOcjena" Nullable="true" Precision="38" Scale="6" />
+        </ComplexType>
+        <ComplexType Name="DetaljiServisa_Report">
+          <Property Type="Int32" Name="ServisID" Nullable="false" />
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="Int32" Name="KlijentID" Nullable="false" />
+          <Property Type="Int32" Name="PonudaID" Nullable="false" />
+          <Property Type="Int32" Name="UpitID" Nullable="false" />
+          <Property Type="DateTime" Name="Datum_Upita" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DatumK_reiranja_Ponude" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="Datum_Pocetka_Servisa" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Datum_Zavrsetka_Servisa" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Konacna_Cijena" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Opis_Kvara" Nullable="false" />
+          <Property Type="String" Name="Odgovor" Nullable="false" />
+          <Property Type="String" Name="Marka_uredjaja" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Model_uredjaja" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ime_i_prezime_klijenta" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Naziv_kompanije" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1683,6 +1707,28 @@
           <FunctionImportMapping FunctionImportName="esp_Recommender_ColdStart" FunctionName="ServisInfoModel.Store.esp_Recommender_ColdStart">
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_Kompanija_GetProsjecnaOcjena" FunctionName="ServisInfoModel.Store.esp_Kompanija_GetProsjecnaOcjena" />
+          <FunctionImportMapping FunctionImportName="esp_Report_DetaljiServisa" FunctionName="ServisInfoModel.Store.esp_Report_DetaljiServisa">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.DetaljiServisa_Report">
+                <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+                <ScalarProperty Name="KompanijaID" ColumnName="KompanijaID" />
+                <ScalarProperty Name="KlijentID" ColumnName="KlijentID" />
+                <ScalarProperty Name="PonudaID" ColumnName="PonudaID" />
+                <ScalarProperty Name="UpitID" ColumnName="UpitID" />
+                <ScalarProperty Name="Datum_Upita" ColumnName="Datum Upita" />
+                <ScalarProperty Name="DatumK_reiranja_Ponude" ColumnName="DatumK reiranja Ponude" />
+                <ScalarProperty Name="Datum_Pocetka_Servisa" ColumnName="Datum Pocetka Servisa" />
+                <ScalarProperty Name="Datum_Zavrsetka_Servisa" ColumnName="Datum Zavrsetka Servisa" />
+                <ScalarProperty Name="Konacna_Cijena" ColumnName="Konacna Cijena" />
+                <ScalarProperty Name="Opis_Kvara" ColumnName="Opis Kvara" />
+                <ScalarProperty Name="Odgovor" ColumnName="Odgovor" />
+                <ScalarProperty Name="Marka_uredjaja" ColumnName="Marka uredjaja" />
+                <ScalarProperty Name="Model_uredjaja" ColumnName="Model uredjaja" />
+                <ScalarProperty Name="Ime_i_prezime_klijenta" ColumnName="Ime i prezime klijenta" />
+                <ScalarProperty Name="Naziv_kompanije" ColumnName="Naziv kompanije" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

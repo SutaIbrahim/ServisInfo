@@ -83,6 +83,18 @@ namespace ServisInfo_API.Controllers
         }
 
 
+
+        [HttpGet]
+        [Route("api/Servisi/GetIzvjestaj/{id}")]
+        public IHttpActionResult GetIzvjestaj(string id)
+        {
+
+            DetaljiServisa_Report report = db.esp_Report_DetaljiServisa(Convert.ToInt32(id)).FirstOrDefault();
+
+            return Ok(report);
+        }
+
+
         [HttpGet]
         [Route("api/Servisi/GetCountUtoku/{id}")]
         public int? GetCountUtoku(string id)

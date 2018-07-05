@@ -130,7 +130,7 @@ namespace ServisInfo_UI.Servisi
 
         private void PostaviOcjene()
         {
-            HttpResponseMessage response = OcjeneService.GetActionResponse("GetOcjeneList",ServisID.ToString());
+            HttpResponseMessage response = OcjeneService.GetActionResponse("GetOcjeneList", ServisID.ToString());
 
 
             if (response.IsSuccessStatusCode)
@@ -139,7 +139,7 @@ namespace ServisInfo_UI.Servisi
 
                 OcjeneLbl.Text = "Klijent jos uvijek nije ocijenio ovaj servis";
 
-                foreach(var x in ocjene)
+                foreach (var x in ocjene)
                 {
                     if (x.VrstaOcjeneID == 1)
                     {
@@ -207,6 +207,20 @@ namespace ServisInfo_UI.Servisi
                     HttpResponseMessage response2 = ServisiService.PutResponse(ServisID, servis);
                     MessageBox.Show("Servis uspjesno završen");
 
+                    if (MessageBox.Show("Da li zelite prikazati izvjestaj servisa?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+
+                        HttpResponseMessage r = ServisiService.GetActionResponse("GetIzvjestaj", ServisID.ToString());
+                        if (r.IsSuccessStatusCode)
+                        {
+                            DetaljiServisa_Report detalji = r.Content.ReadAsAsync<DetaljiServisa_Report>().Result;
+
+                            Reports.ReportViewForm frm = new Reports.ReportViewForm();
+                            frm.detalji = detalji;
+                            frm.Show();
+                        }
+                    }
+
                     Bind();
                 }
             }
@@ -228,6 +242,22 @@ namespace ServisInfo_UI.Servisi
             }
             else
                 errorProvider.SetError(CijenaTxt, null);
+        }
+
+        private void IzvjestajBtn_Click(object sender, EventArgs e)
+        {
+
+            HttpResponseMessage r = ServisiService.GetActionResponse("GetIzvjestaj", ServisID.ToString());
+            if (r.IsSuccessStatusCode)
+            {
+                DetaljiServisa_Report detalji = r.Content.ReadAsAsync<DetaljiServisa_Report>().Result;
+
+                Reports.ReportViewForm frm = new Reports.ReportViewForm();
+                frm.detalji = detalji;
+
+
+                frm.Show();
+            }
         }
     }
 }

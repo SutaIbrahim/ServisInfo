@@ -119,6 +119,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DetaljiServisa_Report.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DetaljiUpita_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
