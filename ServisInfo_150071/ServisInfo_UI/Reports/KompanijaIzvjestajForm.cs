@@ -37,12 +37,6 @@ namespace ServisInfo_UI.Reports
 
                 if (podaci.Count() > 0)
                 {
-
-                    foreach (var x in podaci)
-                    {
-                        x.Cijena2 = Convert.ToDouble(x.Cijena);
-                    }
-
                     //report
                     Reports.KompanijaIzvjestajViewForm frm = new Reports.KompanijaIzvjestajViewForm();
                     frm.podaci = podaci;

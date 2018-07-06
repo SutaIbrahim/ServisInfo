@@ -25,6 +25,9 @@ namespace ServisInfo_UI
         {
             InitializeComponent();
             BindGrid();
+            notifyIcon.Icon = this.Icon;
+            notifyIcon.Visible = true;
+            notifyIcon.Icon = SystemIcons.Application;
         }
 
         private void BindGrid()
@@ -41,7 +44,14 @@ namespace ServisInfo_UI
             HttpResponseMessage response2 = KompanijeUpitiService.GetActionResponse("GetCountNeodgovoreni", Global.prijavljenaKompanija.KompanijaID.ToString());
             if (response2.IsSuccessStatusCode)
             {
-                UpitiLbl.Text = response2.Content.ReadAsAsync<int>().Result.ToString();
+                int brUpita = response2.Content.ReadAsAsync<int>().Result;
+                UpitiLbl.Text = brUpita.ToString();
+
+                if (brUpita > 0)
+                {
+                    notifyIcon.ShowBalloonTip(3000, "Novi upiti", "Imate ukupno " + brUpita.ToString() + " neodgovorenih upita", ToolTipIcon.Info);
+                }
+
             }
             else
             {
@@ -155,6 +165,13 @@ namespace ServisInfo_UI
         {
             Reports.KompanijaIzvjestajForm frm = new Reports.KompanijaIzvjestajForm();
             frm.ShowDialog();
+        }
+
+        private void notifyIcon_BalloonTipClicked(object sender, EventArgs e)
+        {
+            Upiti.PregledUpita frm = new Upiti.PregledUpita();
+            frm.ShowDialog();
+            BindGrid();
         }
     }
 }

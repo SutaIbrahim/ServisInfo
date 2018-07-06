@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.upitiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledUpitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +59,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.prosjekLbl = new System.Windows.Forms.Label();
             this.IzvjestajBtn = new System.Windows.Forms.Button();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -350,6 +352,12 @@
             this.IzvjestajBtn.UseVisualStyleBackColor = false;
             this.IzvjestajBtn.Click += new System.EventHandler(this.IzvjestajBtn_Click);
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,5 +432,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label prosjekLbl;
         private System.Windows.Forms.Button IzvjestajBtn;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
