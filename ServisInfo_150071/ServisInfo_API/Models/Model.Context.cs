@@ -21,7 +21,6 @@ namespace ServisInfo_API.Models
             : base("name=ServisInfoEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -453,6 +452,51 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("datumDO", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijaPrometByDate_Report>("esp_Report_UkupniPrometByDate", kompanijaIDParameter, datumODParameter, datumDOParameter);
+        }
+    
+        public virtual int esp_KlijentUpdate(Nullable<int> klijentID, string ime, string prezime, string adresa, string telefon, string email, Nullable<int> gradID, string korisnickoIme, string lozinkaSalt, string lozinkaHash)
+        {
+            var klijentIDParameter = klijentID.HasValue ?
+                new ObjectParameter("KlijentID", klijentID) :
+                new ObjectParameter("KlijentID", typeof(int));
+    
+            var imeParameter = ime != null ?
+                new ObjectParameter("Ime", ime) :
+                new ObjectParameter("Ime", typeof(string));
+    
+            var prezimeParameter = prezime != null ?
+                new ObjectParameter("Prezime", prezime) :
+                new ObjectParameter("Prezime", typeof(string));
+    
+            var adresaParameter = adresa != null ?
+                new ObjectParameter("Adresa", adresa) :
+                new ObjectParameter("Adresa", typeof(string));
+    
+            var telefonParameter = telefon != null ?
+                new ObjectParameter("Telefon", telefon) :
+                new ObjectParameter("Telefon", typeof(string));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var gradIDParameter = gradID.HasValue ?
+                new ObjectParameter("GradID", gradID) :
+                new ObjectParameter("GradID", typeof(int));
+    
+            var korisnickoImeParameter = korisnickoIme != null ?
+                new ObjectParameter("KorisnickoIme", korisnickoIme) :
+                new ObjectParameter("KorisnickoIme", typeof(string));
+    
+            var lozinkaSaltParameter = lozinkaSalt != null ?
+                new ObjectParameter("LozinkaSalt", lozinkaSalt) :
+                new ObjectParameter("LozinkaSalt", typeof(string));
+    
+            var lozinkaHashParameter = lozinkaHash != null ?
+                new ObjectParameter("LozinkaHash", lozinkaHash) :
+                new ObjectParameter("LozinkaHash", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("esp_KlijentUpdate", klijentIDParameter, imeParameter, prezimeParameter, adresaParameter, telefonParameter, emailParameter, gradIDParameter, korisnickoImeParameter, lozinkaSaltParameter, lozinkaHashParameter);
         }
     }
 }

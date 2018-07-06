@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ServisInfoSolution.Registracija"
-             Title=""
-             NavigationPage.HasNavigationBar="False" 
-             NavigationPage.HasBackButton="False"
-             >
-    <ScrollView Margin="10">
-        <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
-            <Label Text="Registracija @ Servis Info"
+             x:Class="ServisInfoSolution.Klijent.UredjivanjeProfila">
+    <ScrollView Margin="15">
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+            <Label Text="Uredi profil"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" Margin="50"/>
+                HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" Margin="20"/>
+
+            <Image Source="appIcon.png" Margin="15" HeightRequest="150" WidthRequest="150"></Image>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -23,7 +21,7 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -34,7 +32,7 @@
 
                 <Label Text="*Prezime:" Grid.Row="1" Grid.Column="0"></Label>
                 <Entry x:Name="prezimeInput" Grid.Row="1" Grid.Column="1"></Entry>
-                
+
                 <Label Text="Adresa:" Grid.Row="2" Grid.Column="0"></Label>
                 <Entry x:Name="adresaInput" Grid.Row="2" Grid.Column="1"></Entry>
 
@@ -46,17 +44,17 @@
 
                 <Label Text="*Grad:" Grid.Row="5" Grid.Column="0"></Label>
                 <Picker x:Name="gradList" Grid.Row="5" Grid.Column="1"></Picker>
-                
+
                 <Label Text="*Korisnicko ime:" Grid.Row="6" Grid.Column="0"></Label>
                 <Entry x:Name="korisnickoImeInput" Grid.Row="6" Grid.Column="1"></Entry>
 
                 <Label Text="*Lozinka:" Grid.Row="7" Grid.Column="0"></Label>
-                <Entry x:Name="lozinkaInput" Grid.Row="7" Grid.Column="1" IsPassword="True"></Entry>
+                <Entry x:Name="lozinkaInput" Grid.Row="7" Grid.Column="1" IsPassword="True" Text=""></Entry>
                 <Label x:Name="porukaLbl" Margin="10" Text="* Obavezna polja"  Grid.Row="8" Grid.Column="1"></Label>
-                
-                <Button x:Name="registrujSeButton" Text="Registruj se"
+
+                <Button x:Name="Sacuvaj" Text="Sacuvaj"
                         Grid.Row="9" Grid.Column="1"
-                        Clicked="registrujSeButton_Clicked" Margin="5"  BackgroundColor="#13818d" TextColor="White"></Button>
+                        Clicked="Sacuvaj_Clicked" Margin="5"  BackgroundColor="Green" TextColor="White"></Button>
 
             </Grid>
         </StackLayout>

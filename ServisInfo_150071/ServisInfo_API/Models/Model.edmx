@@ -373,6 +373,18 @@
           <Parameter Name="Datum1" Type="datetime" Mode="In" />
           <Parameter Name="Datum2" Type="datetime" Mode="In" />
         </Function>
+        <Function Name="esp_KlijentUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KlijentID" Type="int" Mode="In" />
+          <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+          <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+          <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="GradID" Type="int" Mode="In" />
+          <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
+          <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+          <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="esp_KlijentiServisi_GetByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KlijentID" Type="int" Mode="In" />
           <Parameter Name="Datum1" Type="datetime" Mode="In" />
@@ -1122,6 +1134,18 @@
             <Parameter Name="datumOD" Mode="In" Type="DateTime" />
             <Parameter Name="datumDO" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="esp_KlijentUpdate">
+            <Parameter Name="KlijentID" Mode="In" Type="Int32" />
+            <Parameter Name="Ime" Mode="In" Type="String" />
+            <Parameter Name="Prezime" Mode="In" Type="String" />
+            <Parameter Name="Adresa" Mode="In" Type="String" />
+            <Parameter Name="Telefon" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="GradID" Mode="In" Type="Int32" />
+            <Parameter Name="KorisnickoIme" Mode="In" Type="String" />
+            <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+            <Parameter Name="LozinkaHash" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1769,6 +1793,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_KlijentUpdate" FunctionName="ServisInfoModel.Store.esp_KlijentUpdate" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

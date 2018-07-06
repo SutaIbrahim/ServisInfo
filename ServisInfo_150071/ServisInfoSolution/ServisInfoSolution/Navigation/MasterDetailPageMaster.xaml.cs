@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServisInfoSolution.Klijent;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -37,11 +38,11 @@ namespace ServisInfoSolution.Navigation
 
                 MenuItems = new ObservableCollection<MasterDetailPageMenuItem>(new[]
                 {
-
                     new MasterDetailPageMenuItem { Title = " Pretraga kompanija", ImageSource="pretraga.png", TargetType=typeof(MainPage)},
                     new MasterDetailPageMenuItem { Title = " Upiti", ImageSource="upiti.png", TargetType=typeof(PregledUpita)},
                     new MasterDetailPageMenuItem { Title = " Ponude", ImageSource="ponude.png", TargetType=typeof(PregledPonuda)},
                     new MasterDetailPageMenuItem { Title = " Servisi", ImageSource="servisi.png", TargetType=typeof(PregledServisa)},
+                    new MasterDetailPageMenuItem { Title = " Profil", ImageSource="user.png", TargetType=typeof(UredjivanjeProfila)},
                     new MasterDetailPageMenuItem { Title = " Odjava", ImageSource="odjava.png", TargetType=typeof(Prijava)},
                 });
             }
@@ -54,7 +55,6 @@ namespace ServisInfoSolution.Navigation
                     return;
 
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
             }
             #endregion
         }
@@ -65,7 +65,6 @@ namespace ServisInfoSolution.Navigation
             {
                 klijentLbl.Text = "Dobro dosli " + Global.prijavljeniKlijent.Ime + " " + Global.prijavljeniKlijent.Prezime;
             }
-
         }
     }
 }

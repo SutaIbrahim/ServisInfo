@@ -54,6 +54,10 @@ namespace ServisInfo_UI.KompanijeAdministracija
                     k.LozinkaSalt = UIHelper.GenerateSalt();
                     k.LozinkaHash = UIHelper.GenerateHash(k.LozinkaSalt, lozinkaInput.Text);
                 }
+                else
+                {
+                 
+                }
 
                 k.kategorije = null;
 
@@ -61,7 +65,7 @@ namespace ServisInfo_UI.KompanijeAdministracija
 
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Uspjesno ste izmijenili podatek", Messages.msg_succ, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Uspjesno ste izmijenili podatke", Messages.msg_succ, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else

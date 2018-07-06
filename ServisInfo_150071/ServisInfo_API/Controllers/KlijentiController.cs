@@ -63,25 +63,27 @@ namespace ServisInfo_API.Controllers
                 return BadRequest();
             }
 
-            db.Entry(klijenti).State = EntityState.Modified;
+            db.esp_KlijentUpdate(klijenti.KlijentID, klijenti.Ime, klijenti.Prezime, klijenti.Adresa, klijenti.Telefon, klijenti.Email,klijenti.GradID, klijenti.KorisickoIme, klijenti.LozinkaSalt, klijenti.LozinkaHash);
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!KlijentiExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            //db.Entry(klijenti).State = EntityState.Modified;
 
-            return StatusCode(HttpStatusCode.NoContent);
+            //try
+            //{
+            //    db.SaveChanges();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!KlijentiExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
+
+            return StatusCode(HttpStatusCode.OK);
         }
 
         // POST: api/Klijenti

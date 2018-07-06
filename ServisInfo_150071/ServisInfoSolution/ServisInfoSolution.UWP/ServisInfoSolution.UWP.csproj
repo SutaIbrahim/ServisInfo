@@ -143,6 +143,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="servisi.png" />
     <Content Include="upiti.png" />
+    <Content Include="user.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
