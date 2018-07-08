@@ -63,7 +63,7 @@ namespace ServisInfo_UI.Servisi
 
             string status = getStatus();
 
-            HttpResponseMessage response = ServisiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString(), status);
+            HttpResponseMessage response = ServisiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"), DoDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"), status);
 
             if (response.IsSuccessStatusCode)
             {

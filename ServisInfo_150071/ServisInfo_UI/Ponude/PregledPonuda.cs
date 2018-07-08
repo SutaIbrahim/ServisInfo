@@ -35,7 +35,7 @@ namespace ServisInfo_UI.Ponude
         private void BindGrid()
         {
 
-            HttpResponseMessage response = PonudeService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
+            HttpResponseMessage response = PonudeService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"), DoDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"));
 
             if (response.IsSuccessStatusCode)
             {

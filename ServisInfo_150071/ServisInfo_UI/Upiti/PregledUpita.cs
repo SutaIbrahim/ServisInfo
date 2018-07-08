@@ -34,7 +34,7 @@ namespace ServisInfo_UI.Upiti
 
         private void BindGrid()
         {
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetByDate", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"), DoDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"));
 
             if (response.IsSuccessStatusCode)
             {

@@ -30,7 +30,7 @@ namespace ServisInfo_UI.Reports
 
         private void KreirajBtn_Click(object sender, EventArgs e)
         {
-            HttpResponseMessage response = KompanijeService.GetActionResponse("GetPodaci", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString(), DoDtm.Value.ToUniversalTime().ToString());
+            HttpResponseMessage response = KompanijeService.GetActionResponse("GetPodaci", Global.prijavljenaKompanija.KompanijaID.ToString(), OdDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"), DoDtm.Value.ToUniversalTime().ToString("dd-MM-yyyy"));
             if (response.IsSuccessStatusCode)
             {
                 List<KompanijaPrometByDate_Report> podaci = response.Content.ReadAsAsync<List<KompanijaPrometByDate_Report>>().Result;
@@ -48,7 +48,10 @@ namespace ServisInfo_UI.Reports
                 {
                     MessageBox.Show("Nisu pronadjeni podaci za trazeni raspon datuma");
                 }
-
+            }
+            else
+            {
+                MessageBox.Show("Doslo je do greske");
             }
         }
 

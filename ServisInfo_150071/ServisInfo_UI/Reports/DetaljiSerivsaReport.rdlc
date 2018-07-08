@@ -975,7 +975,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Adresa</rd:DefaultName>
-            <Top>5.52019cm</Top>
+            <Top>5.41436cm</Top>
             <Left>3.05871cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
@@ -1005,8 +1005,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Naziv_Grada</rd:DefaultName>
-            <Top>6.2613cm</Top>
-            <Left>3.05871cm</Left>
+            <Top>6.15547cm</Top>
+            <Left>3.04989cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>26</ZIndex>
@@ -1035,7 +1035,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Email</rd:DefaultName>
-            <Top>7.00241cm</Top>
+            <Top>6.89658cm</Top>
             <Left>3.04989cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
