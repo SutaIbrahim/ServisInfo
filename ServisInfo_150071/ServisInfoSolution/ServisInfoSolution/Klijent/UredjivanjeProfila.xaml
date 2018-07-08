@@ -48,7 +48,7 @@
                 <Label Text="*Korisnicko ime:" Grid.Row="6" Grid.Column="0"></Label>
                 <Entry x:Name="korisnickoImeInput" Grid.Row="6" Grid.Column="1"></Entry>
 
-                <Label Text="*Lozinka:" Grid.Row="7" Grid.Column="0"></Label>
+                <Label Text="Lozinka:" Grid.Row="7" Grid.Column="0"></Label>
                 <Entry x:Name="lozinkaInput" Grid.Row="7" Grid.Column="1" IsPassword="True" Text=""></Entry>
                 <Label x:Name="porukaLbl" Margin="10" Text="* Obavezna polja"  Grid.Row="8" Grid.Column="1"></Label>
 

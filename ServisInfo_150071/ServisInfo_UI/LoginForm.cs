@@ -39,6 +39,7 @@ namespace ServisInfo_UI
                 if (UIHelper.GenerateHash(k.LozinkaSalt, lozinkaInput.Text) == k.LozinkaHash)
                 {
                     this.DialogResult = DialogResult.OK;
+                    Global.notBrojac = 0;
                     Global.prijavljenaKompanija = k;
                     Form frm = new Administracija.DodajKompaniju();
                     this.Close();

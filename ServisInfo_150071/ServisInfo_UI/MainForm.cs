@@ -47,9 +47,13 @@ namespace ServisInfo_UI
                 int brUpita = response2.Content.ReadAsAsync<int>().Result;
                 UpitiLbl.Text = brUpita.ToString();
 
-                if (brUpita > 0)
+                if (Global.notBrojac < 2)
                 {
-                    notifyIcon.ShowBalloonTip(3000, "Novi upiti", "Imate ukupno " + brUpita.ToString() + " neodgovorenih upita", ToolTipIcon.Info);
+                    if (brUpita > 0)
+                    {
+                        notifyIcon.ShowBalloonTip(3000, "Novi upiti", "Imate ukupno " + brUpita.ToString() + " neodgovorenih upita", ToolTipIcon.Info);
+                        Global.notBrojac++;
+                    }
                 }
 
             }
