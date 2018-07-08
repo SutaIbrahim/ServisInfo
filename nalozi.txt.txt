@@ -1,0 +1,15 @@
+Desktop dio: 
+
+username: desktop
+pass: test
+
+
+
+Mobilni dio:
+
+username: mobile
+pass: test
+
+
+
+

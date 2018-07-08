@@ -448,6 +448,10 @@
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="KategorijaID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KompanijaID" Type="int" Mode="In" />
+          <Parameter Name="KategorijaID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_Recommender_GetKompanijeByKategorijaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="KompanijaID" Type="int" Mode="In" />
           <Parameter Name="KategorijaID" Type="int" Mode="In" />
@@ -1146,6 +1150,10 @@
             <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
             <Parameter Name="LozinkaHash" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena" EntitySet="Kompanije" ReturnType="Collection(ServisInfoModel.Kompanije)">
+            <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
+            <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1794,6 +1802,8 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_KlijentUpdate" FunctionName="ServisInfoModel.Store.esp_KlijentUpdate" />
+          <FunctionImportMapping FunctionImportName="esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena" FunctionName="ServisInfoModel.Store.esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena">
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -56,22 +56,8 @@ namespace ServisInfoSolution.Kompanija
             {
                 var jsonObject = response2.Content.ReadAsStringAsync();
                 List<KompanijeDetalji_Result> preporuceneKompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_Result>>(jsonObject.Result);
-                //preporuceneKompanije su sortirane po prosjecnim ocjenama
-
-                List<KompanijeDetalji_Result> filter = new List<KompanijeDetalji_Result>();
-
-                // select top 5
-                int brojac = 0;
-                foreach (var x in preporuceneKompanije)
-                {
-                    filter.Add(x);
-
-                    brojac++;
-                    if (brojac > 4) 
-                        break;
-                }
-
-                kompanijeList.ItemsSource = filter;
+                //preporuceneKompanije su sortirane po prosjecnim ocjenama, te je u listu dodana jedna kompanija bez ocjena
+                kompanijeList.ItemsSource = preporuceneKompanije;
             }
 
         }

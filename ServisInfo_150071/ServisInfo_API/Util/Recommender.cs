@@ -47,7 +47,6 @@ namespace ServisInfo_API.Util
                 //sortiranje
                 preporuceneKompanije = preporuceneKompanije.OrderByDescending(p => p.ProsjecnaOcjena).ToList();
 
-                return preporuceneKompanije;
             }
 
             //cold start
@@ -64,8 +63,27 @@ namespace ServisInfo_API.Util
                 //sortiranje
                 preporuceneKompanije = preporuceneKompanije.OrderByDescending(p => p.ProsjecnaOcjena).ToList();
 
-                return preporuceneKompanije;
             }
+
+            List<KompanijeDetalji_Result> filter = new List<KompanijeDetalji_Result>();
+
+            // select top 5
+            int brojac = 0;
+            foreach (var x in preporuceneKompanije)
+            {
+                filter.Add(x);
+
+                brojac++;
+                if (brojac > 4)
+                    break;
+            }
+
+
+            //dodaj jednu kompaniju bez ocjene u listu
+            Kompanije bezOcjene = db.esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena(kompanijaID, kategorijaID).FirstOrDefault();
+            filter.Add(db.esp_Kompanije_GetDetalji(bezOcjene.KompanijaID).First());
+
+            return filter;
 
         }
 
