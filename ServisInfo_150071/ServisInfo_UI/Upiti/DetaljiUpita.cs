@@ -117,6 +117,11 @@ namespace ServisInfo_UI.Upiti
                 }
 
             }
+            else
+            {
+                pictureBox.Visible = false;
+                label6.Text = "Klijent nije izvrsio upload slike";
+            }
 
         }
         ////private static readonly ImageConverter _imageConverter = new ImageConverter();

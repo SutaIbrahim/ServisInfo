@@ -161,7 +161,12 @@ namespace ServisInfoSolution
                                 Global.izabraniGradIndex = -1;
                                 Global.izabranaKategorijaIndex = -1;
 
+
+                           
                                 this.Navigation.PopAsync();
+
+                                //this.Navigation.PushAsync(new MainPage());
+
                             }
                             else
                             {

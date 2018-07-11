@@ -59,6 +59,10 @@
             this.OcjeneLbl = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.IzvjestajBtn = new System.Windows.Forms.Button();
+            this.uredjajLbl = new System.Windows.Forms.Label();
+            this.UpitLbl = new System.Windows.Forms.Label();
+            this.UredjajTxt = new System.Windows.Forms.Label();
+            this.upitTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +70,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(42, 134);
+            this.label6.Location = new System.Drawing.Point(22, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(202, 16);
             this.label6.TabIndex = 12;
@@ -78,15 +82,15 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.Location = new System.Drawing.Point(505, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 16);
+            this.label5.Size = new System.Drawing.Size(83, 16);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Trajanje dana:";
+            this.label5.Text = "Kategorija:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(439, 287);
+            this.label4.Location = new System.Drawing.Point(449, 459);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(183, 16);
             this.label4.TabIndex = 10;
@@ -96,7 +100,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(42, 180);
+            this.label3.Location = new System.Drawing.Point(53, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 16);
             this.label3.TabIndex = 9;
@@ -116,7 +120,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(422, 134);
+            this.label2.Location = new System.Drawing.Point(396, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 16);
             this.label2.TabIndex = 7;
@@ -124,7 +128,7 @@
             // 
             // NazadBtn
             // 
-            this.NazadBtn.Location = new System.Drawing.Point(45, 400);
+            this.NazadBtn.Location = new System.Drawing.Point(55, 572);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(141, 37);
             this.NazadBtn.TabIndex = 22;
@@ -146,7 +150,7 @@
             // 
             this.DatumPrihvatanjaLbl.AutoSize = true;
             this.DatumPrihvatanjaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumPrihvatanjaLbl.Location = new System.Drawing.Point(639, 134);
+            this.DatumPrihvatanjaLbl.Location = new System.Drawing.Point(613, 133);
             this.DatumPrihvatanjaLbl.Name = "DatumPrihvatanjaLbl";
             this.DatumPrihvatanjaLbl.Size = new System.Drawing.Size(95, 16);
             this.DatumPrihvatanjaLbl.TabIndex = 26;
@@ -166,7 +170,7 @@
             // 
             this.TrajanjeLbl.AutoSize = true;
             this.TrajanjeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TrajanjeLbl.Location = new System.Drawing.Point(639, 220);
+            this.TrajanjeLbl.Location = new System.Drawing.Point(613, 220);
             this.TrajanjeLbl.Name = "TrajanjeLbl";
             this.TrajanjeLbl.Size = new System.Drawing.Size(95, 16);
             this.TrajanjeLbl.TabIndex = 28;
@@ -184,7 +188,7 @@
             // 
             // CijenaTxt
             // 
-            this.CijenaTxt.Location = new System.Drawing.Point(628, 283);
+            this.CijenaTxt.Location = new System.Drawing.Point(638, 455);
             this.CijenaTxt.Name = "CijenaTxt";
             this.CijenaTxt.Size = new System.Drawing.Size(73, 20);
             this.CijenaTxt.TabIndex = 30;
@@ -215,7 +219,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(560, 180);
+            this.label10.Location = new System.Drawing.Point(534, 179);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 16);
             this.label10.TabIndex = 33;
@@ -225,7 +229,7 @@
             // 
             this.KlijentLbl.AutoSize = true;
             this.KlijentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KlijentLbl.Location = new System.Drawing.Point(639, 180);
+            this.KlijentLbl.Location = new System.Drawing.Point(613, 179);
             this.KlijentLbl.Name = "KlijentLbl";
             this.KlijentLbl.Size = new System.Drawing.Size(95, 16);
             this.KlijentLbl.TabIndex = 34;
@@ -233,7 +237,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(-5, 254);
+            this.groupBox1.Location = new System.Drawing.Point(-5, 433);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(785, 10);
             this.groupBox1.TabIndex = 35;
@@ -243,7 +247,7 @@
             // 
             this.ZapocniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ZapocniBtn.ForeColor = System.Drawing.Color.Green;
-            this.ZapocniBtn.Location = new System.Drawing.Point(192, 295);
+            this.ZapocniBtn.Location = new System.Drawing.Point(202, 467);
             this.ZapocniBtn.Name = "ZapocniBtn";
             this.ZapocniBtn.Size = new System.Drawing.Size(430, 142);
             this.ZapocniBtn.TabIndex = 36;
@@ -266,7 +270,7 @@
             // 
             this.ZavrsiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ZavrsiBtn.ForeColor = System.Drawing.Color.Green;
-            this.ZavrsiBtn.Location = new System.Drawing.Point(518, 315);
+            this.ZavrsiBtn.Location = new System.Drawing.Point(528, 487);
             this.ZavrsiBtn.Name = "ZavrsiBtn";
             this.ZavrsiBtn.Size = new System.Drawing.Size(216, 37);
             this.ZavrsiBtn.TabIndex = 38;
@@ -278,7 +282,7 @@
             // 
             this.NapomenaLbl.AutoSize = true;
             this.NapomenaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.NapomenaLbl.Location = new System.Drawing.Point(515, 355);
+            this.NapomenaLbl.Location = new System.Drawing.Point(525, 527);
             this.NapomenaLbl.Name = "NapomenaLbl";
             this.NapomenaLbl.Size = new System.Drawing.Size(219, 13);
             this.NapomenaLbl.TabIndex = 39;
@@ -288,7 +292,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(707, 287);
+            this.label7.Location = new System.Drawing.Point(717, 459);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(27, 16);
             this.label7.TabIndex = 40;
@@ -308,7 +312,7 @@
             // 
             this.ocjena1Lbl.AutoSize = true;
             this.ocjena1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ocjena1Lbl.Location = new System.Drawing.Point(438, 351);
+            this.ocjena1Lbl.Location = new System.Drawing.Point(448, 523);
             this.ocjena1Lbl.Name = "ocjena1Lbl";
             this.ocjena1Lbl.Size = new System.Drawing.Size(61, 16);
             this.ocjena1Lbl.TabIndex = 43;
@@ -318,7 +322,7 @@
             // 
             this.ocjena2Lbl.AutoSize = true;
             this.ocjena2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ocjena2Lbl.Location = new System.Drawing.Point(438, 384);
+            this.ocjena2Lbl.Location = new System.Drawing.Point(448, 556);
             this.ocjena2Lbl.Name = "ocjena2Lbl";
             this.ocjena2Lbl.Size = new System.Drawing.Size(61, 16);
             this.ocjena2Lbl.TabIndex = 44;
@@ -328,7 +332,7 @@
             // 
             this.ocjena3Lbl.AutoSize = true;
             this.ocjena3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ocjena3Lbl.Location = new System.Drawing.Point(438, 416);
+            this.ocjena3Lbl.Location = new System.Drawing.Point(448, 588);
             this.ocjena3Lbl.Name = "ocjena3Lbl";
             this.ocjena3Lbl.Size = new System.Drawing.Size(61, 16);
             this.ocjena3Lbl.TabIndex = 45;
@@ -338,7 +342,7 @@
             // 
             this.OcjeneLbl.AutoSize = true;
             this.OcjeneLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.OcjeneLbl.Location = new System.Drawing.Point(438, 323);
+            this.OcjeneLbl.Location = new System.Drawing.Point(448, 495);
             this.OcjeneLbl.Name = "OcjeneLbl";
             this.OcjeneLbl.Size = new System.Drawing.Size(157, 20);
             this.OcjeneLbl.TabIndex = 46;
@@ -350,7 +354,7 @@
             // 
             // IzvjestajBtn
             // 
-            this.IzvjestajBtn.Location = new System.Drawing.Point(45, 277);
+            this.IzvjestajBtn.Location = new System.Drawing.Point(55, 449);
             this.IzvjestajBtn.Name = "IzvjestajBtn";
             this.IzvjestajBtn.Size = new System.Drawing.Size(141, 35);
             this.IzvjestajBtn.TabIndex = 47;
@@ -358,11 +362,53 @@
             this.IzvjestajBtn.UseVisualStyleBackColor = true;
             this.IzvjestajBtn.Click += new System.EventHandler(this.IzvjestajBtn_Click);
             // 
+            // uredjajLbl
+            // 
+            this.uredjajLbl.AutoSize = true;
+            this.uredjajLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uredjajLbl.Location = new System.Drawing.Point(525, 257);
+            this.uredjajLbl.Name = "uredjajLbl";
+            this.uredjajLbl.Size = new System.Drawing.Size(63, 16);
+            this.uredjajLbl.TabIndex = 48;
+            this.uredjajLbl.Text = "Uredjaj:";
+            // 
+            // UpitLbl
+            // 
+            this.UpitLbl.AutoSize = true;
+            this.UpitLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UpitLbl.Location = new System.Drawing.Point(31, 273);
+            this.UpitLbl.Name = "UpitLbl";
+            this.UpitLbl.Size = new System.Drawing.Size(87, 16);
+            this.UpitLbl.TabIndex = 49;
+            this.UpitLbl.Text = "Opis kvara:";
+            // 
+            // UredjajTxt
+            // 
+            this.UredjajTxt.AutoSize = true;
+            this.UredjajTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UredjajTxt.Location = new System.Drawing.Point(613, 257);
+            this.UredjajTxt.Name = "UredjajTxt";
+            this.UredjajTxt.Size = new System.Drawing.Size(95, 16);
+            this.UredjajTxt.TabIndex = 50;
+            this.UredjajTxt.Text = "Trajanje dana:";
+            // 
+            // upitTxt
+            // 
+            this.upitTxt.Location = new System.Drawing.Point(34, 305);
+            this.upitTxt.Multiline = true;
+            this.upitTxt.Name = "upitTxt";
+            this.upitTxt.Size = new System.Drawing.Size(554, 122);
+            this.upitTxt.TabIndex = 51;
+            // 
             // DetaljiServisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 461);
+            this.ClientSize = new System.Drawing.Size(785, 621);
+            this.Controls.Add(this.upitTxt);
+            this.Controls.Add(this.UredjajTxt);
+            this.Controls.Add(this.UpitLbl);
+            this.Controls.Add(this.uredjajLbl);
             this.Controls.Add(this.IzvjestajBtn);
             this.Controls.Add(this.OcjeneLbl);
             this.Controls.Add(this.ocjena3Lbl);
@@ -392,8 +438,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ZapocniBtn);
-            this.MaximumSize = new System.Drawing.Size(801, 500);
-            this.MinimumSize = new System.Drawing.Size(801, 500);
+            this.MaximumSize = new System.Drawing.Size(801, 660);
+            this.MinimumSize = new System.Drawing.Size(801, 660);
             this.Name = "DetaljiServisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiServisa";
@@ -435,5 +481,9 @@
         private System.Windows.Forms.Label OcjeneLbl;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Button IzvjestajBtn;
+        private System.Windows.Forms.Label UredjajTxt;
+        private System.Windows.Forms.Label UpitLbl;
+        private System.Windows.Forms.Label uredjajLbl;
+        private System.Windows.Forms.TextBox upitTxt;
     }
 }

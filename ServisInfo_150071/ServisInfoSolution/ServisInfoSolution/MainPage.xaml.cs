@@ -26,7 +26,7 @@ namespace ServisInfoSolution
             InitializeComponent();
             Fill();
 
-   
+
         }
 
         protected override void OnAppearing()
@@ -44,12 +44,12 @@ namespace ServisInfoSolution
 
             base.OnAppearing();
         }
-        private void Fill()
+        public void Fill()
         {
             //setovanje imena u sidebaru
             MasterDetailPageMaster m = new MasterDetailPageMaster();
             m.Refresh();
-            
+
 
             HttpResponseMessage response = kategorijeService.GetResponse();
 
@@ -196,7 +196,7 @@ namespace ServisInfoSolution
             else
             {
                 this.Navigation.PushAsync(new KreirajUpit());
-               // Fill(); - izbrisu se kompanijeID
+                Reset();
             }
 
         }
@@ -265,6 +265,12 @@ namespace ServisInfoSolution
             Global.izabraneKompanije.Clear();
 
             Search();
+        }
+
+
+        private void Reset()
+        {
+            InitializeComponent();
         }
     }
 }

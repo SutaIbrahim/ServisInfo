@@ -41,6 +41,15 @@ namespace ServisInfo_API.Controllers
         {
             return db.esp_NeodgovoreniUpiti(Convert.ToInt32(kompanijaID)).FirstOrDefault();
         }
+        [HttpGet]
+        [Route("api/KompanijeUpiti/GetKU/{upitID}")]
+        public List<KompanijeUpiti> GetKU(string upitID)
+        {
+            int id = Convert.ToInt32(upitID);
+
+            return db.KompanijeUpiti.Where(x => x.UpitID == id).ToList();
+        }
+
 
         // PUT: api/KompanijeUpiti/5
         [ResponseType(typeof(void))]

@@ -49,7 +49,7 @@ namespace ServisInfoSolution
                 DatumPocetkaLBl.Text = ponuda.DatumPocetka.ToString();
                 DatumZavrsetkaLbl.Text = ponuda.DatumZavršetka.ToString();
                 TrajanjeLbl.Text = ponuda.TrajanjeDani.ToString();
-                CijenaLbl.Text = ponuda.Završna_cijena.ToString();
+                CijenaLbl.Text = ponuda.Završna_cijena.ToString() + " KM";
                 KompanijaLbl.Text = ponuda.Naziv_Kompanije;
 
                 //ocjene layout

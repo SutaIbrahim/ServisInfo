@@ -56,7 +56,9 @@ namespace ServisInfo_UI.Servisi
             KlijentLbl.Text = s.Ime_klijenta;
             ServisIDLbl.Text = ServisID.ToString();
             IzvjestajBtn.Hide();
-
+            TrajanjeLbl.Text = s.Kategorija; // kategorija !
+            UredjajTxt.Text = s.Uredjaj;
+            upitTxt.Text = s.OpisKvara;
             ocjena1Lbl.Text = "";
             ocjena2Lbl.Text = "";
             ocjena3Lbl.Text = "";
@@ -67,9 +69,9 @@ namespace ServisInfo_UI.Servisi
                 ZapocniBtn.Show();
                 DatumPocetkaLbl.Hide();
                 DatumZavrsetkaLbl.Hide();
-                TrajanjeLbl.Hide();
+                //TrajanjeLbl.Hide();
                 CijenaTxt.Hide();
-                TrajanjeLbl.Hide();
+               // TrajanjeLbl.Hide();
                 NijeZavrsenLbl.Hide();
                 ZavrsiBtn.Hide();
                 NapomenaLbl.Hide();
@@ -86,7 +88,7 @@ namespace ServisInfo_UI.Servisi
             {
                 ZapocniBtn.Hide();
                 DatumPocetkaLbl.Show();
-                TrajanjeLbl.Show();
+               // TrajanjeLbl.Show();
                 CijenaTxt.Show();
                 NijeZavrsenLbl.Show();
                 PonudaBtn.Show();
@@ -108,7 +110,7 @@ namespace ServisInfo_UI.Servisi
                     ZavrsiBtn.Show();
                     DatumZavrsetkaLbl.Hide();
                     label5.Hide();
-                    TrajanjeLbl.Hide();
+                   // TrajanjeLbl.Hide();
                 }
                 else
                 {
@@ -120,8 +122,8 @@ namespace ServisInfo_UI.Servisi
                     NapomenaLbl.Hide();
                     ZavrsiBtn.Hide();
                     label5.Show();
-                    TrajanjeLbl.Show();
-                    TrajanjeLbl.Text = s.TrajanjeDani.ToString();
+                   // TrajanjeLbl.Show();
+                   // TrajanjeLbl.Text = s.TrajanjeDani.ToString();
                     IzvjestajBtn.Show();
                     //
                     PostaviOcjene();

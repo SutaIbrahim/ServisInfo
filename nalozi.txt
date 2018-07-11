@@ -1,0 +1,19 @@
+Desktop dio: 
+
+	Kompanija:
+		username: desktop
+		pass: test
+
+	Admin:
+		username: admin
+		pass: test	
+
+
+Mobilni dio:
+
+	username: mobile
+	pass: test
+
+
+
+

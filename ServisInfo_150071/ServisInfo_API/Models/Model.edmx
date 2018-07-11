@@ -1270,6 +1270,8 @@
           <Property Type="String" Name="Kategorija" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Naziv_Kompanije" Nullable="false" MaxLength="50" />
           <Property Type="Boolean" Name="Ocjenjen" Nullable="true" />
+          <Property Type="String" Name="Uredjaj" Nullable="false" MaxLength="101" />
+          <Property Type="String" Name="OpisKvara" Nullable="false" />
         </ComplexType>
         <ComplexType Name="PonudeKlijent_Result">
           <Property Type="Int32" Name="PonudaID" Nullable="false" />
@@ -1655,6 +1657,8 @@
                 <ScalarProperty Name="Kategorija" ColumnName="Kategorija" />
                 <ScalarProperty Name="Naziv_Kompanije" ColumnName="Naziv_Kompanije" />
                 <ScalarProperty Name="Ocjenjen" ColumnName="Ocjenjen" />
+                <ScalarProperty Name="Uredjaj" ColumnName="Uredjaj" />
+                <ScalarProperty Name="OpisKvara" ColumnName="OpisKvara" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

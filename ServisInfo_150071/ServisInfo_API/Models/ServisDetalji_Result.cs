@@ -28,5 +28,7 @@ namespace ServisInfo_API.Models
         public string Kategorija { get; set; }
         public string Naziv_Kompanije { get; set; }
         public Nullable<bool> Ocjenjen { get; set; }
+        public string Uredjaj { get; set; }
+        public string OpisKvara { get; set; }
     }
 }

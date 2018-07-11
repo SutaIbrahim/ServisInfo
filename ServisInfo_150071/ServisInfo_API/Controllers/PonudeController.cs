@@ -63,6 +63,25 @@ namespace ServisInfo_API.Controllers
         }
 
         [HttpGet]
+        [Route("api/Ponude/provjeriOdgovor/{upitID}")]
+        public bool provjeriOdgovor(string upitID)
+        {
+
+            int id = Convert.ToInt32(upitID);
+
+            List<Ponude> p = db.Ponude.Where(x => x.UpitID == id).ToList();
+
+            if (p.Count() > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        [HttpGet]
         [Route("api/Ponude/GetPonudeByKlijentID/{klijentId}")]
         public List<PonudeKlijent_Result> GetPonudeByKlijentID(string klijentId)
         {

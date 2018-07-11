@@ -48,11 +48,14 @@
                 <Label Text="Opis:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"   ></Label>
                 <Label x:Name="OpisLbl" Text=""    Grid.Row="6" Grid.Column="1"  HeightRequest="150"></Label>
 
-                <Label Text="Slika:" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0"   ></Label>
+                <Label Text="Slika:" x:Name="slikaPct" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0"   ></Label>
 
             </Grid>
             
             <Image x:Name="slika"  Margin="5"></Image>
+
+
+            <Button x:Name="IzbtisiBtn" BackgroundColor="Red" Text="Izbrisi upit" HorizontalOptions="End" Clicked="IzbtisiBtn_Clicked" Margin="12" TextColor="White"></Button>
 
 
         </StackLayout>

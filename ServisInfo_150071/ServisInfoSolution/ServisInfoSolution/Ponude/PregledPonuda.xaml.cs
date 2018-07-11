@@ -45,7 +45,10 @@ namespace ServisInfoSolution
             {
                 var jsonObject = response.Content.ReadAsStringAsync();
                 ponude = JsonConvert.DeserializeObject<List<PonudeByDate_Result>>(jsonObject.Result);
-
+                foreach(var x in ponude)
+                {
+                    x.Cijena += " KM";
+                }
                 Filter();
                // ponudeList.ItemsSource = ponude;
             }
@@ -77,7 +80,6 @@ namespace ServisInfoSolution
                     }
                 }
 
-                ponudeList.ItemsSource = filtriranePonude;
 
             }
             foreach (var x in filtriranePonude) // set datetime to string
@@ -93,6 +95,7 @@ namespace ServisInfoSolution
                 }
             }
 
+            ponudeList.ItemsSource = filtriranePonude;
 
 
         }
