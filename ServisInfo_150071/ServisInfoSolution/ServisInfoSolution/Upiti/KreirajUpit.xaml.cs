@@ -24,12 +24,17 @@ namespace ServisInfoSolution
         private WebAPIHelper upitiService = new WebAPIHelper(Global.APIAdress, "api/Upiti");
         private WebAPIHelper kompanijeUpitiService = new WebAPIHelper(Global.APIAdress, "api/Kompanijeupiti");
 
-        private Stream s;
+        int selected1; // odabir marke index
+        int selected2; // odabir modela index
+
+        private Stream s; // za sliku
 
         public KreirajUpit()
         {
 
             InitializeComponent();
+            selected1 = -1;
+            selected2 = -1;
 
             kategorijaLbl.Text = "Izabrana kategorija: " + Global.izabranaKategorija.Naziv;
 
@@ -41,7 +46,7 @@ namespace ServisInfoSolution
                 kompanije += Global.izabraneKompanije[x] + ", ";
             }
 
-           List<int> a= Global.izabraneKompanijeID;
+            List<int> a = Global.izabraneKompanijeID;
 
             last = Global.izabraneKompanije[Global.izabraneKompanije.Count() - 1];
             kompanije += last;
@@ -66,6 +71,15 @@ namespace ServisInfoSolution
                 s = file.GetStream();
                 slika.HeightRequest = 240;
 
+                if (selected1 != -1) // dodano zbog androida 8.0 i 8.1 jer se nakon odabira slike resetuje odabir uredjaja
+                {
+                    markaUredjajaPicker.SelectedIndex = selected1;
+                }
+                if (selected2 != -1)
+                {
+                    modelUredjajaPicker.SelectedIndex = selected2;
+                }
+
             };
 
         }
@@ -82,24 +96,37 @@ namespace ServisInfoSolution
 
                 markaUredjajaPicker.ItemDisplayBinding = new Binding("Naziv");
 
-                markaUredjajaPicker.SelectedIndex = 1;
             }
 
         }
 
         private void markaUredjajaPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            HttpResponseMessage response2 = modeliUredjajaService.GetActionResponse("GetByMarkaId", ((markaUredjajaPicker.SelectedItem as MarkeUredjaja).MarkaUredjajaID).ToString());
 
-            if (response2.IsSuccessStatusCode)
+            if ((markaUredjajaPicker.SelectedItem as MarkeUredjaja) != null)
             {
-                var jsonObject = response2.Content.ReadAsStringAsync();
-                List<ModeliUredjaja> modeli = JsonConvert.DeserializeObject<List<ModeliUredjaja>>(jsonObject.Result);
-                modelUredjajaPicker.ItemsSource = modeli;
 
-                modelUredjajaPicker.ItemDisplayBinding = new Binding("Naziv");
+                selected1 = (markaUredjajaPicker.SelectedIndex);
+                HttpResponseMessage response2 = modeliUredjajaService.GetActionResponse("GetByMarkaId", ((markaUredjajaPicker.SelectedItem as MarkeUredjaja).MarkaUredjajaID).ToString());
 
-                modelUredjajaPicker.SelectedIndex = 1;
+                if (response2.IsSuccessStatusCode)
+                {
+                    var jsonObject = response2.Content.ReadAsStringAsync();
+                    List<ModeliUredjaja> modeli = JsonConvert.DeserializeObject<List<ModeliUredjaja>>(jsonObject.Result);
+                    modelUredjajaPicker.ItemsSource = modeli;
+
+                    modelUredjajaPicker.ItemDisplayBinding = new Binding("Naziv");
+
+                }
+            }
+        }
+
+        private void modelUredjajaPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((modelUredjajaPicker.SelectedItem as ModeliUredjaja) != null)
+            {
+
+                selected2 = (modelUredjajaPicker.SelectedIndex);
             }
         }
 
@@ -162,7 +189,6 @@ namespace ServisInfoSolution
                                 Global.izabranaKategorijaIndex = -1;
 
 
-                           
                                 this.Navigation.PopAsync();
 
                                 //this.Navigation.PushAsync(new MainPage());
@@ -206,7 +232,16 @@ namespace ServisInfoSolution
             {
                 return false;
             }
+            if ((markaUredjajaPicker.SelectedItem as MarkeUredjaja) == null)
+            {
+                return false;
+            }
+            if ((modelUredjajaPicker.SelectedItem as ModeliUredjaja) == null)
+            {
+                return false;
+            }
             return true;
         }
+
     }
 }

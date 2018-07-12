@@ -38,7 +38,6 @@ namespace ServisInfoSolution
                 gradList.ItemsSource = vrste;
                 gradList.ItemDisplayBinding = new Binding("Naziv");
 
-                gradList.SelectedIndex = 1;
             }
            
 
@@ -104,6 +103,10 @@ namespace ServisInfoSolution
                 return false;
             }
             else if (!(lozinkaInput.Text != null))
+            {
+                return false;
+            }
+            else if((gradList.SelectedItem as Gradovi) == null)
             {
                 return false;
             }
