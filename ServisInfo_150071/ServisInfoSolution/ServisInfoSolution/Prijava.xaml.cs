@@ -51,7 +51,17 @@ namespace ServisInfoSolution
                     (klijent.LozinkaSalt, lozinkaInput.Text))
                 {
                     Global.prijavljeniKlijent = klijent;
-                    this.Navigation.PushAsync(new MainPage());
+
+
+                    //var page = (Page)Activator.CreateInstance(typeof(MainPage));
+                    //page.Title = "ge";
+                    //MasterDetailPage m = new MasterDetailPage();
+                    //m.Detail = new NavigationPage(page);
+                    //m.IsPresented = true;
+
+
+                  this.Navigation.PushAsync(new MainPage());
+
                 }
                 else
                 {

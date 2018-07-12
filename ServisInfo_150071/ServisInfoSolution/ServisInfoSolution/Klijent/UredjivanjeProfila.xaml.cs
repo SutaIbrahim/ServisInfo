@@ -90,7 +90,8 @@ namespace ServisInfoSolution.Klijent
                 if (response3.IsSuccessStatusCode)
                 {
                     DisplayAlert("", "Uspjesno ste uredili profil", "OK");
-                    this.Navigation.PushAsync(new MainPage());
+                    //this.Navigation.PushAsync(new MainPage());
+                    this.Navigation.RemovePage(this);
                 }
                 else
                 {

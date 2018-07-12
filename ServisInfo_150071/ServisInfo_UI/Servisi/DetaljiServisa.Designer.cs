@@ -397,7 +397,7 @@
             this.upitTxt.Location = new System.Drawing.Point(34, 305);
             this.upitTxt.Multiline = true;
             this.upitTxt.Name = "upitTxt";
-            this.upitTxt.Size = new System.Drawing.Size(554, 122);
+            this.upitTxt.Size = new System.Drawing.Size(674, 122);
             this.upitTxt.TabIndex = 51;
             // 
             // DetaljiServisa

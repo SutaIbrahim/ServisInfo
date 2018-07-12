@@ -8,20 +8,20 @@
             >
     
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="25">
             <Label Text="Prijava @ Servis Info"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="0,0,0,5" FontAttributes="Bold"/>
+                HorizontalOptions="CenterAndExpand" FontSize="19" Margin="0,0,0,5" FontAttributes="Bold"/>
 
-            <Image x:Name="logoImg" Grid.Column="0" Source="appIcon.png"  HeightRequest="150" WidthRequest="150" Margin="10"></Image>
+            <Image x:Name="logoImg" Grid.Column="0" Source="appIcon.png"  HeightRequest="150" WidthRequest="150" Margin="15"></Image>
             
             <Entry x:Name="korisnickoImeInput" Placeholder="Korisničko ime"></Entry>
             <Entry x:Name="lozinkaInput" Placeholder="Lozinka" IsPassword="True"></Entry>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-                <Button x:Name="registerButton" Text="Registracija" Clicked="registerButton_Clicked" Margin="4" FontSize="14"></Button>
+                <Button x:Name="registerButton" Text="Registracija" Clicked="registerButton_Clicked" Margin="4" FontSize="13"></Button>
 
-                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4" BackgroundColor="#13818d" TextColor="White" FontSize="14"></Button>
+                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4" BackgroundColor="#13818d" TextColor="White" FontSize="13"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

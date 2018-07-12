@@ -109,67 +109,6 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Textbox Name="Textbox24">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Kompanija:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>4.7438cm</Top>
-            <Left>0.75738cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.18668cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Naziv_kompanije1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!Naziv_kompanije.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Naziv_kompanije1</rd:DefaultName>
-            <Top>4.7438cm</Top>
-            <Left>3.04989cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Datum_Zavrsetka_Servisa">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -185,11 +124,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Datum_Zavrsetka_Servisa</rd:DefaultName>
-            <Top>9.98732cm</Top>
-            <Left>14.1378cm</Left>
+            <Top>7.80273cm</Top>
+            <Left>5.15727cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
-            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -207,7 +145,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Datum zavrsetka servisa</Value>
+                    <Value>Datum zavrsetka servisa:</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -217,11 +155,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>9.98732cm</Top>
-            <Left>9.4775cm</Left>
+            <Top>7.80273cm</Top>
+            <Left>0.49697cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.20587cm</Width>
-            <ZIndex>3</ZIndex>
+            <Width>4.48391cm</Width>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -239,7 +177,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Datum poceta servisa:</Value>
+                    <Value>Datum pocetka servisa:</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -249,11 +187,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>8.55996cm</Top>
-            <Left>9.4775cm</Left>
+            <Top>6.87808cm</Top>
+            <Left>0.49697cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -279,11 +217,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Datum_Pocetka_Servisa</rd:DefaultName>
-            <Top>8.55996cm</Top>
-            <Left>14.1378cm</Left>
+            <Top>6.87808cm</Top>
+            <Left>5.15727cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
-            <ZIndex>5</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -309,41 +247,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Datum_Upita</rd:DefaultName>
-            <Top>8.55996cm</Top>
-            <Left>5.41769cm</Left>
+            <Top>5.9785cm</Top>
+            <Left>5.13081cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="DatumK_reiranja_Ponude">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!DatumK_reiranja_Ponude.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>DatumK_reiranja_Ponude</rd:DefaultName>
-            <Top>9.98732cm</Top>
-            <Left>5.41769cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -382,138 +290,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>8.55996cm</Top>
-            <Left>0.78385cm</Left>
+            <Top>5.9785cm</Top>
+            <Left>0.49697cm</Left>
             <Height>0.6cm</Height>
             <Width>4.20587cm</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox28">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Datum kreiranja ponude:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>9.98732cm</Top>
-            <Left>0.78385cm</Left>
-            <Height>0.6cm</Height>
-            <Width>4.20587cm</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Ime_i_prezime_klijenta">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!Ime_i_prezime_klijenta.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Ime_i_prezime_klijenta</rd:DefaultName>
-            <Top>4.7438cm</Top>
-            <Left>14.11134cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox29">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Klijent:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>4.7438cm</Top>
-            <Left>10.91321cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.7437cm</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -539,11 +320,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Marka_uredjaja</rd:DefaultName>
-            <Top>11.34505cm</Top>
-            <Left>5.41769cm</Left>
+            <Top>5.95176cm</Top>
+            <Left>14.42651cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -569,11 +350,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Model_uredjaja</rd:DefaultName>
-            <Top>12.77241cm</Top>
-            <Left>5.44415cm</Left>
+            <Top>6.87808cm</Top>
+            <Left>14.42651cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -601,11 +382,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>11.34505cm</Top>
-            <Left>0.78384cm</Left>
+            <Top>5.95176cm</Top>
+            <Left>11.14071cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.20587cm</Width>
-            <ZIndex>14</ZIndex>
+            <Width>3.21525cm</Width>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -644,11 +425,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>12.77241cm</Top>
-            <Left>0.78384cm</Left>
+            <Top>6.87808cm</Top>
+            <Left>11.14071cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.20587cm</Width>
-            <ZIndex>15</ZIndex>
+            <Width>3.2417cm</Width>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -674,11 +455,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Opis_Kvara</rd:DefaultName>
-            <Top>14.13014cm</Top>
-            <Left>5.41769cm</Left>
+            <Top>9.14097cm</Top>
+            <Left>3.75498cm</Left>
             <Height>1.74885cm</Height>
-            <Width>11.22011cm</Width>
-            <ZIndex>16</ZIndex>
+            <Width>13.14507cm</Width>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -717,11 +498,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>14.13014cm</Top>
-            <Left>0.78385cm</Left>
+            <Top>9.14097cm</Top>
+            <Left>0.52343cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.20587cm</Width>
-            <ZIndex>17</ZIndex>
+            <Width>2.4067cm</Width>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -760,11 +541,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>16.40634cm</Top>
-            <Left>0.78384cm</Left>
+            <Top>11.44363cm</Top>
+            <Left>0.52343cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.20587cm</Width>
-            <ZIndex>18</ZIndex>
+            <Width>2.4067cm</Width>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -790,11 +571,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Odgovor</rd:DefaultName>
-            <Top>16.40634cm</Top>
-            <Left>5.41769cm</Left>
+            <Top>11.44363cm</Top>
+            <Left>3.75498cm</Left>
             <Height>1.7767cm</Height>
-            <Width>11.22011cm</Width>
-            <ZIndex>19</ZIndex>
+            <Width>13.17153cm</Width>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -814,6 +595,7 @@
                   <TextRun>
                     <Value>Konacna cijena:</Value>
                     <Style>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -824,18 +606,20 @@
                 <TextRuns>
                   <TextRun>
                     <Value />
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>19.24992cm</Top>
-            <Left>10.43cm</Left>
+            <Top>14.07554cm</Top>
+            <Left>10.0717cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.25337cm</Width>
-            <ZIndex>20</ZIndex>
+            <Width>3.85959cm</Width>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -854,38 +638,20 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!Konacna_Cijena.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Konacna_Cijena</rd:DefaultName>
-            <Top>19.24992cm</Top>
-            <Left>14.1378cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
-            <ZIndex>21</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox35">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Servis ID:</Value>
                     <Style>
-                      <FontSize>16pt</FontSize>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">  </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>KM</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -893,12 +659,12 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>1.98099cm</Top>
-            <Left>5.41769cm</Left>
-            <Height>1.01776cm</Height>
-            <Width>3.30072cm</Width>
-            <ZIndex>22</ZIndex>
+            <rd:DefaultName>Konacna_Cijena</rd:DefaultName>
+            <Top>14.07554cm</Top>
+            <Left>13.93129cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.99522cm</Width>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -930,11 +696,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ServisID</rd:DefaultName>
-            <Top>1.98099cm</Top>
-            <Left>8.20093cm</Left>
+            <Top>0.30554cm</Top>
+            <Left>11.14071cm</Left>
             <Height>1.01776cm</Height>
             <Width>3.71848cm</Width>
-            <ZIndex>23</ZIndex>
+            <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -945,40 +711,449 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Image Name="AppIcon">
-            <Source>Embedded</Source>
-            <Value>appIcon</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>0.73744cm</Top>
-            <Left>1.03543cm</Left>
-            <Height>3.29917cm</Height>
-            <Width>4.20587cm</Width>
-            <ZIndex>24</ZIndex>
+          <Line Name="Line1">
+            <Top>5.1062cm</Top>
+            <Left>0.49697cm</Left>
+            <Height>0cm</Height>
+            <Width>16.42954cm</Width>
+            <ZIndex>17</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
             </Style>
-          </Image>
-          <Textbox Name="Adresa">
+          </Line>
+          <Line Name="Line2">
+            <Top>13.70515cm</Top>
+            <Left>0.49697cm</Left>
+            <Height>0cm</Height>
+            <Width>16.42954cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox36">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!Adresa.Value, "DataSet1")</Value>
+                    <Value>Izvjestaj o servisu ID:</Value>
+                    <Style>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox24</rd:DefaultName>
+            <Top>0.30554cm</Top>
+            <Left>4.9039cm</Left>
+            <Height>1.01776cm</Height>
+            <Width>6.23681cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Potpis i pecat</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Adresa</rd:DefaultName>
-            <Top>5.41436cm</Top>
-            <Left>3.05871cm</Left>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>15.23505cm</Top>
+            <Left>12.14792cm</Left>
             <Height>0.6cm</Height>
+            <Width>2.43316cm</Width>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>___________________________</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>16.01144cm</Top>
+            <Left>10.78508cm</Left>
+            <Height>0.6cm</Height>
+            <Width>5.68754cm</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Za sve nesuglasice i eventualne greske obratite se na email</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>14.11364cm</Top>
+            <Left>0.52343cm</Left>
+            <Height>0.5619cm</Height>
+            <Width>9.14746cm</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Rectangle Name="Rectangle2">
+            <ReportItems>
+              <Textbox Name="Adresa">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!Adresa.Value, "DataSet1")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Adresa</rd:DefaultName>
+                <Top>1.58371cm</Top>
+                <Left>0.35277cm</Left>
+                <Height>0.6cm</Height>
+                <Width>2.5cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Email">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!Email.Value, "DataSet1")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Email</rd:DefaultName>
+                <Top>2.18371cm</Top>
+                <Left>0.31749cm</Left>
+                <Height>0.6cm</Height>
+                <Width>2.5cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Naziv_Grada">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!Naziv_Grada.Value, "DataSet1")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Naziv_Grada</rd:DefaultName>
+                <Top>1.58371cm</Top>
+                <Left>2.88804cm</Left>
+                <Height>0.6cm</Height>
+                <Width>2.5cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Naziv_kompanije1">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!Naziv_kompanije.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Naziv_kompanije1</rd:DefaultName>
+                <Top>1.09891cm</Top>
+                <Left>0.38804cm</Left>
+                <Height>0.6cm</Height>
+                <Width>3.05562cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox24">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Kompanija:</Value>
+                        <Style>
+                          <FontSize>12pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox24</rd:DefaultName>
+                <Top>0.32253cm</Top>
+                <Left>0.35277cm</Left>
+                <Height>0.6cm</Height>
+                <Width>3.0909cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Line Name="Line7">
+                <Top>2.99861cm</Top>
+                <Left>0.10309cm</Left>
+                <Height>0cm</Height>
+                <Width>6.21982cm</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                  </Border>
+                </Style>
+              </Line>
+              <Line Name="Line9">
+                <Top>0.03527cm</Top>
+                <Left>0.10309cm</Left>
+                <Height>0cm</Height>
+                <Width>6.21982cm</Width>
+                <ZIndex>6</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                  </Border>
+                </Style>
+              </Line>
+              <Line Name="Line10">
+                <Top>0.03527cm</Top>
+                <Left>0.10309cm</Left>
+                <Height>2.96334cm</Height>
+                <Width>0cm</Width>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                  </Border>
+                </Style>
+              </Line>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>1.63724cm</Top>
+            <Left>0.49697cm</Left>
+            <Height>3.08208cm</Height>
+            <Width>6.32292cm</Width>
+            <ZIndex>23</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Textbox Name="Ime_i_prezime_klijenta">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Ime_i_prezime_klijenta.Value, "DataSet1")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Ime_i_prezime_klijenta</rd:DefaultName>
+            <Top>2.45393cm</Top>
+            <Left>12.05549cm</Left>
+            <Height>0.54708cm</Height>
             <Width>2.5cm</Width>
+            <ZIndex>24</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox29">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Klijent:</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox24</rd:DefaultName>
+            <Top>1.85393cm</Top>
+            <Left>12.08108cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.47441cm</Width>
             <ZIndex>25</ZIndex>
             <Style>
               <Border>
@@ -990,72 +1165,174 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Naziv_Grada">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!Naziv_Grada.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Naziv_Grada</rd:DefaultName>
-            <Top>6.15547cm</Top>
-            <Left>3.04989cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+          <Line Name="Line3">
+            <Top>1.67252cm</Top>
+            <Left>11.32771cm</Left>
+            <Height>2.96333cm</Height>
+            <Width>0cm</Width>
             <ZIndex>26</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Textbox>
-          <Textbox Name="Email">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!Email.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Email</rd:DefaultName>
-            <Top>6.89658cm</Top>
-            <Left>3.04989cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+          </Line>
+          <Line Name="Line4">
+            <Top>1.63724cm</Top>
+            <Left>11.32771cm</Left>
+            <Height>0cm</Height>
+            <Width>5.28495cm</Width>
             <ZIndex>27</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Textbox>
+          </Line>
+          <Line Name="Line5">
+            <Top>4.60058cm</Top>
+            <Left>11.32771cm</Left>
+            <Height>0cm</Height>
+            <Width>5.28495cm</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line6">
+            <Top>1.63724cm</Top>
+            <Left>16.61266cm</Left>
+            <Height>2.92806cm</Height>
+            <Width>0cm</Width>
+            <ZIndex>29</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line8">
+            <Top>1.63724cm</Top>
+            <Left>6.81989cm</Left>
+            <Height>2.99862cm</Height>
+            <Width>0cm</Width>
+            <ZIndex>30</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
         </ReportItems>
-        <Height>8.0441in</Height>
+        <Height>6.7558in</Height>
         <Style />
       </Body>
-      <Width>6.98668in</Width>
+      <Width>7.1172in</Width>
       <Page>
+        <PageHeader>
+          <Height>3.83646cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="AppIcon">
+              <Source>Embedded</Source>
+              <Value>appIcon</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.3609cm</Top>
+              <Left>0.52343cm</Left>
+              <Height>3.00813cm</Height>
+              <Width>4.12233cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="Textbox35">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>ServisInfo</Value>
+                      <Style>
+                        <FontSize>16pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox24</rd:DefaultName>
+              <Top>1.60445cm</Top>
+              <Left>4.00611cm</Left>
+              <Height>1.01776cm</Height>
+              <Width>3.30072cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>1.64938cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox10">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>© Copyright 2018 ServisInfo</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox10</rd:DefaultName>
+              <Top>0.57312cm</Top>
+              <Left>12.68026cm</Left>
+              <Height>0.6cm</Height>
+              <Width>4.24625cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
         <LeftMargin>2cm</LeftMargin>

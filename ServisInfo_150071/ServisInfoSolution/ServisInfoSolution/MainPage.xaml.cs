@@ -24,7 +24,9 @@ namespace ServisInfoSolution
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, true);
             Fill();
+           
 
         }
 
@@ -270,6 +272,29 @@ namespace ServisInfoSolution
         private void Reset()
         {
             InitializeComponent();
+
+            HttpResponseMessage response = kategorijeService.GetResponse();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonObject = response.Content.ReadAsStringAsync();
+                List<Kategorije> kategorije = JsonConvert.DeserializeObject<List<Kategorije>>(jsonObject.Result);
+                kategorijePicker.ItemsSource = kategorije;
+
+                kategorijePicker.ItemDisplayBinding = new Binding("Naziv");
+            }
+
+            HttpResponseMessage response2 = gradoviService.GetResponse();
+
+            if (response2.IsSuccessStatusCode)
+            {
+                var jsonObject = response2.Content.ReadAsStringAsync();
+                List<Gradovi> gradovi = JsonConvert.DeserializeObject<List<Gradovi>>(jsonObject.Result);
+                gradoviPicker.ItemsSource = gradovi;
+
+                gradoviPicker.ItemDisplayBinding = new Binding("Naziv");
+
+            }
         }
     }
 }

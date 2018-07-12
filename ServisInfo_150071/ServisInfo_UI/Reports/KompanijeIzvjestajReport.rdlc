@@ -213,7 +213,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Cijena</Value>
+                                  <Value>Cijena (KM)</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -533,9 +533,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
             <Top>6.93566cm</Top>
-            <Left>7.84142cm</Left>
+            <Left>7.45336cm</Left>
             <Height>0.83813cm</Height>
-            <Width>6.3711cm</Width>
+            <Width>6.75916cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -570,7 +570,7 @@
             </Paragraphs>
             <rd:DefaultName>Naziv_kompanije</rd:DefaultName>
             <Top>2.94045cm</Top>
-            <Left>4.61821cm</Left>
+            <Left>4.54765cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>4</ZIndex>
@@ -721,8 +721,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox6</rd:DefaultName>
-              <Top>1.15093cm</Top>
-              <Left>3.74509cm</Left>
+              <Top>0.85989cm</Top>
+              <Left>3.40585cm</Left>
               <Height>0.78521cm</Height>
               <Width>4.71778cm</Width>
               <ZIndex>1</ZIndex>
@@ -765,8 +765,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox10</rd:DefaultName>
-              <Top>0.17639cm</Top>
-              <Left>11.39502cm</Left>
+              <Top>1.07597cm</Top>
+              <Left>10.5219cm</Left>
               <Height>0.6cm</Height>
               <Width>4.24625cm</Width>
               <Style>

@@ -78,7 +78,6 @@ namespace ServisInfo_UI.Ponude
             this.Close();
         }
 
-   
 
         private void servisBtn_Click(object sender, EventArgs e)
         {
@@ -96,9 +95,16 @@ namespace ServisInfo_UI.Ponude
             }
             else
             {
-                PonudeService.DeleteResponse(p.PonudaID.ToString());
-                MessageBox.Show("Ponuda je uspjesno izbrisana", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+               HttpResponseMessage r= PonudeService.DeleteResponse(p.PonudaID.ToString());
+                if (r.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Ponuda je uspjesno izbrisana", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Doslo je do greske u komunikaciji", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
