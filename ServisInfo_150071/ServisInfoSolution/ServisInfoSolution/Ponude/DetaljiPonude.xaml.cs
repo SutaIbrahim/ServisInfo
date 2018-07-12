@@ -64,7 +64,7 @@ namespace ServisInfoSolution
                 KompanijaLbl.Text = ponuda.Naziv_kompanije;
                 KategorijaLbl.Text = ponuda.Naziv;
                 OdgovorLbl.Text = ponuda.Odgovor;
-                CijenaLbl.Text = ponuda.Cijena.ToString();
+                CijenaLbl.Text = ponuda.Cijena.ToString() + " KM";
 
             }
 

@@ -24,7 +24,7 @@
 
             <Label x:Name="errorLbl" TextColor="Red"  HorizontalOptions="End"  FontSize="8"></Label>
 
-            <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center"  FontSize="9" TextColor="Gray" HorizontalTextAlignment="Center" Margin="5"></Label>
+            <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center"  FontSize="11" TextColor="Gray" HorizontalTextAlignment="Center" Margin="4"></Label>
 
 
             <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="65" ItemTapped="kompanijeList_ItemTapped" >

@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.Registracija"
              Title=""
-             NavigationPage.HasNavigationBar="False" 
-             NavigationPage.HasBackButton="False"
+             NavigationPage.HasBackButton="True"
              >
     <ScrollView Margin="10">
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
@@ -56,7 +55,7 @@
                 
                 <Button x:Name="registrujSeButton" Text="Registruj se"
                         Grid.Row="9" Grid.Column="1"
-                        Clicked="registrujSeButton_Clicked" Margin="5"  BackgroundColor="#13818d" TextColor="White"></Button>
+                        Clicked="registrujSeButton_Clicked" Margin="5"  BackgroundColor="#13818d" TextColor="White" FontSize="14"></Button>
 
             </Grid>
         </StackLayout>

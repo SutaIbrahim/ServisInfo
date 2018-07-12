@@ -6,20 +6,20 @@
         <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
             <Label Text="Uredi profil"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" Margin="20"/>
+                HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" Margin="10"/>
 
             <Image Source="appIcon.png" Margin="15" HeightRequest="150" WidthRequest="150"></Image>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
@@ -54,7 +54,7 @@
 
                 <Button x:Name="Sacuvaj" Text="Sacuvaj"
                         Grid.Row="9" Grid.Column="1"
-                        Clicked="Sacuvaj_Clicked" Margin="5"  BackgroundColor="Green" TextColor="White"></Button>
+                        Clicked="Sacuvaj_Clicked" Margin="5"  BackgroundColor="Green" TextColor="White" FontSize="11"></Button>
 
             </Grid>
         </StackLayout>

@@ -13,8 +13,7 @@
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
             <Label x:Name="servisIDLbl" Text="Detalji o servisu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="25" FontAttributes="Bold"></Label>
 
-
-            <Grid Margin="20">
+            <Grid Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -53,10 +52,9 @@
             </Grid>
 
 
-
             <!--ocjene-->
 
-            <Label x:Name="porukaLbl" Text="Servis je zavrsen, molimo vas da ocijenite uslugu" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
+            <Label x:Name="porukaLbl" Text="Servis je zavrsen, molimo vas da ocijenite uslugu" FontSize="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
 
             <Grid Margin="7">
                 <Grid.ColumnDefinitions>
@@ -73,8 +71,6 @@
                 </Grid.RowDefinitions>
 
 
-
-
                 <Label x:Name="BrzinaLbl" Text="Brzina usluge:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
                 <Slider x:Name="BrzinaSlider" Maximum="5"  Value="5"   Grid.Row="1" Grid.Column="1" ></Slider>
 
@@ -85,7 +81,7 @@
                 <Label x:Name="KomunikacijaLbl" Text="Komunikacija:" FontAttributes="Bold" Grid.Row="3"  Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
                 <Slider x:Name="KomunikacijaSlider"  Maximum="5" Value="5"  Grid.Row="3" Grid.Column="1"></Slider>
        
-                <Button x:Name="ocjeniBtn"  FontAttributes="Bold" Grid.Row="4"  Grid.Column="1" Text="Ocijeni uslugu servisa"  BackgroundColor="Green" TextColor="White" Clicked="ocjeniBtn_Clicked" ></Button>
+                <Button x:Name="ocjeniBtn"  FontAttributes="Bold" Grid.Row="4"  Grid.Column="1" Text="Ocijeni uslugu servisa"  BackgroundColor="Green" TextColor="White" Clicked="ocjeniBtn_Clicked" FontSize="10"></Button>
 
 
             </Grid>

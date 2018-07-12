@@ -21,10 +21,12 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                     <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
-                    <RowDefinition ></RowDefinition>
+
                 </Grid.RowDefinitions>
 
 
@@ -40,7 +42,8 @@
                 <Label Text="Telefon:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" ></Label>
                 <Label x:Name="TelefonLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="3" Grid.Column="1" ></Label>
 
-                <Button x:Name="Button"  Grid.Row="4" Grid.Column="1" TextColor="White" Margin="10" Clicked="Button_Clicked"></Button>
+                <!--dodaj/ukloni-->
+                <Button x:Name="Button"  Grid.Row="4" Grid.Column="1" TextColor="White" Margin="10" FontSize="10" Clicked="Button_Clicked"></Button>
 
             </Grid>
 
@@ -48,16 +51,16 @@
             <!--prosjecne ocjene-->
             <Label x:Name="porukaLbl" Text="Prosjecne ocjene kompanije:" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
 
-            <Grid Margin="15">
+            <Grid Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions >
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
@@ -103,9 +106,9 @@
 
                                 <StackLayout Grid.Column="1" Padding="2"  VerticalOptions="Center" >
 
-                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="12"/>
-                                    <Label Text="{Binding Adresa}" FontSize="11"/>
-                                    <Label Text="{Binding Grad}" FontSize="11"/>
+                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="10"/>
+                                    <Label Text="{Binding Adresa}" FontSize="9"/>
+                                    <Label Text="{Binding Grad}" FontSize="9"/>
 
                                 </StackLayout>
                             </Grid>

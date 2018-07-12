@@ -19,9 +19,9 @@
             <Entry x:Name="lozinkaInput" Placeholder="Lozinka" IsPassword="True"></Entry>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-                <Button x:Name="registerButton" Text="Registracija" Clicked="registerButton_Clicked" Margin="4" ></Button>
+                <Button x:Name="registerButton" Text="Registracija" Clicked="registerButton_Clicked" Margin="4" FontSize="14"></Button>
 
-                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4" BackgroundColor="#13818d" TextColor="White"></Button>
+                <Button Text="Prijavi se" Clicked="Button_Clicked" Margin="4" BackgroundColor="#13818d" TextColor="White" FontSize="14"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -6,7 +6,7 @@
              >
   
     <ScrollView>
-        <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="10">
 
             <Label Text="Kreiranje novog upita"
                 VerticalOptions="CenterAndExpand" 
@@ -19,9 +19,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -35,26 +34,26 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Label Text="*Marka uredjaja" Grid.Row="1" Grid.Column="0"></Label>
-                <Picker x:Name="markaUredjajaPicker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="markaUredjajaPicker_SelectedIndexChanged"></Picker>
+                <Label Text="*Marka uredjaja" Grid.Row="0" Grid.Column="0"></Label>
+                <Picker x:Name="markaUredjajaPicker" Grid.Row="0" Grid.Column="1" SelectedIndexChanged="markaUredjajaPicker_SelectedIndexChanged"></Picker>
 
-                <Label Text="*Model uredjaja:" Grid.Row="2" Grid.Column="0"></Label>
-                <Picker x:Name="modelUredjajaPicker" Grid.Row="2" Grid.Column="1" SelectedIndexChanged="modelUredjajaPicker_SelectedIndexChanged"></Picker>
+                <Label Text="*Model uredjaja:" Grid.Row="1" Grid.Column="0"></Label>
+                <Picker x:Name="modelUredjajaPicker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="modelUredjajaPicker_SelectedIndexChanged"></Picker>
 
-                <Label Text="*Opis kvara:" Grid.Row="3" Grid.Column="0"></Label>
-                <Editor x:Name="opisKvaraTxt" Grid.Row="3" Grid.Column="1" HeightRequest="150"></Editor>
+                <Label Text="*Opis kvara:" Grid.Row="2" Grid.Column="0"></Label>
+                <Editor x:Name="opisKvaraTxt" Grid.Row="2" Grid.Column="1" HeightRequest="150"></Editor>
 
 
-                <Button x:Name="dodajSlikuBtn" Text="Dodaj sliku" Grid.Row="4" Grid.Column="0" Clicked="dodajSlikuBtn_Clicked"></Button>
-                <Image x:Name="slika" Grid.Row="5" Grid.Column="1" Margin="5"></Image>
+                <Button x:Name="dodajSlikuBtn" Text="Dodaj sliku" Grid.Row="3" Grid.Column="0" Clicked="dodajSlikuBtn_Clicked"></Button>
+                <Image x:Name="slika" Grid.Row="4" Grid.Column="1" Margin="5"></Image>
 
-                <Label Text="Zeljeni raspon prijema uredjaja:" Grid.Row="6" Grid.Column="0"></Label>
+                <Label Text="Zeljeni raspon prijema uredjaja:" Grid.Row="5" Grid.Column="0"></Label>
 
-                <Label Text="Od:" Grid.Row="7" Grid.Column="0"></Label>
-                <DatePicker x:Name="datumOd"  Grid.Row="7" Grid.Column="1" WidthRequest="100"></DatePicker>
+                <Label Text="Od:" Grid.Row="6" Grid.Column="0"></Label>
+                <DatePicker x:Name="datumOd"  Grid.Row="6" Grid.Column="1" WidthRequest="100"></DatePicker>
 
-                <Label Text="Do:" Grid.Row="8" Grid.Column="0"></Label>
-                <DatePicker x:Name="datumDo"  Grid.Row="8" Grid.Column="1" WidthRequest="140"></DatePicker>
+                <Label Text="Do:" Grid.Row="7" Grid.Column="0"></Label>
+                <DatePicker x:Name="datumDo"  Grid.Row="7" Grid.Column="1" WidthRequest="140"></DatePicker>
                 
             </Grid>
             
