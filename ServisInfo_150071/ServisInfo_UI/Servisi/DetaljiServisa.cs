@@ -195,7 +195,7 @@ namespace ServisInfo_UI.Servisi
                     servis.DatumZavršetka = DateTime.Now;
                     servis.Cijena = Convert.ToDecimal(CijenaTxt.Text);
 
-                    servis.TrajanjeDani = s.DatumPocetka.Value.DayOfYear - DateTime.Now.DayOfYear; // bug ako su 2 razlicite godine !
+                    servis.TrajanjeDani = DateTime.Now.DayOfYear -  s.DatumPocetka.Value.DayOfYear; // bug ako su 2 razlicite godine !
 
                     HttpResponseMessage response2 = ServisiService.PutResponse(ServisID, servis);
                     MessageBox.Show("Servis uspjesno završen");

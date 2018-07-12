@@ -28,30 +28,31 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Text="*Ime:" Grid.Row="0" Grid.Column="0"></Label>
+                <Label Text="*Ime:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Entry x:Name="imeInput" Grid.Row="0" Grid.Column="1"></Entry>
 
-                <Label Text="*Prezime:" Grid.Row="1" Grid.Column="0"></Label>
+                <Label Text="*Prezime:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Entry x:Name="prezimeInput" Grid.Row="1" Grid.Column="1"></Entry>
-                
-                <Label Text="Adresa:" Grid.Row="2" Grid.Column="0"></Label>
+
+                <Label Text="Adresa:" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Entry x:Name="adresaInput" Grid.Row="2" Grid.Column="1"></Entry>
 
-                <Label Text="*Telefon:" Grid.Row="3" Grid.Column="0"></Label>
+                <Label Text="*Telefon:" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Entry x:Name="telefonInput" Grid.Row="3" Grid.Column="1"></Entry>
 
-                <Label Text="*Email:" Grid.Row="4" Grid.Column="0"></Label>
+                <Label Text="*Email:" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Entry x:Name="emailInput" Grid.Row="4" Grid.Column="1"></Entry>
 
-                <Label Text="*Grad:" Grid.Row="5" Grid.Column="0"></Label>
+                <Label Text="*Grad:" Grid.Row="5" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Picker x:Name="gradList" Grid.Row="5" Grid.Column="1"></Picker>
-                
-                <Label Text="*Korisnicko ime:" Grid.Row="6" Grid.Column="0"></Label>
+
+                <Label Text="*Korisnicko ime:" Grid.Row="6" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Entry x:Name="korisnickoImeInput" Grid.Row="6" Grid.Column="1"></Entry>
 
-                <Label Text="*Lozinka:" Grid.Row="7" Grid.Column="0"></Label>
+                <Label Text="*Lozinka:" Grid.Row="7" Grid.Column="0" VerticalOptions="Center"></Label>
                 <Entry x:Name="lozinkaInput" Grid.Row="7" Grid.Column="1" IsPassword="True"></Entry>
-                <Label x:Name="porukaLbl" Margin="10" Text="* Obavezna polja"  Grid.Row="8" Grid.Column="1"></Label>
+                
+                <Label x:Name="porukaLbl" Margin="10" Text="* Obavezna polja"  Grid.Row="8" Grid.Column="1" VerticalOptions="Center"></Label>
                 
                 <Button x:Name="registrujSeButton" Text="Registruj se"
                         Grid.Row="9" Grid.Column="1"

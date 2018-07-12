@@ -5,8 +5,8 @@
     <ScrollView Margin="10">
 
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-            <Label x:Name="upitIDLbl" Text="Detalji o upitu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="25" FontAttributes="Bold"></Label>
+        <StackLayout HorizontalOptions="Center">
+            <Label x:Name="upitIDLbl" Text="Detalji o upitu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="10" FontAttributes="Bold"></Label>
 
 
             <Grid Margin="5">

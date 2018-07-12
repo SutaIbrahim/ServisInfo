@@ -41,19 +41,21 @@ namespace ServisInfoSolution
             if (response.IsSuccessStatusCode)
             {
                 var jsonObject = response.Content.ReadAsStringAsync();
-                ServisDetalji_Result ponuda = JsonConvert.DeserializeObject<ServisDetalji_Result>(jsonObject.Result);
-                this.ponuda = ponuda;
+                ServisDetalji_Result servis = JsonConvert.DeserializeObject<ServisDetalji_Result>(jsonObject.Result);
+                this.ponuda = servis;
 
-                DatumPrihvatanjaLbl.Text = ponuda.DatumPrihvatanja.ToString();
-                servisIDLbl.Text = "Detalji o servisu ID: " + ponuda.ServisID.ToString();
-                DatumPocetkaLBl.Text = ponuda.DatumPocetka.ToString();
-                DatumZavrsetkaLbl.Text = ponuda.DatumZavršetka.ToString();
-                TrajanjeLbl.Text = ponuda.TrajanjeDani.ToString();
-                CijenaLbl.Text = ponuda.Završna_cijena.ToString() + " KM";
-                KompanijaLbl.Text = ponuda.Naziv_Kompanije;
+                DatumPrihvatanjaLbl.Text = servis.DatumPrihvatanja.ToString();
+                servisIDLbl.Text = "Detalji o servisu ID: " + servis.ServisID.ToString();
+                DatumPocetkaLBl.Text = servis.DatumPocetka.ToString();
+                DatumZavrsetkaLbl.Text = servis.DatumZavršetka.ToString();
+                TrajanjeLbl.Text = servis.TrajanjeDani.ToString();
+                CijenaLbl.Text = servis.Završna_cijena.ToString() + " KM";
+                KompanijaLbl.Text = servis.Naziv_Kompanije;
+                KategorijaLbl.Text = servis.Kategorija;
+                UredjajLbl.Text = servis.Uredjaj;
 
                 //ocjene layout
-                if (ponuda.DatumPocetka == null)
+                if (servis.DatumPocetka == null)
                 {
                     porukaLbl.Text = "Servis jos uvijek nije zapocet !";
 
@@ -67,7 +69,7 @@ namespace ServisInfoSolution
 
                     ocjeniBtn.IsVisible = false;
                 }
-                else if (ponuda.Ocjenjen == true) // bool ocjenjen
+                else if (servis.Ocjenjen == true) // bool ocjenjen
                 {
                     porukaLbl.Text = "Servis je uspjesno zavrsen i ocjenjen !";
 
@@ -84,7 +86,7 @@ namespace ServisInfoSolution
                     PreuzmiOcjene(); /////////
 
                 }
-                else if (ponuda.DatumZavršetka == null)
+                else if (servis.DatumZavršetka == null)
                 {
                     porukaLbl.Text = "Servis je u toku !";
 
