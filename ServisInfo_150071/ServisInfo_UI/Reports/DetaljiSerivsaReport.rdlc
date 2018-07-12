@@ -456,9 +456,9 @@
             </Paragraphs>
             <rd:DefaultName>Opis_Kvara</rd:DefaultName>
             <Top>9.14097cm</Top>
-            <Left>3.75498cm</Left>
+            <Left>3.4203cm</Left>
             <Height>1.74885cm</Height>
-            <Width>13.14507cm</Width>
+            <Width>13.19236cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -499,7 +499,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
             <Top>9.14097cm</Top>
-            <Left>0.52343cm</Left>
+            <Left>0.60006cm</Left>
             <Height>0.6cm</Height>
             <Width>2.4067cm</Width>
             <ZIndex>11</ZIndex>
@@ -542,7 +542,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
             <Top>11.44363cm</Top>
-            <Left>0.52343cm</Left>
+            <Left>0.60006cm</Left>
             <Height>0.6cm</Height>
             <Width>2.4067cm</Width>
             <ZIndex>12</ZIndex>
@@ -572,9 +572,9 @@
             </Paragraphs>
             <rd:DefaultName>Odgovor</rd:DefaultName>
             <Top>11.44363cm</Top>
-            <Left>3.75498cm</Left>
-            <Height>1.7767cm</Height>
-            <Width>13.17153cm</Width>
+            <Left>3.37887cm</Left>
+            <Height>1.64441cm</Height>
+            <Width>13.23379cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -910,7 +910,7 @@
                 <Top>2.18371cm</Top>
                 <Left>0.31749cm</Left>
                 <Height>0.6cm</Height>
-                <Width>2.5cm</Width>
+                <Width>3.8313cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -938,9 +938,9 @@
                 </Paragraphs>
                 <rd:DefaultName>Naziv_Grada</rd:DefaultName>
                 <Top>1.58371cm</Top>
-                <Left>2.88804cm</Left>
+                <Left>2.92333cm</Left>
                 <Height>0.6cm</Height>
-                <Width>2.5cm</Width>
+                <Width>2.73812cm</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -972,7 +972,7 @@
                 <Top>1.09891cm</Top>
                 <Left>0.38804cm</Left>
                 <Height>0.6cm</Height>
-                <Width>3.05562cm</Width>
+                <Width>5.5427cm</Width>
                 <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
@@ -1084,7 +1084,7 @@
             <Top>2.45393cm</Top>
             <Left>12.05549cm</Left>
             <Height>0.54708cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.11396cm</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
@@ -1219,6 +1219,54 @@
             <Height>2.99862cm</Height>
             <Width>0cm</Width>
             <ZIndex>30</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line11">
+            <Top>8.84445cm</Top>
+            <Left>0.49697cm</Left>
+            <Height>0cm</Height>
+            <Width>16.42954cm</Width>
+            <ZIndex>31</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line12">
+            <Top>8.84445cm</Top>
+            <Left>16.92651cm</Left>
+            <Height>4.53463cm</Height>
+            <Width>0cm</Width>
+            <ZIndex>32</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line13">
+            <Top>13.37908cm</Top>
+            <Left>0.49697cm</Left>
+            <Height>0cm</Height>
+            <Width>16.42954cm</Width>
+            <ZIndex>33</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line14">
+            <Top>8.84445cm</Top>
+            <Left>0.52343cm</Left>
+            <Height>4.53463cm</Height>
+            <Width>0cm</Width>
+            <ZIndex>34</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>

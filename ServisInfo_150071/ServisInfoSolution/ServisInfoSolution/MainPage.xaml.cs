@@ -26,8 +26,6 @@ namespace ServisInfoSolution
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, true);
             Fill();
-           
-
         }
 
         protected override void OnAppearing()
@@ -42,12 +40,12 @@ namespace ServisInfoSolution
                 Global.izabranaKategorijaIndex = -1;
                 this.Navigation.PushAsync(new Prijava());
             }
-
+            Search();
             base.OnAppearing();
         }
         public void Fill()
         {
-            //setovanje imena u sidebaru
+            //setovanje imena u navbaru
             MasterDetailPageMaster m = new MasterDetailPageMaster();
             m.Refresh();
 
@@ -123,9 +121,8 @@ namespace ServisInfoSolution
             Search();
         }
 
-        private void Search()
+        public void Search()
         {
-
             if (kategorijePicker.SelectedItem != null && gradoviPicker.SelectedItem != null)
             {
 
@@ -197,7 +194,7 @@ namespace ServisInfoSolution
             else
             {
                 this.Navigation.PushAsync(new KreirajUpit());
-                Reset();
+                //Reset();
             }
 
         }
@@ -205,11 +202,8 @@ namespace ServisInfoSolution
         private void kompanijeList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             this.Navigation.PushAsync(new DetaljiKompanije((e.Item as KompanijeDetalji_X_Result).KompanijaID));
+            Search();
         }
-
-        //private void Button_Pressed(object sender, EventArgs e)
-        //{
-        //}
 
         public void Dodaj(Object Sender, EventArgs args)
         {

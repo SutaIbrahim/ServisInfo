@@ -96,8 +96,8 @@ namespace ServisInfo_UI.Upiti
                 {
                     Image resizedImg = UIHelper.ResizeImage(orgImg, new Size(resizedImgWidth, resizedImgHeight));
 
-                    if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
-                    {
+                    //if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
+                    //{
                         int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
                         int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
 
@@ -108,12 +108,12 @@ namespace ServisInfo_UI.Upiti
                         //croppedImg.Save(ms, orgImg.RawFormat);
 
                         pictureBox.Image = resizedImg;
-                    }
-                    else
-                    {
-                        MessageBox.Show(Messages.picture_war + " " + resizedImgWidth + "x" + resizedImgHeight + ".", Messages.warning,
-                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show(Messages.picture_war + " " + resizedImgWidth + "x" + resizedImgHeight + ".", Messages.warning,
+                    //                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //}
                 }
 
             }
@@ -124,6 +124,7 @@ namespace ServisInfo_UI.Upiti
             }
 
         }
+
         ////private static readonly ImageConverter _imageConverter = new ImageConverter();
         //public static Bitmap GetImageFromByteArray(byte[] byteArray)
         //{

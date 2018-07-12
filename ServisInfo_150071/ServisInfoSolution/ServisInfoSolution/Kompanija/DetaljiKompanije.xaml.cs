@@ -143,7 +143,7 @@ namespace ServisInfoSolution.Kompanija
             }
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e) // dodajBtn
         {
             bool postoji = false;
 
@@ -160,13 +160,13 @@ namespace ServisInfoSolution.Kompanija
                 Global.izabraneKompanijeID.Remove(kompanijaID);
                 Global.izabraneKompanije.Remove(k.Naziv);
                 setButton();
-
             }
             else
             {
                 Global.izabraneKompanijeID.Add(kompanijaID);
                 Global.izabraneKompanije.Add(k.Naziv);
                 setButton();
+              
             }
         }
 
