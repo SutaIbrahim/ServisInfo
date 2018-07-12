@@ -2,28 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.DetaljiUpita">
-    <ScrollView Margin="20">
+    <ScrollView Margin="10">
 
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label x:Name="upitIDLbl" Text="Detalji o upitu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="40" FontAttributes="Bold"></Label>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+            <Label x:Name="upitIDLbl" Text="Detalji o upitu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="25" FontAttributes="Bold"></Label>
 
 
-            <Grid >
+            <Grid Margin="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
@@ -46,7 +46,7 @@
                 <Label x:Name="KategorijaLbl" Text=""    Grid.Row="5" Grid.Column="1" ></Label>
 
                 <Label Text="Opis:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"   ></Label>
-                <Label x:Name="OpisLbl" Text=""    Grid.Row="6" Grid.Column="1"  HeightRequest="150"></Label>
+                <Label x:Name="OpisLbl" Text=""    Grid.Row="6" Grid.Column="1" ></Label>
 
                 <Label Text="Slika:" x:Name="slikaPct" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0"   ></Label>
 
@@ -55,7 +55,7 @@
             <Image x:Name="slika"  Margin="5"></Image>
 
 
-            <Button x:Name="IzbtisiBtn" BackgroundColor="Red" Text="Izbrisi upit" HorizontalOptions="End" Clicked="IzbtisiBtn_Clicked" Margin="12" TextColor="White"></Button>
+            <Button x:Name="IzbtisiBtn" BackgroundColor="OrangeRed" Text="Izbrisi upit" HorizontalOptions="End" Clicked="IzbtisiBtn_Clicked" Margin="10" TextColor="White" FontSize="11"></Button>
 
 
         </StackLayout>

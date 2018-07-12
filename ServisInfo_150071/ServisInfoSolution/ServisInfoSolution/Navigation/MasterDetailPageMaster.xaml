@@ -27,18 +27,18 @@
                            Text="Dobro dosli u ServisInfo"
               Grid.Column="1"
               Grid.Row="2"
-                        FontSize="22"/>
+                        FontSize="18"/>
                 </Grid>
             </ListView.Header>
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate  Margin="5">
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <StackLayout Padding="19,15" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                             <Image Source="{Binding ImageSource}"></Image>
                             <Label VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
-                    FontSize="18"/>
+                    FontSize="17"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

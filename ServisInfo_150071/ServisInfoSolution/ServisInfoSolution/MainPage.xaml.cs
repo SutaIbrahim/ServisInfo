@@ -26,7 +26,6 @@ namespace ServisInfoSolution
             InitializeComponent();
             Fill();
 
-
         }
 
         protected override void OnAppearing()

@@ -6,20 +6,23 @@
 
 
         <StackLayout >
-            <Label Text="Pregled ponuda" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+            <Label Text="Pregled ponuda" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Margin="8"></Label>
 
 
-            <Label Text="Izaberite raspon datuma za prikaz ponuda (Od-Do):" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
-            <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged"></DatePicker>
-            <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged"></DatePicker>
+            <Label Text="Izaberite raspon datuma za prikaz ponuda (Od-Do):" FontSize="11" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged" ></DatePicker>
+                <Label Text="_" VerticalOptions="Center"></Label>
+                <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged" ></DatePicker>
+            </StackLayout>
 
             <StackLayout Margin="5">
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Prikazi neprihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    <Label Text="Prikazi neprihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="10"></Label>
                     <Switch x:Name="neSW" PropertyChanged="neSW_PropertyChanged"></Switch>
 
-                    <Label Text="| Prikazi prihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    <Label Text="| Prikazi prihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
                     <Switch x:Name="daSW" PropertyChanged="daSW_PropertyChanged"></Switch>
                 </StackLayout>
 
@@ -27,11 +30,11 @@
 
 
 
-            <Label Text="Kliknite na ponudu za vise detalja" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
+            <Label Text="Kliknite na ponudu za vise detalja" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
 
 
 
-            <ListView x:Name="ponudeList"   RowHeight="70" Margin="6" ItemTapped="ponudeList_ItemTapped" BackgroundColor="LightGray">
+            <ListView x:Name="ponudeList"  RowHeight="50" Margin="6" ItemTapped="ponudeList_ItemTapped" BackgroundColor="LightGray">
 
 
                 <ListView.Header>
@@ -45,11 +48,11 @@
 
                         </Grid.ColumnDefinitions>
 
-                        <Label Text="Kompanija:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold" TextColor="White"></Label>
-                        <Label Text="Kategorija:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
-                        <Label Text="Cijena:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
-                        <Label Text="Datum kreiranja:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
-                        <Label Text="Prihvacena?" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
+                        <Label Text="Kompanija:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold" TextColor="White"  FontSize="11"></Label>
+                        <Label Text="Kategorija:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"  FontSize="11"></Label>
+                        <Label Text="Cijena:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"  FontSize="10"></Label>
+                        <Label Text="Datum kreiranja:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"  FontSize="11"></Label>
+                        <Label Text="Prihvacena?" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"  FontSize="11"></Label>
 
                     </Grid>
 
@@ -68,11 +71,11 @@
 
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="{Binding Naziv_kompanije}" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
-                                <Label Text="{Binding Naziv_kategorije}"  Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
-                                <Label Text="{Binding Cijena}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                <Label Text="{Binding DatumKreiranjaS}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
-                                <Label Text="{Binding PrihvacenaS}" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+                                <Label Text="{Binding Naziv_kompanije}" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   FontSize="10"/>
+                                <Label Text="{Binding Naziv_kategorije}"  Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="10" />
+                                <Label Text="{Binding Cijena}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="10"/>
+                                <Label Text="{Binding DatumKreiranjaS}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   FontSize="10"/>
+                                <Label Text="{Binding PrihvacenaS}" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   FontSize="10"/>
 
 
                             </Grid>

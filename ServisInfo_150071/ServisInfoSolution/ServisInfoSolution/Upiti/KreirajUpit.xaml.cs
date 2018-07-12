@@ -33,6 +33,7 @@ namespace ServisInfoSolution
         {
 
             InitializeComponent();
+
             selected1 = -1;
             selected2 = -1;
 
@@ -52,6 +53,7 @@ namespace ServisInfoSolution
             kompanije += last;
             kompanijeLbl.Text = kompanije;
             s = null;
+
 
             //otvaranje galerije -->> xam.plugin.media nuget 
             dodajSlikuBtn.Clicked += async (sender, args) =>
@@ -79,8 +81,8 @@ namespace ServisInfoSolution
                 {
                     modelUredjajaPicker.SelectedIndex = selected2;
                 }
-
             };
+
 
         }
 
@@ -105,8 +107,8 @@ namespace ServisInfoSolution
 
             if ((markaUredjajaPicker.SelectedItem as MarkeUredjaja) != null)
             {
-
                 selected1 = (markaUredjajaPicker.SelectedIndex);
+
                 HttpResponseMessage response2 = modeliUredjajaService.GetActionResponse("GetByMarkaId", ((markaUredjajaPicker.SelectedItem as MarkeUredjaja).MarkaUredjajaID).ToString());
 
                 if (response2.IsSuccessStatusCode)
@@ -116,7 +118,6 @@ namespace ServisInfoSolution
                     modelUredjajaPicker.ItemsSource = modeli;
 
                     modelUredjajaPicker.ItemDisplayBinding = new Binding("Naziv");
-
                 }
             }
         }
@@ -125,7 +126,6 @@ namespace ServisInfoSolution
         {
             if ((modelUredjajaPicker.SelectedItem as ModeliUredjaja) != null)
             {
-
                 selected2 = (modelUredjajaPicker.SelectedIndex);
             }
         }
@@ -188,11 +188,9 @@ namespace ServisInfoSolution
                                 Global.izabraniGradIndex = -1;
                                 Global.izabranaKategorijaIndex = -1;
 
-
                                 this.Navigation.PopAsync();
 
                                 //this.Navigation.PushAsync(new MainPage());
-
                             }
                             else
                             {

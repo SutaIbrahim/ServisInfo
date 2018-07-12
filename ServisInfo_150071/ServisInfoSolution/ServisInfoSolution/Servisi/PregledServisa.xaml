@@ -7,38 +7,40 @@
 
         <StackLayout >
 
-            <Label Text="Pregled servisa" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Text="Pregled servisa" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8"></Label>
 
 
-            <Label Text="Izaberite raspon datuma za prikaz servisa (Od-Do):" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
-            <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged"></DatePicker>
-            <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged"></DatePicker>
-
+            <Label Text="Izaberite raspon datuma za prikaz servisa (Od-Do):" FontSize="11" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged" ></DatePicker>
+                <Label Text="_" VerticalOptions="Center"></Label>
+                <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged" ></DatePicker>
+            </StackLayout>
 
 
             <StackLayout Margin="5">
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Prikazi servise u toku" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    <Label Text="Prikazi servise u toku" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
                     <Switch x:Name="uTokuSw" PropertyChanged="uTokuSw_PropertyChanged"></Switch>
 
-                    <Label Text=" |  Prikazi zavrsene servise" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    <Label Text=" |   Prikazi zavrsene servise" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
                     <Switch x:Name="zavrseniSw" PropertyChanged="zavrseniSw_PropertyChanged"></Switch>
                 </StackLayout>
 
             </StackLayout>
 
-            <Label Text="Kliknite na servis za vise detalja" Margin="5" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
+            <Label Text="Kliknite na servis za vise detalja" Margin="9" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
 
 
 
 
 
-            <ListView x:Name="servisiList" RowHeight="70" Margin="6" ItemTapped="servisiList_ItemTapped" BackgroundColor="LightGray">
+            <ListView x:Name="servisiList" RowHeight="50" Margin="6" ItemTapped="servisiList_ItemTapped" BackgroundColor="LightGray">
 
                 <ListView.Header>
 
-                    <Grid   Margin="6" BackgroundColor="#13818d" HeightRequest="66" Padding="5">
+                    <Grid   Margin="6" BackgroundColor="#13818d" HeightRequest="50" Padding="5">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
@@ -47,10 +49,10 @@
 
                         </Grid.ColumnDefinitions>
 
-                        <Label Text="Naziv kompanije:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold" TextColor="White"></Label>
-                        <Label Text="Datum prihvatanja servisa:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
-                        <Label Text="Datum pocetka servisa:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
-                        <Label Text="Datum zavrsetka servisa:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"></Label>
+                        <Label Text="Naziv kompanije:" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="90" FontAttributes="Bold" TextColor="White" FontSize="11"></Label>
+                        <Label Text="Datum prihvatanja servisa:" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="11"></Label>
+                        <Label Text="Datum pocetka servisa:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="11"></Label>
+                        <Label Text="Datum zavrsetka servisa:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="11"></Label>
                     </Grid>
 
                 </ListView.Header>
@@ -69,15 +71,15 @@
                                 </Grid.ColumnDefinitions>
 
 
-                                <Label Text="{Binding Naziv_kompanije}" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+                                <Label Text="{Binding Naziv_kompanije}" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="10"/>
 
-                                <Label Text="{Binding DatumPrihvatanjaS}"  Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+                                <Label Text="{Binding DatumPrihvatanjaS}"  Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="9"/>
                                 <!--<DatePicker BindingContext="{Binding DatumPrihvatanja}" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"  />-->
 
-                                <Label Text="{Binding DatumPocetkaS}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding DatumPocetkaS}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="8"/>
                                 <!--<DatePicker BindingContext="{Binding DatumPocetka}" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"  />-->
 
-                                <Label Text="{Binding DatumZavrsetkaS}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+                                <Label Text="{Binding DatumZavrsetkaS}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="8" />
                                 <!--<DatePicker BindingContext="{Binding DatumZavrsetka}" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"  />-->
 
                                 <!--<Label Text="{Binding TrajanjeSati}" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />-->

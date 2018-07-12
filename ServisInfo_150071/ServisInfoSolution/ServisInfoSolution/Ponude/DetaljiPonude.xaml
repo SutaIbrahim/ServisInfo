@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.DetaljiPonude">
-    <ScrollView Margin="20">
+    <ScrollView Margin="10">
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label x:Name="ponudaIDLbl" Text="Detalji o ponudi ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="40" FontAttributes="Bold"></Label>
+            <Label x:Name="ponudaIDLbl" Text="Detalji o ponudi ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="25" FontAttributes="Bold"></Label>
             
 
             <Grid >
@@ -15,15 +15,15 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
@@ -46,7 +46,7 @@
                 <Label x:Name="KategorijaLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  Grid.Row="5" Grid.Column="1" ></Label>
 
                 <Label Text="Odgovor:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" ></Label>
-                <Label x:Name="OdgovorLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"  Grid.Row="6" Grid.Column="1"  HeightRequest="150"></Label>
+                <Label x:Name="OdgovorLbl" Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"  Grid.Row="6" Grid.Column="1"  HeightRequest="135"></Label>
 
                 <Label Text="Predlozena cijena:" FontAttributes="Bold" Grid.Row="7"  Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" ></Label>
                 <Label x:Name="CijenaLbl"  Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"  Grid.Row="7" Grid.Column="1" ></Label>
