@@ -87,5 +87,19 @@ namespace ServisInfo_UI.Ponude
                 Servisi.DetaljiServisa frm=new Servisi.DetaljiServisa(response.Content.ReadAsAsync<int>().Result);
                 frm.ShowDialog();
         }
+
+        private void obrisiBtn_Click(object sender, EventArgs e)
+        {
+            if (p.Prihvacena)
+            {
+                MessageBox.Show("Ponudu nije moguce obrisati jer je vec prihvacena", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                PonudeService.DeleteResponse(p.PonudaID.ToString());
+                MessageBox.Show("Ponuda je uspjesno izbrisana", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
     }
 }

@@ -53,6 +53,7 @@
             this.CijenaLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.servisBtn = new System.Windows.Forms.Button();
+            this.obrisiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // KategorijaLbl
@@ -307,11 +308,22 @@
             this.servisBtn.UseVisualStyleBackColor = true;
             this.servisBtn.Click += new System.EventHandler(this.servisBtn_Click);
             // 
+            // obrisiBtn
+            // 
+            this.obrisiBtn.Location = new System.Drawing.Point(523, 103);
+            this.obrisiBtn.Name = "obrisiBtn";
+            this.obrisiBtn.Size = new System.Drawing.Size(83, 24);
+            this.obrisiBtn.TabIndex = 58;
+            this.obrisiBtn.Text = "Obrisi ponudu";
+            this.obrisiBtn.UseVisualStyleBackColor = true;
+            this.obrisiBtn.Click += new System.EventHandler(this.obrisiBtn_Click);
+            // 
             // DetaljiPonude
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 597);
+            this.Controls.Add(this.obrisiBtn);
             this.Controls.Add(this.servisBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CijenaLbl);
@@ -375,5 +387,6 @@
         private System.Windows.Forms.Label CijenaLbl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button servisBtn;
+        private System.Windows.Forms.Button obrisiBtn;
     }
 }

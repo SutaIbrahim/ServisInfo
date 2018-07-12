@@ -185,7 +185,7 @@ namespace ServisInfoSolution.Kompanija
 
             if (postoji)
             {
-                Button.BackgroundColor = Color.Red;
+                Button.BackgroundColor = Color.OrangeRed;
                 Button.Text = "Ukloni";
             }
             else

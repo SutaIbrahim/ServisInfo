@@ -83,7 +83,7 @@
             HeightRequest="1" 
             BackgroundColor="Black" 
             HorizontalOptions="FillAndExpand" 
-            Margin="10"
+            Margin="8"
                     />
                 <Label />
             </StackLayout>
@@ -92,7 +92,7 @@
             <!--recommender-->
             <Label x:Name="poruka2Lbl" Text="Preporucene kompanije:" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
 
-            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="60" ItemTapped="kompanijeList_ItemTapped" Margin="20" >
+            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="60" ItemTapped="kompanijeList_ItemTapped" Margin="10" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
