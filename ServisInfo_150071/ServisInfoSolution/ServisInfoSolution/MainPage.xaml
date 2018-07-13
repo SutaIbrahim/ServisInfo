@@ -11,6 +11,7 @@
 
     <ContentPage.Content>
         <StackLayout  Padding="30">
+            <Label x:Name="porukaLbl" Text="Povucite prema desno za prikaz menija" FontSize="9" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Margin="2" TextColor="DarkGray"></Label>
 
             <Picker x:Name="kategorijePicker" Title="Odaberite kategoriju" SelectedIndexChanged="kategorijePicker_SelectedIndexChanged"></Picker>
             <Picker x:Name="gradoviPicker" Title="Izaberite grad" SelectedIndexChanged="gradoviPicker_SelectedIndexChanged"></Picker>

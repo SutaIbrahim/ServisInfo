@@ -208,6 +208,7 @@
             this.GradoviCmb.Name = "GradoviCmb";
             this.GradoviCmb.Size = new System.Drawing.Size(157, 21);
             this.GradoviCmb.TabIndex = 18;
+            this.GradoviCmb.Validating += new System.ComponentModel.CancelEventHandler(this.GradoviCmb_Validating);
             // 
             // groupBox2
             // 

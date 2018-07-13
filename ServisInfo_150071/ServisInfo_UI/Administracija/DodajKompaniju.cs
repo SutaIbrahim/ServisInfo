@@ -31,10 +31,12 @@ namespace ServisInfo_UI.Administracija
             HttpResponseMessage response = GradoviService.GetResponse();
             if (response.IsSuccessStatusCode)
             {
-                GradoviCmb.DataSource = response.Content.ReadAsAsync<List<Gradovi>>().Result;
+                List<Gradovi> g = response.Content.ReadAsAsync<List<Gradovi>>().Result;
+                g.Insert(0, new Gradovi());
+
+                GradoviCmb.DataSource = g;
                 GradoviCmb.DisplayMember = "Naziv";
                 GradoviCmb.ValueMember = "GradID";
-                GradoviCmb.SelectedIndex = 0;
             }
 
         }
@@ -67,10 +69,11 @@ namespace ServisInfo_UI.Administracija
                 }
                 else
                 {
-                    string msg = response.ReasonPhrase;
+                    MessageBox.Show("Korisnicko ime ili email su zauzeti", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    MessageBox.Show("Error Code" +
-                    response.StatusCode + " : Message - " + msg);
+                    //string msg = response.ReasonPhrase;
+                    //MessageBox.Show("Error Code" +
+                    //response.StatusCode + " : Message - " + msg);
                 }
             }
         }
@@ -166,6 +169,17 @@ namespace ServisInfo_UI.Administracija
                     errorProvider.SetError(EmailTxt, Messages.email_err);
                 }
             }
+        }
+
+        private void GradoviCmb_Validating(object sender, CancelEventArgs e)
+        {
+            if (GradoviCmb.SelectedValue == null || GradoviCmb.SelectedIndex == 0)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(GradoviCmb, "Odaberite grad");
+            }
+            else
+                errorProvider.SetError(GradoviCmb, null);
         }
     }
 }

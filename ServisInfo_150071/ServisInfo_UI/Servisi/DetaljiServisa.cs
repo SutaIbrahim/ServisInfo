@@ -109,7 +109,6 @@ namespace ServisInfo_UI.Servisi
                     DatumZavrsetkaLbl.Hide();
                     ZavrsiBtn.Show();
                     DatumZavrsetkaLbl.Hide();
-                    label5.Hide();
                    // TrajanjeLbl.Hide();
                 }
                 else
@@ -121,7 +120,6 @@ namespace ServisInfo_UI.Servisi
                     CijenaTxt.Text = s.Cijena.ToString();
                     NapomenaLbl.Hide();
                     ZavrsiBtn.Hide();
-                    label5.Show();
                    // TrajanjeLbl.Show();
                    // TrajanjeLbl.Text = s.TrajanjeDani.ToString();
                     IzvjestajBtn.Show();

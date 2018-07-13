@@ -312,7 +312,7 @@
             // 
             // obrisiBtn
             // 
-            this.obrisiBtn.Location = new System.Drawing.Point(523, 103);
+            this.obrisiBtn.Location = new System.Drawing.Point(454, 105);
             this.obrisiBtn.Name = "obrisiBtn";
             this.obrisiBtn.Size = new System.Drawing.Size(83, 24);
             this.obrisiBtn.TabIndex = 58;
