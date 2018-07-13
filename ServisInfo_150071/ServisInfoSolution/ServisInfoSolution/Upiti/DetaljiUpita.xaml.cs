@@ -21,7 +21,7 @@ namespace ServisInfoSolution
         private WebAPIHelper kompanijeUpitiService = new WebAPIHelper(Global.APIAdress, "api/KompanijeUpiti");
         private WebAPIHelper ponudeService = new WebAPIHelper(Global.APIAdress, "api/Ponude");
 
-
+        bool zatvori;
 
         private int upitID;
         public DetaljiUpita(int upitID)
@@ -33,6 +33,7 @@ namespace ServisInfoSolution
 
         protected override void OnAppearing()
         {
+            zatvori = true;
             Fill();
         }
 
@@ -69,50 +70,54 @@ namespace ServisInfoSolution
             }
         }
 
-        private void IzbtisiBtn_Clicked(object sender, EventArgs e)
+        private async void IzbtisiBtn_Clicked(object sender, EventArgs e)
         {
 
-            HttpResponseMessage provjera = ponudeService.GetActionResponse("provjeriOdgovor", upitID.ToString()); // da li je ijedna kompanija odgovorila na upit
-            bool postoji = true;
-            if (provjera.IsSuccessStatusCode)
+            var answer = await DisplayAlert("Upozorenje", "Jeste li sigurni da zelite izbrisati upit?", "Da", "Ne");
+            if (answer)
             {
-                var jsonObject = provjera.Content.ReadAsStringAsync();
-                postoji = JsonConvert.DeserializeObject<bool>(jsonObject.Result);
-            }
-
-
-            if (!postoji)
-            {
-                HttpResponseMessage response = kompanijeUpitiService.GetActionResponse("GetKU", upitID.ToString());
-                if (response.IsSuccessStatusCode)
+                HttpResponseMessage provjera = ponudeService.GetActionResponse("provjeriOdgovor", upitID.ToString()); // da li je ijedna kompanija odgovorila na upit
+                bool postoji = true;
+                if (provjera.IsSuccessStatusCode)
                 {
-                    var jsonObject = response.Content.ReadAsStringAsync();
-                    List<KompanijeUpiti> ku = JsonConvert.DeserializeObject<List<KompanijeUpiti>>(jsonObject.Result);
-
-                    foreach (var x in ku)
-                    {
-                        kompanijeUpitiService.DeleteResponse(x.KompanijaUpitID.ToString());
-                    }
-
-                    HttpResponseMessage response2 = upitiService.DeleteResponse(upitID.ToString());
-
-                    if (response2.IsSuccessStatusCode)
-                    {
-                        DisplayAlert("", "Upit je uspjesno izbrisan", "OK");
-                        this.Navigation.PopAsync();
-                    }
-                    else
-                    {
-                        DisplayAlert("Greska", "Doslo je do greske", "OK");
-                    }
-
+                    var jsonObject = provjera.Content.ReadAsStringAsync();
+                    postoji = JsonConvert.DeserializeObject<bool>(jsonObject.Result);
                 }
-            }
-            else
-            {
-                DisplayAlert("Greska", "Upit nije moguce izbrisati jer je minimalno jedna kompanija kreirala upit", "OK");
-            }
 
+
+                if (!postoji)
+                {
+                    HttpResponseMessage response = kompanijeUpitiService.GetActionResponse("GetKU", upitID.ToString());
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var jsonObject = response.Content.ReadAsStringAsync();
+                        List<KompanijeUpiti> ku = JsonConvert.DeserializeObject<List<KompanijeUpiti>>(jsonObject.Result);
+
+                        foreach (var x in ku)
+                        {
+                            kompanijeUpitiService.DeleteResponse(x.KompanijaUpitID.ToString());
+                        }
+
+                        HttpResponseMessage response2 = upitiService.DeleteResponse(upitID.ToString());
+
+                        if (response2.IsSuccessStatusCode)
+                        {
+                            DisplayAlert("", "Upit je uspjesno izbrisan", "OK");
+                            this.Navigation.PopAsync();
+                        }
+                        else
+                        {
+                            DisplayAlert("Greska", "Doslo je do greske", "OK");
+                        }
+
+                    }
+                }
+                else
+                {
+                    DisplayAlert("Greska", "Upit nije moguce izbrisati jer je minimalno jedna kompanija kreirala upit", "OK");
+                }
+
+            }
         }
 
 

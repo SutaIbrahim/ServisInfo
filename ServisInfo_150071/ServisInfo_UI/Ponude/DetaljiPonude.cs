@@ -72,7 +72,7 @@ namespace ServisInfo_UI.Ponude
                 servisBtn.Hide();
             }
         }
-    
+
         private void NazadBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -83,27 +83,31 @@ namespace ServisInfo_UI.Ponude
         {
             HttpResponseMessage response = ServisiService.GetActionResponse("GetServisByPonudaID", PonudaID.ToString());
 
-                Servisi.DetaljiServisa frm=new Servisi.DetaljiServisa(response.Content.ReadAsAsync<int>().Result);
-                frm.ShowDialog();
+            Servisi.DetaljiServisa frm = new Servisi.DetaljiServisa(response.Content.ReadAsAsync<int>().Result);
+            frm.ShowDialog();
         }
 
         private void obrisiBtn_Click(object sender, EventArgs e)
         {
-            if (p.Prihvacena)
+            var answer = MessageBox.Show("Jeste li sigurni da zelite izbrisati", "Upozorenje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (answer == DialogResult.Yes)
             {
-                MessageBox.Show("Ponudu nije moguce obrisati jer je vec prihvacena", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-               HttpResponseMessage r= PonudeService.DeleteResponse(p.PonudaID.ToString());
-                if (r.IsSuccessStatusCode)
+                if (p.Prihvacena)
                 {
-                    MessageBox.Show("Ponuda je uspjesno izbrisana", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    MessageBox.Show("Ponudu nije moguce obrisati jer je vec prihvacena", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    MessageBox.Show("Doslo je do greske u komunikaciji", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HttpResponseMessage r = PonudeService.DeleteResponse(p.PonudaID.ToString());
+                    if (r.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Ponuda je uspjesno izbrisana", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Doslo je do greske u komunikaciji", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
