@@ -48,32 +48,38 @@ namespace ServisInfo_UI.Upiti
 
         private void FillForm()
         {
-            DatumLbl.Text = u.Datum_upita.ToString();
-            MarkaLbl.Text = u.Marka_uredjaja;
-            ModelLbl.Text = u.Model_uredjaja;
-            OdLbl.Text = u.ZeljeniDatumPrijemaOd.ToString();
-            DoLbl.Text = u.ZeljeniDatumPrijemaDo.ToString();
-            KlijentLbl.Text = u.NazivKlijenta;
-            OpisTxt.Text = u.Opis_kvara;
-            UpitIDLbl.Text = UID.ToString();
-            KategorijaLbl.Text = u.Naziv_kategorije;
-
-            UcitajSliku();
-
-
-            if (u.Odgovoreno == true)
+            if (u != null)
             {
-                KreirajPonuduBtn.Hide();
-                DaLbl.Text = "DA";
-                NeLbl.Hide();
+                DatumLbl.Text = u.Datum_upita.ToString();
+                MarkaLbl.Text = u.Marka_uredjaja;
+                ModelLbl.Text = u.Model_uredjaja;
+                OdLbl.Text = u.ZeljeniDatumPrijemaOd.ToString();
+                DoLbl.Text = u.ZeljeniDatumPrijemaDo.ToString();
+                KlijentLbl.Text = u.NazivKlijenta;
+                OpisTxt.Text = u.Opis_kvara;
+                UpitIDLbl.Text = UID.ToString();
+                KategorijaLbl.Text = u.Naziv_kategorije;
+
+                UcitajSliku();
+
+
+                if (u.Odgovoreno == true)
+                {
+                    KreirajPonuduBtn.Hide();
+                    DaLbl.Text = "DA";
+                    NeLbl.Hide();
+                }
+                else
+                {
+                    PregledajPonuduBtn.Hide();
+                    DaLbl.Hide();
+                    NeLbl.Text = "NE";
+                }
             }
             else
             {
-                PregledajPonuduBtn.Hide();
-                DaLbl.Hide();
-                NeLbl.Text = "NE";
+                MessageBox.Show("Greska","",MessageBoxButtons.OK);
             }
-
         }
 
         private void UcitajSliku()

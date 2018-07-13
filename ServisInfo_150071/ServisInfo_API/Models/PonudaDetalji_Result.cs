@@ -28,5 +28,6 @@ namespace ServisInfo_API.Models
         public string Klijent_ime_i_prezime { get; set; }
         public Nullable<int> KategorijaID { get; set; }
         public string Naziv { get; set; }
+        public string Uredjaj { get; set; }
     }
 }

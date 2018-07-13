@@ -1219,6 +1219,7 @@
           <Property Type="String" Name="Klijent_ime_i_prezime" Nullable="false" MaxLength="101" />
           <Property Type="Int32" Name="KategorijaID" Nullable="true" />
           <Property Type="String" Name="Naziv" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Uredjaj" Nullable="false" MaxLength="101" />
         </ComplexType>
         <ComplexType Name="KompanijaUpiti_Result">
           <Property Type="Int32" Name="UpitID" Nullable="false" />
@@ -1589,6 +1590,7 @@
                 <ScalarProperty Name="Klijent_ime_i_prezime" ColumnName="Klijent ime i prezime" />
                 <ScalarProperty Name="KategorijaID" ColumnName="KategorijaID" />
                 <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Uredjaj" ColumnName="Uredjaj" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

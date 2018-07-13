@@ -54,6 +54,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.servisBtn = new System.Windows.Forms.Button();
             this.obrisiBtn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.UredjajTxt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // KategorijaLbl
@@ -81,7 +83,7 @@
             this.DaLbl.AutoSize = true;
             this.DaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DaLbl.ForeColor = System.Drawing.Color.Green;
-            this.DaLbl.Location = new System.Drawing.Point(546, 171);
+            this.DaLbl.Location = new System.Drawing.Point(199, 206);
             this.DaLbl.Name = "DaLbl";
             this.DaLbl.Size = new System.Drawing.Size(52, 16);
             this.DaLbl.TabIndex = 46;
@@ -92,7 +94,7 @@
             this.NeLbl.AutoSize = true;
             this.NeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NeLbl.ForeColor = System.Drawing.Color.Red;
-            this.NeLbl.Location = new System.Drawing.Point(546, 171);
+            this.NeLbl.Location = new System.Drawing.Point(199, 206);
             this.NeLbl.Name = "NeLbl";
             this.NeLbl.Size = new System.Drawing.Size(52, 16);
             this.NeLbl.TabIndex = 45;
@@ -162,7 +164,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(421, 171);
+            this.label10.Location = new System.Drawing.Point(24, 207);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 15);
             this.label10.TabIndex = 35;
@@ -318,11 +320,33 @@
             this.obrisiBtn.UseVisualStyleBackColor = true;
             this.obrisiBtn.Click += new System.EventHandler(this.obrisiBtn_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(451, 171);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 15);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "Uredjaj:";
+            // 
+            // UredjajTxt
+            // 
+            this.UredjajTxt.AutoSize = true;
+            this.UredjajTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UredjajTxt.Location = new System.Drawing.Point(546, 171);
+            this.UredjajTxt.Name = "UredjajTxt";
+            this.UredjajTxt.Size = new System.Drawing.Size(52, 16);
+            this.UredjajTxt.TabIndex = 60;
+            this.UredjajTxt.Text = "label12";
+            // 
             // DetaljiPonude
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 597);
+            this.Controls.Add(this.UredjajTxt);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.obrisiBtn);
             this.Controls.Add(this.servisBtn);
             this.Controls.Add(this.label5);
@@ -388,5 +412,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button servisBtn;
         private System.Windows.Forms.Button obrisiBtn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label UredjajTxt;
     }
 }

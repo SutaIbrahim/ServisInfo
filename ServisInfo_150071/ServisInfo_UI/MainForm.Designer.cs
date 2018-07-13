@@ -179,7 +179,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(15, 405);
+            this.label3.Location = new System.Drawing.Point(16, 405);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 24);
             this.label3.TabIndex = 5;
@@ -189,7 +189,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(579, 405);
+            this.label4.Location = new System.Drawing.Point(591, 405);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 24);
             this.label4.TabIndex = 6;
@@ -199,7 +199,7 @@
             // 
             this.UpitiLbl.AutoSize = true;
             this.UpitiLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitiLbl.Location = new System.Drawing.Point(234, 405);
+            this.UpitiLbl.Location = new System.Drawing.Point(235, 405);
             this.UpitiLbl.Name = "UpitiLbl";
             this.UpitiLbl.Size = new System.Drawing.Size(40, 24);
             this.UpitiLbl.TabIndex = 8;
@@ -209,7 +209,7 @@
             // 
             this.DatumLbl.AutoSize = true;
             this.DatumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumLbl.Location = new System.Drawing.Point(660, 172);
+            this.DatumLbl.Location = new System.Drawing.Point(672, 172);
             this.DatumLbl.Name = "DatumLbl";
             this.DatumLbl.Size = new System.Drawing.Size(62, 24);
             this.DatumLbl.TabIndex = 9;
@@ -252,7 +252,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(579, 172);
+            this.label6.Location = new System.Drawing.Point(591, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 13;
@@ -262,7 +262,7 @@
             // 
             this.BrojServisaLbl.AutoSize = true;
             this.BrojServisaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BrojServisaLbl.Location = new System.Drawing.Point(726, 405);
+            this.BrojServisaLbl.Location = new System.Drawing.Point(738, 405);
             this.BrojServisaLbl.Name = "BrojServisaLbl";
             this.BrojServisaLbl.Size = new System.Drawing.Size(40, 24);
             this.BrojServisaLbl.TabIndex = 14;
@@ -324,7 +324,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(276, 172);
+            this.label7.Location = new System.Drawing.Point(304, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(178, 24);
             this.label7.TabIndex = 40;
@@ -334,7 +334,7 @@
             // 
             this.prosjekLbl.AutoSize = true;
             this.prosjekLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.prosjekLbl.Location = new System.Drawing.Point(460, 172);
+            this.prosjekLbl.Location = new System.Drawing.Point(488, 172);
             this.prosjekLbl.Name = "prosjekLbl";
             this.prosjekLbl.Size = new System.Drawing.Size(40, 24);
             this.prosjekLbl.TabIndex = 41;

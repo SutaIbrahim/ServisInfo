@@ -20,6 +20,8 @@ namespace ServisInfo_API.Util
             List<Ocjene> zajedniceOcjene2 = new List<Ocjene>();
             List<KompanijeDetalji_Result> preporuceneKompanije = new List<KompanijeDetalji_Result>();
 
+
+            //preporuci slicne kompanije
             foreach (var x in kompanijeDict)
             {
                 foreach (var o in ocjenePosmatraneKompanije)
@@ -29,7 +31,6 @@ namespace ServisInfo_API.Util
                         zajedniceOcjene1.Add(o);
                         zajedniceOcjene2.Add(x.Value.Where(i => i.KlijentID == o.KlijentID).First());
                     }
-                    //41:30 yt
                 }
                 double slicnost = GetSlicnost(zajedniceOcjene1, zajedniceOcjene2);
                 if (slicnost > 0.85)
@@ -41,7 +42,6 @@ namespace ServisInfo_API.Util
             }
 
 
-
             if (preporuceneKompanije.Count() != 0)
             {
                 //sortiranje
@@ -49,7 +49,8 @@ namespace ServisInfo_API.Util
 
             }
 
-            //cold start
+            //cold start, ukoliko klijent jos nije ocijenio nijednu kompaniju -
+            //dodaj top 5 sa najvecom prosjecnom ocjenom
             else
             {
                 List<Kompanije> CS = new List<Kompanije>();
@@ -67,21 +68,63 @@ namespace ServisInfo_API.Util
 
             List<KompanijeDetalji_Result> filter = new List<KompanijeDetalji_Result>();
 
-            // select top 5
-            int brojac = 0;
-            foreach (var x in preporuceneKompanije)
+            //filtriraj prvih 5 i dodaj jednu kompaniju bez ocjene
+            if (preporuceneKompanije.Count > 5)
             {
-                filter.Add(x);
+                // select top 5
+                foreach (var x in preporuceneKompanije)
+                {
+                    filter.Add(x);
 
-                brojac++;
-                if (brojac > 4)
-                    break;
+                    if (filter.Count>=5)
+                        break;
+                }
+
+                //dodaj jednu kompaniju bez ocjene u listu -- 6. stavka
+                Kompanije bezOcjene = db.esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena(kompanijaID, kategorijaID).FirstOrDefault();
+                if (bezOcjene != null) // ako ne postoji kompanija bez ocjene
+                {
+                    filter.Add(db.esp_Kompanije_GetDetalji(bezOcjene.KompanijaID).First());
+                }
             }
+            else
+            {
+                // ukoliko nema toliko zajednickih kompanija i mal je broj ocjenjenih kompanija(cold start,pocetak rada aplikacije) popuni listu sa random kompanijama
+                foreach(var x in preporuceneKompanije)
+                {
+                    filter.Add(x);
+                }
 
+                int brojac = 0;
+                int loopStop = 0;
 
-            //dodaj jednu kompaniju bez ocjene u listu
-            Kompanije bezOcjene = db.esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena(kompanijaID, kategorijaID).FirstOrDefault();
-            filter.Add(db.esp_Kompanije_GetDetalji(bezOcjene.KompanijaID).First());
+                while (filter.Count < 6 && loopStop<100)
+                {
+                    //popuni listu random kompanijama bez ocjena
+                    Kompanije bezOcjene = db.esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena(kompanijaID, kategorijaID).FirstOrDefault();
+                    KompanijeDetalji_Result kd = db.esp_Kompanije_GetDetalji(bezOcjene.KompanijaID).First();
+
+                    bool postoji = false;
+                    foreach(var x in filter.ToList())
+                    {
+                        postoji = false;
+                        if (kd.KompanijaID == x.KompanijaID)// ukoliko vec postoji kompanija u listi, nemoj je dodavati
+                        {
+                            brojac--;
+                            postoji = true;
+                        }
+                    }
+
+                    if (postoji == false)
+                    {
+                        filter.Add(db.esp_Kompanije_GetDetalji(bezOcjene.KompanijaID).First());
+                    }
+
+                    brojac++;
+                    loopStop++; // zaustavi beskonacnu petlju ako vise nema kompanija na listi, lista preporucenih kompanija ce biti manja od 6
+                }
+
+            }
 
             return filter;
 
@@ -123,7 +166,6 @@ namespace ServisInfo_API.Util
 
             foreach (var x in kompanije)
             {
-
                 ocjene = db.esp_Ocjene_GetByKompanijaID(x.KompanijaID).ToList();
                 if (ocjene.Count > 0)
                 {
@@ -131,7 +173,6 @@ namespace ServisInfo_API.Util
                 }
             }
         }
-
 
 
     }

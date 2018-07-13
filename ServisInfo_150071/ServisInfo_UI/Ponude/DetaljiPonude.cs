@@ -57,7 +57,7 @@ namespace ServisInfo_UI.Ponude
             CijenaLbl.Text = p.Cijena.ToString();
             OdgovorTxt.Text = p.Odgovor;
             KategorijaLbl.Text = p.Naziv;
-            
+            UredjajTxt.Text = p.Uredjaj;
 
             if (p.Prihvacena == true)
             {

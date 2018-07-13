@@ -58,29 +58,68 @@ namespace ServisInfoSolution
             //otvaranje galerije -->> xam.plugin.media nuget 
             dodajSlikuBtn.Clicked += async (sender, args) =>
             {
-                if (!CrossMedia.Current.IsPickPhotoSupported)
-                {
-                    await DisplayAlert("x", "upload slika nije podrzan", "Ok");
-                    return;
-                }
 
-                var file = await CrossMedia.Current.PickPhotoAsync();
-                if (file == null)
-                    return;
-
-                slika.Source = ImageSource.FromStream(() => file.GetStream());
-                //
-                s = file.GetStream();
-                slika.HeightRequest = 240;
-
-                if (selected1 != -1) // dodano zbog androida 8.0 i 8.1 jer se nakon odabira slike resetuje odabir uredjaja
+                if (slika.Source == null)
                 {
-                    markaUredjajaPicker.SelectedIndex = selected1;
+                    if (!CrossMedia.Current.IsPickPhotoSupported)
+                    {
+                        await DisplayAlert("x", "upload slika nije podrzan", "Ok");
+                        return;
+                    }
+
+                    var file = await CrossMedia.Current.PickPhotoAsync();
+                    if (file == null)
+                    {
+                        if (selected1 != -1) // dodano zbog androida 8.0 i 8.1 jer se nakon odabira slike resetuje odabir uredjaja
+                        {
+                            markaUredjajaPicker.SelectedIndex = selected1;
+                        }
+                        if (selected2 != -1)
+                        {
+                            modelUredjajaPicker.SelectedIndex = selected2;
+                        }
+                        return;
+                    }
+
+                    //
+                    s = file.GetStream();
+
+                    if (s.Length >= 4000000) // ogranicenje 4mb, setovano u webconfig-u apija
+                    {
+                        slika.Source = null;
+                        await DisplayAlert("Greska !", "Velicina slike je veca od 4mb, izaberite manju sliku", "OK");
+                    }
+                    else
+                    {
+                        slika.Source = ImageSource.FromStream(() => file.GetStream()); // postavi sliku
+                        slika.HeightRequest = 240;
+                        dodajSlikuBtn.Text = "Ukloni sliku";
+                    }
+                    if (selected1 != -1) // dodano zbog androida 8.0 i 8.1 jer se nakon odabira slike resetuje odabir uredjaja
+                    {
+                        markaUredjajaPicker.SelectedIndex = selected1;
+                    }
+                    if (selected2 != -1)
+                    {
+                        modelUredjajaPicker.SelectedIndex = selected2;
+                    }
                 }
-                if (selected2 != -1)
+                else
                 {
-                    modelUredjajaPicker.SelectedIndex = selected2;
+                    if (selected1 != -1) // dodano zbog androida 8.0 i 8.1 jer se nakon odabira slike resetuje odabir uredjaja
+                    {
+                        markaUredjajaPicker.SelectedIndex = selected1;
+                    }
+                    if (selected2 != -1)
+                    {
+                        modelUredjajaPicker.SelectedIndex = selected2;
+                    }
+
+                    dodajSlikuBtn.Text = "Dodaj sliku";
+                    slika.Source = null;
+                    slika.HeightRequest = 35;
                 }
+               
             };
 
 
@@ -202,6 +241,10 @@ namespace ServisInfoSolution
                             DisplayAlert("Greska!", "Doslo je do greske u komunikaciji", "OK");
                         }
                     }
+                    else
+                    {
+                        DisplayAlert("Greska!", "Doslo je do greske u komunikaciji", "OK");
+                    }
                 }
             }
             else
@@ -222,6 +265,8 @@ namespace ServisInfoSolution
 
         private void dodajSlikuBtn_Clicked(object sender, EventArgs e)
         {
+          
+
         }
 
         private bool validacija()
