@@ -15,7 +15,7 @@ namespace ServisInfoSolution
 			InitializeComponent();
             Global.prvoPokretanje = true;
 
-            Global.APIAdress = "http://192.168.0.26/"; // setovanje API ADRESSE
+            Global.APIAdress = "http://192.168.0.19/"; // setovanje API ADRESSE
 
             MainPage = new Navigation.MasterDetailPage();
 

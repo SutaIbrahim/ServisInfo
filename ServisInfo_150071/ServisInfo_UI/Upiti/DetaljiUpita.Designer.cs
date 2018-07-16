@@ -335,8 +335,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(685, 909);
+            this.ClientSize = new System.Drawing.Size(685, 749);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.PregledajPonuduBtn);
             this.Controls.Add(this.UpitIDLbl);
@@ -365,7 +366,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(701, 948);
-            this.MinimumSize = new System.Drawing.Size(701, 948);
+            this.MinimumSize = new System.Drawing.Size(701, 726);
             this.Name = "DetaljiUpita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiUpita";
