@@ -327,7 +327,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 759);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(627, 749);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.PitanjeTxt);
@@ -355,7 +356,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.MaximumSize = new System.Drawing.Size(643, 798);
-            this.MinimumSize = new System.Drawing.Size(643, 798);
+            this.MinimumSize = new System.Drawing.Size(643, 766);
             this.Name = "KreirajPonudu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KreirajPonudu";
