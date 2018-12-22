@@ -91,12 +91,15 @@
             // 
             // PrikaziBtn
             // 
+            this.PrikaziBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.PrikaziBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PrikaziBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.PrikaziBtn.Location = new System.Drawing.Point(169, 73);
             this.PrikaziBtn.Name = "PrikaziBtn";
             this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
             this.PrikaziBtn.TabIndex = 5;
             this.PrikaziBtn.Text = "Prikaži";
-            this.PrikaziBtn.UseVisualStyleBackColor = true;
+            this.PrikaziBtn.UseVisualStyleBackColor = false;
             this.PrikaziBtn.Click += new System.EventHandler(this.PrikaziBtn_Click);
             // 
             // UpitiGrid
@@ -114,12 +117,15 @@
             // 
             // DetaljiBtn
             // 
+            this.DetaljiBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.DetaljiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DetaljiBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.DetaljiBtn.Location = new System.Drawing.Point(852, 88);
             this.DetaljiBtn.Name = "DetaljiBtn";
             this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
             this.DetaljiBtn.TabIndex = 7;
             this.DetaljiBtn.Text = "Prikaz detalja o upitu";
-            this.DetaljiBtn.UseVisualStyleBackColor = true;
+            this.DetaljiBtn.UseVisualStyleBackColor = false;
             this.DetaljiBtn.Click += new System.EventHandler(this.DetaljiBtn_Click);
             // 
             // label4
@@ -135,6 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(991, 489);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DetaljiBtn);

@@ -301,6 +301,10 @@
     <None Include="Resources\admin.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\services-background2.png" />
+    <None Include="Resources\blue-usb-cable-white-background-26939474.jpg" />
+    <None Include="Resources\appIcon2.png" />
+    <None Include="Resources\mobile-applications-icon-11.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

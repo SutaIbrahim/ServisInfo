@@ -37,22 +37,26 @@
             // 
             // SacuvajBtn
             // 
+            this.SacuvajBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.SacuvajBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SacuvajBtn.Location = new System.Drawing.Point(286, 406);
             this.SacuvajBtn.Name = "SacuvajBtn";
             this.SacuvajBtn.Size = new System.Drawing.Size(113, 42);
             this.SacuvajBtn.TabIndex = 0;
             this.SacuvajBtn.Text = "Sacuvaj promjene";
-            this.SacuvajBtn.UseVisualStyleBackColor = true;
+            this.SacuvajBtn.UseVisualStyleBackColor = false;
             this.SacuvajBtn.Click += new System.EventHandler(this.SacuvajBtn_Click);
             // 
             // OdustaniBtn
             // 
+            this.OdustaniBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.OdustaniBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.OdustaniBtn.Location = new System.Drawing.Point(27, 406);
             this.OdustaniBtn.Name = "OdustaniBtn";
             this.OdustaniBtn.Size = new System.Drawing.Size(114, 42);
             this.OdustaniBtn.TabIndex = 1;
             this.OdustaniBtn.Text = "Odustani";
-            this.OdustaniBtn.UseVisualStyleBackColor = true;
+            this.OdustaniBtn.UseVisualStyleBackColor = false;
             this.OdustaniBtn.Click += new System.EventHandler(this.OdustaniBtn_Click);
             // 
             // label1
@@ -84,6 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(424, 480);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.KategorijeList);

@@ -128,12 +128,14 @@
             // 
             // NazadBtn
             // 
+            this.NazadBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.NazadBtn.ForeColor = System.Drawing.SystemColors.Desktop;
             this.NazadBtn.Location = new System.Drawing.Point(55, 572);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(141, 37);
             this.NazadBtn.TabIndex = 22;
             this.NazadBtn.Text = "Nazad";
-            this.NazadBtn.UseVisualStyleBackColor = true;
+            this.NazadBtn.UseVisualStyleBackColor = false;
             this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
             // 
             // PonudaIDLbl
@@ -245,14 +247,15 @@
             // 
             // ZapocniBtn
             // 
+            this.ZapocniBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.ZapocniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ZapocniBtn.ForeColor = System.Drawing.Color.Green;
+            this.ZapocniBtn.ForeColor = System.Drawing.Color.Honeydew;
             this.ZapocniBtn.Location = new System.Drawing.Point(202, 467);
             this.ZapocniBtn.Name = "ZapocniBtn";
             this.ZapocniBtn.Size = new System.Drawing.Size(430, 142);
             this.ZapocniBtn.TabIndex = 36;
             this.ZapocniBtn.Text = "Započni servis";
-            this.ZapocniBtn.UseVisualStyleBackColor = true;
+            this.ZapocniBtn.UseVisualStyleBackColor = false;
             this.ZapocniBtn.Click += new System.EventHandler(this.ZapocniBtn_Click);
             // 
             // NijeZavrsenLbl
@@ -268,14 +271,15 @@
             // 
             // ZavrsiBtn
             // 
+            this.ZavrsiBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.ZavrsiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ZavrsiBtn.ForeColor = System.Drawing.Color.Green;
+            this.ZavrsiBtn.ForeColor = System.Drawing.Color.Honeydew;
             this.ZavrsiBtn.Location = new System.Drawing.Point(528, 487);
             this.ZavrsiBtn.Name = "ZavrsiBtn";
             this.ZavrsiBtn.Size = new System.Drawing.Size(216, 37);
             this.ZavrsiBtn.TabIndex = 38;
             this.ZavrsiBtn.Text = "Oznaci servis kao završen";
-            this.ZavrsiBtn.UseVisualStyleBackColor = true;
+            this.ZavrsiBtn.UseVisualStyleBackColor = false;
             this.ZavrsiBtn.Click += new System.EventHandler(this.ZavrsiBtn_Click);
             // 
             // NapomenaLbl
@@ -300,12 +304,15 @@
             // 
             // PonudaBtn
             // 
+            this.PonudaBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.PonudaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PonudaBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.PonudaBtn.Location = new System.Drawing.Point(287, 129);
             this.PonudaBtn.Name = "PonudaBtn";
             this.PonudaBtn.Size = new System.Drawing.Size(87, 27);
             this.PonudaBtn.TabIndex = 41;
             this.PonudaBtn.Text = "Prikazi ponudu";
-            this.PonudaBtn.UseVisualStyleBackColor = true;
+            this.PonudaBtn.UseVisualStyleBackColor = false;
             this.PonudaBtn.Click += new System.EventHandler(this.PonudaBtn_Click);
             // 
             // ocjena1Lbl
@@ -354,12 +361,14 @@
             // 
             // IzvjestajBtn
             // 
+            this.IzvjestajBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.IzvjestajBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.IzvjestajBtn.Location = new System.Drawing.Point(55, 449);
             this.IzvjestajBtn.Name = "IzvjestajBtn";
             this.IzvjestajBtn.Size = new System.Drawing.Size(141, 35);
             this.IzvjestajBtn.TabIndex = 47;
             this.IzvjestajBtn.Text = "Prikazi izvjestaj";
-            this.IzvjestajBtn.UseVisualStyleBackColor = true;
+            this.IzvjestajBtn.UseVisualStyleBackColor = false;
             this.IzvjestajBtn.Click += new System.EventHandler(this.IzvjestajBtn_Click);
             // 
             // uredjajLbl
@@ -405,6 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(785, 621);
             this.Controls.Add(this.upitTxt);
             this.Controls.Add(this.UredjajTxt);

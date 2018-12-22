@@ -170,23 +170,27 @@
             // 
             // KreirajBtn
             // 
-            this.KreirajBtn.ForeColor = System.Drawing.Color.Green;
+            this.KreirajBtn.BackColor = System.Drawing.Color.CadetBlue;
+            this.KreirajBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.KreirajBtn.ForeColor = System.Drawing.Color.White;
             this.KreirajBtn.Location = new System.Drawing.Point(481, 689);
             this.KreirajBtn.Name = "KreirajBtn";
             this.KreirajBtn.Size = new System.Drawing.Size(117, 48);
             this.KreirajBtn.TabIndex = 13;
             this.KreirajBtn.Text = "Kreiraj ponudu";
-            this.KreirajBtn.UseVisualStyleBackColor = true;
+            this.KreirajBtn.UseVisualStyleBackColor = false;
             this.KreirajBtn.Click += new System.EventHandler(this.KreirajBtn_Click);
             // 
             // OdustaniBtn
             // 
+            this.OdustaniBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.OdustaniBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.OdustaniBtn.Location = new System.Drawing.Point(349, 703);
             this.OdustaniBtn.Name = "OdustaniBtn";
             this.OdustaniBtn.Size = new System.Drawing.Size(116, 30);
             this.OdustaniBtn.TabIndex = 14;
             this.OdustaniBtn.Text = "Odustani";
-            this.OdustaniBtn.UseVisualStyleBackColor = true;
+            this.OdustaniBtn.UseVisualStyleBackColor = false;
             this.OdustaniBtn.Click += new System.EventHandler(this.OdustaniBtn_Click);
             // 
             // NajranijiPrijemDateTime
@@ -328,6 +332,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(627, 749);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);

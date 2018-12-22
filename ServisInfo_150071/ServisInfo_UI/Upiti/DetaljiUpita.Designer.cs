@@ -220,6 +220,7 @@
             // 
             // OpisTxt
             // 
+            this.OpisTxt.BackColor = System.Drawing.Color.AliceBlue;
             this.OpisTxt.Location = new System.Drawing.Point(35, 244);
             this.OpisTxt.Multiline = true;
             this.OpisTxt.Name = "OpisTxt";
@@ -242,12 +243,15 @@
             // 
             // NazadBtn
             // 
+            this.NazadBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.NazadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NazadBtn.ForeColor = System.Drawing.SystemColors.ControlText;
             this.NazadBtn.Location = new System.Drawing.Point(35, 848);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(149, 37);
             this.NazadBtn.TabIndex = 21;
             this.NazadBtn.Text = "Nazad";
-            this.NazadBtn.UseVisualStyleBackColor = true;
+            this.NazadBtn.UseVisualStyleBackColor = false;
             this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
             // 
             // NeLbl
@@ -314,13 +318,15 @@
             // 
             // PregledajPonuduBtn
             // 
+            this.PregledajPonuduBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.PregledajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PregledajPonuduBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.PregledajPonuduBtn.Location = new System.Drawing.Point(473, 848);
             this.PregledajPonuduBtn.Name = "PregledajPonuduBtn";
             this.PregledajPonuduBtn.Size = new System.Drawing.Size(180, 37);
             this.PregledajPonuduBtn.TabIndex = 53;
             this.PregledajPonuduBtn.Text = "Pregledaj kreiranu ponudu";
-            this.PregledajPonuduBtn.UseVisualStyleBackColor = true;
+            this.PregledajPonuduBtn.UseVisualStyleBackColor = false;
             this.PregledajPonuduBtn.Click += new System.EventHandler(this.PregledajPonuduBtn_Click);
             // 
             // pictureBox
@@ -337,6 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(685, 749);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.PregledajPonuduBtn);

@@ -45,12 +45,14 @@
             // 
             // DetaljiBtn
             // 
+            this.DetaljiBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.DetaljiBtn.ForeColor = System.Drawing.Color.White;
             this.DetaljiBtn.Location = new System.Drawing.Point(852, 91);
             this.DetaljiBtn.Name = "DetaljiBtn";
             this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
             this.DetaljiBtn.TabIndex = 15;
             this.DetaljiBtn.Text = "Prikaz detalja o servisu";
-            this.DetaljiBtn.UseVisualStyleBackColor = true;
+            this.DetaljiBtn.UseVisualStyleBackColor = false;
             this.DetaljiBtn.Click += new System.EventHandler(this.DetaljiBtn_Click);
             // 
             // ServisiGrid
@@ -68,12 +70,15 @@
             // 
             // PrikaziBtn
             // 
+            this.PrikaziBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.PrikaziBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PrikaziBtn.ForeColor = System.Drawing.SystemColors.Window;
             this.PrikaziBtn.Location = new System.Drawing.Point(246, 76);
             this.PrikaziBtn.Name = "PrikaziBtn";
             this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
             this.PrikaziBtn.TabIndex = 13;
             this.PrikaziBtn.Text = "Prikaži";
-            this.PrikaziBtn.UseVisualStyleBackColor = true;
+            this.PrikaziBtn.UseVisualStyleBackColor = false;
             this.PrikaziBtn.Click += new System.EventHandler(this.PrikaziBtn_Click);
             // 
             // DoDtm
@@ -159,6 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(991, 489);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ZavrseniChck);

@@ -41,27 +41,33 @@
             // 
             // odustaniButton
             // 
+            this.odustaniButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.odustaniButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.odustaniButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.odustaniButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.odustaniButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.odustaniButton.Location = new System.Drawing.Point(148, 218);
+            this.odustaniButton.Location = new System.Drawing.Point(130, 219);
             this.odustaniButton.Name = "odustaniButton";
             this.odustaniButton.Size = new System.Drawing.Size(81, 30);
             this.odustaniButton.TabIndex = 17;
             this.odustaniButton.Text = "Odustani";
             this.odustaniButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.odustaniButton.UseVisualStyleBackColor = true;
+            this.odustaniButton.UseVisualStyleBackColor = false;
             this.odustaniButton.Click += new System.EventHandler(this.odustaniButton_Click);
             // 
             // potvrdiButton
             // 
+            this.potvrdiButton.BackColor = System.Drawing.Color.SteelBlue;
             this.potvrdiButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.potvrdiButton.Location = new System.Drawing.Point(235, 218);
+            this.potvrdiButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.potvrdiButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.potvrdiButton.Location = new System.Drawing.Point(217, 207);
             this.potvrdiButton.Name = "potvrdiButton";
-            this.potvrdiButton.Size = new System.Drawing.Size(81, 30);
+            this.potvrdiButton.Size = new System.Drawing.Size(99, 41);
             this.potvrdiButton.TabIndex = 16;
             this.potvrdiButton.Text = "Potvrdi";
             this.potvrdiButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.potvrdiButton.UseVisualStyleBackColor = true;
+            this.potvrdiButton.UseVisualStyleBackColor = false;
             this.potvrdiButton.Click += new System.EventHandler(this.potvrdiButton_Click);
             // 
             // lozinkaInput
@@ -124,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(346, 261);
             this.ControlBox = false;
             this.Controls.Add(this.label3);

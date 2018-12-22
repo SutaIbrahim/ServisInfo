@@ -102,12 +102,15 @@
             // 
             // NazadBtn
             // 
+            this.NazadBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.NazadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NazadBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.NazadBtn.Location = new System.Drawing.Point(23, 530);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(149, 37);
             this.NazadBtn.TabIndex = 44;
             this.NazadBtn.Text = "Nazad";
-            this.NazadBtn.UseVisualStyleBackColor = true;
+            this.NazadBtn.UseVisualStyleBackColor = false;
             this.NazadBtn.Click += new System.EventHandler(this.NazadBtn_Click);
             // 
             // OdgovorTxt
@@ -302,22 +305,26 @@
             // 
             // servisBtn
             // 
+            this.servisBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.servisBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.servisBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.servisBtn.Location = new System.Drawing.Point(487, 530);
             this.servisBtn.Name = "servisBtn";
             this.servisBtn.Size = new System.Drawing.Size(145, 37);
             this.servisBtn.TabIndex = 57;
             this.servisBtn.Text = "Otvori kreirani servis";
-            this.servisBtn.UseVisualStyleBackColor = true;
+            this.servisBtn.UseVisualStyleBackColor = false;
             this.servisBtn.Click += new System.EventHandler(this.servisBtn_Click);
             // 
             // obrisiBtn
             // 
+            this.obrisiBtn.BackColor = System.Drawing.Color.Tomato;
             this.obrisiBtn.Location = new System.Drawing.Point(454, 105);
             this.obrisiBtn.Name = "obrisiBtn";
             this.obrisiBtn.Size = new System.Drawing.Size(83, 24);
             this.obrisiBtn.TabIndex = 58;
             this.obrisiBtn.Text = "Obrisi ponudu";
-            this.obrisiBtn.UseVisualStyleBackColor = true;
+            this.obrisiBtn.UseVisualStyleBackColor = false;
             this.obrisiBtn.Click += new System.EventHandler(this.obrisiBtn_Click);
             // 
             // label8
@@ -344,6 +351,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(660, 597);
             this.Controls.Add(this.UredjajTxt);
             this.Controls.Add(this.label8);

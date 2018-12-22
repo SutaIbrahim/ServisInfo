@@ -92,6 +92,9 @@
             // 
             // sacuvajButton
             // 
+            this.sacuvajButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.sacuvajButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sacuvajButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.sacuvajButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sacuvajButton.Location = new System.Drawing.Point(212, 311);
             this.sacuvajButton.Name = "sacuvajButton";
@@ -99,7 +102,7 @@
             this.sacuvajButton.TabIndex = 59;
             this.sacuvajButton.Text = "Sačuvaj";
             this.sacuvajButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sacuvajButton.UseVisualStyleBackColor = true;
+            this.sacuvajButton.UseVisualStyleBackColor = false;
             this.sacuvajButton.Click += new System.EventHandler(this.sacuvajButton_Click);
             // 
             // emailInput
@@ -163,6 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(374, 389);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.telefonInput);

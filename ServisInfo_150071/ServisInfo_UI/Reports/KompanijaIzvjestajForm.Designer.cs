@@ -84,19 +84,22 @@
             // 
             // KreirajBtn
             // 
+            this.KreirajBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.KreirajBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.KreirajBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.KreirajBtn.Location = new System.Drawing.Point(179, 165);
             this.KreirajBtn.Name = "KreirajBtn";
             this.KreirajBtn.Size = new System.Drawing.Size(125, 33);
             this.KreirajBtn.TabIndex = 5;
             this.KreirajBtn.Text = "Kreiraj izvjestaj";
-            this.KreirajBtn.UseVisualStyleBackColor = true;
+            this.KreirajBtn.UseVisualStyleBackColor = false;
             this.KreirajBtn.Click += new System.EventHandler(this.KreirajBtn_Click);
             // 
             // KompanijaIzvjestajForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(338, 217);
             this.Controls.Add(this.KreirajBtn);
             this.Controls.Add(this.label3);
