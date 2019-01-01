@@ -26,5 +26,6 @@ namespace ServisInfo_API.Models
         public Nullable<bool> Odgovoreno { get; set; }
         public string Naziv_kategorije { get; set; }
         public Nullable<int> KompanijaUpitID { get; set; }
+        public Nullable<int> KategorijaID { get; set; }
     }
 }

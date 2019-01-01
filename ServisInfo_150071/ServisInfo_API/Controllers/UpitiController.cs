@@ -36,6 +36,18 @@ namespace ServisInfo_API.App_Start
             return Ok(upiti);
         }
 
+        [HttpGet]
+        public IHttpActionResult GetOdgovoriByKategorijaId(int id)
+        {
+            List<Upiti> ponude = db.Upiti.Include(x => x.Ponude).Where(k => k.KategorijaID == id).ToList();
+            if (ponude == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(ponude);
+        }
+
         //desktop
         [HttpGet]
         [Route("api/Upiti/GetByDate/{kompanijaID}/{datum}/{datum2}")]

@@ -216,6 +216,9 @@
     <Compile Include="Models\Upiti.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UpitiByKategorijaId.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\UpitiKlijentByDate_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

@@ -11,6 +11,44 @@ namespace ServisInfo_UI.Util
 {
     public class UIHelper
     {
+        #region Prijedlog kvara
+        public static List<string> EventualniKvar(List<ServisInfo_API.Models.Ponude> p, string text)
+        {
+            var returnText = new List<string>();
+
+            #region Predefined 
+            if (text.Contains("bater"))
+            {
+                returnText.Add("Problem sa baterijom - Potrebno zamijeniti bateriju ukoliko je stara preko 2 godine ili je fizički oštećena");
+            }
+            if (text.Contains("ekr") || text.Contains("disp"))
+            {
+                returnText.Add("Problem sa ekranom - Provjerite konektore");
+            }
+            if (text.Contains("punjenj") || text.Contains("punit"))
+            {
+                returnText.Add("Problem sa micro USB konektorom ili kabelom za punjenje");
+            }
+            if (text.Contains("USB"))
+            {
+                returnText.Add("Zamijeniti USB kabal ili USB konektor");
+            }
+            #endregion
+
+            if (returnText.Count() < 3)
+            {
+                foreach (var x in p.Take(3))
+                {
+                    returnText.Add(x.Odgovor.Replace("Postovani,", ""));
+                }
+            }
+
+
+
+            return returnText;
+        }
+        #endregion
+
         #region Korisnici
         public static string GenerateSalt()
         {

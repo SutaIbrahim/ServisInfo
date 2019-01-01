@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 using ServisInfo_API.Models;
 using System.Net.Http;
 using System.Resources;
@@ -21,9 +22,13 @@ namespace ServisInfo_UI.Upiti
     {
 
         private WebAPIHelper UpitiService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.UpitiRoute);
-
+        private WebAPIHelper PonudeService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.PonudeRoute);
 
         private DetaljiUpita_Result u { get; set; }
+        private List<UpitiByKategorijaId> listaUpita { get; set; }
+        private List<ServisInfo_API.Models.Ponude> p { get; set; }
+
+
         private int UID { get; set; }
 
         public DetaljiUpita(int upitID)
@@ -31,7 +36,8 @@ namespace ServisInfo_UI.Upiti
             UID = upitID;
             InitializeComponent();
 
-            HttpResponseMessage response = UpitiService.GetActionResponse("GetDetalji", upitID.ToString(),Global.prijavljenaKompanija.KompanijaID.ToString());
+            HttpResponseMessage response = UpitiService.GetActionResponse("GetDetalji", upitID.ToString(), Global.prijavljenaKompanija.KompanijaID.ToString());
+
 
             if (response.IsSuccessStatusCode)
             {
@@ -40,9 +46,19 @@ namespace ServisInfo_UI.Upiti
                 else if (response.IsSuccessStatusCode)
                 {
                     u = response.Content.ReadAsAsync<DetaljiUpita_Result>().Result;
+                    if (!u.Odgovoreno.GetValueOrDefault())
+                    {
+                        HttpResponseMessage response2 = PonudeService.GetActionResponse("GetAllByKategorijaId", u.KategorijaID.ToString());
+
+                        if (response2.IsSuccessStatusCode)
+                        {
+                            p = response2.Content.ReadAsAsync<List<ServisInfo_API.Models.Ponude>>().Result;
+                        }
+                    }
                     FillForm();
                 }
             }
+
         }
 
 
@@ -60,8 +76,34 @@ namespace ServisInfo_UI.Upiti
                 UpitIDLbl.Text = UID.ToString();
                 KategorijaLbl.Text = u.Naziv_kategorije;
 
-                UcitajSliku();
+                prijedlogLbl.Text = "";
 
+                if (!u.Odgovoreno.GetValueOrDefault())
+                {
+                    List<string> prijedlozi = UIHelper.EventualniKvar(p, OpisTxt.Text);
+
+                    if (prijedlozi.Count() > 0)
+                    {
+                        foreach (var x in prijedlozi.Take(3))
+                        {
+                            prijedlogLbl.Text += x;
+                            prijedlogLbl.Text += "\n";
+                        }
+
+                    }
+                    else
+                    {
+                        prijedlogLbl.Visible = false;
+                        label13.Visible = false;
+                    }
+                }
+                else
+                {
+                    prijedlogLbl.Visible = false;
+                    label13.Visible = false;
+                }
+
+                UcitajSliku();
 
                 if (u.Odgovoreno == true)
                 {
@@ -78,7 +120,7 @@ namespace ServisInfo_UI.Upiti
             }
             else
             {
-                MessageBox.Show("Greska","",MessageBoxButtons.OK);
+                MessageBox.Show("Greska", "", MessageBoxButtons.OK);
             }
         }
 
@@ -104,16 +146,16 @@ namespace ServisInfo_UI.Upiti
 
                     //if (resizedImg.Width > croppedImgWidth && resizedImg.Height > croppedImgHeight)
                     //{
-                        int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
-                        int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
+                    int croppedXPosition = (resizedImg.Width - croppedImgWidth) / 2;
+                    int croppedYPosition = (resizedImg.Height - croppedImgHeight) / 2;
 
-                        Image croppedImg = UIHelper.CropImage(resizedImg, new Rectangle(croppedXPosition, croppedYPosition, croppedImgWidth, croppedImgHeight));
+                    Image croppedImg = UIHelper.CropImage(resizedImg, new Rectangle(croppedXPosition, croppedYPosition, croppedImgWidth, croppedImgHeight));
 
-                        ////From Image to byte[]
-                        //MemoryStream ms = new MemoryStream();
-                        //croppedImg.Save(ms, orgImg.RawFormat);
+                    ////From Image to byte[]
+                    //MemoryStream ms = new MemoryStream();
+                    //croppedImg.Save(ms, orgImg.RawFormat);
 
-                        pictureBox.Image = resizedImg;
+                    pictureBox.Image = resizedImg;
                     //}
                     //else
                     //{
@@ -175,6 +217,11 @@ namespace ServisInfo_UI.Upiti
         }
 
         private void KategorijaLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DetaljiUpita_Load(object sender, EventArgs e)
         {
 
         }

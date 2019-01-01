@@ -143,7 +143,7 @@
           <Property Name="VrstaOcjeneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Klijenti__GradID__286302EC">
+        <Association Name="FK__Klijenti__GradID__403A8C7D">
           <End Role="Gradovi" Type="Self.Gradovi" Multiplicity="0..1" />
           <End Role="Klijenti" Type="Self.Klijenti" Multiplicity="*" />
           <ReferentialConstraint>
@@ -155,7 +155,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Kompanije__GradI__2D27B809">
+        <Association Name="FK__Kompanije__GradI__412EB0B6">
           <End Role="Gradovi" Type="Self.Gradovi" Multiplicity="1" />
           <End Role="Kompanije" Type="Self.Kompanije" Multiplicity="*" />
           <ReferentialConstraint>
@@ -167,7 +167,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Kompanije__Kateg__3F466844">
+        <Association Name="FK__Kompanije__Kateg__4222D4EF">
           <End Role="Kategorije" Type="Self.Kategorije" Multiplicity="1" />
           <End Role="KompanijeKategorije" Type="Self.KompanijeKategorije" Multiplicity="*" />
           <ReferentialConstraint>
@@ -179,19 +179,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Kompanije__Kompa__02FC7413">
-          <End Role="Kompanije" Type="Self.Kompanije" Multiplicity="1" />
-          <End Role="KompanijeUpiti" Type="Self.KompanijeUpiti" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Kompanije">
-              <PropertyRef Name="KompanijaID" />
-            </Principal>
-            <Dependent Role="KompanijeUpiti">
-              <PropertyRef Name="KompanijaID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Kompanije__Kompa__403A8C7D">
+        <Association Name="FK__Kompanije__Kompa__4316F928">
           <End Role="Kompanije" Type="Self.Kompanije" Multiplicity="1" />
           <End Role="KompanijeKategorije" Type="Self.KompanijeKategorije" Multiplicity="*" />
           <ReferentialConstraint>
@@ -203,7 +191,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Kompanije__UpitI__03F0984C">
+        <Association Name="FK__Kompanije__Kompa__440B1D61">
+          <End Role="Kompanije" Type="Self.Kompanije" Multiplicity="1" />
+          <End Role="KompanijeUpiti" Type="Self.KompanijeUpiti" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kompanije">
+              <PropertyRef Name="KompanijaID" />
+            </Principal>
+            <Dependent Role="KompanijeUpiti">
+              <PropertyRef Name="KompanijaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Kompanije__UpitI__44FF419A">
           <End Role="Upiti" Type="Self.Upiti" Multiplicity="1" />
           <End Role="KompanijeUpiti" Type="Self.KompanijeUpiti" Multiplicity="*" />
           <ReferentialConstraint>
@@ -215,7 +215,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ModeliUre__Marka__7C4F7684">
+        <Association Name="FK__ModeliUre__Marka__45F365D3">
           <End Role="MarkeUredjaja" Type="Self.MarkeUredjaja" Multiplicity="1" />
           <End Role="ModeliUredjaja" Type="Self.ModeliUredjaja" Multiplicity="*" />
           <ReferentialConstraint>
@@ -227,7 +227,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ocjene__KlijentI__114A936A">
+        <Association Name="FK__Ocjene__KlijentI__46E78A0C">
           <End Role="Klijenti" Type="Self.Klijenti" Multiplicity="1" />
           <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
           <ReferentialConstraint>
@@ -239,7 +239,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ocjene__ServisID__10566F31">
+        <Association Name="FK__Ocjene__ServisID__47DBAE45">
           <End Role="Servisi" Type="Self.Servisi" Multiplicity="1" />
           <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
           <ReferentialConstraint>
@@ -251,7 +251,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ocjene__VrstaOcj__0F624AF8">
+        <Association Name="FK__Ocjene__VrstaOcj__48CFD27E">
           <End Role="VrsteOcjena" Type="Self.VrsteOcjena" Multiplicity="1" />
           <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
           <ReferentialConstraint>
@@ -263,7 +263,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ponude__KlijentI__07C12930">
+        <Association Name="FK__Ponude__KlijentI__49C3F6B7">
           <End Role="Klijenti" Type="Self.Klijenti" Multiplicity="1" />
           <End Role="Ponude" Type="Self.Ponude" Multiplicity="*" />
           <ReferentialConstraint>
@@ -275,7 +275,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ponude__Kompanij__06CD04F7">
+        <Association Name="FK__Ponude__Kompanij__4AB81AF0">
           <End Role="Kompanije" Type="Self.Kompanije" Multiplicity="1" />
           <End Role="Ponude" Type="Self.Ponude" Multiplicity="*" />
           <ReferentialConstraint>
@@ -287,7 +287,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ponude__UpitID__08B54D69">
+        <Association Name="FK__Ponude__UpitID__4BAC3F29">
           <End Role="Upiti" Type="Self.Upiti" Multiplicity="1" />
           <End Role="Ponude" Type="Self.Ponude" Multiplicity="*" />
           <ReferentialConstraint>
@@ -299,7 +299,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Servisi__Kompani__0B91BA14">
+        <Association Name="FK__Servisi__Kompani__4CA06362">
           <End Role="Kompanije" Type="Self.Kompanije" Multiplicity="1" />
           <End Role="Servisi" Type="Self.Servisi" Multiplicity="*" />
           <ReferentialConstraint>
@@ -311,7 +311,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Servisi__PonudaI__0C85DE4D">
+        <Association Name="FK__Servisi__PonudaI__4D94879B">
           <End Role="Ponude" Type="Self.Ponude" Multiplicity="1" />
           <End Role="Servisi" Type="Self.Servisi" Multiplicity="*" />
           <ReferentialConstraint>
@@ -323,7 +323,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Upiti__Kategorij__2739D489">
+        <Association Name="FK__Upiti__Kategorij__4E88ABD4">
           <End Role="Kategorije" Type="Self.Kategorije" Multiplicity="0..1" />
           <End Role="Upiti" Type="Self.Upiti" Multiplicity="*" />
           <ReferentialConstraint>
@@ -335,7 +335,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Upiti__KlijentID__7F2BE32F">
+        <Association Name="FK__Upiti__KlijentID__4F7CD00D">
           <End Role="Klijenti" Type="Self.Klijenti" Multiplicity="1" />
           <End Role="Upiti" Type="Self.Upiti" Multiplicity="*" />
           <ReferentialConstraint>
@@ -347,7 +347,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Upiti__ModelUred__00200768">
+        <Association Name="FK__Upiti__ModelUred__5070F446">
           <End Role="ModeliUredjaja" Type="Self.ModeliUredjaja" Multiplicity="1" />
           <End Role="Upiti" Type="Self.Upiti" Multiplicity="*" />
           <ReferentialConstraint>
@@ -496,75 +496,75 @@
           <EntitySet Name="Servisi" EntityType="Self.Servisi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Upiti" EntityType="Self.Upiti" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VrsteOcjena" EntityType="Self.VrsteOcjena" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Klijenti__GradID__286302EC" Association="Self.FK__Klijenti__GradID__286302EC">
+          <AssociationSet Name="FK__Klijenti__GradID__403A8C7D" Association="Self.FK__Klijenti__GradID__403A8C7D">
             <End Role="Gradovi" EntitySet="Gradovi" />
             <End Role="Klijenti" EntitySet="Klijenti" />
           </AssociationSet>
-          <AssociationSet Name="FK__Kompanije__GradI__2D27B809" Association="Self.FK__Kompanije__GradI__2D27B809">
+          <AssociationSet Name="FK__Kompanije__GradI__412EB0B6" Association="Self.FK__Kompanije__GradI__412EB0B6">
             <End Role="Gradovi" EntitySet="Gradovi" />
             <End Role="Kompanije" EntitySet="Kompanije" />
           </AssociationSet>
-          <AssociationSet Name="FK__Kompanije__Kateg__3F466844" Association="Self.FK__Kompanije__Kateg__3F466844">
+          <AssociationSet Name="FK__Kompanije__Kateg__4222D4EF" Association="Self.FK__Kompanije__Kateg__4222D4EF">
             <End Role="Kategorije" EntitySet="Kategorije" />
             <End Role="KompanijeKategorije" EntitySet="KompanijeKategorije" />
           </AssociationSet>
-          <AssociationSet Name="FK__Kompanije__Kompa__02FC7413" Association="Self.FK__Kompanije__Kompa__02FC7413">
-            <End Role="Kompanije" EntitySet="Kompanije" />
-            <End Role="KompanijeUpiti" EntitySet="KompanijeUpiti" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Kompanije__Kompa__403A8C7D" Association="Self.FK__Kompanije__Kompa__403A8C7D">
+          <AssociationSet Name="FK__Kompanije__Kompa__4316F928" Association="Self.FK__Kompanije__Kompa__4316F928">
             <End Role="Kompanije" EntitySet="Kompanije" />
             <End Role="KompanijeKategorije" EntitySet="KompanijeKategorije" />
           </AssociationSet>
-          <AssociationSet Name="FK__Kompanije__UpitI__03F0984C" Association="Self.FK__Kompanije__UpitI__03F0984C">
+          <AssociationSet Name="FK__Kompanije__Kompa__440B1D61" Association="Self.FK__Kompanije__Kompa__440B1D61">
+            <End Role="Kompanije" EntitySet="Kompanije" />
+            <End Role="KompanijeUpiti" EntitySet="KompanijeUpiti" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Kompanije__UpitI__44FF419A" Association="Self.FK__Kompanije__UpitI__44FF419A">
             <End Role="Upiti" EntitySet="Upiti" />
             <End Role="KompanijeUpiti" EntitySet="KompanijeUpiti" />
           </AssociationSet>
-          <AssociationSet Name="FK__ModeliUre__Marka__7C4F7684" Association="Self.FK__ModeliUre__Marka__7C4F7684">
+          <AssociationSet Name="FK__ModeliUre__Marka__45F365D3" Association="Self.FK__ModeliUre__Marka__45F365D3">
             <End Role="MarkeUredjaja" EntitySet="MarkeUredjaja" />
             <End Role="ModeliUredjaja" EntitySet="ModeliUredjaja" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ocjene__KlijentI__114A936A" Association="Self.FK__Ocjene__KlijentI__114A936A">
+          <AssociationSet Name="FK__Ocjene__KlijentI__46E78A0C" Association="Self.FK__Ocjene__KlijentI__46E78A0C">
             <End Role="Klijenti" EntitySet="Klijenti" />
             <End Role="Ocjene" EntitySet="Ocjene" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ocjene__ServisID__10566F31" Association="Self.FK__Ocjene__ServisID__10566F31">
+          <AssociationSet Name="FK__Ocjene__ServisID__47DBAE45" Association="Self.FK__Ocjene__ServisID__47DBAE45">
             <End Role="Servisi" EntitySet="Servisi" />
             <End Role="Ocjene" EntitySet="Ocjene" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ocjene__VrstaOcj__0F624AF8" Association="Self.FK__Ocjene__VrstaOcj__0F624AF8">
+          <AssociationSet Name="FK__Ocjene__VrstaOcj__48CFD27E" Association="Self.FK__Ocjene__VrstaOcj__48CFD27E">
             <End Role="VrsteOcjena" EntitySet="VrsteOcjena" />
             <End Role="Ocjene" EntitySet="Ocjene" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ponude__KlijentI__07C12930" Association="Self.FK__Ponude__KlijentI__07C12930">
+          <AssociationSet Name="FK__Ponude__KlijentI__49C3F6B7" Association="Self.FK__Ponude__KlijentI__49C3F6B7">
             <End Role="Klijenti" EntitySet="Klijenti" />
             <End Role="Ponude" EntitySet="Ponude" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ponude__Kompanij__06CD04F7" Association="Self.FK__Ponude__Kompanij__06CD04F7">
+          <AssociationSet Name="FK__Ponude__Kompanij__4AB81AF0" Association="Self.FK__Ponude__Kompanij__4AB81AF0">
             <End Role="Kompanije" EntitySet="Kompanije" />
             <End Role="Ponude" EntitySet="Ponude" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ponude__UpitID__08B54D69" Association="Self.FK__Ponude__UpitID__08B54D69">
+          <AssociationSet Name="FK__Ponude__UpitID__4BAC3F29" Association="Self.FK__Ponude__UpitID__4BAC3F29">
             <End Role="Upiti" EntitySet="Upiti" />
             <End Role="Ponude" EntitySet="Ponude" />
           </AssociationSet>
-          <AssociationSet Name="FK__Servisi__Kompani__0B91BA14" Association="Self.FK__Servisi__Kompani__0B91BA14">
+          <AssociationSet Name="FK__Servisi__Kompani__4CA06362" Association="Self.FK__Servisi__Kompani__4CA06362">
             <End Role="Kompanije" EntitySet="Kompanije" />
             <End Role="Servisi" EntitySet="Servisi" />
           </AssociationSet>
-          <AssociationSet Name="FK__Servisi__PonudaI__0C85DE4D" Association="Self.FK__Servisi__PonudaI__0C85DE4D">
+          <AssociationSet Name="FK__Servisi__PonudaI__4D94879B" Association="Self.FK__Servisi__PonudaI__4D94879B">
             <End Role="Ponude" EntitySet="Ponude" />
             <End Role="Servisi" EntitySet="Servisi" />
           </AssociationSet>
-          <AssociationSet Name="FK__Upiti__Kategorij__2739D489" Association="Self.FK__Upiti__Kategorij__2739D489">
+          <AssociationSet Name="FK__Upiti__Kategorij__4E88ABD4" Association="Self.FK__Upiti__Kategorij__4E88ABD4">
             <End Role="Kategorije" EntitySet="Kategorije" />
             <End Role="Upiti" EntitySet="Upiti" />
           </AssociationSet>
-          <AssociationSet Name="FK__Upiti__KlijentID__7F2BE32F" Association="Self.FK__Upiti__KlijentID__7F2BE32F">
+          <AssociationSet Name="FK__Upiti__KlijentID__4F7CD00D" Association="Self.FK__Upiti__KlijentID__4F7CD00D">
             <End Role="Klijenti" EntitySet="Klijenti" />
             <End Role="Upiti" EntitySet="Upiti" />
           </AssociationSet>
-          <AssociationSet Name="FK__Upiti__ModelUred__00200768" Association="Self.FK__Upiti__ModelUred__00200768">
+          <AssociationSet Name="FK__Upiti__ModelUred__5070F446" Association="Self.FK__Upiti__ModelUred__5070F446">
             <End Role="ModeliUredjaja" EntitySet="ModeliUredjaja" />
             <End Role="Upiti" EntitySet="Upiti" />
           </AssociationSet>
@@ -1190,6 +1190,7 @@
           <Property Type="Boolean" Name="Odgovoreno" Nullable="true" />
           <Property Type="String" Name="Naziv_kategorije" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="KompanijaUpitID" Nullable="true" />
+          <Property Type="Int32" Name="KategorijaID" Nullable="true" />
         </ComplexType>
         <Association Name="FK__Upiti__Kategorij__2739D489">
           <End Type="ServisInfoModel.Kategorije" Role="Kategorije" Multiplicity="0..1" />
@@ -1381,6 +1382,10 @@
           <Property Type="DateTime" Name="Od" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="Do" Nullable="true" Precision="23" />
         </ComplexType>
+        <ComplexType Name="UpitiByKategorijaId" >
+          <Property Type="String" Name="Odgovor" Nullable="false" />
+          <Property Type="Single" Name="Opis" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1569,6 +1574,7 @@
                 <ScalarProperty Name="Odgovoreno" ColumnName="Odgovoreno" />
                 <ScalarProperty Name="Naziv_kategorije" ColumnName="Naziv kategorije" />
                 <ScalarProperty Name="KompanijaUpitID" ColumnName="KompanijaUpitID" />
+                <ScalarProperty Name="KategorijaID" ColumnName="KategorijaID" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

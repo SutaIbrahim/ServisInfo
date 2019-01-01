@@ -22,6 +22,13 @@ namespace ServisInfo_API.Controllers
             return db.Ponude;
         }
 
+        [HttpGet]
+        [Route("api/Ponude/GetAllByKategorijaId/{kategorijaId}")]
+        public List<Ponude> GetAllByKategorijaId(int kategorijaId)
+        {
+            return db.Ponude.Include(k => k.Upiti.Kategorije).Where(i=>i.Upiti.Kategorije.KategorijaID==kategorijaId).ToList();
+        }
+
         // GET: api/Ponude/5
         [ResponseType(typeof(Ponude))]
         public IHttpActionResult GetPonude(int id)
