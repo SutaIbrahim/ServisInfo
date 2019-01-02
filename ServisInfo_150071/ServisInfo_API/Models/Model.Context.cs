@@ -20,9 +20,7 @@ namespace ServisInfo_API.Models
         public ServisInfoEntities()
             : base("name=ServisInfoEntities")
         {
-
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -525,6 +523,15 @@ namespace ServisInfo_API.Models
                 new ObjectParameter("KategorijaID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kompanije>("esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena", mergeOption, kompanijaIDParameter, kategorijaIDParameter);
+        }
+    
+        public virtual ObjectResult<KompanijeUpitResult> edp_KompanijeByUpit(Nullable<int> upitId)
+        {
+            var upitIdParameter = upitId.HasValue ?
+                new ObjectParameter("UpitId", upitId) :
+                new ObjectParameter("UpitId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KompanijeUpitResult>("edp_KompanijeByUpit", upitIdParameter);
         }
     }
 }

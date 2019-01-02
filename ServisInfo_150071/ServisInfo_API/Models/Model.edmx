@@ -359,6 +359,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="edp_KompanijeByUpit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UpitId" Type="int" Mode="In" />
+        </Function>
         <Function Name="edp_Ponude_DetaljiByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="PonudaID" Type="int" Mode="In" />
         </Function>
@@ -1154,6 +1157,9 @@
             <Parameter Name="KompanijaID" Mode="In" Type="Int32" />
             <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="edp_KompanijeByUpit" ReturnType="Collection(ServisInfoModel.KompanijeUpitResult)">
+            <Parameter Name="UpitId" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
           <End Type="ServisInfoModel.ModeliUredjaja" Role="ModeliUredjaja" Multiplicity="1" />
@@ -1385,6 +1391,16 @@
         <ComplexType Name="UpitiByKategorijaId" >
           <Property Type="String" Name="Odgovor" Nullable="false" />
           <Property Type="Single" Name="Opis" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="edp_KompanijeByUpit_Result">
+          <Property Type="Int32" Name="UpitID" Nullable="false" />
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="KompanijeUpitResult">
+          <Property Type="Int32" Name="UpitID" Nullable="false" />
+          <Property Type="Int32" Name="KompanijaID" Nullable="false" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1815,6 +1831,15 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_KlijentUpdate" FunctionName="ServisInfoModel.Store.esp_KlijentUpdate" />
           <FunctionImportMapping FunctionImportName="esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena" FunctionName="ServisInfoModel.Store.esp_Recommender_ColdStart_PreporuciKompanijeBezOcjena">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="edp_KompanijeByUpit" FunctionName="ServisInfoModel.Store.edp_KompanijeByUpit">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="ServisInfoModel.KompanijeUpitResult">
+                <ScalarProperty Name="UpitID" ColumnName="UpitID" />
+                <ScalarProperty Name="KompanijaID" ColumnName="KompanijaID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

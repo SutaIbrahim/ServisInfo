@@ -55,7 +55,25 @@ namespace ServisInfoSolution
                 KategorijaLbl.Text = upit.Naziv_kategorije;
                 OpisLbl.Text = upit.Opis_kvara;
 
-                if (upit.Slika != null)
+                HttpResponseMessage response2 = upitiService.GetActionResponse("GetKompanijeByUpitId", upitID.ToString());
+                if (response2.IsSuccessStatusCode)
+                {
+                    var jsonObject2 = response2.Content.ReadAsStringAsync();
+                    List<KompanijeUpitResult> kompanije = JsonConvert.DeserializeObject<List<KompanijeUpitResult>>(jsonObject2.Result);
+
+                    string kompanijeString = "";
+                    for (int x = 0; x < kompanije.Count() - 1; x++) {
+                        kompanijeString += kompanije[x].Naziv + ",";
+                    }
+                    kompanijeString += kompanije[kompanije.Count() - 1].Naziv;
+
+                    KompanijeListLbl.Text = kompanijeString;
+
+                }
+
+
+
+;                if (upit.Slika != null)
                 {
                     Stream stream = new MemoryStream(upit.Slika);
 

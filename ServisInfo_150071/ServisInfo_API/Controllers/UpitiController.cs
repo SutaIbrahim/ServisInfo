@@ -112,6 +112,15 @@ namespace ServisInfo_API.App_Start
             return Ok(ponudaID);
         }
 
+        [HttpGet]
+        [Route("api/Upiti/GetKompanijeByUpitId/{UpitID}")]
+        public IHttpActionResult GetKompanijeByUpitId(string UpitID)
+        {
+            List<KompanijeUpitResult> k = db.edp_KompanijeByUpit(Convert.ToInt32(UpitID)).ToList();
+
+            return Ok(k);
+        }
+
         // PUT: api/Upiti/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutUpiti(int id, Upiti upiti)

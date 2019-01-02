@@ -47,7 +47,7 @@
                 <Label Text="Kategorija:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0"   ></Label>
                 <Label x:Name="KategorijaLbl" Text=""    Grid.Row="5" Grid.Column="1" ></Label>
 
-                <Label Text="Poslato kompanijama:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"   ></Label>
+                <Label Text="Poslato kompaniji/ama:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"   ></Label>
                 <Label x:Name="KompanijeListLbl" Text=""    Grid.Row="6" Grid.Column="1" ></Label>
 
                 <Label Text="Opis:" FontAttributes="Bold" Grid.Row="7" Grid.Column="0"   ></Label>
