@@ -105,6 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="appIcon.png" />
+    <Content Include="homepage.jpg" />
+    <Content Include="homepage.png" />
     <Content Include="logo.jpg" />
     <Content Include="odjava.png" />
     <Content Include="ponude.png" />

@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.DetaljServisa">
-    <ScrollView Margin="10">
-
-        <StackLayout HorizontalOptions="Center" Margin="5">
+    <ScrollView >
+        <Grid>
+            <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
+            <StackLayout HorizontalOptions="Center" Margin="5">
             <Label x:Name="servisIDLbl" Text="Detalji o servisu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="10" FontAttributes="Bold"></Label>
 
-            <Grid Margin="5">
+            <Grid Margin="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -55,9 +56,9 @@
 
             <!--ocjene-->
 
-            <Label x:Name="porukaLbl" Text="Servis je zavrsen, molimo vas da ocijenite uslugu" FontSize="12" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="5" TextColor="DarkGray"></Label>
+            <Label x:Name="porukaLbl" Text="Servis je zavrsen, molimo vas da ocijenite uslugu" FontSize="12" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="5" TextColor="Gray"></Label>
 
-            <Grid Margin="3">
+            <Grid Margin="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -86,5 +87,11 @@
 
             </Grid>
         </StackLayout>
+            <ListView>
+                <ListView.Footer>
+                    <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" Margin="10" />
+                </ListView.Footer>
+            </ListView>
+        </Grid>
     </ScrollView>
 </ContentPage>

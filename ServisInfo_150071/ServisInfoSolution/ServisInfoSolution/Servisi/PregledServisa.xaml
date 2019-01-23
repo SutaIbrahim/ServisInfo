@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.PregledServisa">
     <ContentPage.Content Margin="22">
+        <Grid>
+            <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
 
-
-        <StackLayout >
+            <StackLayout >
 
             <Label Text="Pregled servisa" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8"></Label>
 
 
             <Label Text="Izaberite raspon datuma za prikaz servisa (Od-Do):" FontSize="11" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="20">
                 <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged" ></DatePicker>
                 <Label Text="_" VerticalOptions="Center"></Label>
                 <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged" ></DatePicker>
@@ -30,17 +31,17 @@
 
             </StackLayout>
 
-            <Label Text="Kliknite na servis za vise detalja" Margin="9" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
+            <Label Text="Kliknite na servis za vise detalja" Margin="9" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray"></Label>
 
 
 
 
 
-            <ListView x:Name="servisiList" RowHeight="50" Margin="6" ItemTapped="servisiList_ItemTapped" BackgroundColor="LightGray">
+            <ListView x:Name="servisiList" RowHeight="50" ItemTapped="servisiList_ItemTapped" BackgroundColor="LightGray">
 
                 <ListView.Header>
 
-                    <Grid   Margin="6" BackgroundColor="#13818d" HeightRequest="50" Padding="5">
+                    <Grid   BackgroundColor="#13818d" HeightRequest="30" Padding="5" Opacity="0.8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
@@ -56,8 +57,10 @@
                     </Grid>
 
                 </ListView.Header>
-
-                <ListView.ItemTemplate>
+                    <ListView.Footer>
+                        <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" Margin="10" />
+                    </ListView.Footer>
+                    <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
@@ -92,5 +95,7 @@
             </ListView>
 
         </StackLayout>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

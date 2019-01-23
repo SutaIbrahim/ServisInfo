@@ -2,68 +2,76 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.DetaljiUpita">
-    <ScrollView Margin="10">
+    <ScrollView >
+
+        <Grid>
+            <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
+
+            <StackLayout HorizontalOptions="Center">
+                <Label x:Name="upitIDLbl" Text="Detalji o upitu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="10" FontAttributes="Bold"></Label>
 
 
-        <StackLayout HorizontalOptions="Center">
-            <Label x:Name="upitIDLbl" Text="Detalji o upitu ID:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="10" FontAttributes="Bold"></Label>
+                <Grid Margin="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
 
 
-            <Grid Margin="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+                    <Label Text="Datum kreiranja upita:" FontAttributes="Bold"    Grid.Row="0" Grid.Column="0"   ></Label>
+                    <Label x:Name="DatumLbl"    Grid.Row="0" Grid.Column="1" ></Label>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="35"></RowDefinition>
-                    <RowDefinition Height="35"></RowDefinition>
-                    <RowDefinition Height="35"></RowDefinition>
-                    <RowDefinition Height="35"></RowDefinition>
-                    <RowDefinition Height="35"></RowDefinition>
-                    <RowDefinition Height="35"></RowDefinition>
-                    <RowDefinition Height="35"></RowDefinition>
+                    <Label Text="Zeljeni datum prijema OD:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"   ></Label>
+                    <Label x:Name="zeljeniOdLbl"   Grid.Row="1" Grid.Column="1"  ></Label>
 
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                </Grid.RowDefinitions>
+                    <Label Text="Zeljeni datum prijema DO:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0"   ></Label>
+                    <Label x:Name="zeljeniDoLbl"     Grid.Row="2" Grid.Column="1" ></Label>
 
+                    <Label Text="Marka uredjaja:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0"   ></Label>
+                    <Label x:Name="markaLBl" Text=""    Grid.Row="3" Grid.Column="1" ></Label>
 
-                <Label Text="Datum kreiranja upita:" FontAttributes="Bold"    Grid.Row="0" Grid.Column="0"   ></Label>
-                <Label x:Name="DatumLbl"    Grid.Row="0" Grid.Column="1" ></Label>
+                    <Label Text="Model uredjaja::" FontAttributes="Bold" Grid.Row="4" Grid.Column="0"   ></Label>
+                    <Label x:Name="modelLbl" Text=""    Grid.Row="4" Grid.Column="1" ></Label>
 
-                <Label Text="Zeljeni datum prijema OD:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"   ></Label>
-                <Label x:Name="zeljeniOdLbl"   Grid.Row="1" Grid.Column="1"  ></Label>
+                    <Label Text="Kategorija:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0"   ></Label>
+                    <Label x:Name="KategorijaLbl" Text=""    Grid.Row="5" Grid.Column="1" ></Label>
 
-                <Label Text="Zeljeni datum prijema DO:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0"   ></Label>
-                <Label x:Name="zeljeniDoLbl"     Grid.Row="2" Grid.Column="1" ></Label>
+                    <Label Text="Poslato kompaniji/ama:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"   ></Label>
+                    <Label x:Name="KompanijeListLbl" Text=""    Grid.Row="6" Grid.Column="1" ></Label>
 
-                <Label Text="Marka uredjaja:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0"   ></Label>
-                <Label x:Name="markaLBl" Text=""    Grid.Row="3" Grid.Column="1" ></Label>
+                    <Label Text="Opis:" FontAttributes="Bold" Grid.Row="7" Grid.Column="0"   ></Label>
+                    <Label x:Name="OpisLbl" Text=""    Grid.Row="7" Grid.Column="1" ></Label>
 
-                <Label Text="Model uredjaja::" FontAttributes="Bold" Grid.Row="4" Grid.Column="0"   ></Label>
-                <Label x:Name="modelLbl" Text=""    Grid.Row="4" Grid.Column="1" ></Label>
+                    <Label Text="Slika:" x:Name="slikaPct" FontAttributes="Bold" Grid.Row="8"  Grid.Column="0"   ></Label>
 
-                <Label Text="Kategorija:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0"   ></Label>
-                <Label x:Name="KategorijaLbl" Text=""    Grid.Row="5" Grid.Column="1" ></Label>
+                </Grid>
 
-                <Label Text="Poslato kompaniji/ama:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"   ></Label>
-                <Label x:Name="KompanijeListLbl" Text=""    Grid.Row="6" Grid.Column="1" ></Label>
-
-                <Label Text="Opis:" FontAttributes="Bold" Grid.Row="7" Grid.Column="0"   ></Label>
-                <Label x:Name="OpisLbl" Text=""    Grid.Row="7" Grid.Column="1" ></Label>
-
-                <Label Text="Slika:" x:Name="slikaPct" FontAttributes="Bold" Grid.Row="8"  Grid.Column="0"   ></Label>
-
-            </Grid>
-            
-            <Image x:Name="slika"  Margin="5"></Image>
+                <Image x:Name="slika"  Margin="5"></Image>
 
 
-            <Button x:Name="IzbtisiBtn" BackgroundColor="OrangeRed" Text="Izbrisi upit" HorizontalOptions="End" Clicked="IzbtisiBtn_Clicked" Margin="10" TextColor="White" FontSize="11"></Button>
+                <Button x:Name="IzbtisiBtn" BackgroundColor="OrangeRed" Text="Izbrisi upit" HorizontalOptions="End" Clicked="IzbtisiBtn_Clicked" Margin="25" TextColor="White" FontSize="11"></Button>
 
 
-        </StackLayout>
+            </StackLayout>
+            <ListView>
+                <ListView.Footer>
+                    <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" Margin="10" />
+                </ListView.Footer>
+            </ListView>
 
+        </Grid>
     </ScrollView>
 </ContentPage>

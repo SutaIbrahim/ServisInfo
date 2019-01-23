@@ -290,5 +290,10 @@ namespace ServisInfoSolution
 
             }
         }
+
+        private void resolveBtn_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

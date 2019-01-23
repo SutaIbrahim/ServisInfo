@@ -81,6 +81,7 @@ namespace ServisInfoSolution
 
         private void registerButton_Clicked(object sender, EventArgs e)
         {
+
             this.Navigation.PushAsync(new Registracija());
         }
     }

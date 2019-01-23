@@ -9,61 +9,73 @@
              NavigationPage.HasNavigationBar="True"
              >
 
+
     <ContentPage.Content>
-        <StackLayout  Padding="30">
-            <Label x:Name="porukaLbl" Text="Povucite prema desno za prikaz menija" FontSize="9" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Margin="2" TextColor="DarkGray"></Label>
+        <Grid>
+            <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
+            <StackLayout  Padding="30">
+                <Label x:Name="porukaLbl" Text="Povucite prema desno za prikaz menija" FontSize="9" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Margin="2" TextColor="DarkGray"></Label>
 
-            <Picker x:Name="kategorijePicker" Title="Odaberite kategoriju" SelectedIndexChanged="kategorijePicker_SelectedIndexChanged"></Picker>
-            <Picker x:Name="gradoviPicker" Title="Izaberite grad" SelectedIndexChanged="gradoviPicker_SelectedIndexChanged"></Picker>
-
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-            <Button x:Name="resetBtn" Text="Ponisti odabire" Clicked="resetBtn_Clicked" BackgroundColor="Gray" TextColor="White" HorizontalOptions="End" FontSize="11"></Button>
-
-                <Button x:Name="kreirajUpitBtn" Text="Kreiraj upit" Clicked="kreirajUpitBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"  FontSize="11"></Button>
-            </StackLayout>
-
-            <Label x:Name="errorLbl" TextColor="Red"  HorizontalOptions="End"  FontSize="8"></Label>
-
-            <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center"  FontSize="11" TextColor="Gray" HorizontalTextAlignment="Center" Margin="4"></Label>
+                <Picker x:Name="kategorijePicker" Title="Odaberite kategoriju" SelectedIndexChanged="kategorijePicker_SelectedIndexChanged"></Picker>
+                <Picker x:Name="gradoviPicker" Title="Izaberite grad" SelectedIndexChanged="gradoviPicker_SelectedIndexChanged"></Picker>
 
 
-            <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="65" ItemTapped="kompanijeList_ItemTapped" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+
+                    <Button x:Name="resetBtn" Text="Ponisti odabire" Clicked="resetBtn_Clicked" BackgroundColor="Gray" TextColor="White" HorizontalOptions="End" FontSize="11"></Button>
+                    <Button x:Name="resolveBtn" Text="Pogledaj moguća rješenja" Clicked="resolveBtn_Clicked"  BackgroundColor="Gray" TextColor="White" HorizontalOptions="End" FontSize="11"></Button>
+                    <Button x:Name="kreirajUpitBtn" Text="Kreiraj upit" Clicked="kreirajUpitBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"  FontSize="11"></Button>
+                </StackLayout>
+
+                <Label x:Name="errorLbl" TextColor="Red"  HorizontalOptions="End"  FontSize="8"></Label>
+
+                <Label x:Name="GreskaLbl" Text="Nema rezultata" VerticalTextAlignment="Center"  FontSize="11" TextColor="Gray" HorizontalTextAlignment="Center" Margin="4"></Label>
 
 
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="65" ItemTapped="kompanijeList_ItemTapped" >
+                    <ListView.Footer>
+                        <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" />
+                    </ListView.Footer>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+
+
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
 
 
 
-                                </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
 
-                                <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg" HeightRequest="55" WidthRequest="60" Margin="2,0,0,0"   HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                                    <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg" HeightRequest="55" WidthRequest="60" Margin="2,0,0,0"   HorizontalOptions="Center" VerticalOptions="Center"></Image>
 
-                                <StackLayout Grid.Column="1" Padding="1"  VerticalOptions="Center" Margin="2,0,0,0">
+                                    <StackLayout Grid.Column="1" Padding="1"  VerticalOptions="Center" Margin="2,0,0,0">
 
-                                    <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="9"/>
-                                    <!--<Label Text="{Binding Adresa}" FontSize="12"/>-->
-                                    <Label Text="{Binding ProsjecnaOcjena}" FontSize="8"/>
-                                </StackLayout>
+                                        <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="9"/>
+                                        <!--<Label Text="{Binding Adresa}" FontSize="12"/>-->
+                                        <Label Text="{Binding ProsjecnaOcjena}" FontSize="8"/>
+                                    </StackLayout>
 
-                                <Label x:Name="checkbox" Grid.Column="2" Text="{Binding Izabrana}" TextColor="Green" FontSize="14" Margin="8" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-                              
-                                <Button Grid.Column="3" Text="Dodaj/ukloni" Clicked="Dodaj" CommandParameter="{Binding KompanijaID}" BackgroundColor="Green" TextColor="White" HeightRequest="30" FontSize="9" HorizontalOptions="Center" VerticalOptions="Center" Margin="5"/>
+                                    <Label x:Name="checkbox" Grid.Column="2" Text="{Binding Izabrana}" TextColor="Green" FontSize="14" Margin="8" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
 
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                                    <Button Grid.Column="3" Text="Dodaj/ukloni" Clicked="Dodaj" CommandParameter="{Binding KompanijaID}" BackgroundColor="Green" TextColor="White" HeightRequest="30" FontSize="9" HorizontalOptions="Center" VerticalOptions="Center" Margin="5"/>
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+               
+               
+                </ListView>
         </StackLayout>
+       
+        </Grid>
     </ContentPage.Content>
+
 </ContentPage>

@@ -84,7 +84,7 @@ namespace ServisInfo_UI.Upiti
 
                     if (prijedlozi.Count() > 0)
                     {
-                        foreach (var x in prijedlozi.Take(3))
+                        foreach (var x in prijedlozi.Take(1))
                         {
                             prijedlogLbl.Text += x;
                             prijedlogLbl.Text += "\n";

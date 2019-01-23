@@ -235,7 +235,7 @@
             // 
             this.KreirajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.KreirajPonuduBtn.ForeColor = System.Drawing.Color.Green;
-            this.KreirajPonuduBtn.Location = new System.Drawing.Point(473, 848);
+            this.KreirajPonuduBtn.Location = new System.Drawing.Point(473, 771);
             this.KreirajPonuduBtn.Name = "KreirajPonuduBtn";
             this.KreirajPonuduBtn.Size = new System.Drawing.Size(180, 37);
             this.KreirajPonuduBtn.TabIndex = 20;
@@ -248,7 +248,7 @@
             this.NazadBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.NazadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NazadBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NazadBtn.Location = new System.Drawing.Point(35, 848);
+            this.NazadBtn.Location = new System.Drawing.Point(37, 771);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(149, 37);
             this.NazadBtn.TabIndex = 21;
@@ -323,7 +323,7 @@
             this.PregledajPonuduBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.PregledajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PregledajPonuduBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PregledajPonuduBtn.Location = new System.Drawing.Point(473, 848);
+            this.PregledajPonuduBtn.Location = new System.Drawing.Point(473, 772);
             this.PregledajPonuduBtn.Name = "PregledajPonuduBtn";
             this.PregledajPonuduBtn.Size = new System.Drawing.Size(180, 37);
             this.PregledajPonuduBtn.TabIndex = 53;
@@ -335,7 +335,7 @@
             // 
             this.pictureBox.Location = new System.Drawing.Point(82, 547);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(440, 255);
+            this.pictureBox.Size = new System.Drawing.Size(440, 201);
             this.pictureBox.TabIndex = 54;
             this.pictureBox.TabStop = false;
             // 
@@ -366,7 +366,7 @@
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(685, 909);
+            this.ClientSize = new System.Drawing.Size(714, 621);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.prijedlogLbl);
             this.Controls.Add(this.pictureBox);
@@ -396,8 +396,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(701, 948);
-            this.MinimumSize = new System.Drawing.Size(701, 726);
+            this.MaximumSize = new System.Drawing.Size(730, 948);
+            this.MinimumSize = new System.Drawing.Size(690, 650);
             this.Name = "DetaljiUpita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiUpita";

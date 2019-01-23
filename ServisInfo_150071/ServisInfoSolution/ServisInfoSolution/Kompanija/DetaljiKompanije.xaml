@@ -2,19 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.Kompanija.DetaljiKompanije">
-    <ScrollView Margin="10">
-
-        <!--<StackLayout>
+    <ScrollView>
+        <Grid>
+            <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
+            <!--<StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>-->
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center"  Margin="25">
             <Label x:Name="kompanijaLbl" Text="Detalji o kompaniji:" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="20" FontAttributes="Bold"></Label>
 
 
-            <Grid Margin="15">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -49,7 +50,7 @@
 
 
             <!--prosjecne ocjene-->
-            <Label x:Name="porukaLbl" Text="Prosjecne ocjene kompanije:" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
+            <Label x:Name="porukaLbl" Text="Prosječne ocjene kompanije:" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
 
             <Grid Margin="10">
                 <Grid.ColumnDefinitions>
@@ -90,7 +91,7 @@
 
 
             <!--recommender-->
-            <Label x:Name="poruka2Lbl" Text="Preporucene kompanije:" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
+            <Label x:Name="poruka2Lbl" Text="Preporučene kompanije:" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" TextColor="DarkGray"></Label>
 
             <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="60" ItemTapped="kompanijeList_ItemTapped" Margin="10" >
                 <ListView.ItemTemplate>
@@ -118,6 +119,6 @@
             </ListView>
 
         </StackLayout>
-
+        </Grid>
     </ScrollView>
 </ContentPage>

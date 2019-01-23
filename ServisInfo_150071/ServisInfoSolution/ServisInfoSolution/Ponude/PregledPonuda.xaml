@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.PregledPonuda">
     <ContentPage.Content Margin="22">
+        <Grid>
+            <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
 
-
-        <StackLayout >
+            <StackLayout >
             <Label Text="Pregled ponuda" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Margin="8"></Label>
 
 
             <Label Text="Izaberite raspon datuma za prikaz ponuda (Od-Do):" FontSize="11" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Margin="20">
                 <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged" ></DatePicker>
                 <Label Text="_" VerticalOptions="Center"></Label>
                 <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged" ></DatePicker>
@@ -22,23 +23,22 @@
                     <Label Text="Prikazi neprihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="10"></Label>
                     <Switch x:Name="neSW" PropertyChanged="neSW_PropertyChanged"></Switch>
 
-                    <Label Text="| Prikazi prihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
+                    <Label Text="|  Prikazi prihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
                     <Switch x:Name="daSW" PropertyChanged="daSW_PropertyChanged"></Switch>
                 </StackLayout>
 
             </StackLayout >
 
 
-
-            <Label Text="Kliknite na ponudu za vise detalja" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="LightGray"></Label>
-
+            <Label Text="Kliknite na ponudu za vise detalja" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray"></Label>
 
 
-            <ListView x:Name="ponudeList"  RowHeight="50" Margin="6" ItemTapped="ponudeList_ItemTapped" BackgroundColor="LightGray">
+
+            <ListView x:Name="ponudeList"  RowHeight="50" ItemTapped="ponudeList_ItemTapped" BackgroundColor="LightGray">
 
 
                 <ListView.Header>
-                    <Grid  Margin="6" BackgroundColor="#13818d" HeightRequest="50" Padding="3">
+                    <Grid  BackgroundColor="#13818d" HeightRequest="30" Padding="5" Opacity="0.8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
@@ -57,8 +57,10 @@
                     </Grid>
 
                 </ListView.Header>
-
-                <ListView.ItemTemplate>
+                    <ListView.Footer>
+                        <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" Margin="10" />
+                    </ListView.Footer>
+                    <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
@@ -85,5 +87,7 @@
             </ListView>
 
         </StackLayout>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>
