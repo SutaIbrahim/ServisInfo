@@ -33,9 +33,7 @@
             <Label Text="Kliknite na ponudu za vise detalja" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray"></Label>
 
 
-
             <ListView x:Name="ponudeList"  RowHeight="50" ItemTapped="ponudeList_ItemTapped" BackgroundColor="LightGray">
-
 
                 <ListView.Header>
                     <Grid  BackgroundColor="#13818d" HeightRequest="30" Padding="5" Opacity="0.8">
@@ -53,7 +51,6 @@
                         <Label Text="Cijena:" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"  FontSize="10"></Label>
                         <Label Text="Datum kreiranja:" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"  FontSize="11"></Label>
                         <Label Text="Prihvacena?" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="White"  FontSize="11"></Label>
-
                     </Grid>
 
                 </ListView.Header>

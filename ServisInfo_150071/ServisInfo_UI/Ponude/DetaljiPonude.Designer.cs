@@ -56,6 +56,8 @@
             this.obrisiBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.UredjajTxt = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // KategorijaLbl
@@ -72,7 +74,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(20, 170);
+            this.label11.Location = new System.Drawing.Point(109, 170);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 15);
             this.label11.TabIndex = 47;
@@ -83,7 +85,7 @@
             this.DaLbl.AutoSize = true;
             this.DaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DaLbl.ForeColor = System.Drawing.Color.Green;
-            this.DaLbl.Location = new System.Drawing.Point(199, 206);
+            this.DaLbl.Location = new System.Drawing.Point(515, 172);
             this.DaLbl.Name = "DaLbl";
             this.DaLbl.Size = new System.Drawing.Size(52, 16);
             this.DaLbl.TabIndex = 46;
@@ -94,7 +96,7 @@
             this.NeLbl.AutoSize = true;
             this.NeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NeLbl.ForeColor = System.Drawing.Color.Red;
-            this.NeLbl.Location = new System.Drawing.Point(199, 206);
+            this.NeLbl.Location = new System.Drawing.Point(518, 169);
             this.NeLbl.Name = "NeLbl";
             this.NeLbl.Size = new System.Drawing.Size(52, 16);
             this.NeLbl.TabIndex = 45;
@@ -105,7 +107,7 @@
             this.NazadBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.NazadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NazadBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NazadBtn.Location = new System.Drawing.Point(23, 530);
+            this.NazadBtn.Location = new System.Drawing.Point(25, 518);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(149, 37);
             this.NazadBtn.TabIndex = 44;
@@ -137,7 +139,7 @@
             // 
             this.KlijentLbl.AutoSize = true;
             this.KlijentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KlijentLbl.Location = new System.Drawing.Point(546, 143);
+            this.KlijentLbl.Location = new System.Drawing.Point(515, 143);
             this.KlijentLbl.Name = "KlijentLbl";
             this.KlijentLbl.Size = new System.Drawing.Size(52, 16);
             this.KlijentLbl.TabIndex = 40;
@@ -167,7 +169,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(24, 207);
+            this.label10.Location = new System.Drawing.Point(420, 172);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 15);
             this.label10.TabIndex = 35;
@@ -229,15 +231,15 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label12.Location = new System.Drawing.Point(211, 33);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 33);
+            this.label12.Size = new System.Drawing.Size(191, 33);
             this.label12.TabIndex = 49;
-            this.label12.Text = "Ponuda ID:";
+            this.label12.Text = "Ponuda broj:";
             // 
             // PonudaIDLbl
             // 
             this.PonudaIDLbl.AutoSize = true;
             this.PonudaIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PonudaIDLbl.Location = new System.Drawing.Point(384, 33);
+            this.PonudaIDLbl.Location = new System.Drawing.Point(398, 33);
             this.PonudaIDLbl.Name = "PonudaIDLbl";
             this.PonudaIDLbl.Size = new System.Drawing.Size(159, 33);
             this.PonudaIDLbl.TabIndex = 50;
@@ -249,15 +251,15 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label13.Location = new System.Drawing.Point(19, 103);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(269, 24);
+            this.label13.Size = new System.Drawing.Size(244, 24);
             this.label13.TabIndex = 51;
-            this.label13.Text = "Ponuda kreirana za Upit ID: ";
+            this.label13.Text = "Ponuda kreirana za Upit: ";
             // 
             // UpitIDLbl
             // 
             this.UpitIDLbl.AutoSize = true;
             this.UpitIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitIDLbl.Location = new System.Drawing.Point(294, 103);
+            this.UpitIDLbl.Location = new System.Drawing.Point(256, 103);
             this.UpitIDLbl.Name = "UpitIDLbl";
             this.UpitIDLbl.Size = new System.Drawing.Size(236, 24);
             this.UpitIDLbl.TabIndex = 52;
@@ -308,7 +310,7 @@
             this.servisBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.servisBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.servisBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.servisBtn.Location = new System.Drawing.Point(487, 530);
+            this.servisBtn.Location = new System.Drawing.Point(489, 518);
             this.servisBtn.Name = "servisBtn";
             this.servisBtn.Size = new System.Drawing.Size(145, 37);
             this.servisBtn.TabIndex = 57;
@@ -331,21 +333,41 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(451, 171);
+            this.label8.Location = new System.Drawing.Point(127, 197);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 15);
             this.label8.TabIndex = 59;
             this.label8.Text = "Uredjaj:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // UredjajTxt
             // 
             this.UredjajTxt.AutoSize = true;
             this.UredjajTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UredjajTxt.Location = new System.Drawing.Point(546, 171);
+            this.UredjajTxt.Location = new System.Drawing.Point(199, 197);
             this.UredjajTxt.Name = "UredjajTxt";
             this.UredjajTxt.Size = new System.Drawing.Size(52, 16);
             this.UredjajTxt.TabIndex = 60;
             this.UredjajTxt.Text = "label12";
+            this.UredjajTxt.Click += new System.EventHandler(this.UredjajTxt_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(14, 561);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(635, 10);
+            this.groupBox1.TabIndex = 62;
+            this.groupBox1.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(501, 577);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 13);
+            this.label14.TabIndex = 61;
+            this.label14.Text = "Copyright © ServisInfo 2018";
             // 
             // DetaljiPonude
             // 
@@ -353,6 +375,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(660, 597);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.UredjajTxt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.obrisiBtn);
@@ -422,5 +446,7 @@
         private System.Windows.Forms.Button obrisiBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label UredjajTxt;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label14;
     }
 }

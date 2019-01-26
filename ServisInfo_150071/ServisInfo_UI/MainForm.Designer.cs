@@ -60,8 +60,17 @@
             this.IzvjestajBtn = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ukupnoUpitaLbl = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.servisiSviLbl = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -74,7 +83,7 @@
             this.postavkeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(764, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,7 +98,7 @@
             // pregledUpitaToolStripMenuItem
             // 
             this.pregledUpitaToolStripMenuItem.Name = "pregledUpitaToolStripMenuItem";
-            this.pregledUpitaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.pregledUpitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pregledUpitaToolStripMenuItem.Text = "Pregled upita";
             this.pregledUpitaToolStripMenuItem.Click += new System.EventHandler(this.pregledUpitaToolStripMenuItem_Click);
             // 
@@ -104,7 +113,7 @@
             // pregledPonudaToolStripMenuItem
             // 
             this.pregledPonudaToolStripMenuItem.Name = "pregledPonudaToolStripMenuItem";
-            this.pregledPonudaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.pregledPonudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pregledPonudaToolStripMenuItem.Text = "Pregled ponuda";
             this.pregledPonudaToolStripMenuItem.Click += new System.EventHandler(this.pregledPonudaToolStripMenuItem_Click);
             // 
@@ -119,7 +128,7 @@
             // pregledServisaToolStripMenuItem
             // 
             this.pregledServisaToolStripMenuItem.Name = "pregledServisaToolStripMenuItem";
-            this.pregledServisaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pregledServisaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pregledServisaToolStripMenuItem.Text = "Pregled servisa";
             this.pregledServisaToolStripMenuItem.Click += new System.EventHandler(this.pregledServisaToolStripMenuItem_Click);
             // 
@@ -135,14 +144,14 @@
             // izmjenaKategorijaToolStripMenuItem
             // 
             this.izmjenaKategorijaToolStripMenuItem.Name = "izmjenaKategorijaToolStripMenuItem";
-            this.izmjenaKategorijaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.izmjenaKategorijaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.izmjenaKategorijaToolStripMenuItem.Text = "Izmjena kategorija";
             this.izmjenaKategorijaToolStripMenuItem.Click += new System.EventHandler(this.izmjenaKategorijaToolStripMenuItem_Click);
             // 
             // uredjivanjeProfilaToolStripMenuItem
             // 
             this.uredjivanjeProfilaToolStripMenuItem.Name = "uredjivanjeProfilaToolStripMenuItem";
-            this.uredjivanjeProfilaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.uredjivanjeProfilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.uredjivanjeProfilaToolStripMenuItem.Text = "Uredjivanje profila";
             this.uredjivanjeProfilaToolStripMenuItem.Click += new System.EventHandler(this.uredjivanjeProfilaToolStripMenuItem_Click);
             // 
@@ -150,17 +159,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(15, 172);
+            this.label1.Location = new System.Drawing.Point(28, 584);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 24);
+            this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Prijavljena kompanija:";
+            this.label1.Text = "Prijavljeni ste kao:";
             // 
             // ServisLbl
             // 
             this.ServisLbl.AutoSize = true;
             this.ServisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ServisLbl.Location = new System.Drawing.Point(15, 204);
+            this.ServisLbl.Location = new System.Drawing.Point(212, 584);
             this.ServisLbl.Name = "ServisLbl";
             this.ServisLbl.Size = new System.Drawing.Size(40, 24);
             this.ServisLbl.TabIndex = 3;
@@ -170,7 +179,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(206, 51);
+            this.label2.Location = new System.Drawing.Point(182, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(408, 39);
             this.label2.TabIndex = 4;
@@ -180,17 +189,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(16, 405);
+            this.label3.Location = new System.Drawing.Point(18, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 24);
+            this.label3.Size = new System.Drawing.Size(103, 24);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Neodgovorenih upita:";
+            this.label3.Text = "Novi upiti:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(554, 405);
+            this.label4.Location = new System.Drawing.Point(17, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 24);
             this.label4.TabIndex = 6;
@@ -201,7 +210,7 @@
             // 
             this.UpitiLbl.AutoSize = true;
             this.UpitiLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitiLbl.Location = new System.Drawing.Point(235, 405);
+            this.UpitiLbl.Location = new System.Drawing.Point(128, 160);
             this.UpitiLbl.Name = "UpitiLbl";
             this.UpitiLbl.Size = new System.Drawing.Size(40, 24);
             this.UpitiLbl.TabIndex = 8;
@@ -211,7 +220,7 @@
             // 
             this.DatumLbl.AutoSize = true;
             this.DatumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumLbl.Location = new System.Drawing.Point(672, 172);
+            this.DatumLbl.Location = new System.Drawing.Point(116, 121);
             this.DatumLbl.Name = "DatumLbl";
             this.DatumLbl.Size = new System.Drawing.Size(62, 24);
             this.DatumLbl.TabIndex = 9;
@@ -221,40 +230,40 @@
             // 
             this.UpitiBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.UpitiBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            this.UpitiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UpitiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.UpitiBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpitiBtn.Location = new System.Drawing.Point(19, 445);
+            this.UpitiBtn.Location = new System.Drawing.Point(439, 420);
             this.UpitiBtn.Name = "UpitiBtn";
-            this.UpitiBtn.Size = new System.Drawing.Size(224, 101);
+            this.UpitiBtn.Size = new System.Drawing.Size(302, 36);
             this.UpitiBtn.TabIndex = 10;
-            this.UpitiBtn.Text = "Pregledaj upite";
+            this.UpitiBtn.Text = "Upiti";
             this.UpitiBtn.UseVisualStyleBackColor = false;
             this.UpitiBtn.Click += new System.EventHandler(this.UpitiBtn_Click);
             // 
             // ServisiBtn
             // 
             this.ServisiBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.ServisiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ServisiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ServisiBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ServisiBtn.Location = new System.Drawing.Point(558, 445);
+            this.ServisiBtn.Location = new System.Drawing.Point(439, 505);
             this.ServisiBtn.Name = "ServisiBtn";
-            this.ServisiBtn.Size = new System.Drawing.Size(224, 101);
+            this.ServisiBtn.Size = new System.Drawing.Size(302, 36);
             this.ServisiBtn.TabIndex = 11;
-            this.ServisiBtn.Text = "Pregledaj servise";
+            this.ServisiBtn.Text = "Servisi";
             this.ServisiBtn.UseVisualStyleBackColor = false;
             this.ServisiBtn.Click += new System.EventHandler(this.ServisiBtn_Click);
             // 
             // PonudeBtn
             // 
             this.PonudeBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.PonudeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PonudeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PonudeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PonudeBtn.Location = new System.Drawing.Point(296, 495);
+            this.PonudeBtn.Location = new System.Drawing.Point(439, 462);
             this.PonudeBtn.Name = "PonudeBtn";
             this.PonudeBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PonudeBtn.Size = new System.Drawing.Size(224, 101);
+            this.PonudeBtn.Size = new System.Drawing.Size(302, 36);
             this.PonudeBtn.TabIndex = 12;
-            this.PonudeBtn.Text = "Pregledaj ponude";
+            this.PonudeBtn.Text = "Ponude";
             this.PonudeBtn.UseVisualStyleBackColor = false;
             this.PonudeBtn.Click += new System.EventHandler(this.PonudeBtn_Click);
             // 
@@ -262,7 +271,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(591, 172);
+            this.label6.Location = new System.Drawing.Point(26, 121);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 13;
@@ -272,7 +281,7 @@
             // 
             this.BrojServisaLbl.AutoSize = true;
             this.BrojServisaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BrojServisaLbl.Location = new System.Drawing.Point(701, 405);
+            this.BrojServisaLbl.Location = new System.Drawing.Point(165, 202);
             this.BrojServisaLbl.Name = "BrojServisaLbl";
             this.BrojServisaLbl.Size = new System.Drawing.Size(40, 24);
             this.BrojServisaLbl.TabIndex = 14;
@@ -282,7 +291,7 @@
             // 
             this.groupBox1.Location = new System.Drawing.Point(10, 615);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(785, 10);
+            this.groupBox1.Size = new System.Drawing.Size(744, 10);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             // 
@@ -290,7 +299,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(642, 631);
+            this.label5.Location = new System.Drawing.Point(601, 631);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 13);
             this.label5.TabIndex = 37;
@@ -299,11 +308,11 @@
             // OdjavaBtn
             // 
             this.OdjavaBtn.BackColor = System.Drawing.Color.Tomato;
-            this.OdjavaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.OdjavaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.OdjavaBtn.ForeColor = System.Drawing.Color.Snow;
-            this.OdjavaBtn.Location = new System.Drawing.Point(19, 560);
+            this.OdjavaBtn.Location = new System.Drawing.Point(576, 577);
             this.OdjavaBtn.Name = "OdjavaBtn";
-            this.OdjavaBtn.Size = new System.Drawing.Size(224, 36);
+            this.OdjavaBtn.Size = new System.Drawing.Size(165, 32);
             this.OdjavaBtn.TabIndex = 38;
             this.OdjavaBtn.Text = "Odjava";
             this.OdjavaBtn.UseVisualStyleBackColor = false;
@@ -312,11 +321,11 @@
             // KategorijeBtn
             // 
             this.KategorijeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.KategorijeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.KategorijeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.KategorijeBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.KategorijeBtn.Location = new System.Drawing.Point(558, 560);
+            this.KategorijeBtn.Location = new System.Drawing.Point(26, 420);
             this.KategorijeBtn.Name = "KategorijeBtn";
-            this.KategorijeBtn.Size = new System.Drawing.Size(224, 36);
+            this.KategorijeBtn.Size = new System.Drawing.Size(301, 35);
             this.KategorijeBtn.TabIndex = 39;
             this.KategorijeBtn.Text = "Izmjena kategorija";
             this.KategorijeBtn.UseVisualStyleBackColor = false;
@@ -326,17 +335,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(304, 172);
+            this.label7.Location = new System.Drawing.Point(17, 41);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(178, 24);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Prosjecna ocjena:";
+            this.label7.Text = "Prosječna ocjena:";
             // 
             // prosjekLbl
             // 
             this.prosjekLbl.AutoSize = true;
             this.prosjekLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.prosjekLbl.Location = new System.Drawing.Point(488, 172);
+            this.prosjekLbl.Location = new System.Drawing.Point(201, 41);
             this.prosjekLbl.Name = "prosjekLbl";
             this.prosjekLbl.Size = new System.Drawing.Size(40, 24);
             this.prosjekLbl.TabIndex = 41;
@@ -345,12 +354,12 @@
             // IzvjestajBtn
             // 
             this.IzvjestajBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.IzvjestajBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.IzvjestajBtn.Location = new System.Drawing.Point(296, 445);
+            this.IzvjestajBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.IzvjestajBtn.Location = new System.Drawing.Point(26, 505);
             this.IzvjestajBtn.Name = "IzvjestajBtn";
-            this.IzvjestajBtn.Size = new System.Drawing.Size(224, 36);
+            this.IzvjestajBtn.Size = new System.Drawing.Size(301, 36);
             this.IzvjestajBtn.TabIndex = 42;
-            this.IzvjestajBtn.Text = "Izvjestaj o prometu";
+            this.IzvjestajBtn.Text = "Izvještaj o prometu";
             this.IzvjestajBtn.UseVisualStyleBackColor = false;
             this.IzvjestajBtn.Click += new System.EventHandler(this.IzvjestajBtn_Click);
             // 
@@ -365,11 +374,88 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox1.BackgroundImage = global::ServisInfo_UI.Properties.Resources.mobile_applications_icon_11;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(296, 204);
+            this.pictureBox1.Location = new System.Drawing.Point(398, 132);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 225);
+            this.pictureBox1.Size = new System.Drawing.Size(343, 272);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(26, 462);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(301, 35);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Uređivanje profila";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.servisiSviLbl);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.ukupnoUpitaLbl);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.prosjekLbl);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.BrojServisaLbl);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.UpitiLbl);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox2.Location = new System.Drawing.Point(26, 159);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(301, 245);
+            this.groupBox2.TabIndex = 44;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Osnovne informacije";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(17, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 24);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Broj upita:";
+            // 
+            // ukupnoUpitaLbl
+            // 
+            this.ukupnoUpitaLbl.AutoSize = true;
+            this.ukupnoUpitaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ukupnoUpitaLbl.Location = new System.Drawing.Point(128, 80);
+            this.ukupnoUpitaLbl.Name = "ukupnoUpitaLbl";
+            this.ukupnoUpitaLbl.Size = new System.Drawing.Size(40, 24);
+            this.ukupnoUpitaLbl.TabIndex = 43;
+            this.ukupnoUpitaLbl.Text = "asd";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.Location = new System.Drawing.Point(17, 120);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(124, 24);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Broj servisa:";
+            // 
+            // servisiSviLbl
+            // 
+            this.servisiSviLbl.AutoSize = true;
+            this.servisiSviLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.servisiSviLbl.Location = new System.Drawing.Point(146, 120);
+            this.servisiSviLbl.Name = "servisiSviLbl";
+            this.servisiSviLbl.Size = new System.Drawing.Size(40, 24);
+            this.servisiSviLbl.TabIndex = 45;
+            this.servisiSviLbl.Text = "asd";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
@@ -377,32 +463,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(794, 653);
+            this.ClientSize = new System.Drawing.Size(764, 653);
+            this.Controls.Add(this.ServisLbl);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.IzvjestajBtn);
-            this.Controls.Add(this.prosjekLbl);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.KategorijeBtn);
             this.Controls.Add(this.OdjavaBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.BrojServisaLbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PonudeBtn);
             this.Controls.Add(this.ServisiBtn);
             this.Controls.Add(this.UpitiBtn);
             this.Controls.Add(this.DatumLbl);
-            this.Controls.Add(this.UpitiLbl);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ServisLbl);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(810, 692);
-            this.MinimumSize = new System.Drawing.Size(810, 692);
+            this.MaximumSize = new System.Drawing.Size(780, 692);
+            this.MinimumSize = new System.Drawing.Size(780, 692);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServisInfo@Pocetna";
@@ -410,6 +492,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,5 +532,13 @@
         private System.Windows.Forms.Label prosjekLbl;
         private System.Windows.Forms.Button IzvjestajBtn;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label ukupnoUpitaLbl;
+        private System.Windows.Forms.Label servisiSviLbl;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

@@ -35,6 +35,7 @@ namespace ServisInfo_API.App_Start
 
             return Ok(upiti);
         }
+ 
 
         [HttpGet]
         public IHttpActionResult GetOdgovoriByKategorijaId(int id)

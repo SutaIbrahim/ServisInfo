@@ -34,7 +34,13 @@ namespace ServisInfo_API.Controllers
 
             return Ok(kompanijeUpiti);
         }
-
+        [HttpGet]
+        [Route("api/KompanijeUpiti/GetUpitiSvi/{kompanijaID}")]
+        public IHttpActionResult GetUpitiSvi(int kompanijaId)
+        {
+            int broj = db.KompanijeUpiti.Where(x => x.KompanijaID == kompanijaId).Count();
+            return Ok(broj);
+        }
         [HttpGet]
         [Route("api/KompanijeUpiti/GetCountNeodgovoreni/{kompanijaID}")]
         public int? GetByDate(string kompanijaID)

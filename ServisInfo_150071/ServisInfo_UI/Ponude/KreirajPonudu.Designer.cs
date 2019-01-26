@@ -57,6 +57,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label15 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DaniSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SatiSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -76,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(21, 685);
+            this.label4.Location = new System.Drawing.Point(21, 661);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(183, 16);
             this.label4.TabIndex = 3;
@@ -115,7 +117,7 @@
             // 
             // DaniSelect
             // 
-            this.DaniSelect.Location = new System.Drawing.Point(206, 685);
+            this.DaniSelect.Location = new System.Drawing.Point(206, 661);
             this.DaniSelect.Name = "DaniSelect";
             this.DaniSelect.Size = new System.Drawing.Size(45, 20);
             this.DaniSelect.TabIndex = 7;
@@ -123,7 +125,7 @@
             // SatiSelect
             // 
             this.SatiSelect.DecimalPlaces = 1;
-            this.SatiSelect.Location = new System.Drawing.Point(272, 685);
+            this.SatiSelect.Location = new System.Drawing.Point(272, 661);
             this.SatiSelect.Name = "SatiSelect";
             this.SatiSelect.Size = new System.Drawing.Size(44, 20);
             this.SatiSelect.TabIndex = 8;
@@ -132,7 +134,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(250, 689);
+            this.label2.Location = new System.Drawing.Point(250, 665);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 16);
             this.label2.TabIndex = 9;
@@ -142,7 +144,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(313, 689);
+            this.label3.Location = new System.Drawing.Point(313, 665);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 16);
             this.label3.TabIndex = 10;
@@ -162,7 +164,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(11, 137);
+            this.label8.Location = new System.Drawing.Point(133, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 16);
             this.label8.TabIndex = 12;
@@ -170,10 +172,10 @@
             // 
             // KreirajBtn
             // 
-            this.KreirajBtn.BackColor = System.Drawing.Color.CadetBlue;
+            this.KreirajBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.KreirajBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.KreirajBtn.ForeColor = System.Drawing.Color.White;
-            this.KreirajBtn.Location = new System.Drawing.Point(481, 689);
+            this.KreirajBtn.Location = new System.Drawing.Point(481, 665);
             this.KreirajBtn.Name = "KreirajBtn";
             this.KreirajBtn.Size = new System.Drawing.Size(117, 48);
             this.KreirajBtn.TabIndex = 13;
@@ -185,7 +187,7 @@
             // 
             this.OdustaniBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.OdustaniBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.OdustaniBtn.Location = new System.Drawing.Point(349, 703);
+            this.OdustaniBtn.Location = new System.Drawing.Point(349, 681);
             this.OdustaniBtn.Name = "OdustaniBtn";
             this.OdustaniBtn.Size = new System.Drawing.Size(116, 30);
             this.OdustaniBtn.TabIndex = 14;
@@ -218,9 +220,9 @@
             this.kategorijaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kategorijaLbl.Location = new System.Drawing.Point(193, 112);
             this.kategorijaLbl.Name = "kategorijaLbl";
-            this.kategorijaLbl.Size = new System.Drawing.Size(46, 16);
+            this.kategorijaLbl.Size = new System.Drawing.Size(35, 16);
             this.kategorijaLbl.TabIndex = 17;
-            this.kategorijaLbl.Text = "Klijent:";
+            this.kategorijaLbl.Text = "Test";
             // 
             // CijenaTxt
             // 
@@ -327,14 +329,33 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(466, 735);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 13);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Copyright © ServisInfo 2018";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(14, 719);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(592, 10);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            // 
             // KreirajPonudu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(627, 627);
+            this.ClientSize = new System.Drawing.Size(629, 641);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.PitanjeTxt);
@@ -361,8 +382,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.MaximumSize = new System.Drawing.Size(643, 798);
-            this.MinimumSize = new System.Drawing.Size(643, 666);
+            this.MaximumSize = new System.Drawing.Size(650, 798);
+            this.MinimumSize = new System.Drawing.Size(645, 666);
             this.Name = "KreirajPonudu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KreirajPonudu";
@@ -405,5 +426,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

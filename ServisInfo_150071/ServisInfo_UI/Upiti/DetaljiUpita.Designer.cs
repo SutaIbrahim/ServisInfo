@@ -57,6 +57,8 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.prijedlogLbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +116,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(33, 547);
+            this.label6.Location = new System.Drawing.Point(32, 550);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 15);
             this.label6.TabIndex = 5;
@@ -164,7 +166,7 @@
             // 
             this.DatumLbl.AutoSize = true;
             this.DatumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumLbl.Location = new System.Drawing.Point(192, 101);
+            this.DatumLbl.Location = new System.Drawing.Point(142, 101);
             this.DatumLbl.Name = "DatumLbl";
             this.DatumLbl.Size = new System.Drawing.Size(52, 16);
             this.DatumLbl.TabIndex = 10;
@@ -174,7 +176,7 @@
             // 
             this.MarkaLbl.AutoSize = true;
             this.MarkaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MarkaLbl.Location = new System.Drawing.Point(192, 126);
+            this.MarkaLbl.Location = new System.Drawing.Point(142, 126);
             this.MarkaLbl.Name = "MarkaLbl";
             this.MarkaLbl.Size = new System.Drawing.Size(52, 16);
             this.MarkaLbl.TabIndex = 11;
@@ -204,7 +206,7 @@
             // 
             this.KlijentLbl.AutoSize = true;
             this.KlijentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KlijentLbl.Location = new System.Drawing.Point(558, 101);
+            this.KlijentLbl.Location = new System.Drawing.Point(521, 100);
             this.KlijentLbl.Name = "KlijentLbl";
             this.KlijentLbl.Size = new System.Drawing.Size(52, 16);
             this.KlijentLbl.TabIndex = 16;
@@ -214,7 +216,7 @@
             // 
             this.ModelLbl.AutoSize = true;
             this.ModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ModelLbl.Location = new System.Drawing.Point(192, 154);
+            this.ModelLbl.Location = new System.Drawing.Point(142, 154);
             this.ModelLbl.Name = "ModelLbl";
             this.ModelLbl.Size = new System.Drawing.Size(52, 16);
             this.ModelLbl.TabIndex = 17;
@@ -233,14 +235,16 @@
             // 
             // KreirajPonuduBtn
             // 
+            this.KreirajPonuduBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.KreirajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KreirajPonuduBtn.ForeColor = System.Drawing.Color.Green;
-            this.KreirajPonuduBtn.Location = new System.Drawing.Point(473, 771);
+            this.KreirajPonuduBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.KreirajPonuduBtn.Location = new System.Drawing.Point(473, 757);
+            this.KreirajPonuduBtn.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.KreirajPonuduBtn.Name = "KreirajPonuduBtn";
-            this.KreirajPonuduBtn.Size = new System.Drawing.Size(180, 37);
+            this.KreirajPonuduBtn.Size = new System.Drawing.Size(180, 38);
             this.KreirajPonuduBtn.TabIndex = 20;
             this.KreirajPonuduBtn.Text = "Kreiraj ponudu";
-            this.KreirajPonuduBtn.UseVisualStyleBackColor = true;
+            this.KreirajPonuduBtn.UseVisualStyleBackColor = false;
             this.KreirajPonuduBtn.Click += new System.EventHandler(this.KreirajPonuduBtn_Click);
             // 
             // NazadBtn
@@ -248,7 +252,8 @@
             this.NazadBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.NazadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NazadBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NazadBtn.Location = new System.Drawing.Point(37, 771);
+            this.NazadBtn.Location = new System.Drawing.Point(35, 758);
+            this.NazadBtn.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(149, 37);
             this.NazadBtn.TabIndex = 21;
@@ -261,7 +266,7 @@
             this.NeLbl.AutoSize = true;
             this.NeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NeLbl.ForeColor = System.Drawing.Color.Red;
-            this.NeLbl.Location = new System.Drawing.Point(558, 154);
+            this.NeLbl.Location = new System.Drawing.Point(521, 153);
             this.NeLbl.Name = "NeLbl";
             this.NeLbl.Size = new System.Drawing.Size(52, 16);
             this.NeLbl.TabIndex = 22;
@@ -272,7 +277,7 @@
             this.DaLbl.AutoSize = true;
             this.DaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DaLbl.ForeColor = System.Drawing.Color.Green;
-            this.DaLbl.Location = new System.Drawing.Point(558, 154);
+            this.DaLbl.Location = new System.Drawing.Point(521, 153);
             this.DaLbl.Name = "DaLbl";
             this.DaLbl.Size = new System.Drawing.Size(52, 16);
             this.DaLbl.TabIndex = 23;
@@ -292,7 +297,7 @@
             // 
             this.KategorijaLbl.AutoSize = true;
             this.KategorijaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KategorijaLbl.Location = new System.Drawing.Point(558, 127);
+            this.KategorijaLbl.Location = new System.Drawing.Point(521, 126);
             this.KategorijaLbl.Name = "KategorijaLbl";
             this.KategorijaLbl.Size = new System.Drawing.Size(52, 16);
             this.KategorijaLbl.TabIndex = 25;
@@ -323,7 +328,8 @@
             this.PregledajPonuduBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.PregledajPonuduBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PregledajPonuduBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PregledajPonuduBtn.Location = new System.Drawing.Point(473, 772);
+            this.PregledajPonuduBtn.Location = new System.Drawing.Point(473, 757);
+            this.PregledajPonuduBtn.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.PregledajPonuduBtn.Name = "PregledajPonuduBtn";
             this.PregledajPonuduBtn.Size = new System.Drawing.Size(180, 37);
             this.PregledajPonuduBtn.TabIndex = 53;
@@ -333,9 +339,9 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(82, 547);
+            this.pictureBox.Location = new System.Drawing.Point(82, 550);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(440, 201);
+            this.pictureBox.Size = new System.Drawing.Size(424, 190);
             this.pictureBox.TabIndex = 54;
             this.pictureBox.TabStop = false;
             // 
@@ -343,7 +349,7 @@
             // 
             this.prijedlogLbl.AutoSize = true;
             this.prijedlogLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.prijedlogLbl.Location = new System.Drawing.Point(34, 480);
+            this.prijedlogLbl.Location = new System.Drawing.Point(34, 490);
             this.prijedlogLbl.Name = "prijedlogLbl";
             this.prijedlogLbl.Size = new System.Drawing.Size(52, 16);
             this.prijedlogLbl.TabIndex = 55;
@@ -353,11 +359,29 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label13.Location = new System.Drawing.Point(34, 458);
+            this.label13.Location = new System.Drawing.Point(34, 468);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(110, 15);
             this.label13.TabIndex = 56;
             this.label13.Text = "Mogća rješenja:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(12, 801);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(661, 10);
+            this.groupBox1.TabIndex = 58;
+            this.groupBox1.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(516, 817);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 13);
+            this.label14.TabIndex = 57;
+            this.label14.Text = "Copyright © ServisInfo 2018";
             // 
             // DetaljiUpita
             // 
@@ -366,7 +390,9 @@
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(714, 621);
+            this.ClientSize = new System.Drawing.Size(684, 836);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.prijedlogLbl);
             this.Controls.Add(this.pictureBox);
@@ -397,7 +423,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(730, 948);
-            this.MinimumSize = new System.Drawing.Size(690, 650);
+            this.MinimumSize = new System.Drawing.Size(700, 650);
             this.Name = "DetaljiUpita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiUpita";
@@ -439,5 +465,7 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label prijedlogLbl;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label14;
     }
 }

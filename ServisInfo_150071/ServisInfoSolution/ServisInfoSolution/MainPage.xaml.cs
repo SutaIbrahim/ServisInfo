@@ -293,6 +293,7 @@ namespace ServisInfoSolution
 
         private void resolveBtn_Clicked(object sender, EventArgs e)
         {
+            this.Navigation.PushAsync(new Rjesenja.Rjesenja());
 
         }
     }

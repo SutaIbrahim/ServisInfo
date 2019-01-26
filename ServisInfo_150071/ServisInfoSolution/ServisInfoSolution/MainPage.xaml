@@ -23,7 +23,7 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="End">
 
                     <Button x:Name="resetBtn" Text="Ponisti odabire" Clicked="resetBtn_Clicked" BackgroundColor="Gray" TextColor="White" HorizontalOptions="End" FontSize="11"></Button>
-                    <Button x:Name="resolveBtn" Text="Pogledaj moguća rješenja" Clicked="resolveBtn_Clicked"  BackgroundColor="Gray" TextColor="White" HorizontalOptions="End" FontSize="11"></Button>
+                    <Button x:Name="resolveBtn" Text="Moguća rješenja" Clicked="resolveBtn_Clicked"  BackgroundColor="Gray" TextColor="White" HorizontalOptions="End" FontSize="11"></Button>
                     <Button x:Name="kreirajUpitBtn" Text="Kreiraj upit" Clicked="kreirajUpitBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"  FontSize="11"></Button>
                 </StackLayout>
 

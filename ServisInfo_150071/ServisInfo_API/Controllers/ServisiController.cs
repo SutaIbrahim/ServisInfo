@@ -34,6 +34,13 @@ namespace ServisInfo_API.Controllers
 
             return Ok(servisi);
         }
+        [HttpGet]
+        [Route("api/Servisi/GetServisiSvi/{kompanijaID}")]
+        public IHttpActionResult GetServisiSvi(int kompanijaId)
+        {
+            int broj = db.Servisi.Where(x => x.KompanijaID == kompanijaId).Count();
+            return Ok(broj);
+        }
         //desktop
         [HttpGet]
         [Route("api/Servisi/GetByDate/{kompanijaID}/{datum}/{datum2}/{status}")]

@@ -96,9 +96,9 @@
             this.sacuvajButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sacuvajButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.sacuvajButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sacuvajButton.Location = new System.Drawing.Point(212, 311);
+            this.sacuvajButton.Location = new System.Drawing.Point(200, 303);
             this.sacuvajButton.Name = "sacuvajButton";
-            this.sacuvajButton.Size = new System.Drawing.Size(98, 30);
+            this.sacuvajButton.Size = new System.Drawing.Size(110, 38);
             this.sacuvajButton.TabIndex = 59;
             this.sacuvajButton.Text = "Sačuvaj";
             this.sacuvajButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -93,6 +93,30 @@ namespace ServisInfo_UI
 
             //
             DatumLbl.Text = DateTime.Now.ToShortDateString();
+
+            HttpResponseMessage response5 = KompanijeUpitiService.GetActionResponse("GetUpitiSvi", Global.prijavljenaKompanija.KompanijaID.ToString());
+            if (response5.IsSuccessStatusCode)
+            {
+                int sviUpitiBroj = response5.Content.ReadAsAsync<int>().Result;
+
+                ukupnoUpitaLbl.Text = sviUpitiBroj.ToString();
+            }
+            else
+            {
+                ukupnoUpitaLbl.Text = "0";
+            }
+
+            HttpResponseMessage response6 = ServisiService.GetActionResponse("GetServisiSvi", Global.prijavljenaKompanija.KompanijaID.ToString());
+            if (response6.IsSuccessStatusCode)
+            {
+                int sviServisiBroj = response6.Content.ReadAsAsync<int>().Result;
+
+               servisiSviLbl.Text = sviServisiBroj.ToString();
+            }
+            else
+            {
+                servisiSviLbl.Text = "0";
+            }
         }
 
         private void pregledUpitaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,6 +210,14 @@ namespace ServisInfo_UI
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KompanijeAdministracija.IzmjenaProfila frm = new KompanijeAdministracija.IzmjenaProfila();
+            frm.ShowDialog();
+
+            BindGrid();
         }
     }
 }
