@@ -51,7 +51,9 @@ namespace ServisInfoSolution.Rjesenja
             }
         }
 
+        private void pronadjiBtn_Clicked(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

@@ -12,18 +12,18 @@
 
             <Label Text="Izaberite raspon datuma za prikaz ponuda (Od-Do):" FontSize="11" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4"></Label>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Margin="20">
-                <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged" ></DatePicker>
-                <Label Text="_" VerticalOptions="Center"></Label>
+                        <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged"  ></DatePicker>
+                    <Label Text="_" VerticalOptions="Center"></Label>
                 <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged" ></DatePicker>
             </StackLayout>
 
             <StackLayout Margin="5">
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Prikazi neprihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="10"></Label>
+                    <Label Text="Prikazi neprihvacene ponude" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="10"></Label>
                     <Switch x:Name="neSW" PropertyChanged="neSW_PropertyChanged"></Switch>
 
-                    <Label Text="|  Prikazi prihvacene ponude" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
+                    <Label Text=" Prikazi prihvacene ponude" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
                     <Switch x:Name="daSW" PropertyChanged="daSW_PropertyChanged"></Switch>
                 </StackLayout>
 

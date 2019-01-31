@@ -3,16 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.Rjesenja.Rjesenja"
 Title="Najčešća rješenja"             >
-    
-    <ContentPage.Content>
+
+    <ScrollView >
         <Grid>
             <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
             <StackLayout  Padding="30">
 
                 <Picker x:Name="kategorijePicker" Title="Odaberite kategoriju" SelectedIndexChanged="kategorijePicker_SelectedIndexChanged"></Picker>
+                <Label Text="Prijedlozi su bazirani na osnovu prijašnjih iskustava i služe kao samostalna pomoć te se ne garantuje na njihovu tačnost" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray"></Label>
+
+                <Label Text="Izaberite kategoriju kako bi pronašli moguća rješenja" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray" Margin="0,40,0,0"></Label>
+
+                <StackLayout Orientation="Horizontal" Margin="10,40,10,10">
+                    <Switch x:Name="prvi" ></Switch>
+                    <Label Text="-    Linije raznih boja po ekranu" VerticalTextAlignment="Center" FontSize="15" ></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <Switch x:Name="drugi"></Switch>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <Switch x:Name="treci"></Switch>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <Switch x:Name="cetvrti"></Switch>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <Switch x:Name="peti"></Switch>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+
+                    <Button x:Name="pronadjiBtn" Text="Pronađi rješenja" Clicked="pronadjiBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"  FontSize="11" HeightRequest="35"></Button>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <Editor HeightRequest="100" WidthRequest="400" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" ></Editor>
+                </StackLayout>
+
+            </StackLayout>
+            <StackLayout  VerticalOptions="End" Margin="13">
+                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" VerticalOptions="End" TextColor="Gray" />
 
             </StackLayout>
 
+
         </Grid>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

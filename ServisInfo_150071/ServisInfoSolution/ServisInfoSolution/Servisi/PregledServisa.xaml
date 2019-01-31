@@ -25,7 +25,7 @@
                     <Label Text="Prikazi servise u toku" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
                     <Switch x:Name="uTokuSw" PropertyChanged="uTokuSw_PropertyChanged"></Switch>
 
-                    <Label Text=" |   Prikazi zavrsene servise" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
+                    <Label Text=" Prikazi zavrsene servise" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"  FontSize="10"></Label>
                     <Switch x:Name="zavrseniSw" PropertyChanged="zavrseniSw_PropertyChanged"></Switch>
                 </StackLayout>
 
