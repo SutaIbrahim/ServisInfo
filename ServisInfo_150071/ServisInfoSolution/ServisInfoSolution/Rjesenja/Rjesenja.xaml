@@ -12,30 +12,30 @@ Title="Najčešća rješenja"             >
                 <Picker x:Name="kategorijePicker" Title="Odaberite kategoriju" SelectedIndexChanged="kategorijePicker_SelectedIndexChanged"></Picker>
                 <Label Text="Prijedlozi su bazirani na osnovu prijašnjih iskustava i služe kao samostalna pomoć te se ne garantuje na njihovu tačnost" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray"></Label>
 
-                <Label Text="Izaberite kategoriju kako bi pronašli moguća rješenja" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray" Margin="0,40,0,0"></Label>
+                <Label x:Name="izaberiteLbl" Text="Izaberite kategoriju kako bi pronašli moguća rješenja" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray" Margin="0,40,0,0"></Label>
 
                 <StackLayout Orientation="Horizontal" Margin="10,40,10,10">
                     <Switch x:Name="prvi" ></Switch>
-                    <Label Text="-    Linije raznih boja po ekranu" VerticalTextAlignment="Center" FontSize="15" ></Label>
+                    <Label Text="-    Linije raznih boja po ekranu" VerticalTextAlignment="Center" FontSize="15" x:Name="prviTxt"></Label>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="10">
                     <Switch x:Name="drugi"></Switch>
-                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" x:Name="drugiTxt"></Label>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="10">
                     <Switch x:Name="treci"></Switch>
-                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" x:Name="treciTxt"></Label>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="10">
                     <Switch x:Name="cetvrti"></Switch>
-                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" x:Name="cetvrtiTxt"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Margin="10">
                     <Switch x:Name="peti"></Switch>
-                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" ></Label>
+                    <Label Text="-    Touch prekida"  VerticalTextAlignment="Center"  FontSize="15" x:Name="petiTxt"></Label>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="End">
@@ -43,9 +43,12 @@ Title="Najčešća rješenja"             >
                     <Button x:Name="pronadjiBtn" Text="Pronađi rješenja" Clicked="pronadjiBtn_Clicked" BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"  FontSize="11" HeightRequest="35"></Button>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="10">
-                    <Editor HeightRequest="100" WidthRequest="400" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" ></Editor>
-                </StackLayout>
+                <Label x:Name="moguca"  VerticalTextAlignment="Center"  FontSize="18" Text="Moguća rješenja:" FontAttributes="Bold"></Label>
+                <Label x:Name="editor"  VerticalTextAlignment="Center"  FontSize="18"></Label>
+                <Label x:Name="link" TextColor="Blue" ></Label>
+                <!--<StackLayout Orientation="Horizontal" Margin="10">
+                    <Editor HeightRequest="100" WidthRequest="600" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" x:Name="editor"></Editor>
+                </StackLayout>-->
 
             </StackLayout>
             <StackLayout  VerticalOptions="End" Margin="13">

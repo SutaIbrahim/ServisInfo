@@ -19,7 +19,6 @@
                 <Picker x:Name="kategorijePicker" Title="Odaberite kategoriju" SelectedIndexChanged="kategorijePicker_SelectedIndexChanged"></Picker>
                 <Picker x:Name="gradoviPicker" Title="Izaberite grad" SelectedIndexChanged="gradoviPicker_SelectedIndexChanged"></Picker>
 
-
                 <StackLayout Orientation="Horizontal" HorizontalOptions="End">
 
                     <Button x:Name="resetBtn" Text="Ponisti odabire" Clicked="resetBtn_Clicked" BackgroundColor="Gray" TextColor="White" HorizontalOptions="End" FontSize="11"></Button>
@@ -42,13 +41,10 @@
                                 <Grid>
                                     <Grid.ColumnDefinitions>
 
-
                                         <ColumnDefinition Width="Auto"></ColumnDefinition>
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                         <ColumnDefinition Width="Auto"></ColumnDefinition>
                                         <ColumnDefinition Width="Auto"></ColumnDefinition>
-
-
 
                                     </Grid.ColumnDefinitions>
 
