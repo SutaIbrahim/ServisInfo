@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.Rjesenja.Rjesenja"
-Title="Najčešća rješenja"             >
-
+Title="Najčešća rješenja"         
+             >
     <ScrollView >
         <Grid>
             <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
@@ -13,6 +13,7 @@ Title="Najčešća rješenja"             >
                 <Label Text="Prijedlozi su bazirani na osnovu prijašnjih iskustava i služe kao samostalna pomoć te se ne garantuje na njihovu tačnost" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray"></Label>
 
                 <Label x:Name="izaberiteLbl" Text="Izaberite kategoriju kako bi pronašli moguća rješenja" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray" Margin="0,40,0,0"></Label>
+                <Label x:Name="nemaLbl" Text="Nažalost ova kategorija nema ponuđenih rješenja" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray" Margin="0,40,0,0"></Label>
 
                 <StackLayout Orientation="Horizontal" Margin="10,40,10,10">
                     <Switch x:Name="prvi" ></Switch>
@@ -49,13 +50,9 @@ Title="Najčešća rješenja"             >
                 <!--<StackLayout Orientation="Horizontal" Margin="10">
                     <Editor HeightRequest="100" WidthRequest="600" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" x:Name="editor"></Editor>
                 </StackLayout>-->
+                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" VerticalOptions="End" TextColor="Gray" Margin="10,20,10,10" />
 
             </StackLayout>
-            <StackLayout  VerticalOptions="End" Margin="13">
-                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" VerticalOptions="End" TextColor="Gray" />
-
-            </StackLayout>
-
 
         </Grid>
     </ScrollView>

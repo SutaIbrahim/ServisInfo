@@ -11,7 +11,7 @@
 
                 <Label Text="Izaberite raspon datuma za prikaz upita (Od-Do):"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="4" FontSize="11"></Label>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Margin="20">
-                    <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged"></DatePicker>
+                    <DatePicker  x:Name="OdDtm" PropertyChanged="OdDtm_PropertyChanged" ></DatePicker>
                     <Label Text="_" VerticalOptions="Center"></Label>
                     <DatePicker  x:Name="DoDtm" PropertyChanged="DoDtm_PropertyChanged"  ></DatePicker>
                 </StackLayout>
