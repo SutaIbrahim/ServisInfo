@@ -39,6 +39,7 @@
             this.OdjavaBtn = new System.Windows.Forms.Button();
             this.PregledKompanijaBtn = new System.Windows.Forms.Button();
             this.pregledKategorijaBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -155,11 +156,23 @@
             this.pregledKategorijaBtn.UseVisualStyleBackColor = true;
             this.pregledKategorijaBtn.Click += new System.EventHandler(this.pregledKategorijaBtn_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(289, 333);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(222, 59);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Pregled klijenata";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 438);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pregledKategorijaBtn);
             this.Controls.Add(this.PregledKompanijaBtn);
             this.Controls.Add(this.label1);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Button OdjavaBtn;
         private System.Windows.Forms.Button PregledKompanijaBtn;
         private System.Windows.Forms.Button pregledKategorijaBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

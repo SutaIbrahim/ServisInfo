@@ -49,6 +49,18 @@ namespace ServisInfo_API.Controllers
             return Ok(k);
         }
 
+
+        [Route("api/Klijenti/SearchByNaziv/{naziv?}")]
+        [HttpGet]
+        public IHttpActionResult SearchByNaziv(string naziv = "")
+        {
+
+            List<Klijenti> klijenti = db.Klijenti.Where(x => naziv == "" || (x.Prezime + " " + x.Ime).Contains(naziv) || x.KorisickoIme.Contains(naziv)).ToList();
+
+            return Ok(klijenti);
+        }
+
+
         // PUT: api/Klijenti/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutKlijenti(int id, Klijenti klijenti)
@@ -111,8 +123,52 @@ namespace ServisInfo_API.Controllers
                 return NotFound();
             }
 
+            try
+            {
+
+       
+                List<Ponude> ponude = db.Ponude.Where(p => p.KlijentID == id).ToList();
+                List<Ocjene> ocjene = db.Ocjene.Where(p => p.KlijentID == id).ToList();
+                foreach (var x in ocjene)
+                {
+                    var o = db.Ocjene.Where(p => p.OcjenaID == x.OcjenaID).FirstOrDefault();
+                    db.Ocjene.Remove(o);
+                }
+                foreach (var x in ponude)
+            {
+                var servis = db.Servisi.Where(p => p.PonudaID == x.PonudaID).FirstOrDefault();
+                db.Servisi.Remove(servis);
+            }
+            foreach (var x in ponude)
+            {
+                var pa = db.Ponude.Where(p => p.PonudaID == x.PonudaID).FirstOrDefault();
+                db.Ponude.Remove(pa);
+            }
+            List<Upiti> upiti = db.Upiti.Where(p => p.KlijentID == id).ToList();
+
+
+                foreach (var x in upiti)
+                {
+                   var kUpuitu = db.KompanijeUpiti.Where(p => p.UpitID == x.UpitID).ToList();
+
+                    foreach (var y in kUpuitu)
+                    {
+                        db.KompanijeUpiti.Remove(y);
+                    }
+                }
+
+                foreach (var x in upiti)
+            {
+                var u = db.Upiti.Where(p => p.UpitID == x.UpitID).FirstOrDefault();
+                db.Upiti.Remove(u);
+            }
             db.Klijenti.Remove(klijenti);
             db.SaveChanges();
+            }
+            catch (ArgumentException e)
+            {
+
+            }
 
             return Ok(klijenti);
         }

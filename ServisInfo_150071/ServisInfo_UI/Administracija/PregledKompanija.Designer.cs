@@ -33,6 +33,7 @@
             this.NazivBtn = new System.Windows.Forms.Label();
             this.NazivInput = new System.Windows.Forms.TextBox();
             this.KompanijeGrid = new System.Windows.Forms.DataGridView();
+            this.obrisiBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.KompanijeGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             // novaKompanijaBtn
             // 
-            this.novaKompanijaBtn.Location = new System.Drawing.Point(717, 27);
+            this.novaKompanijaBtn.Location = new System.Drawing.Point(614, 28);
             this.novaKompanijaBtn.Name = "novaKompanijaBtn";
             this.novaKompanijaBtn.Size = new System.Drawing.Size(198, 23);
             this.novaKompanijaBtn.TabIndex = 10;
@@ -86,11 +87,24 @@
             this.KompanijeGrid.Size = new System.Drawing.Size(931, 382);
             this.KompanijeGrid.TabIndex = 13;
             // 
+            // obrisiBtn
+            // 
+            this.obrisiBtn.BackColor = System.Drawing.Color.Salmon;
+            this.obrisiBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.obrisiBtn.Location = new System.Drawing.Point(818, 28);
+            this.obrisiBtn.Name = "obrisiBtn";
+            this.obrisiBtn.Size = new System.Drawing.Size(101, 23);
+            this.obrisiBtn.TabIndex = 14;
+            this.obrisiBtn.Text = "Obriši";
+            this.obrisiBtn.UseVisualStyleBackColor = false;
+            this.obrisiBtn.Click += new System.EventHandler(this.obrisiBtn_Click);
+            // 
             // PregledKompanija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 467);
+            this.Controls.Add(this.obrisiBtn);
             this.Controls.Add(this.KompanijeGrid);
             this.Controls.Add(this.traziButton);
             this.Controls.Add(this.novaKompanijaBtn);
@@ -114,5 +128,6 @@
         private System.Windows.Forms.Label NazivBtn;
         private System.Windows.Forms.TextBox NazivInput;
         private System.Windows.Forms.DataGridView KompanijeGrid;
+        private System.Windows.Forms.Button obrisiBtn;
     }
 }

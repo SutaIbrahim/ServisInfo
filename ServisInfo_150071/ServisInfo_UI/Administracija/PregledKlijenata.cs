@@ -14,32 +14,34 @@ using System.Windows.Forms;
 
 namespace ServisInfo_UI.Administracija
 {
-    public partial class PregledKompanija : Form
+    public partial class PregledKlijenata : Form
     {
-        public PregledKompanija()
+        public PregledKlijenata()
         {
             InitializeComponent();
         }
-        private void PregledKompanija_Load(object sender, EventArgs e)
+
+        private void PregledKlijenata_Load(object sender, EventArgs e)
         {
             BindGrid();
         }
 
-        private WebAPIHelper kompanijeService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.KompanijeRoute);
-
+        private WebAPIHelper klijentiService = new WebAPIHelper(ConfigurationManager.AppSettings["APIAddress"], Global.KlijentiRoute);
 
         private void BindGrid()
         {
-            HttpResponseMessage response = kompanijeService.GetActionResponse("SearchByNaziv", NazivInput.Text.Trim());
+            HttpResponseMessage response = klijentiService.GetActionResponse("SearchByNaziv", NazivInput.Text.Trim());
 
             if (response.IsSuccessStatusCode)
             {
-                List<Kompanije_Result> kompanije = response.Content.ReadAsAsync<List<Kompanije_Result>>().Result;
+                List<Klijenti> kompanije = response.Content.ReadAsAsync<List<Klijenti>>().Result;
                 KompanijeGrid.DataSource = kompanije;
                 KompanijeGrid.ClearSelection();
 
-                KompanijeGrid.Columns[0].HeaderText = "ID kompanije";
-                KompanijeGrid.Columns[1].HeaderText = "Naziv kompanije";
+                KompanijeGrid.Columns[0].HeaderText = "ID klijenta";
+                KompanijeGrid.Columns[1].HeaderText = "Ime ";
+                KompanijeGrid.Columns[2].HeaderText = "Prezime ";
+
             }
             else
             {
@@ -53,17 +55,9 @@ namespace ServisInfo_UI.Administracija
             BindGrid();
         }
 
-
-        private void novaKompanijaBtn_Click(object sender, EventArgs e)
-        {
-            DodajKompaniju frm = new DodajKompaniju();
-            frm.ShowDialog();
-            BindGrid();
-        }
-
         private void obrisiBtn_Click(object sender, EventArgs e)
         {
-            if (KompanijeGrid.SelectedRows.Count == 0)
+             if (KompanijeGrid.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Morate izabrati kompaniju");
             }
@@ -71,7 +65,7 @@ namespace ServisInfo_UI.Administracija
             {
                 int id = Convert.ToInt32(KompanijeGrid.SelectedRows[0].Cells[0].Value);
 
-                kompanijeService.DeleteResponse(id.ToString());
+                klijentiService.DeleteResponse(id.ToString());
 
                 BindGrid();
             }

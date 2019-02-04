@@ -95,6 +95,12 @@
     <Compile Include="Administracija\PregledKategorija.Designer.cs">
       <DependentUpon>PregledKategorija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracija\PregledKlijenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracija\PregledKlijenata.Designer.cs">
+      <DependentUpon>PregledKlijenata.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracija\PregledKompanija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracija\PregledKategorija.resx">
       <DependentUpon>PregledKategorija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracija\PregledKlijenata.resx">
+      <DependentUpon>PregledKlijenata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracija\PregledKompanija.resx">
       <DependentUpon>PregledKompanija.cs</DependentUpon>

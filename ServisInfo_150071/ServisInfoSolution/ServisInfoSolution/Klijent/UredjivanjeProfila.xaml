@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServisInfoSolution.Klijent.UredjivanjeProfila">
     <ScrollView >
-       
 
+        <Grid>
             <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
             <Label Text="Uredi profil"
                 VerticalOptions="CenterAndExpand" 
@@ -60,9 +60,11 @@
                         Clicked="Sacuvaj_Clicked"  BackgroundColor="Green" TextColor="White" FontSize="11" HeightRequest="40"></Button>
 
             </Grid>
+                
         </StackLayout>
         <StackLayout  VerticalOptions="End">
             <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center"  TextColor="Gray" Margin="10,20,10,10" />
         </StackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>

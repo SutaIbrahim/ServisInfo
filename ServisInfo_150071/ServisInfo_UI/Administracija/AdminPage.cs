@@ -45,5 +45,11 @@ namespace ServisInfo_UI.Administracija
             Administracija.PregledKategorija frm = new Administracija.PregledKategorija();
             frm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Administracija.PregledKlijenata frm = new Administracija.PregledKlijenata();
+            frm.ShowDialog();
+        }
     }
 }
