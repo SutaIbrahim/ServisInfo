@@ -138,6 +138,14 @@ namespace ServisInfoSolution
 
                     PostaviCheckBox();
 
+
+                    foreach (var x in kompanije)
+                    {
+                        if (x.ProsjecnaOcjena != null && x.ProsjecnaOcjena > 0) { 
+                        x.ProsjecnaOcjena = Math.Round(x.ProsjecnaOcjena.GetValueOrDefault(), 2);
+                         }
+                    }
+
                     kompanijeList.ItemsSource = kompanije;
 
                     if (kompanije.Count() > 0)
@@ -155,7 +163,6 @@ namespace ServisInfoSolution
                 GreskaLbl.Text = "Nema rezultata";
                 kompanijeList.ItemsSource = new List<KompanijeDetalji_X_Result>();
             }
-
 
         }
 
