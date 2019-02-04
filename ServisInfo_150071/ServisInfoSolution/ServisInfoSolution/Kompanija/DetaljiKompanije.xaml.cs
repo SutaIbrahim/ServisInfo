@@ -65,6 +65,7 @@ namespace ServisInfoSolution.Kompanija
         private void IzracunajProsjecneOcjene()
         {
             HttpResponseMessage response = ocjeneService.GetActionResponse("GetOcjeneKompanije", kompanijaID.ToString());
+            gridic.IsVisible = true;
 
             if (response.IsSuccessStatusCode)
             {
@@ -132,6 +133,10 @@ namespace ServisInfoSolution.Kompanija
                 }
                 else
                 {
+                    porukaLbl.Text = "Kompanija jos uvijek nema ocjena";
+
+                    gridic.IsVisible = false;
+
                     BrzinaLbl.Text = "Kompanija jos uvijek nema ocjena";
                     KvalitetLbl.Text = "";
                     KomunikacijaLbl.Text = "";

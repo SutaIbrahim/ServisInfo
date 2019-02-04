@@ -8,7 +8,7 @@
         <Grid>
             <Image Source="homepage.jpg" Aspect="AspectFill" Opacity="0.2" />
 
-            <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <StackLayout VerticalOptions="StartAndExpand" Padding="20">
             <Label Text="Kreiranje novog upita"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="Large" Margin="5" FontAttributes="Bold" />
@@ -62,6 +62,9 @@
 
             <Button x:Name="posaljiBtn" Text="Posalji upit" HeightRequest="40" BackgroundColor="#13818d" TextColor="White" Clicked="posaljiBtn_Clicked" FontSize="Small"></Button>
         </StackLayout>
+            <StackLayout  VerticalOptions="End">
+                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center"  TextColor="Gray" Margin="10,20,10,10" />
+            </StackLayout>
         </Grid>
     </ScrollView>
 </ContentPage>

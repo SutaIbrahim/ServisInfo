@@ -32,9 +32,7 @@
 
 
                 <ListView x:Name="kompanijeList" VerticalOptions="FillAndExpand" RowHeight="65" ItemTapped="kompanijeList_ItemTapped" >
-                    <ListView.Footer>
-                        <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" />
-                    </ListView.Footer>
+              
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -70,7 +68,9 @@
                
                 </ListView>
         </StackLayout>
-       
+            <StackLayout  VerticalOptions="End">
+                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center"  TextColor="Gray" Margin="10,20,10,10" />
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 

@@ -60,12 +60,11 @@
 
 
         </StackLayout>
-            <ListView>
-                <ListView.Footer>
-                    <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" Margin="10" />
-                </ListView.Footer>
-            </ListView>
+            <StackLayout  VerticalOptions="End">
+                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center"  TextColor="Gray" Margin="10,20,10,10" />
+            </StackLayout>
         </Grid>
-        </ScrollView>
+     
+    </ScrollView>
    
 </ContentPage>

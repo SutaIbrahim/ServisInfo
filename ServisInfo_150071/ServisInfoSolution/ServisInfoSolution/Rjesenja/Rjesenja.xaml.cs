@@ -164,6 +164,25 @@ namespace ServisInfoSolution.Rjesenja
                     petiTxt.Text = "Slika se prikazuje ali touch ne radi";
 
                 }
+                else if (k.KategorijaID == 13) //boot loop
+                {
+
+                    pronadjiBtn.IsVisible = true;
+                    editor.IsVisible = true;
+
+                    prvi.IsVisible = true;
+                    prviTxt.IsVisible = true;
+                    prviTxt.Text = "Uređaj se u kontiniutetu resetuje";
+
+                    drugi.IsVisible = true;
+                    drugiTxt.IsVisible = true;
+                    drugiTxt.Text = "Uređaj se ugasi tokom rada";
+
+                    treci.IsVisible = true;
+                    treciTxt.IsVisible = true;
+                    treciTxt.Text = "Uređaj se vrlo dugo pali ";
+
+                }
                 else
                 {
                     nemaLbl.IsVisible = true;
@@ -192,18 +211,18 @@ namespace ServisInfoSolution.Rjesenja
                 {
                     if (drugi.IsToggled)
                     {
-                        editor.Text = " - Nažalost bateriju je potrebno zamijeniti";
+                        editor.Text = "- Nažalost bateriju je potrebno zamijeniti";
                     }
                     else if (peti.IsToggled && drugi.IsToggled)
                     {
-                        editor.Text = " - Nažalost bateriju je potrebno zamijeniti";
+                        editor.Text = "- Nažalost bateriju je potrebno zamijeniti";
                     }
                     else if (cetvrti.IsToggled && peti.IsToggled)
                     {
-                        editor.Text = " - Moguć problem u konektoru punjenja, pokušaje očistiti prašinu\n" +
-                            " - Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
-                            " - Provjerite USB kabal\n" +
-                            " - Bateriju je potrebno kalibrirati (ispraznite bateriju na 0% te je napunite do kraja, u tom procesu uređaj nemojte koristiti)";
+                        editor.Text = "- Moguć problem u konektoru punjenja, pokušaje očistiti prašinu\n" +
+                            "- Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
+                            "- Provjerite USB kabal\n" +
+                            "- Bateriju je potrebno kalibrirati (ispraznite bateriju na 0% te je napunite do kraja, u tom procesu uređaj nemojte koristiti)";
 
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         tapGestureRecognizer.Tapped += (s, ea) =>
@@ -213,7 +232,7 @@ namespace ServisInfoSolution.Rjesenja
 
                         link.IsVisible = true;
                         link.GestureRecognizers.Add(tapGestureRecognizer);
-                        link.Text = " - Kliknite ovde u slučaju neuspjeha za napredniju kalibraciju";
+                        link.Text = "- Kliknite ovde u slučaju neuspjeha za napredniju kalibraciju";
                     }
                     else if (prvi.IsToggled || cetvrti.IsToggled || treci.IsToggled)
                     {
@@ -224,11 +243,11 @@ namespace ServisInfoSolution.Rjesenja
                             Device.OpenUri(new Uri("https://balkanandroid.com/kako-kalibrirati-podesiti-bateriju-na-vasem-androidu"));
                         };
 
-                        editor.Text = " - Bateriju je potrebno kalibrirati (ispraznite bateriju na 0% te je napunite do kraja, u tom procesu uređaj nemojte koristiti)";
+                        editor.Text = "- Bateriju je potrebno kalibrirati (ispraznite bateriju na 0% te je napunite do kraja, u tom procesu uređaj nemojte koristiti)";
 
                         link.IsVisible = true;
                         link.GestureRecognizers.Add(tapGestureRecognizer);
-                        link.Text = " - Kliknite ovde u slučaju neuspjeha za napredniju kalibraciju";
+                        link.Text = "- Kliknite ovde u slučaju neuspjeha za napredniju kalibraciju";
                     }
 
 
@@ -238,13 +257,13 @@ namespace ServisInfoSolution.Rjesenja
                 {
                     if (drugi.IsToggled)
                     {
-                        editor.Text = " - Konektor je potrebno zamijenuti, javite se nekom od naših servisa";
+                        editor.Text = "- Konektor je potrebno zamijenuti, javite se nekom od naših servisa";
                     }
                    else if (prvi.IsToggled)
                     {
-                        editor.Text = " - Pokušaje očistiti prašinu\n" +
-                            " - Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
-                            " - Provjerite USB kabal";
+                        editor.Text = "- Pokušaje očistiti prašinu\n" +
+                            "- Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
+                            "- Provjerite USB kabal";
 
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         tapGestureRecognizer.Tapped += (s, ea) =>
@@ -254,15 +273,15 @@ namespace ServisInfoSolution.Rjesenja
 
                         link.IsVisible = true;
                         link.GestureRecognizers.Add(tapGestureRecognizer);
-                        link.Text = " - Kliknite ovde za video upustvo čiščenja konektora punjenja";
+                        link.Text = "- Kliknite ovde za video upustvo čiščenja konektora punjenja";
                     }
                     else
                     if (treci.IsToggled)
                     {
-                        editor.Text = " - Pokušaje očistiti prašinu\n" +
-                            " - Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
-                            " - Provjerite USB kabal\n" +
-                            " - Provjerite stanje baterije";
+                        editor.Text = "- Pokušaje očistiti prašinu\n" +
+                            "- Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
+                            "- Provjerite USB kabal\n" +
+                            "- Provjerite stanje baterije";
 
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         tapGestureRecognizer.Tapped += (s, ea) =>
@@ -272,13 +291,13 @@ namespace ServisInfoSolution.Rjesenja
 
                         link.IsVisible = true;
                         link.GestureRecognizers.Add(tapGestureRecognizer);
-                        link.Text = " - Kliknite ovde za video upustvo čiščenja konektora punjenja";
+                        link.Text = "- Kliknite ovde za video upustvo čiščenja konektora punjenja";
                     }else
                     if (cetvrti.IsToggled)
                     {
-                        editor.Text = " - Pokušaje očistiti prašinu\n" +
-                            " - Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
-                            " - Provjerite USB kabal";
+                        editor.Text = "- Pokušaje očistiti prašinu\n" +
+                            "- Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
+                            "- Provjerite USB kabal";
 
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         tapGestureRecognizer.Tapped += (s, ea) =>
@@ -288,14 +307,14 @@ namespace ServisInfoSolution.Rjesenja
 
                         link.IsVisible = true;
                         link.GestureRecognizers.Add(tapGestureRecognizer);
-                        link.Text = " - Kliknite ovde za video upustvo čiščenja konektora punjenja";
+                        link.Text = "- Kliknite ovde za video upustvo čiščenja konektora punjenja";
                     }else
                     if (peti.IsToggled)
                     {
-                        editor.Text = " - Pokušaje očistiti prašinu\n" +
-                            " - Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
-                             " - Provjerite USB kabal\n" +
-                            " - Provjerite stanje baterije";
+                        editor.Text = "- Pokušaje očistiti prašinu\n" +
+                            "- Provjerite adapter za punjenje, uvjerite se u njegovu ispravtnost \n" +
+                             "- Provjerite USB kabal\n" +
+                            "- Provjerite stanje baterije";
 
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         tapGestureRecognizer.Tapped += (s, ea) =>
@@ -305,7 +324,7 @@ namespace ServisInfoSolution.Rjesenja
 
                         link.IsVisible = true;
                         link.GestureRecognizers.Add(tapGestureRecognizer);
-                        link.Text = " - Kliknite ovde za video upustvo čiščenja konektora punjenja";
+                        link.Text = "- Kliknite ovde za video upustvo čiščenja konektora punjenja";
                     }
 
 
@@ -316,35 +335,85 @@ namespace ServisInfoSolution.Rjesenja
                 {
                     if (drugi.IsToggled)
                     {
-                        editor.Text = " - Potrebno je zamijeniti flat kabal ili cijeli displey, javite se nekom od naših servisa";
+                        editor.Text = "- Potrebno je zamijeniti flat kabal ili cijeli displey, javite se nekom od naših servisa";
                     }
                     else if (prvi.IsToggled)
                     {
-                        editor.Text = " - Provjerite ispravnost i napunjenost baterije\n" +
-                            " - Provjerite ispravnost uređaja, da li se uopšte uključuje\n";
+                        editor.Text = "- Provjerite ispravnost i napunjenost baterije\n" +
+                            "- Provjerite ispravnost uređaja, da li se uopšte uključuje\n";
 
                     }
                     else
                      if (treci.IsToggled)
                     {
-                        editor.Text = " - Potrebno je zamijeniti flat kabal ili cijeli displey, javite se nekom od naših servisa";
+                        editor.Text = "- Potrebno je zamijeniti flat kabal ili cijeli displey, javite se nekom od naših servisa";
 
                     }
                     else
                     if (cetvrti.IsToggled)
                     {
-                        editor.Text = " - Potrebno je zamijeniti flat kabal ili cijeli displey, javite se nekom od naših servisa";
+                        editor.Text = "- Potrebno je zamijeniti flat kabal ili cijeli displey, javite se nekom od naših servisa";
 
                     }
                     else
                     if (peti.IsToggled)
                     {
-                        editor.Text = " - Potrebno je zamijeniti flat kabal toucha ili cijeli displey, javite se nekom od naših servisa";
+                        editor.Text = "- Potrebno je zamijeniti flat kabal toucha ili cijeli displey, javite se nekom od naših servisa";
                     }
-
 
                 }
 
+                else if (kId == 13) //displey
+                {
+
+                    if (treci.IsToggled)
+                    {
+                        var tapGestureRecognizer = new TapGestureRecognizer();
+                        tapGestureRecognizer.Tapped += (s, ea) =>
+                        {
+                            Device.OpenUri(new Uri("https://www.hardreset.info/"));
+                        };
+
+                        link.IsVisible = true;
+                        link.GestureRecognizers.Add(tapGestureRecognizer);
+                        link.Text = "- Potrebno je da uradite hard reset mobilnog uređaja, upustva možete pronaći klikom na ovaj link";
+
+                        editor.Text = "- Provjerite ispravnost i stanje baterije\n" +
+                            "- Provjerite stanje sa memorijom, oslobodite prostor ukoliko je memorija puna";
+                    }
+                    else if (drugi.IsToggled)
+                    {
+                        var tapGestureRecognizer = new TapGestureRecognizer();
+                        tapGestureRecognizer.Tapped += (s, ea) =>
+                        {
+                            Device.OpenUri(new Uri("https://www.hardreset.info/"));
+                        };
+
+                        link.IsVisible = true;
+                        link.GestureRecognizers.Add(tapGestureRecognizer);
+                        link.Text = "- Potrebno je da uradite hard reset mobilnog uređaja, upustva možete pronaći klikom na ovaj link";
+
+                        editor.Text = "- Provjerite ispravnost i stanje baterije";
+
+
+                    }
+                    else if (prvi.IsToggled)
+                    {
+                        var tapGestureRecognizer = new TapGestureRecognizer();
+                        tapGestureRecognizer.Tapped += (s, ea) =>
+                        {
+                            Device.OpenUri(new Uri("https://www.hardreset.info/"));
+                        };
+
+                        link.IsVisible = true;
+                        link.GestureRecognizers.Add(tapGestureRecognizer);
+                        link.Text = "- Potrebno je da uradite hard reset mobilnog uređaja, upustva možete pronaći klikom na ovaj link";
+
+                        editor.Text = "- Izvadite bateriju iz uređaja 10 min te onda pokušajte upaliti";
+
+                    }
+
+                }
 
 
 

@@ -50,10 +50,12 @@ Title="Najčešća rješenja"
                 <!--<StackLayout Orientation="Horizontal" Margin="10">
                     <Editor HeightRequest="100" WidthRequest="600" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" x:Name="editor"></Editor>
                 </StackLayout>-->
-                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" VerticalOptions="End" TextColor="Gray" Margin="10,20,10,10" />
+        
 
             </StackLayout>
-
+            <StackLayout  VerticalOptions="End">
+                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center"  TextColor="Gray" Margin="10,20,10,10" />
+            </StackLayout>
         </Grid>
     </ScrollView>
 </ContentPage>

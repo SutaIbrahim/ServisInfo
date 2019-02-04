@@ -54,9 +54,7 @@
                     </Grid>
 
                 </ListView.Header>
-                    <ListView.Footer>
-                        <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center" TextColor="Gray" Margin="10" />
-                    </ListView.Footer>
+                   
                     <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -84,6 +82,9 @@
             </ListView>
 
         </StackLayout>
+            <StackLayout  VerticalOptions="End">
+                <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center"  TextColor="Gray" Margin="10,20,10,10" />
+            </StackLayout>
         </Grid>
 
     </ContentPage.Content>
