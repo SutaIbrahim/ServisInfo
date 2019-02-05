@@ -38,9 +38,15 @@ namespace ServisInfo_UI.Administracija
                 KompanijeGrid.DataSource = kompanije;
                 KompanijeGrid.ClearSelection();
 
-                KompanijeGrid.Columns[0].HeaderText = "ID klijenta";
-                KompanijeGrid.Columns[1].HeaderText = "Ime ";
-                KompanijeGrid.Columns[2].HeaderText = "Prezime ";
+                KompanijeGrid.Columns[0].Visible = false;
+                KompanijeGrid.Columns[6].HeaderText = "Korisnicko ime";
+                KompanijeGrid.Columns[7].Visible = false;
+                KompanijeGrid.Columns[8].Visible = false;
+                KompanijeGrid.Columns[9].Visible = false;
+                KompanijeGrid.Columns[10].Visible = false;
+                KompanijeGrid.Columns[11].Visible = false;
+                KompanijeGrid.Columns[12].Visible = false;
+                KompanijeGrid.Columns[13].Visible = false;
 
             }
             else

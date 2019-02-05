@@ -137,7 +137,8 @@ namespace ServisInfo_API.Controllers
                 foreach (var x in ponude)
             {
                 var servis = db.Servisi.Where(p => p.PonudaID == x.PonudaID).FirstOrDefault();
-                db.Servisi.Remove(servis);
+                    if (servis != null)
+                        db.Servisi.Remove(servis);
             }
             foreach (var x in ponude)
             {

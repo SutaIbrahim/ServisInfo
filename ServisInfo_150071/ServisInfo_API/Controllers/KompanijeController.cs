@@ -237,8 +237,51 @@ namespace ServisInfo_API.Controllers
                 return NotFound();
             }
 
-            db.Kompanije.Remove(kompanije);
-            db.SaveChanges();
+            try
+            {
+
+                List<Ponude> ponude = db.Ponude.Where(p => p.KompanijaID == id).ToList();
+           
+                      List<Ocjene> ocjene = db.Ocjene.Include(s=>s.Servisi).Where(p => p.Servisi.KompanijaID == id).ToList();
+                foreach (var x in ocjene)
+                {
+                    var o = db.Ocjene.Where(p => p.OcjenaID == x.OcjenaID).FirstOrDefault();
+                    db.Ocjene.Remove(o);
+                }
+                foreach (var x in ponude)
+                {
+                    var servis = db.Servisi.Where(p => p.PonudaID == x.PonudaID).FirstOrDefault();
+                    if(servis!=null)
+                    db.Servisi.Remove(servis);
+                }
+                foreach (var x in ponude)
+                {
+                    var pa = db.Ponude.Where(p => p.PonudaID == x.PonudaID).FirstOrDefault();
+                    db.Ponude.Remove(pa);
+                }
+
+                    var kUpuitu = db.KompanijeUpiti.Where(p => p.KompanijaID ==id).ToList();
+                    foreach (var y in kUpuitu)
+                    {
+                        db.KompanijeUpiti.Remove(y);
+                    }
+
+                var kKategorije = db.KompanijeKategorije.Where(p => p.KompanijaID == id).ToList();
+                foreach (var y in kKategorije)
+                {
+                    db.KompanijeKategorije.Remove(y);
+                }
+
+
+
+                db.Kompanije.Remove(kompanije);
+                db.SaveChanges();
+            }
+            catch (ArgumentException e)
+            {
+
+            }
+           
 
             return Ok(kompanije);
         }

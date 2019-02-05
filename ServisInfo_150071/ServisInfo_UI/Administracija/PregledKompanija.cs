@@ -76,5 +76,24 @@ namespace ServisInfo_UI.Administracija
                 BindGrid();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (KompanijeGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati kompaniju");
+            }
+            else
+            {
+                int id = Convert.ToInt32(KompanijeGrid.SelectedRows[0].Cells[0].Value);
+
+                KompanijeAdministracija.IzmjenaProfila frm = new KompanijeAdministracija.IzmjenaProfila(id);
+                frm.ShowDialog();
+                BindGrid();
+            }
+
+
+        }
     }
 }

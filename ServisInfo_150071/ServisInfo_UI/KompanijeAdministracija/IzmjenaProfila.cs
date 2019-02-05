@@ -21,9 +21,27 @@ namespace ServisInfo_UI.KompanijeAdministracija
 
         private Kompanije k { get; set; }
 
-        public IzmjenaProfila()
+        public IzmjenaProfila(int? id=null)
         {
-            k = Global.prijavljenaKompanija;
+
+            if (id == null)
+            {
+                k = Global.prijavljenaKompanija;
+            }
+            else
+            {
+                HttpResponseMessage response = KompanijeService.GetResponse(id.GetValueOrDefault().ToString());
+
+                if (response.IsSuccessStatusCode)
+                {
+                    k = response.Content.ReadAsAsync<Kompanije>().Result;
+                }
+                else
+                {
+                    MessageBox.Show("Error Code" +
+                    response.StatusCode + " : Message - " + response.ReasonPhrase);
+                }
+            }
             InitializeComponent();
             this.AutoValidate = AutoValidate.Disable;
         }
