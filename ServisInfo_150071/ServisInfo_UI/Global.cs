@@ -12,7 +12,6 @@ namespace ServisInfo_UI
         public static Kompanije prijavljenaKompanija { get; set; }
         public static bool IsRadnik { get; set; }
 
-
         public static int notBrojac { get; set; } // ogranicen broj prikaza notifikacija
 
         #region API Routes 

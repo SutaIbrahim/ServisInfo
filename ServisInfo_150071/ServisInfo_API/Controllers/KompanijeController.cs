@@ -61,6 +61,17 @@ namespace ServisInfo_API.Controllers
             return Ok(kompanije);
         }
 
+        [Route("api/Kompanije/SearchRadniciByKompanijaId/{id}/{naziv?}")]
+        [HttpGet]
+        public IHttpActionResult SearchRadniciByKompanijaId(string id, string naziv="")
+        {
+            int _id = Convert.ToInt32(id);
+
+            List<Kompanije> kompanije = db.Kompanije.Where(x=>x.RefKompanijaID== _id && (naziv=="" || x.KorisickoIme==naziv)).ToList();
+
+            return Ok(kompanije);
+        }
+
 
         [Route("api/Kompanije/GetProsjecnaOcjena/{kompanijaID}")]
         [HttpGet]

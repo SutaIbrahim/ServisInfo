@@ -20,9 +20,7 @@ namespace ServisInfo_API.Models
         public ServisInfoEntities()
             : base("name=ServisInfoEntities")
         {
-
             this.Configuration.LazyLoadingEnabled = false;
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

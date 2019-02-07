@@ -34,6 +34,7 @@ namespace ServisInfo_UI
                 KategorijeBtn.Hide();
                 button1.Hide();
                 IzvjestajBtn.Hide();
+                menuStrip1.Hide();
             }
         }
 

@@ -175,9 +175,9 @@
             this.KreirajBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.KreirajBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.KreirajBtn.ForeColor = System.Drawing.Color.White;
-            this.KreirajBtn.Location = new System.Drawing.Point(481, 665);
+            this.KreirajBtn.Location = new System.Drawing.Point(480, 679);
             this.KreirajBtn.Name = "KreirajBtn";
-            this.KreirajBtn.Size = new System.Drawing.Size(117, 48);
+            this.KreirajBtn.Size = new System.Drawing.Size(117, 32);
             this.KreirajBtn.TabIndex = 13;
             this.KreirajBtn.Text = "Kreiraj ponudu";
             this.KreirajBtn.UseVisualStyleBackColor = false;

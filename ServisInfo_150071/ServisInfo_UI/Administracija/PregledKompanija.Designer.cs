@@ -51,7 +51,7 @@
             // 
             // novaKompanijaBtn
             // 
-            this.novaKompanijaBtn.Location = new System.Drawing.Point(787, 16);
+            this.novaKompanijaBtn.Location = new System.Drawing.Point(649, 16);
             this.novaKompanijaBtn.Name = "novaKompanijaBtn";
             this.novaKompanijaBtn.Size = new System.Drawing.Size(132, 23);
             this.novaKompanijaBtn.TabIndex = 10;
@@ -103,9 +103,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(646, 16);
+            this.button1.Location = new System.Drawing.Point(649, 45);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 23);
+            this.button1.Size = new System.Drawing.Size(132, 23);
             this.button1.TabIndex = 15;
             this.button1.Text = "Izmijeni";
             this.button1.UseVisualStyleBackColor = true;
@@ -113,13 +113,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(646, 45);
+            this.button2.Location = new System.Drawing.Point(787, 16);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 23);
+            this.button2.Size = new System.Drawing.Size(132, 23);
             this.button2.TabIndex = 16;
-            this.button2.Text = "Dodaj radnika";
+            this.button2.Text = "Pregled radnika";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // PregledKompanija
             // 

@@ -136,8 +136,9 @@ namespace ServisInfoSolution
                     var jsonObject = response.Content.ReadAsStringAsync();
                     kompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_X_Result>>(jsonObject.Result);
 
-                    PostaviCheckBox();
+                    kompanije = kompanije.Where(x => !string.IsNullOrEmpty(x.Naziv)).ToList();
 
+                    PostaviCheckBox();
 
                     foreach (var x in kompanije)
                     {

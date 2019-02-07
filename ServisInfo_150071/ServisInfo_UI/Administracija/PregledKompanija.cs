@@ -36,7 +36,7 @@ namespace ServisInfo_UI.Administracija
             {
                 List<Kompanije_Result> kompanije = response.Content.ReadAsAsync<List<Kompanije_Result>>().Result;
 
-                kompanije = kompanije.Where(x => !string.IsNullOrEmpty(x.Naziv_kompanije)).ToList();
+                kompanije = kompanije.Where(x => !string.IsNullOrEmpty(x.Naziv_kompanije) && x.Naziv_kompanije!="Admin").ToList();
                 KompanijeGrid.DataSource = kompanije;
                 KompanijeGrid.ClearSelection();
 
@@ -73,8 +73,10 @@ namespace ServisInfo_UI.Administracija
             {
                 int id = Convert.ToInt32(KompanijeGrid.SelectedRows[0].Cells[0].Value);
 
-                kompanijeService.DeleteResponse(id.ToString());
-
+                if (id != 12)
+                {
+                    kompanijeService.DeleteResponse(id.ToString());
+                }
                 BindGrid();
             }
         }
@@ -109,6 +111,38 @@ namespace ServisInfo_UI.Administracija
                 int id = Convert.ToInt32(KompanijeGrid.SelectedRows[0].Cells[0].Value);
 
                DodajRadnika frm = new DodajRadnika(id);
+                frm.ShowDialog();
+                BindGrid();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (KompanijeGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati kompaniju");
+            }
+            else
+            {
+                int id = Convert.ToInt32(KompanijeGrid.SelectedRows[0].Cells[0].Value);
+
+                PregledRadnika frm = new PregledRadnika(id);
+                frm.ShowDialog();
+                BindGrid();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (KompanijeGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati kompaniju");
+            }
+            else
+            {
+                int id = Convert.ToInt32(KompanijeGrid.SelectedRows[0].Cells[0].Value);
+
+                PregledRadnika frm = new PregledRadnika(id);
                 frm.ShowDialog();
                 BindGrid();
             }

@@ -17,7 +17,7 @@ namespace ServisInfo_PCL.Model
         public string LozinkaSalt { get; set; }
         public string LozinkaHash { get; set; }
         public int GradID { get; set; }
-
+        public int? RefKompanijaID { get; set; }
 
     }
 }
