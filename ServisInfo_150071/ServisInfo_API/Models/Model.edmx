@@ -47,6 +47,7 @@
           <Property Name="LozinkaSalt" Type="nvarchar(max)" />
           <Property Name="LozinkaHash" Type="nvarchar(max)" />
           <Property Name="GradID" Type="int" Nullable="false" />
+          <Property Name="RefKompanijaID" Type="int" />
         </EntityType>
         <EntityType Name="KompanijeKategorije">
           <Key>
@@ -631,6 +632,7 @@
           <NavigationProperty Name="KompanijeKategorije" Relationship="Self.FK__Kompanije__Kompa__403A8C7D" FromRole="Kompanije" ToRole="KompanijeKategorije" />
           <NavigationProperty Name="Ponude" Relationship="Self.FK__Ponude__Kompanij__4316F928" FromRole="Kompanije" ToRole="Ponude" />
           <NavigationProperty Name="Servisi" Relationship="Self.FK__Servisi__Kompani__47DBAE45" FromRole="Kompanije" ToRole="Servisi" />
+          <Property Name="RefKompanijaID" Type="Int32" />
         </EntityType>
         <EntityType Name="KompanijeKategorije">
           <Key>
@@ -1158,7 +1160,7 @@
             <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="edp_KompanijeByUpit" ReturnType="Collection(ServisInfoModel.KompanijeUpitResult)">
-            <Parameter Name="UpitId" Mode="In" Type="Int32" />
+          <Parameter Name="UpitId" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <Association Name="FK__Upiti__ModelUred__00200768">
@@ -1443,6 +1445,7 @@
           <EntitySetMapping Name="Kompanije">
             <EntityTypeMapping TypeName="ServisInfoModel.Kompanije">
               <MappingFragment StoreEntitySet="Kompanije">
+                <ScalarProperty Name="RefKompanijaID" ColumnName="RefKompanijaID" />
                 <ScalarProperty Name="KompanijaID" ColumnName="KompanijaID" />
                 <ScalarProperty Name="Naziv" ColumnName="Naziv" />
                 <ScalarProperty Name="Adresa" ColumnName="Adresa" />

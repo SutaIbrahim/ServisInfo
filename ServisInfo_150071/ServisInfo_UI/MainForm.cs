@@ -28,6 +28,13 @@ namespace ServisInfo_UI
             notifyIcon.Icon = this.Icon;
             notifyIcon.Visible = true;
             notifyIcon.Icon = SystemIcons.Application;
+
+            if (Global.IsRadnik)
+            {
+                KategorijeBtn.Hide();
+                button1.Hide();
+                IzvjestajBtn.Hide();
+            }
         }
 
         private void BindGrid()

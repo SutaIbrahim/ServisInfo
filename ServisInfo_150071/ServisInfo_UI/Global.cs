@@ -10,6 +10,8 @@ namespace ServisInfo_UI
     public static class Global
     {
         public static Kompanije prijavljenaKompanija { get; set; }
+        public static bool IsRadnik { get; set; }
+
 
         public static int notBrojac { get; set; } // ogranicen broj prikaza notifikacija
 

@@ -32,6 +32,7 @@ namespace ServisInfo_API.Models
         public string LozinkaSalt { get; set; }
         public string LozinkaHash { get; set; }
         public int GradID { get; set; }
+        public Nullable<int> RefKompanijaID { get; set; }
     
         public virtual Gradovi Gradovi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -35,6 +35,8 @@ namespace ServisInfo_UI.Administracija
             if (response.IsSuccessStatusCode)
             {
                 List<Kompanije_Result> kompanije = response.Content.ReadAsAsync<List<Kompanije_Result>>().Result;
+
+                kompanije = kompanije.Where(x => !string.IsNullOrEmpty(x.Naziv_kompanije)).ToList();
                 KompanijeGrid.DataSource = kompanije;
                 KompanijeGrid.ClearSelection();
 
@@ -94,6 +96,22 @@ namespace ServisInfo_UI.Administracija
             }
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (KompanijeGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati kompaniju");
+            }
+            else
+            {
+                int id = Convert.ToInt32(KompanijeGrid.SelectedRows[0].Cells[0].Value);
+
+               DodajRadnika frm = new DodajRadnika(id);
+                frm.ShowDialog();
+                BindGrid();
+            }
         }
     }
 }

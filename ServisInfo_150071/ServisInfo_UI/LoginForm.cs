@@ -41,6 +41,16 @@ namespace ServisInfo_UI
                     this.DialogResult = DialogResult.OK;
                     Global.notBrojac = 0;
                     Global.prijavljenaKompanija = k;
+                    if (k.RefKompanijaID != null)
+                    {
+                        Global.IsRadnik = true;
+                        HttpResponseMessage response2 = KompanijeService.GetResponse(k.RefKompanijaID.GetValueOrDefault().ToString());
+                        Global.prijavljenaKompanija = response2.Content.ReadAsAsync<Kompanije>().Result;
+                    }
+                    else
+                    {
+                        Global.IsRadnik = false;
+                    }
                     Form frm = new Administracija.DodajKompaniju();
                     this.Close();
                 }

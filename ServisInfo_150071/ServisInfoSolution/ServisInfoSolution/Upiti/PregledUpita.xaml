@@ -20,7 +20,7 @@
                 <Label Text="Kliknite na upit za vise detalja" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Gray" ></Label>
 
 
-                <ListView x:Name="upitiList"  RowHeight="50" ItemTapped="upitiList_ItemTapped"  BackgroundColor="LightGray" Margin="20,0">
+                <ListView x:Name="upitiList"  RowHeight="50" ItemTapped="upitiList_ItemTapped"  BackgroundColor="LightGray" >
 
                     <ListView.Header>
                         <Grid  BackgroundColor="#13818d" HeightRequest="30" Padding="5" Opacity="0.8">
