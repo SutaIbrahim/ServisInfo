@@ -68,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(20, 392);
+            this.label1.Location = new System.Drawing.Point(26, 392);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 0;
@@ -159,12 +159,13 @@
             this.label7.Size = new System.Drawing.Size(179, 16);
             this.label7.TabIndex = 11;
             this.label7.Text = "Kreiranje ponude za upit:";
+            this.label7.Visible = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(133, 137);
+            this.label8.Location = new System.Drawing.Point(42, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 16);
             this.label8.TabIndex = 12;
@@ -208,7 +209,7 @@
             // 
             this.KlijentLbl.AutoSize = true;
             this.KlijentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KlijentLbl.Location = new System.Drawing.Point(193, 137);
+            this.KlijentLbl.Location = new System.Drawing.Point(107, 137);
             this.KlijentLbl.Name = "KlijentLbl";
             this.KlijentLbl.Size = new System.Drawing.Size(46, 16);
             this.KlijentLbl.TabIndex = 16;
@@ -223,6 +224,7 @@
             this.kategorijaLbl.Size = new System.Drawing.Size(35, 16);
             this.kategorijaLbl.TabIndex = 17;
             this.kategorijaLbl.Text = "Test";
+            this.kategorijaLbl.Visible = false;
             // 
             // CijenaTxt
             // 

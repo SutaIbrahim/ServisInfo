@@ -47,9 +47,9 @@
             // 
             this.DetaljiBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.DetaljiBtn.ForeColor = System.Drawing.Color.White;
-            this.DetaljiBtn.Location = new System.Drawing.Point(852, 91);
+            this.DetaljiBtn.Location = new System.Drawing.Point(840, 67);
             this.DetaljiBtn.Name = "DetaljiBtn";
-            this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
+            this.DetaljiBtn.Size = new System.Drawing.Size(139, 31);
             this.DetaljiBtn.TabIndex = 15;
             this.DetaljiBtn.Text = "Prikaz detalja o servisu";
             this.DetaljiBtn.UseVisualStyleBackColor = false;
@@ -61,21 +61,21 @@
             this.ServisiGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ServisiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ServisiGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ServisiGrid.Location = new System.Drawing.Point(0, 153);
+            this.ServisiGrid.Location = new System.Drawing.Point(0, 132);
             this.ServisiGrid.Name = "ServisiGrid";
             this.ServisiGrid.ReadOnly = true;
             this.ServisiGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ServisiGrid.Size = new System.Drawing.Size(991, 336);
+            this.ServisiGrid.Size = new System.Drawing.Size(991, 357);
             this.ServisiGrid.TabIndex = 14;
             // 
             // PrikaziBtn
             // 
             this.PrikaziBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.PrikaziBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PrikaziBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PrikaziBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.PrikaziBtn.Location = new System.Drawing.Point(246, 76);
+            this.PrikaziBtn.Location = new System.Drawing.Point(436, 68);
             this.PrikaziBtn.Name = "PrikaziBtn";
-            this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
+            this.PrikaziBtn.Size = new System.Drawing.Size(140, 33);
             this.PrikaziBtn.TabIndex = 13;
             this.PrikaziBtn.Text = "Prikaži";
             this.PrikaziBtn.UseVisualStyleBackColor = false;
@@ -84,7 +84,7 @@
             // DoDtm
             // 
             this.DoDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DoDtm.Location = new System.Drawing.Point(59, 116);
+            this.DoDtm.Location = new System.Drawing.Point(203, 76);
             this.DoDtm.Name = "DoDtm";
             this.DoDtm.Size = new System.Drawing.Size(85, 20);
             this.DoDtm.TabIndex = 12;
@@ -94,7 +94,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(13, 121);
+            this.label3.Location = new System.Drawing.Point(166, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 11;
@@ -104,7 +104,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(13, 81);
+            this.label2.Location = new System.Drawing.Point(13, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 10;
@@ -132,7 +132,7 @@
             // ZavrseniChck
             // 
             this.ZavrseniChck.AutoSize = true;
-            this.ZavrseniChck.Location = new System.Drawing.Point(162, 116);
+            this.ZavrseniChck.Location = new System.Drawing.Point(363, 79);
             this.ZavrseniChck.Name = "ZavrseniChck";
             this.ZavrseniChck.Size = new System.Drawing.Size(67, 17);
             this.ZavrseniChck.TabIndex = 17;
@@ -143,7 +143,7 @@
             // UtokuChck
             // 
             this.UtokuChck.AutoSize = true;
-            this.UtokuChck.Location = new System.Drawing.Point(162, 79);
+            this.UtokuChck.Location = new System.Drawing.Point(299, 79);
             this.UtokuChck.Name = "UtokuChck";
             this.UtokuChck.Size = new System.Drawing.Size(58, 17);
             this.UtokuChck.TabIndex = 16;
@@ -154,7 +154,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(814, 125);
+            this.label4.Location = new System.Drawing.Point(814, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 13);
             this.label4.TabIndex = 18;

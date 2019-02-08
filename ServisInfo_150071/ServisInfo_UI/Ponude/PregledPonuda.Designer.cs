@@ -47,22 +47,22 @@
             this.PonudeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PonudeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PonudeGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PonudeGrid.Location = new System.Drawing.Point(0, 153);
+            this.PonudeGrid.Location = new System.Drawing.Point(0, 127);
             this.PonudeGrid.Name = "PonudeGrid";
             this.PonudeGrid.ReadOnly = true;
             this.PonudeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PonudeGrid.Size = new System.Drawing.Size(991, 336);
+            this.PonudeGrid.Size = new System.Drawing.Size(991, 362);
             this.PonudeGrid.TabIndex = 14;
             this.PonudeGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PonudeGrid_CellContentDoubleClick);
             // 
             // PrikaziBtn
             // 
             this.PrikaziBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.PrikaziBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PrikaziBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PrikaziBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PrikaziBtn.Location = new System.Drawing.Point(186, 67);
+            this.PrikaziBtn.Location = new System.Drawing.Point(312, 63);
             this.PrikaziBtn.Name = "PrikaziBtn";
-            this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
+            this.PrikaziBtn.Size = new System.Drawing.Size(140, 30);
             this.PrikaziBtn.TabIndex = 13;
             this.PrikaziBtn.Text = "Prikaži";
             this.PrikaziBtn.UseVisualStyleBackColor = false;
@@ -71,7 +71,7 @@
             // DoDtm
             // 
             this.DoDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DoDtm.Location = new System.Drawing.Point(60, 107);
+            this.DoDtm.Location = new System.Drawing.Point(204, 67);
             this.DoDtm.Name = "DoDtm";
             this.DoDtm.Size = new System.Drawing.Size(85, 20);
             this.DoDtm.TabIndex = 12;
@@ -81,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(14, 112);
+            this.label3.Location = new System.Drawing.Point(158, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 11;
@@ -91,7 +91,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(14, 72);
+            this.label2.Location = new System.Drawing.Point(14, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 10;
@@ -119,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(799, 114);
+            this.label4.Location = new System.Drawing.Point(799, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 13);
             this.label4.TabIndex = 16;
@@ -129,7 +129,7 @@
             // 
             this.DetaljiBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.DetaljiBtn.ForeColor = System.Drawing.Color.White;
-            this.DetaljiBtn.Location = new System.Drawing.Point(852, 80);
+            this.DetaljiBtn.Location = new System.Drawing.Point(852, 61);
             this.DetaljiBtn.Name = "DetaljiBtn";
             this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
             this.DetaljiBtn.TabIndex = 15;

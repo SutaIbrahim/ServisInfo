@@ -69,8 +69,8 @@ namespace ServisInfo_UI.Upiti
                 DatumLbl.Text = u.Datum_upita.ToString();
                 MarkaLbl.Text = u.Marka_uredjaja;
                 ModelLbl.Text = u.Model_uredjaja;
-                OdLbl.Text = u.ZeljeniDatumPrijemaOd.ToString();
-                DoLbl.Text = u.ZeljeniDatumPrijemaDo.ToString();
+                OdLbl.Text = u.ZeljeniDatumPrijemaOd.GetValueOrDefault().ToString("dd.MM.yyyy");
+                DoLbl.Text = u.ZeljeniDatumPrijemaDo.GetValueOrDefault().ToString("dd.MM.yyyy");
                 KlijentLbl.Text = u.NazivKlijenta;
                 OpisTxt.Text = u.Opis_kvara;
                 UpitIDLbl.Text = UID.ToString();

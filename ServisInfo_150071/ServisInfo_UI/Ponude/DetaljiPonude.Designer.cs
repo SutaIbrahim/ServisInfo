@@ -85,7 +85,7 @@
             this.DaLbl.AutoSize = true;
             this.DaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DaLbl.ForeColor = System.Drawing.Color.Green;
-            this.DaLbl.Location = new System.Drawing.Point(515, 172);
+            this.DaLbl.Location = new System.Drawing.Point(515, 175);
             this.DaLbl.Name = "DaLbl";
             this.DaLbl.Size = new System.Drawing.Size(52, 16);
             this.DaLbl.TabIndex = 46;
@@ -96,7 +96,7 @@
             this.NeLbl.AutoSize = true;
             this.NeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NeLbl.ForeColor = System.Drawing.Color.Red;
-            this.NeLbl.Location = new System.Drawing.Point(518, 169);
+            this.NeLbl.Location = new System.Drawing.Point(518, 172);
             this.NeLbl.Name = "NeLbl";
             this.NeLbl.Size = new System.Drawing.Size(52, 16);
             this.NeLbl.TabIndex = 45;

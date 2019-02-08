@@ -54,7 +54,7 @@
             // OdDtm
             // 
             this.OdDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.OdDtm.Location = new System.Drawing.Point(62, 73);
+            this.OdDtm.Location = new System.Drawing.Point(62, 75);
             this.OdDtm.Name = "OdDtm";
             this.OdDtm.Size = new System.Drawing.Size(85, 20);
             this.OdDtm.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(16, 118);
+            this.label3.Location = new System.Drawing.Point(158, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 3;
@@ -83,7 +83,7 @@
             // DoDtm
             // 
             this.DoDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DoDtm.Location = new System.Drawing.Point(62, 113);
+            this.DoDtm.Location = new System.Drawing.Point(199, 75);
             this.DoDtm.Name = "DoDtm";
             this.DoDtm.Size = new System.Drawing.Size(85, 20);
             this.DoDtm.TabIndex = 4;
@@ -94,9 +94,9 @@
             this.PrikaziBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.PrikaziBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PrikaziBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrikaziBtn.Location = new System.Drawing.Point(169, 73);
+            this.PrikaziBtn.Location = new System.Drawing.Point(315, 70);
             this.PrikaziBtn.Name = "PrikaziBtn";
-            this.PrikaziBtn.Size = new System.Drawing.Size(140, 60);
+            this.PrikaziBtn.Size = new System.Drawing.Size(140, 31);
             this.PrikaziBtn.TabIndex = 5;
             this.PrikaziBtn.Text = "Prikaži";
             this.PrikaziBtn.UseVisualStyleBackColor = false;
@@ -108,11 +108,11 @@
             this.UpitiGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UpitiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UpitiGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.UpitiGrid.Location = new System.Drawing.Point(0, 153);
+            this.UpitiGrid.Location = new System.Drawing.Point(0, 125);
             this.UpitiGrid.Name = "UpitiGrid";
             this.UpitiGrid.ReadOnly = true;
             this.UpitiGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UpitiGrid.Size = new System.Drawing.Size(991, 336);
+            this.UpitiGrid.Size = new System.Drawing.Size(991, 364);
             this.UpitiGrid.TabIndex = 6;
             // 
             // DetaljiBtn
@@ -120,9 +120,9 @@
             this.DetaljiBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.DetaljiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DetaljiBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DetaljiBtn.Location = new System.Drawing.Point(852, 88);
+            this.DetaljiBtn.Location = new System.Drawing.Point(843, 67);
             this.DetaljiBtn.Name = "DetaljiBtn";
-            this.DetaljiBtn.Size = new System.Drawing.Size(127, 31);
+            this.DetaljiBtn.Size = new System.Drawing.Size(136, 31);
             this.DetaljiBtn.TabIndex = 7;
             this.DetaljiBtn.Text = "Prikaz detalja o upitu";
             this.DetaljiBtn.UseVisualStyleBackColor = false;
@@ -131,7 +131,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(824, 122);
+            this.label4.Location = new System.Drawing.Point(824, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 13);
             this.label4.TabIndex = 8;

@@ -79,7 +79,7 @@ namespace ServisInfo_UI.Servisi
 
                 label1.Hide();
                 label3.Hide();
-                label5.Hide();
+                label5.Show();
                 label4.Hide();
                 label7.Hide();
             }
@@ -264,6 +264,11 @@ namespace ServisInfo_UI.Servisi
             {
                 e.Handled = true;
             }
+        }
+
+        private void DetaljiServisa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

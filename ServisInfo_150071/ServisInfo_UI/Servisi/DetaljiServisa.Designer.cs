@@ -133,7 +133,7 @@
             // 
             this.NazadBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.NazadBtn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.NazadBtn.Location = new System.Drawing.Point(34, 550);
+            this.NazadBtn.Location = new System.Drawing.Point(34, 538);
             this.NazadBtn.Name = "NazadBtn";
             this.NazadBtn.Size = new System.Drawing.Size(141, 37);
             this.NazadBtn.TabIndex = 22;
@@ -145,7 +145,7 @@
             // 
             this.PonudaIDLbl.AutoSize = true;
             this.PonudaIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PonudaIDLbl.Location = new System.Drawing.Point(259, 134);
+            this.PonudaIDLbl.Location = new System.Drawing.Point(240, 134);
             this.PonudaIDLbl.Name = "PonudaIDLbl";
             this.PonudaIDLbl.Size = new System.Drawing.Size(95, 16);
             this.PonudaIDLbl.TabIndex = 23;
@@ -155,7 +155,7 @@
             // 
             this.DatumPrihvatanjaLbl.AutoSize = true;
             this.DatumPrihvatanjaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumPrihvatanjaLbl.Location = new System.Drawing.Point(613, 133);
+            this.DatumPrihvatanjaLbl.Location = new System.Drawing.Point(602, 133);
             this.DatumPrihvatanjaLbl.Name = "DatumPrihvatanjaLbl";
             this.DatumPrihvatanjaLbl.Size = new System.Drawing.Size(95, 16);
             this.DatumPrihvatanjaLbl.TabIndex = 26;
@@ -165,7 +165,7 @@
             // 
             this.DatumPocetkaLbl.AutoSize = true;
             this.DatumPocetkaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumPocetkaLbl.Location = new System.Drawing.Point(259, 168);
+            this.DatumPocetkaLbl.Location = new System.Drawing.Point(240, 168);
             this.DatumPocetkaLbl.Name = "DatumPocetkaLbl";
             this.DatumPocetkaLbl.Size = new System.Drawing.Size(95, 16);
             this.DatumPocetkaLbl.TabIndex = 27;
@@ -175,7 +175,7 @@
             // 
             this.TrajanjeLbl.AutoSize = true;
             this.TrajanjeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TrajanjeLbl.Location = new System.Drawing.Point(613, 208);
+            this.TrajanjeLbl.Location = new System.Drawing.Point(602, 208);
             this.TrajanjeLbl.Name = "TrajanjeLbl";
             this.TrajanjeLbl.Size = new System.Drawing.Size(95, 16);
             this.TrajanjeLbl.TabIndex = 28;
@@ -185,7 +185,7 @@
             // 
             this.DatumZavrsetkaLbl.AutoSize = true;
             this.DatumZavrsetkaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DatumZavrsetkaLbl.Location = new System.Drawing.Point(259, 208);
+            this.DatumZavrsetkaLbl.Location = new System.Drawing.Point(240, 208);
             this.DatumZavrsetkaLbl.Name = "DatumZavrsetkaLbl";
             this.DatumZavrsetkaLbl.Size = new System.Drawing.Size(95, 16);
             this.DatumZavrsetkaLbl.TabIndex = 29;
@@ -234,7 +234,7 @@
             // 
             this.KlijentLbl.AutoSize = true;
             this.KlijentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KlijentLbl.Location = new System.Drawing.Point(613, 167);
+            this.KlijentLbl.Location = new System.Drawing.Point(602, 167);
             this.KlijentLbl.Name = "KlijentLbl";
             this.KlijentLbl.Size = new System.Drawing.Size(95, 16);
             this.KlijentLbl.TabIndex = 34;
@@ -253,7 +253,7 @@
             this.ZapocniBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.ZapocniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ZapocniBtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.ZapocniBtn.Location = new System.Drawing.Point(525, 487);
+            this.ZapocniBtn.Location = new System.Drawing.Point(525, 538);
             this.ZapocniBtn.Name = "ZapocniBtn";
             this.ZapocniBtn.Size = new System.Drawing.Size(219, 37);
             this.ZapocniBtn.TabIndex = 36;
@@ -266,7 +266,7 @@
             this.NijeZavrsenLbl.AutoSize = true;
             this.NijeZavrsenLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NijeZavrsenLbl.ForeColor = System.Drawing.Color.Red;
-            this.NijeZavrsenLbl.Location = new System.Drawing.Point(259, 208);
+            this.NijeZavrsenLbl.Location = new System.Drawing.Point(240, 208);
             this.NijeZavrsenLbl.Name = "NijeZavrsenLbl";
             this.NijeZavrsenLbl.Size = new System.Drawing.Size(95, 16);
             this.NijeZavrsenLbl.TabIndex = 37;
@@ -277,7 +277,7 @@
             this.ZavrsiBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.ZavrsiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ZavrsiBtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.ZavrsiBtn.Location = new System.Drawing.Point(528, 487);
+            this.ZavrsiBtn.Location = new System.Drawing.Point(528, 538);
             this.ZavrsiBtn.Name = "ZavrsiBtn";
             this.ZavrsiBtn.Size = new System.Drawing.Size(216, 37);
             this.ZavrsiBtn.TabIndex = 38;
@@ -289,7 +289,7 @@
             // 
             this.NapomenaLbl.AutoSize = true;
             this.NapomenaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.NapomenaLbl.Location = new System.Drawing.Point(525, 527);
+            this.NapomenaLbl.Location = new System.Drawing.Point(525, 578);
             this.NapomenaLbl.Name = "NapomenaLbl";
             this.NapomenaLbl.Size = new System.Drawing.Size(219, 13);
             this.NapomenaLbl.TabIndex = 39;
@@ -310,7 +310,7 @@
             this.PonudaBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.PonudaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PonudaBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.PonudaBtn.Location = new System.Drawing.Point(303, 128);
+            this.PonudaBtn.Location = new System.Drawing.Point(286, 128);
             this.PonudaBtn.Name = "PonudaBtn";
             this.PonudaBtn.Size = new System.Drawing.Size(87, 27);
             this.PonudaBtn.TabIndex = 41;
@@ -332,7 +332,7 @@
             // 
             this.ocjena2Lbl.AutoSize = true;
             this.ocjena2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ocjena2Lbl.Location = new System.Drawing.Point(448, 549);
+            this.ocjena2Lbl.Location = new System.Drawing.Point(448, 547);
             this.ocjena2Lbl.Name = "ocjena2Lbl";
             this.ocjena2Lbl.Size = new System.Drawing.Size(61, 16);
             this.ocjena2Lbl.TabIndex = 44;
@@ -398,7 +398,7 @@
             // 
             this.UredjajTxt.AutoSize = true;
             this.UredjajTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UredjajTxt.Location = new System.Drawing.Point(613, 245);
+            this.UredjajTxt.Location = new System.Drawing.Point(602, 245);
             this.UredjajTxt.Name = "UredjajTxt";
             this.UredjajTxt.Size = new System.Drawing.Size(95, 16);
             this.UredjajTxt.TabIndex = 50;
@@ -488,6 +488,7 @@
             this.Name = "DetaljiServisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetaljiServisa";
+            this.Load += new System.EventHandler(this.DetaljiServisa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
