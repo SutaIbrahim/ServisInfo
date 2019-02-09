@@ -47,7 +47,7 @@
                                     </Grid.ColumnDefinitions>
 
 
-                                    <Image x:Name="logoImg" Grid.Column="0" Source="logo.jpg" HeightRequest="55" WidthRequest="60" Margin="2,0,0,0"   HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                                    <Image x:Name="logoImg" Grid.Column="0" Source="{Binding LogoSrc}" HeightRequest="55" WidthRequest="60" Margin="2,0,0,0"   HorizontalOptions="Center" VerticalOptions="Center"></Image>
 
                                     <StackLayout Grid.Column="1" Padding="1"  VerticalOptions="Center" Margin="2,0,0,0">
 

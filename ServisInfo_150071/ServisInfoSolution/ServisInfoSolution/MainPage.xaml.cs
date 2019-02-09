@@ -140,14 +140,50 @@ namespace ServisInfoSolution
 
                     PostaviCheckBox();
 
+                    int i = 0;
                     foreach (var x in kompanije)
                     {
                         if (x.ProsjecnaOcjena != null && x.ProsjecnaOcjena > 0) { 
                         x.ProsjecnaOcjena = Math.Round(x.ProsjecnaOcjena.GetValueOrDefault(), 2);
                          }
+                        if (i == 0)
+                        {
+                            x.LogoSrc = "logo4.png";
+                        }
+                        else if (i == 1)
+                        {
+                            x.LogoSrc = "logo2.png";
+                        }
+                        else if (i == 2)
+                        {
+                            x.LogoSrc = "logo3.png";
+                        }
+                        else if (i == 3)
+                        {
+                            x.LogoSrc = "logo1.png";
+                        }
+                        else if (i == 4)
+                        {
+                            x.LogoSrc = "logo5.png";
+                        }
+                        else if (i == 5)
+                        {
+                            x.LogoSrc = "logo6.png";
+                        }
+                        else if (i == 6)
+                        {
+                            x.LogoSrc = "logo7.png";
+                        }
+                        else
+                        {
+                            x.LogoSrc = "logo3.png";
+                        }
+                        i++;
                     }
 
                     kompanijeList.ItemsSource = kompanije;
+
+                    
 
                     if (kompanije.Count() > 0)
                     {

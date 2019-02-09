@@ -44,7 +44,7 @@ namespace ServisInfoSolution
                 ServisDetalji_Result servis = JsonConvert.DeserializeObject<ServisDetalji_Result>(jsonObject.Result);
                 this.ponuda = servis;
 
-                DatumPrihvatanjaLbl.Text = servis.DatumPrihvatanja.ToString();
+                DatumPrihvatanjaLbl.Text = servis.DatumPrihvatanja.ToString("dd.MM.yyyy");
                 servisIDLbl.Text = "Detalji o servisu ID: " + servis.ServisID.ToString();
                 DatumPocetkaLBl.Text = servis.DatumPocetka.GetValueOrDefault().ToString("dd.MM.yyyy");
                 DatumZavrsetkaLbl.Text = servis.DatumZavršetka.GetValueOrDefault().ToString("dd.MM.yyyy");

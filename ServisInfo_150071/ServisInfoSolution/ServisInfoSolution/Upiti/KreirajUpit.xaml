@@ -60,7 +60,7 @@
             
             <Label x:Name="porukaLbl" Margin="13" Text="* Obavezna polja"></Label>
 
-            <Button x:Name="posaljiBtn" Text="Posalji upit" HeightRequest="40" BackgroundColor="#13818d" TextColor="White" Clicked="posaljiBtn_Clicked" FontSize="Small"></Button>
+            <Button x:Name="posaljiBtn" Text="Posalji upit" HeightRequest="37" BackgroundColor="#13818d" TextColor="White" Clicked="posaljiBtn_Clicked" FontSize="Small"></Button>
         </StackLayout>
             <StackLayout  VerticalOptions="End">
                 <Label Text="Servis Info © 2019" HorizontalTextAlignment="Center"  TextColor="Gray" Margin="10,20,10,10" />

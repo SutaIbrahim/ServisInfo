@@ -108,6 +108,13 @@
     <Content Include="homepage.jpg" />
     <Content Include="homepage.png" />
     <Content Include="logo.jpg" />
+    <Content Include="logo1.png" />
+    <Content Include="logo2.png" />
+    <Content Include="logo3.png" />
+    <Content Include="logo4.png" />
+    <Content Include="logo5.png" />
+    <Content Include="logo6.png" />
+    <Content Include="logo7.png" />
     <Content Include="odjava.png" />
     <Content Include="ponude.png" />
     <Content Include="pretraga.png" />

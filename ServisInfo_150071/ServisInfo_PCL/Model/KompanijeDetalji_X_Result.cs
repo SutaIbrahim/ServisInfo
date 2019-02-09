@@ -20,5 +20,7 @@ namespace ServisInfo_PCL.Model
         public Nullable<decimal> ProsjecnaOcjena { get; set; }
 
         public string Izabrana { get; set; }
+        public string LogoSrc { get; set; }
+
     }
 }

@@ -46,7 +46,7 @@ namespace ServisInfoSolution
                 p = ponuda;
 
                 ponudaIDLbl.Text = "Detalji o ponudi ID: " + ponuda.PonudaID.ToString();
-                DatumLbl.Text = ponuda.DatumKreiranja.ToString();
+                DatumLbl.Text = ponuda.DatumKreiranja.ToString("dd.MM.yyyy");
                 TrajanjeDaniLbl.Text = ponuda.TrajanjeDani.ToString();
                 TrajanjeSatiLbl.Text = ponuda.TrajanjeSati.ToString();
 

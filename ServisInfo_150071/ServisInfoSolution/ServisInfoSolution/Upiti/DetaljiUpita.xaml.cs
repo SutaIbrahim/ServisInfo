@@ -47,7 +47,7 @@ namespace ServisInfoSolution
                 DetaljiUpita_Result upit = JsonConvert.DeserializeObject<DetaljiUpita_Result>(jsonObject.Result);
 
                 upitIDLbl.Text = "Detalji o upitu ID: " + upit.UpitID.ToString();
-                DatumLbl.Text = upit.Datum_upita.ToString();
+                DatumLbl.Text = upit.Datum_upita.GetValueOrDefault().ToString("dd.MM.yyyy");
                 zeljeniOdLbl.Text = upit.ZeljeniDatumPrijemaOd.GetValueOrDefault().ToString("dd.MM.yyyy");
                 zeljeniDoLbl.Text = upit.ZeljeniDatumPrijemaDo.GetValueOrDefault().ToString("dd.MM.yyyy");
                 markaLBl.Text = upit.Marka_uredjaja;
