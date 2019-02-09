@@ -57,6 +57,45 @@ namespace ServisInfoSolution.Kompanija
                 var jsonObject = response2.Content.ReadAsStringAsync();
                 List<KompanijeDetalji_Result> preporuceneKompanije = JsonConvert.DeserializeObject<List<KompanijeDetalji_Result>>(jsonObject.Result);
                 //preporuceneKompanije su sortirane po prosjecnim ocjenama, te je u listu dodana jedna kompanija bez ocjena
+
+                int i = 0;
+                foreach (var x in preporuceneKompanije)
+                {
+                    if (i == 0)
+                    {
+                        x.LogoSrc = "logo4.png";
+                    }
+                    else if (i == 1)
+                    {
+                        x.LogoSrc = "logo2.png";
+                    }
+                    else if (i == 2)
+                    {
+                        x.LogoSrc = "logo3.png";
+                    }
+                    else if (i == 3)
+                    {
+                        x.LogoSrc = "logo1.png";
+                    }
+                    else if (i == 4)
+                    {
+                        x.LogoSrc = "logo5.png";
+                    }
+                    else if (i == 5)
+                    {
+                        x.LogoSrc = "logo6.png";
+                    }
+                    else if (i == 6)
+                    {
+                        x.LogoSrc = "logo7.png";
+                    }
+                    else
+                    {
+                        x.LogoSrc = "logo3.png";
+                    }
+                    i++;
+                }
+
                 kompanijeList.ItemsSource = preporuceneKompanije;
             }
 
