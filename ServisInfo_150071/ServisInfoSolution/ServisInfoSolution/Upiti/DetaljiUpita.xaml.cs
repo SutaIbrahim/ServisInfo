@@ -48,8 +48,8 @@ namespace ServisInfoSolution
 
                 upitIDLbl.Text = "Detalji o upitu ID: " + upit.UpitID.ToString();
                 DatumLbl.Text = upit.Datum_upita.ToString();
-                zeljeniOdLbl.Text = upit.ZeljeniDatumPrijemaOd.ToString();
-                zeljeniDoLbl.Text = upit.ZeljeniDatumPrijemaDo.ToString();
+                zeljeniOdLbl.Text = upit.ZeljeniDatumPrijemaOd.GetValueOrDefault().ToString("dd.MM.yyyy");
+                zeljeniDoLbl.Text = upit.ZeljeniDatumPrijemaDo.GetValueOrDefault().ToString("dd.MM.yyyy");
                 markaLBl.Text = upit.Marka_uredjaja;
                 modelLbl.Text = upit.Model_uredjaja;
                 KategorijaLbl.Text = upit.Naziv_kategorije;

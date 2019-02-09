@@ -46,8 +46,8 @@ namespace ServisInfoSolution
 
                 DatumPrihvatanjaLbl.Text = servis.DatumPrihvatanja.ToString();
                 servisIDLbl.Text = "Detalji o servisu ID: " + servis.ServisID.ToString();
-                DatumPocetkaLBl.Text = servis.DatumPocetka.ToString();
-                DatumZavrsetkaLbl.Text = servis.DatumZavršetka.ToString();
+                DatumPocetkaLBl.Text = servis.DatumPocetka.GetValueOrDefault().ToString("dd.MM.yyyy");
+                DatumZavrsetkaLbl.Text = servis.DatumZavršetka.GetValueOrDefault().ToString("dd.MM.yyyy");
                 TrajanjeLbl.Text = servis.TrajanjeDani.ToString();
                 CijenaLbl.Text = servis.Završna_cijena.ToString() + " KM";
                 KompanijaLbl.Text = servis.Naziv_Kompanije;

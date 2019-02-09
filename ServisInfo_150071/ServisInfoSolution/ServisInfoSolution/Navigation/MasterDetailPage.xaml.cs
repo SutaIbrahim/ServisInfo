@@ -28,7 +28,7 @@ namespace ServisInfoSolution.Navigation
             page.Title = item.Title;
 
             var p = new NavigationPage(page);
-            p.BarBackgroundColor = Color.LightSteelBlue;
+           // p.BarBackgroundColor = Color.LightSteelBlue;
 
             Detail = p;
             IsPresented = false;
