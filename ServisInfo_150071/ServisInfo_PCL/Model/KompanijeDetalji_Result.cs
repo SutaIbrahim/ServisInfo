@@ -16,5 +16,9 @@ namespace ServisInfo_PCL.Model
         public string Grad { get; set; }
         public decimal ProsjecnaOcjena { get; set; }
 
+
+        public string LogoSrc { get; set; }
+
+
     }
 }
