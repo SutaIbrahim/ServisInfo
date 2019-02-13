@@ -123,7 +123,7 @@
             this.Controls.Add(this.NazivBtn);
             this.Controls.Add(this.NazivInput);
             this.Name = "PregledRadnika";
-            this.Text = "PregledRadnika";
+            this.Text = "Pregled radnika";
             this.Load += new System.EventHandler(this.PregledRadnika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KompanijeGrid)).EndInit();
             this.ResumeLayout(false);

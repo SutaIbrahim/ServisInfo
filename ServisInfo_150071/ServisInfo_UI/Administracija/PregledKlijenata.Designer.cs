@@ -99,7 +99,7 @@
             this.Controls.Add(this.NazivBtn);
             this.Controls.Add(this.NazivInput);
             this.Name = "PregledKlijenata";
-            this.Text = "PregledKlijenata";
+            this.Text = "Pregled klijenata";
             this.Load += new System.EventHandler(this.PregledKlijenata_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KompanijeGrid)).EndInit();
             this.ResumeLayout(false);

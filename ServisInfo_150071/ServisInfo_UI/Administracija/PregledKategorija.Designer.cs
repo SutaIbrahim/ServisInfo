@@ -68,7 +68,7 @@
             this.MinimumSize = new System.Drawing.Size(508, 539);
             this.Name = "PregledKategorija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "PregledKategorija";
+            this.Text = "Pregled kategorija";
             this.Load += new System.EventHandler(this.PregledKategorija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KategorijeGrid)).EndInit();
             this.ResumeLayout(false);
