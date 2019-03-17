@@ -65,13 +65,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.30257cm</Width>
+                  <Width>1.97966cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.98167cm</Width>
+                  <Width>4.2286cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.27139cm</Width>
+                  <Width>5.29988cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.8175cm</Width>
@@ -172,7 +172,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Datum Završetka</Value>
+                                  <Value>Datum završetka servisa</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -248,7 +248,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>0.86458cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -415,8 +415,8 @@
             <DataSetName>DataSet2</DataSetName>
             <Top>4.50467cm</Top>
             <Left>0.83939cm</Left>
-            <Height>1.2cm</Height>
-            <Width>13.37313cm</Width>
+            <Height>1.46458cm</Height>
+            <Width>14.32564cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -506,7 +506,7 @@
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value xml:space="preserve"> </Value>
+                    <Value xml:space="preserve">   </Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontSize>14pt</FontSize>
@@ -533,7 +533,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
             <Top>6.93566cm</Top>
-            <Left>7.45336cm</Left>
+            <Left>8.40587cm</Left>
             <Height>0.83813cm</Height>
             <Width>6.75916cm</Width>
             <ZIndex>3</ZIndex>
@@ -572,7 +572,7 @@
             <Top>2.94045cm</Top>
             <Left>4.54765cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>5.83375cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -682,7 +682,7 @@
           </Border>
         </Style>
       </Body>
-      <Width>6.22718in</Width>
+      <Width>6.28645in</Width>
       <Page>
         <PageHeader>
           <Height>2.54cm</Height>
@@ -755,7 +755,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>© Copyright 2018 ServisInfo</Value>
+                      <Value>© Copyright 2019 ServisInfo</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>

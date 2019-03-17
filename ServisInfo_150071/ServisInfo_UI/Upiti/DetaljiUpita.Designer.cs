@@ -426,7 +426,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 650);
             this.Name = "DetaljiUpita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DetaljiUpita";
+            this.Text = "Detalji upita";
             this.Load += new System.EventHandler(this.DetaljiUpita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);

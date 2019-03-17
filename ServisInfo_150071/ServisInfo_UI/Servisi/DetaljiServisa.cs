@@ -63,6 +63,7 @@ namespace ServisInfo_UI.Servisi
             ocjena2Lbl.Text = "";
             ocjena3Lbl.Text = "";
             OcjeneLbl.Text = "";
+            opisTxt.Text = s.Opis;
 
             if (s.DatumPocetka == null)
             {
@@ -82,8 +83,9 @@ namespace ServisInfo_UI.Servisi
                 label5.Show();
                 label4.Hide();
                 label7.Hide();
-            }
+                opisTxt.ReadOnly = true;
 
+            }
             else
             {
                 ZapocniBtn.Hide();
@@ -109,7 +111,8 @@ namespace ServisInfo_UI.Servisi
                     DatumZavrsetkaLbl.Hide();
                     ZavrsiBtn.Show();
                     DatumZavrsetkaLbl.Hide();
-                   // TrajanjeLbl.Hide();
+                    // TrajanjeLbl.Hide();
+                    opisTxt.ReadOnly = false;
                 }
                 else
                 {
@@ -125,6 +128,8 @@ namespace ServisInfo_UI.Servisi
                     IzvjestajBtn.Show();
                     //
                     PostaviOcjene();
+                    opisTxt.ReadOnly = true;
+
                 }
             }
         }
@@ -192,6 +197,7 @@ namespace ServisInfo_UI.Servisi
                     ServisInfo_API.Models.Servisi servis = response.Content.ReadAsAsync<ServisInfo_API.Models.Servisi>().Result;
                     servis.DatumZavršetka = DateTime.Now;
                     servis.Cijena = Convert.ToDecimal(CijenaTxt.Text);
+                    servis.Opis = opisTxt.Text;
 
                     servis.TrajanjeDani = DateTime.Now.DayOfYear -  s.DatumPocetka.Value.DayOfYear; // bug ako su 2 razlicite godine !
 

@@ -259,7 +259,7 @@
             this.MinimumSize = new System.Drawing.Size(715, 468);
             this.Name = "DodajKompaniju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DodajKompaniju";
+            this.Text = "Dodaj kompaniju";
             this.Load += new System.EventHandler(this.DodajKompaniju_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

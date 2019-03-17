@@ -28,6 +28,7 @@ namespace ServisInfo_API.Models
         public Nullable<int> TrajanjeDani { get; set; }
         public int KompanijaID { get; set; }
         public int PonudaID { get; set; }
+        public string Opis { get; set; }
     
         public virtual Kompanije Kompanije { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

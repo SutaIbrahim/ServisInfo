@@ -118,7 +118,7 @@
             this.Controls.Add(this.DodajBtn);
             this.Controls.Add(this.groupBox2);
             this.Name = "DodajRadnika";
-            this.Text = "DodajRadnika";
+            this.Text = "Dodaj radnika";
             this.Load += new System.EventHandler(this.DodajRadnika_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -109,7 +109,7 @@
             this.Controls.Add(this.OdDtm);
             this.Name = "KompanijaIzvjestajForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "KompanijaIzvjestajForm";
+            this.Text = "Izvještaj o prometu";
             this.Load += new System.EventHandler(this.KompanijaIzvjestajForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

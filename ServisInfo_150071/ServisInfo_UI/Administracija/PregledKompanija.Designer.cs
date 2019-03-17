@@ -138,7 +138,7 @@
             this.MinimumSize = new System.Drawing.Size(947, 506);
             this.Name = "PregledKompanija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "PregledKompanija";
+            this.Text = "Pregled kompanija";
             this.Load += new System.EventHandler(this.PregledKompanija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KompanijeGrid)).EndInit();
             this.ResumeLayout(false);

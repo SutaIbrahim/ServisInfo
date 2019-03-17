@@ -127,7 +127,7 @@
             <Top>7.80273cm</Top>
             <Left>5.15727cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>5.38396cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -220,7 +220,7 @@
             <Top>6.87808cm</Top>
             <Left>5.15727cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>5.38396cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -250,7 +250,7 @@
             <Top>5.9785cm</Top>
             <Left>5.13081cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>5.41042cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -1350,7 +1350,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>© Copyright 2018 ServisInfo</Value>
+                      <Value>© Copyright 2019 ServisInfo</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>

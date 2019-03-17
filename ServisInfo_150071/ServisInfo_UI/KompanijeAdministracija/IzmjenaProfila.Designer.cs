@@ -184,7 +184,7 @@
             this.MinimumSize = new System.Drawing.Size(390, 428);
             this.Name = "IzmjenaProfila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "IzmjenaProfila";
+            this.Text = "Izmjena profila";
             this.Load += new System.EventHandler(this.IzmjenaProfila_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);

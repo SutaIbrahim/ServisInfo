@@ -30,5 +30,6 @@ namespace ServisInfo_API.Models
         public Nullable<bool> Ocjenjen { get; set; }
         public string Uredjaj { get; set; }
         public string OpisKvara { get; set; }
+        public string Opis { get; set; }
     }
 }

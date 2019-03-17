@@ -83,11 +83,11 @@
     <Compile Include="Administracija\DodajKategoriju.Designer.cs">
       <DependentUpon>DodajKategoriju.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracija\Dodaj kompaniju.cs">
+    <Compile Include="Administracija\DodajKompaniju.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administracija\Dodaj kompaniju.Designer.cs">
-      <DependentUpon>Dodaj kompaniju.cs</DependentUpon>
+    <Compile Include="Administracija\DodajKompaniju.Designer.cs">
+      <DependentUpon>DodajKompaniju.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracija\DodajRadnika.cs">
       <SubType>Form</SubType>
@@ -220,8 +220,8 @@
     <EmbeddedResource Include="Administracija\DodajKategoriju.resx">
       <DependentUpon>DodajKategoriju.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administracija\Dodaj kompaniju.resx">
-      <DependentUpon>Dodaj kompaniju.cs</DependentUpon>
+    <EmbeddedResource Include="Administracija\DodajKompaniju.resx">
+      <DependentUpon>DodajKompaniju.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracija\DodajRadnika.resx">
       <DependentUpon>DodajRadnika.cs</DependentUpon>

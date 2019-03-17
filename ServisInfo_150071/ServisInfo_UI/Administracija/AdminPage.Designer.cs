@@ -188,7 +188,7 @@
             this.MinimumSize = new System.Drawing.Size(822, 477);
             this.Name = "AdminPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminPage";
+            this.Text = "Administracija";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

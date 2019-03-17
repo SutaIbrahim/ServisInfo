@@ -120,6 +120,7 @@
           <Property Name="TrajanjeDani" Type="int" />
           <Property Name="KompanijaID" Type="int" Nullable="false" />
           <Property Name="PonudaID" Type="int" Nullable="false" />
+          <Property Name="Opis" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Upiti">
           <Key>
@@ -722,6 +723,7 @@
           <NavigationProperty Name="Kompanije" Relationship="Self.FK__Servisi__Kompani__47DBAE45" FromRole="Servisi" ToRole="Kompanije" />
           <NavigationProperty Name="Ocjene" Relationship="Self.FK__Ocjene__ServisID__4E88ABD4" FromRole="Servisi" ToRole="Ocjene" />
           <NavigationProperty Name="Ponude" Relationship="Self.FK__Servisi__PonudaI__48CFD27E" FromRole="Servisi" ToRole="Ponude" />
+          <Property Name="Opis" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Upiti">
           <Key>
@@ -1282,6 +1284,7 @@
           <Property Type="Boolean" Name="Ocjenjen" Nullable="true" />
           <Property Type="String" Name="Uredjaj" Nullable="false" MaxLength="101" />
           <Property Type="String" Name="OpisKvara" Nullable="false" />
+          <Property Type="String" Name="Opis" Nullable="true" MaxLength="255" />
         </ComplexType>
         <ComplexType Name="PonudeKlijent_Result">
           <Property Type="Int32" Name="PonudaID" Nullable="false" />
@@ -1526,6 +1529,7 @@
           <EntitySetMapping Name="Servisi">
             <EntityTypeMapping TypeName="ServisInfoModel.Servisi">
               <MappingFragment StoreEntitySet="Servisi">
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
                 <ScalarProperty Name="ServisID" ColumnName="ServisID" />
                 <ScalarProperty Name="DatumPrihvatanja" ColumnName="DatumPrihvatanja" />
                 <ScalarProperty Name="DatumPocetka" ColumnName="DatumPocetka" />
@@ -1686,6 +1690,7 @@
                 <ScalarProperty Name="Ocjenjen" ColumnName="Ocjenjen" />
                 <ScalarProperty Name="Uredjaj" ColumnName="Uredjaj" />
                 <ScalarProperty Name="OpisKvara" ColumnName="OpisKvara" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

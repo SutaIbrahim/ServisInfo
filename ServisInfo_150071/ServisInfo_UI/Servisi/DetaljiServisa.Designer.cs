@@ -66,6 +66,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.opisLbl = new System.Windows.Forms.Label();
+            this.opisTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -388,7 +390,7 @@
             // 
             this.UpitLbl.AutoSize = true;
             this.UpitLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpitLbl.Location = new System.Drawing.Point(31, 276);
+            this.UpitLbl.Location = new System.Drawing.Point(31, 257);
             this.UpitLbl.Name = "UpitLbl";
             this.UpitLbl.Size = new System.Drawing.Size(87, 16);
             this.UpitLbl.TabIndex = 49;
@@ -406,11 +408,11 @@
             // 
             // upitTxt
             // 
-            this.upitTxt.Location = new System.Drawing.Point(34, 305);
+            this.upitTxt.Location = new System.Drawing.Point(34, 286);
             this.upitTxt.Multiline = true;
             this.upitTxt.Name = "upitTxt";
             this.upitTxt.ReadOnly = true;
-            this.upitTxt.Size = new System.Drawing.Size(710, 122);
+            this.upitTxt.Size = new System.Drawing.Size(710, 56);
             this.upitTxt.TabIndex = 51;
             // 
             // groupBox2
@@ -441,12 +443,33 @@
             this.label8.TabIndex = 54;
             this.label8.Text = "Copyright © ServisInfo 2018";
             // 
+            // opisLbl
+            // 
+            this.opisLbl.AutoSize = true;
+            this.opisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.opisLbl.Location = new System.Drawing.Point(31, 349);
+            this.opisLbl.Name = "opisLbl";
+            this.opisLbl.Size = new System.Drawing.Size(99, 16);
+            this.opisLbl.TabIndex = 55;
+            this.opisLbl.Text = "Opis servisa:";
+            // 
+            // opisTxt
+            // 
+            this.opisTxt.Location = new System.Drawing.Point(34, 372);
+            this.opisTxt.Multiline = true;
+            this.opisTxt.Name = "opisTxt";
+            this.opisTxt.ReadOnly = true;
+            this.opisTxt.Size = new System.Drawing.Size(710, 56);
+            this.opisTxt.TabIndex = 56;
+            // 
             // DetaljiServisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(785, 621);
+            this.Controls.Add(this.opisTxt);
+            this.Controls.Add(this.opisLbl);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label14);
@@ -534,5 +557,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox opisTxt;
+        private System.Windows.Forms.Label opisLbl;
     }
 }

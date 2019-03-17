@@ -409,7 +409,7 @@
             this.MinimumSize = new System.Drawing.Size(676, 636);
             this.Name = "DetaljiPonude";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DetaljiPonude";
+            this.Text = "Detalji ponude";
             this.Load += new System.EventHandler(this.DetaljiPonude_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

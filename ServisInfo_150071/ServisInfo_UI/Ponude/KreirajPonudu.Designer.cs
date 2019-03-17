@@ -388,7 +388,7 @@
             this.MinimumSize = new System.Drawing.Size(645, 666);
             this.Name = "KreirajPonudu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "KreirajPonudu";
+            this.Text = "Kreiraj ponudu";
             this.Load += new System.EventHandler(this.KreirajPonudu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DaniSelect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SatiSelect)).EndInit();

@@ -156,7 +156,7 @@
             this.MinimumSize = new System.Drawing.Size(1007, 528);
             this.Name = "PregledUpita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "PregledUpita";
+            this.Text = "Pregled upita";
             this.Load += new System.EventHandler(this.PregledUpita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpitiGrid)).EndInit();
             this.ResumeLayout(false);

@@ -181,7 +181,7 @@
             this.MinimumSize = new System.Drawing.Size(1007, 528);
             this.Name = "PregledServisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "PregledServisa";
+            this.Text = "Pregled servisa";
             this.Load += new System.EventHandler(this.PregledServisa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ServisiGrid)).EndInit();
             this.ResumeLayout(false);

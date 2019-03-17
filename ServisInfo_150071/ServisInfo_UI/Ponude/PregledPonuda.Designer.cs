@@ -156,7 +156,7 @@
             this.MinimumSize = new System.Drawing.Size(1007, 528);
             this.Name = "PregledPonuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "PregledPonuda";
+            this.Text = "Pregled ponuda";
             this.Load += new System.EventHandler(this.PregledPonuda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PonudeGrid)).EndInit();
             this.ResumeLayout(false);
